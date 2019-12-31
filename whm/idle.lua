@@ -1,0 +1,15 @@
+sets.idle={
+    ammo="Homiliary",
+    head="Inyanga Tiara +2",
+    body={ name="Piety Briault +3", augments={'Enhances "Benediction" effect',}},
+    hands="Inyan. Dastanas +2",
+    legs="Volte Brais",
+    feet="Crier's Gaiters",
+    neck="Twilight Torque",
+    waist="Eschan Stone",
+    left_ear="Glorious Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Ayanmo Ring",
+    right_ring="Defending Ring",
+    back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','"Cure" potency +10%',}},
+}

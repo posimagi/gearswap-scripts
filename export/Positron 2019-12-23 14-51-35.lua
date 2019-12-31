@@ -1,0 +1,17 @@
+sets.exported={
+    main="Hornetneedle",
+    sub="Mercurial Kris",
+    range="Raider's Bmrng.",
+    head="Meghanada Visor +1",
+    body="Meg. Cuirie +1",
+    hands="Meg. Gloves +2",
+    legs={ name="Herculean Trousers", augments={'Haste+1','"Dbl.Atk."+4','"Treasure Hunter"+1','Accuracy+17 Attack+17','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},
+    feet="Meg. Jam. +1",
+    neck="Sanctity Necklace",
+    waist="Sailfi Belt +1",
+    left_ear="Suppanomimi",
+    right_ear="Sherida Earring",
+    left_ring="Epona's Ring",
+    right_ring="Petrov Ring",
+    back={ name="Canny Cape", augments={'DEX+1','AGI+2','"Dual Wield"+5','Crit. hit damage +3%',}},
+}

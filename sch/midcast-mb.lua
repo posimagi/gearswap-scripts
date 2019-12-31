@@ -1,0 +1,15 @@
+sets.midcast.mb={
+    ammo="Pemphredo Tathlum",
+    head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
+    body="Jhakri Robe +2",
+    hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst dmg.+5%','CHR+9','Mag. Acc.+11',}},
+    feet="Arbatel Loafers +1",
+    neck="Mizu. Kubikazari",
+    waist="Hachirin-no-Obi",
+    left_ear="Regal Earring",
+    right_ear="Barkaro. Earring",
+    left_ring="Locus Ring",
+    right_ring="Mujin Band",
+    back={ name="Lugh's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+}

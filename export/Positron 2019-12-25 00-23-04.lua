@@ -1,0 +1,17 @@
+sets.exported={
+    main="Vitiation Sword",
+    sub="Ammurapi Shield",
+    ammo="Homiliary",
+    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +4',}},
+    body="Jhakri Robe +2",
+    hands="Malignance Gloves",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet="Malignance Boots",
+    neck="Twilight Torque",
+    waist="Eschan Stone",
+    left_ear="Magnetic Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Ayanmo Ring",
+    right_ring="Defending Ring",
+    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
+}

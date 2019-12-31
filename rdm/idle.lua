@@ -1,0 +1,15 @@
+sets.idle={
+    ammo="Homiliary",
+    head={ name="Viti. Chapeau +2", augments={'Enhances "Dia III" effect','Enhances "Slow II" effect',}},
+    body="Jhakri Robe +2",
+    hands="Malignance Gloves",
+    legs="Carmine Cuisses +1",
+    feet="Malignance Boots",
+    neck="Twilight Torque",
+    waist="Eschan Stone",
+    left_ear="Magnetic Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Ayanmo Ring",
+    right_ring="Defending Ring",
+    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
+}

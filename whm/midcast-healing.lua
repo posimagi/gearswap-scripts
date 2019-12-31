@@ -1,0 +1,15 @@
+sets.midcast.healing={
+    ammo="Homiliary",
+    head="Inyanga Tiara +2",
+    body="Ebers Bliaud +1",
+    hands={ name="Telchine Gloves", augments={'"Mag.Atk.Bns."+1','Spell interruption rate down -2%',}},
+    legs="Ebers Pant. +1",
+    feet="Aya. Gambieras +2",
+    neck="Incanter's Torque",
+    waist="Siegel Sash",
+    left_ear="Glorious Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Inyanga Ring",
+    right_ring="Lebeche Ring",
+    back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','"Cure" potency +10%',}},
+}

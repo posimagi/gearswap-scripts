@@ -1,0 +1,15 @@
+sets.midcast.enfeebling={
+    ammo="Hydrocera",
+    head="Jhakri Coronal +2",
+    body="Jhakri Robe +2",
+    hands="Jhakri Cuffs +2",
+    legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
+    feet="Jhakri Pigaches +2",
+    neck="Incanter's Torque",
+    waist="Rumination Sash",
+    left_ear="Regal Earring",
+    right_ear="Barkaro. Earring",
+    left_ring="Jhakri Ring",
+    right_ring="Kishar Ring",
+    back={ name="Lugh's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+}
