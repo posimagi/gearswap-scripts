@@ -6,8 +6,9 @@ sets.idle={
     feet="Malignance Boots",
     neck="Twilight Torque",
     waist="Eschan Stone",
+    left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
-    left_ring="Warden's Ring",
+    left_ring="Fortified Ring",
     right_ring="Defending Ring",
     back="Gunslinger's Cape",
 }

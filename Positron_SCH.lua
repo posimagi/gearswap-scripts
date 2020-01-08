@@ -15,7 +15,7 @@ function get_sets()
 	include('all-stoneskin.lua')				    -- sets.stoneskin
 	include('all-midcast-darkness.lua')				-- sets.midcast.darkness
 
-	send_command('wait 5; input /lockstyleset 100; gs equip sets.idle') -- lockstyle
+	send_command('wait 5; input /lockstyleset 97; gs equip sets.idle') -- lockstyle
 end
 
 function precast(spell,position)
