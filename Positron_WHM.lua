@@ -9,6 +9,8 @@ function get_sets()
 	include("whm/tp.lua") -- sets.tp
 	include("whm/ws.lua") -- sets.ws
 
+	include("whm/sublimation.lua") -- sets.sublimation
+
 	include("whm/precast-benediction.lua") -- sets.precast.Benediction
 
 	include("whm/midcast-healing.lua") -- sets.midcast.healing
@@ -19,7 +21,13 @@ function get_sets()
 
 	include("all-stoneskin.lua") -- sets.stoneskin
 
-	send_command("wait 5; input /lockstyleset 20; gs equip sets.idle") -- lockstyle
+	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
+
+	send_command(
+		"input /macro book 3; \
+		wait 5; \
+		input /lockstyleset 20; \
+		gs equip sets.idle")
 end
 
 function precast(spell, position)
@@ -27,6 +35,8 @@ function precast(spell, position)
 	if spell.type == "JobAbility" then
 		if spell.english == "Benediction" then
 			equip(sets.precast.benediction)
+		elseif spell.english == "Sublimation" then
+			equip(sets.sublimation)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
@@ -63,6 +73,10 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
+		if spell.english == "Sublimation" or
+		    buffactive_sublimation() then
+			equip(sets.sublimation)
+		end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end
@@ -73,5 +87,8 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+		if buffactive_sublimation() then
+			equip(sets.sublimation)
+		end
 	end
 end

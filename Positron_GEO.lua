@@ -7,7 +7,7 @@ function get_sets()
     include("geo/idle.lua") -- sets.idle
     include("all-th.lua") -- sets.th
 
-    -- include('geo-fastcast.lua')                      -- sets.fastcast
+    include("geo-fastcast.lua") -- sets.fastcast
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 
@@ -21,7 +21,11 @@ function get_sets()
 
     include("all-stoneskin.lua") -- sets.stoneskin
 
-    send_command("wait 5; input /lockstyleset 51; gs equip sets.idle") -- lockstyle
+    send_command(
+        "input /macro book 10; \
+        wait 5; \
+        input /lockstyleset 51; \
+        gs equip sets.idle")
 end
 
 function precast(spell, position)

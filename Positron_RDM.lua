@@ -17,6 +17,7 @@ function get_sets()
 	-- include('rdm-ws-sanguineblade.lua')      -- sets.ws.sanguineblade
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
+	include("rdm/precast-enhancing.lua") -- sets.precast.enhancing
 
 	include("rdm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
@@ -48,7 +49,9 @@ function precast(spell, position)
 		end
 	else
 		equip(sets.fastcast)
-		if spell.english:contains("Impact") then
+		if spell.skill == "Enhancing Magic" then
+			equip(sets.precast.enhancing)
+		elseif spell.english:contains("Impact") then
 			equip(sets.impact)
 		end
 	end

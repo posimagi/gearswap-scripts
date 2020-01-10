@@ -6,7 +6,7 @@ sets.midcast.enhancing={
     legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +5',}},
     feet="Leth. Houseaux +1",
     neck="Incanter's Torque",
-    waist="Siegel Sash",
+    waist="Embla Sash",
     left_ear="Regal Earring",
     right_ear="Loquac. Earring",
     left_ring="Lebeche Ring",
