@@ -16,8 +16,10 @@ function get_sets()
 	include("dnc/precast-jigs.lua") -- sets.precast.jigs
 	-- include("dnc/precast-nofootrise.lua") -- sets.precast.nofootrise
 	include("dnc/precast-reverseflourish.lua") -- sets.precast.reverseflourish
+	include("dnc/strikingflourish.lua") -- sets.strikingflourish
 	include("dnc/climacticflourish.lua") -- sets.climacticflourish
 
+	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 
 	send_command(
@@ -30,6 +32,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if buffactive_strikingflourish() then
+			equip(sets.strikingflourish)
+		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
 		end
@@ -40,6 +45,8 @@ function precast(spell, position)
 	elseif spell.type:contains("Flourish") then
 		if spell.english:contains("Reverse") then
 			equip(sets.precast.reverseflourish)
+		elseif spell.english:contains("Striking") then
+			equip(sets.strikingflourish)
 		elseif spell.english:contains("Climactic") then
 			equip(sets.climacticflourish)
 		end

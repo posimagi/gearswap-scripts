@@ -1,0 +1,15 @@
+sets.tp={
+    ammo="Ginsen",
+    head="Flam. Zucchetto +2",
+    body="Flamma Korazin +2",
+    hands="Wakido Kote +1",
+    legs="Flamma Dirs +2",
+    feet="Flam. Gambieras +2",
+    neck="Agelast Torque",
+    waist="Ioskeha Belt",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Flamma Ring",
+    right_ring="Hizamaru Ring",
+    back={ name="Takaha Mantle", augments={'STR+1','"Zanshin"+1','"Store TP"+3',}},
+}

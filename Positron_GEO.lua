@@ -7,7 +7,7 @@ function get_sets()
     include("geo/idle.lua") -- sets.idle
     include("all-th.lua") -- sets.th
 
-    include("geo-fastcast.lua") -- sets.fastcast
+    include("geo/fastcast.lua") -- sets.fastcast
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 

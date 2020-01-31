@@ -1,6 +1,6 @@
 sets.idle={
     head="Azimuth Hood +1",
-    body="Jhakri Robe +2",
+    body="Shamash Robe",
     hands="Geo. Mitaines +3",
     legs="Volte Brais",
     feet="Azimuth Gaiters +1",

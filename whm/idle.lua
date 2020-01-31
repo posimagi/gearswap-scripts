@@ -1,7 +1,7 @@
 sets.idle={
     ammo="Homiliary",
     head="Inyanga Tiara +2",
-    body={ name="Piety Briault +3", augments={'Enhances "Benediction" effect',}},
+    body="Shamash Robe",
     hands="Inyan. Dastanas +2",
     legs="Volte Brais",
     feet="Crier's Gaiters",

@@ -8,7 +8,7 @@ sets.midcast.enfeebling={
     neck="Dls. Torque +1",
     waist="Rumination Sash",
     left_ear="Regal Earring",
-    right_ear="Malignance Earring",
+    right_ear="Snotra Earring",
     left_ring="Ayanmo Ring",
     right_ring="Kishar Ring",
     back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
