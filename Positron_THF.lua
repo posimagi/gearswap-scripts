@@ -41,7 +41,7 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
-		equip(sets.tp)
+		equip(sets.tp, sets.th)
 		if buffactive_sata() then
 			equip(sets.th)
 		end
@@ -50,7 +50,7 @@ end
 
 function status_change(new, old)
 	if new == "Engaged" then
-		equip(sets.tp)
+		equip(sets.tp, sets.th)
 		if buffactive_sata() then
 			equip(sets.th)
 		end
@@ -65,7 +65,7 @@ function buff_change(name, gain, buff_details)
 			equip(sets.th)
 		else
 			if player.status == "Engaged" then
-				equip(sets.tp)
+				equip(sets.tp, sets.th)
 			elseif player.status == "Idle" then
 				equip(sets.idle)
 			end

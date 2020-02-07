@@ -1,0 +1,15 @@
+sets.idle={
+    ammo="Ginsen",
+    head="Malignance Chapeau",
+    body="Emet Harness",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Crier's Gaiters",
+    neck="Sanctity Necklace",
+    waist="Black Belt",
+    left_ear="Etiolation Earring",
+    right_ear="Odnowa Earring +1",
+    left_ring="Epona's Ring",
+    right_ring="Hizamaru Ring",
+    back="Agema Cape",
+}

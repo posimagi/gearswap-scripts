@@ -8,6 +8,7 @@ function get_sets()
 	include("all-th.lua") -- sets.th
 	include("whm/tp.lua") -- sets.tp
 	include("whm/ws.lua") -- sets.ws
+	include("whm/fastcast.lua") -- sets.fastcast
 
 	include("whm/sublimation.lua") -- sets.sublimation
 
