@@ -11,5 +11,5 @@ sets.midcast.mb={
     right_ear="Barkaro. Earring",
     left_ring="Locus Ring",
     right_ring="Mujin Band",
-    back={ name="Lugh's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 }

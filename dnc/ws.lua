@@ -1,4 +1,5 @@
 sets.ws={
+    ammo="Charis Feather",
     head="Malignance Chapeau",
     body="Meg. Cuirie +2",
     hands="Meg. Gloves +2",

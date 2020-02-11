@@ -5,10 +5,12 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("all-th.lua") -- sets.th
-	
+
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/ws.lua") -- sets.ws
+	include("thf/ws-rudras.lua") -- sets.ws.rudras
+	include("dnc/ws-magical.lua") -- sets.ws.magical
 
 	include("dnc/precast-steps.lua") -- sets.precast.steps
 	include("dnc/precast-waltzes.lua") -- sets.precast.waltzes
@@ -22,8 +24,7 @@ function get_sets()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 
-	send_command(
-		"input /macro book 6; \
+	send_command("input /macro book 6; \
 		wait 5; \
 		input /lockstyleset 98; \
 		gs equip sets.idle")
@@ -38,9 +39,14 @@ function precast(spell, position)
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
 		end
+		if spell.english:contains("Rudra's Storm") then
+			equip(sets.ws.rudras)
+		elseif spell.english:contains("Aeolian Edge") then
+			equip(sets.ws.magical)
+		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("No Foot Rise") then
-			-- equip(sets.precast.nofootrise)									
+		-- equip(sets.precast.nofootrise)
 		end
 	elseif spell.type:contains("Flourish") then
 		if spell.english:contains("Reverse") then
@@ -62,7 +68,6 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-
 end
 
 function aftercast(spell)

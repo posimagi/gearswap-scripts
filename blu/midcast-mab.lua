@@ -11,4 +11,5 @@ sets.midcast.mab={
     right_ear="Loquac. Earring",
     left_ring="Jhakri Ring",
     right_ring="Vertigo Ring",
+    back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
 }

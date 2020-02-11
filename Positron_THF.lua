@@ -8,6 +8,7 @@ function get_sets()
 	include("thf/th.lua") -- sets.th
 	include("thf/tp.lua") -- sets.tp
 	include("thf/ws.lua") -- sets.ws
+	include("thf/ws-rudras.lua") -- sets.ws.rudras
 	include("thf/ws-magical.lua") -- sets.ws.magical
 
 	include("thf/precast-flee.lua") -- sets.precast.flee
@@ -24,7 +25,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains('Aeolian Edge') then
+		if spell.english:contains("Rudra's Storm") then
+			equip(sets.ws.rudras)
+		elseif spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
 		end
 	elseif spell.type == "JobAbility" then

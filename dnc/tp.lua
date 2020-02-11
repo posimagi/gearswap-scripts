@@ -1,4 +1,5 @@
 sets.tp={
+    ammo="Ginsen",
     head="Malignance Chapeau",
     body="Mummu Jacket +2",
     hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
