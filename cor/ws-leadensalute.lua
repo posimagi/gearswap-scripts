@@ -4,4 +4,5 @@ sets.ws.leadensalute={
     waist="Eschan Stone",
     left_ear="Hecate's Earring",
     left_ring="Archon Ring",
+    right_ring="Acumen Ring",
 }

@@ -5,7 +5,7 @@ sets.midcast.enfeebling={
     neck="Incanter's Torque",
     waist="Rumination Sash",
     left_ear="Regal Earring",
-    right_ear="Loquac. Earring",
+    right_ear="Malignance Earring",
     left_ring="Inyanga Ring",
     right_ring="Kishar Ring",
     back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Cure" potency +10%','Occ. inc. resist. to stat. ailments+10',}},

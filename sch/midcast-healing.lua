@@ -7,7 +7,7 @@ sets.midcast.healing={
     neck="Incanter's Torque",
     waist="Rumination Sash",
     left_ear="Regal Earring",
-    right_ear="Loquac. Earring",
+    right_ear="Malignance Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
 }

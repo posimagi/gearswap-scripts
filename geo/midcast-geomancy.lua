@@ -6,5 +6,4 @@ sets.midcast.geomancy={
     feet="Azimuth Gaiters +1",
     neck="Incanter's Torque",
     left_ear="Magnetic Earring",
-    right_ear="Loquac. Earring",
 }

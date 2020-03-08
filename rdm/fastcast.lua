@@ -6,6 +6,6 @@ sets.fastcast={
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     waist="Embla Sash",
     left_ear="Etiolation Earring",
-    right_ear="Loquac. Earring",
+    right_ear="Malignance Earring",
     right_ring="Kishar Ring",
 }

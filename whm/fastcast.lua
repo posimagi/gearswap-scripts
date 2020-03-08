@@ -4,6 +4,6 @@ sets.fastcast={
     legs="Volte Brais",
     waist="Embla Sash",
     left_ear="Etiolation Earring",
-    right_ear="Loquac. Earring",
+    right_ear="Malignance Earring",
     right_ring="Kishar Ring",
 }

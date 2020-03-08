@@ -33,16 +33,16 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if spell.english:contains("Rudra's Storm") then
+			equip(sets.ws.singlehit)
+		elseif spell.english:contains("Aeolian Edge") then
+			equip(sets.ws.magical)
+		end
 		if buffactive_strikingflourish() then
 			equip(sets.strikingflourish)
 		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
-		end
-		if spell.english:contains("Rudra's Storm") then
-			equip(sets.ws.rudras)
-		elseif spell.english:contains("Aeolian Edge") then
-			equip(sets.ws.magical)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("No Foot Rise") then

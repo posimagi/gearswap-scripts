@@ -8,7 +8,6 @@ sets.midcast.enhancing={
     neck="Incanter's Torque",
     waist="Embla Sash",
     left_ear="Regal Earring",
-    right_ear="Loquac. Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
     back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +7','Enha.mag. skill +9','Mag. Acc.+2','Enh. Mag. eff. dur. +18',}},

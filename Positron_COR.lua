@@ -24,10 +24,11 @@ function precast(spell, position)
             if world.weather_element == 'Dark' then
                 equip(sets.obi)
             end
-        end
+		end
+	elseif spell.type == 'CorsairRoll' then
+		equip(sets.precast.phantomroll)
 	elseif spell.type == 'JobAbility' then
-        if spell.english:contains('Roll') or -- FIXME: possibly a different spell.type! Verify.
-           spell.english:contains('Double-Up') then
+        if spell.english:contains('Double-Up') then
 			equip(sets.precast.phantomroll)
 		end
 	end

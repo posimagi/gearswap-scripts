@@ -8,7 +8,7 @@ function get_sets()
 	include("thf/th.lua") -- sets.th
 	include("thf/tp.lua") -- sets.tp
 	include("thf/ws.lua") -- sets.ws
-	include("thf/ws-rudras.lua") -- sets.ws.rudras
+	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
 
 	include("thf/precast-flee.lua") -- sets.precast.flee
@@ -25,8 +25,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains("Rudra's Storm") then
-			equip(sets.ws.rudras)
+		if spell.english:contains("Rudra's Storm") or
+		   spell.english:contains("Mandalic Stab") then
+			equip(sets.ws.singlehit)
 		elseif spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
 		end
@@ -44,6 +45,7 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
+		-- equip(sets.tp)
 		equip(sets.tp, sets.th)
 		if buffactive_sata() then
 			equip(sets.th)
@@ -53,6 +55,7 @@ end
 
 function status_change(new, old)
 	if new == "Engaged" then
+		-- equip(sets.tp)
 		equip(sets.tp, sets.th)
 		if buffactive_sata() then
 			equip(sets.th)
@@ -68,6 +71,7 @@ function buff_change(name, gain, buff_details)
 			equip(sets.th)
 		else
 			if player.status == "Engaged" then
+				-- equip(sets.tp)
 				equip(sets.tp, sets.th)
 			elseif player.status == "Idle" then
 				equip(sets.idle)

@@ -7,6 +7,7 @@ function get_sets()
 	include("all-th.lua") -- sets.th
 	include("all-stoneskin.lua") -- sets.stoneskin
 
+	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
 
@@ -18,7 +19,7 @@ function get_sets()
 end
 
 function precast(spell, position)
-	-- equip(sets.fastcast)
+	equip(sets.fastcast)
 end
 
 function midcast(spell)
