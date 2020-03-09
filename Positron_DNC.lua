@@ -9,7 +9,7 @@ function get_sets()
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/ws.lua") -- sets.ws
-	include("thf/ws-rudras.lua") -- sets.ws.rudras
+	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 
 	include("dnc/precast-steps.lua") -- sets.precast.steps
