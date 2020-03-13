@@ -10,6 +10,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Epona's Ring",
-    right_ring="Petrov Ring",
+    left_ring="Ilabrat Ring",
     back={ name="Toetapper Mantle", augments={'"Store TP"+3','"Dual Wield"+5','Weapon skill damage +1%',}},
 }

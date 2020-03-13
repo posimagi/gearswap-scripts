@@ -9,6 +9,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Epona's Ring",
-    right_ring="Petrov Ring",
+    left_ring="Ilabrat Ring",
     back={ name="Canny Cape", augments={'DEX+1','AGI+2','"Dual Wield"+5','Crit. hit damage +3%',}},
 }

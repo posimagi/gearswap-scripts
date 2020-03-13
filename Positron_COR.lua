@@ -13,7 +13,7 @@ function get_sets()
     include('cor/ws-leadensalute.lua') -- sets.ws.leadensalute
     include('cor/precast-phantomroll.lua') -- sets.precast.phantomroll
 
-	send_command('wait 5; input /lockstyle on; gs equip sets.idle') -- lockstyle
+	send_command('wait 5; input /lockstyleset 96; gs equip sets.idle') -- lockstyle
 end
 
 function precast(spell, position)

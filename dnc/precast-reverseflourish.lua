@@ -1,4 +1,4 @@
 sets.precast.reverseflourish={
     hands="Macu. Bangles +1",
-    back={ name="Toetapper Mantle", augments={'"Store TP"+2','"Dual Wield"+3','"Rev. Flourish"+25',}},
+    back={ name="Toetapper Mantle", augments={'"Store TP"+4','"Dual Wield"+1','"Rev. Flourish"+29',}},
 }

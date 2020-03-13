@@ -6,7 +6,7 @@ function get_sets()
 
 	include("sch/idle.lua") -- sets.idle
 	include("sch/fastcast.lua") -- sets.fastcast
-	include("all-th.lua") -- sets.th
+	include("sch/th.lua") -- sets.th
 
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
