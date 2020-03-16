@@ -12,8 +12,9 @@ function get_sets()
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
 
 	send_command(
-		"input /macro book 16; \
-		wait 5; \
+		"wait 5; \
+		input /macro book 16; \
+		input /macro set 1; \
 		input /lockstyle on; \
 		gs equip sets.idle")
 end

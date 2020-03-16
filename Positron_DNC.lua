@@ -24,8 +24,10 @@ function get_sets()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 
-	send_command("input /macro book 6; \
-		wait 5; \
+	send_command(
+		"wait 5; \
+		input /macro book 6; \
+		input /macro set 9; \
 		input /lockstyleset 98; \
 		gs equip sets.idle")
 end

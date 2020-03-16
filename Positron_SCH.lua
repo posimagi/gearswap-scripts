@@ -18,8 +18,9 @@ function get_sets()
 	include("all-midcast-darkness.lua") -- sets.midcast.darkness
 
 	send_command(
-		"input /macro book 20; \
-		wait 5; \
+		"wait 5; \
+		input /macro book 20; \
+		input /macro set 1; \
 		input /lockstyleset 97; \
 		gs equip sets.idle")
 end

@@ -11,8 +11,10 @@ function get_sets()
     include("run/fastcast.lua") -- sets.fastcast
     include("run/interrupt.lua") -- sets.interrupt
 
-    send_command("input /macro book 7; \
-		wait 5; \
+    send_command(
+        "wait 5; \
+        input /macro book 7; \
+        input /macro set 10; \
         input /lockstyle on; \
         gs equip sets.idle")
 end

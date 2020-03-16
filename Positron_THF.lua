@@ -16,8 +16,9 @@ function get_sets()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 
 	send_command(
-		"input /macro book 6; \
-		wait 5; \
+		"wait 5; \
+		input /macro book 6; \
+		input /macro set 10; \
 		input /lockstyleset 50; \
 		gs equip sets.idle")
 end

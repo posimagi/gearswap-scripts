@@ -25,8 +25,9 @@ function get_sets()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
 	send_command(
-		"input /macro book 3; \
-		wait 5; \
+		"wait 5; \
+		input /macro book 3; \
+		input /macro set 1; \
 		input /lockstyleset 20; \
 		gs equip sets.idle")
 end

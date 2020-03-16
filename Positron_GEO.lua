@@ -22,8 +22,9 @@ function get_sets()
     include("all-stoneskin.lua") -- sets.stoneskin
 
     send_command(
-        "input /macro book 10; \
-        wait 5; \
+        "wait 5; \
+        input /macro book 10; \
+        input /macro set 10; \
         input /lockstyleset 51; \
         gs equip sets.idle")
 end

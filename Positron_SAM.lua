@@ -7,9 +7,12 @@ function get_sets()
     include("sam/idle.lua") -- sets.idle
     include("sam/tp.lua") -- sets.tp
     include("sam/ws.lua") -- sets.ws
+    include("sam/ws-multihit.lua") -- sets.ws.multihit
 
-    send_command("input /macro book 12; \
-		wait 5; \
+    send_command(
+        "wait 5; \
+        input /macro book 12; \
+        input /macro set 1; \
 		input /lockstyleset 49; \
 		gs equip sets.idle")
 end
@@ -17,6 +20,9 @@ end
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
+        if spell.english:contains("Rana") then
+            equip(sets.ws.multihit)
+        end
     elseif spell.type == "JobAbility" then
     -- if spell.english:contains("Meditate") then
       -- equip(sets.precast.meditate)

@@ -8,7 +8,7 @@ sets.tp={
     waist="Sailfi Belt +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    left_ring="Epona's Ring",
     left_ring="Ilabrat Ring",
+    right_ring="Epona's Ring",
     back={ name="Canny Cape", augments={'DEX+1','AGI+2','"Dual Wield"+5','Crit. hit damage +3%',}},
 }

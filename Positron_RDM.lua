@@ -28,8 +28,9 @@ function get_sets()
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
 
 	send_command(
-		"input /macro book 5; \
-		wait 5; \
+		"wait 5; \
+		input /macro book 5; \
+		input /macro set 1; \
 		input /lockstyleset 40; \
 		gs equip sets.idle")
 end
