@@ -1,8 +1,8 @@
 sets.ws={
-    ammo="Charis Feather",
+    ammo="C. Palug Stone",
     head="Malignance Chapeau",
     body="Meg. Cuirie +2",
-    hands="Meg. Gloves +2",
+    hands="Maxixi Bangles +3",
     legs={ name="Horos Tights +3", augments={'Enhances "Saber Dance" effect',}},
     feet={ name="Herculean Boots", augments={'Accuracy+22','Weapon skill damage +4%','DEX+7','Attack+3',}},
     neck="Fotia Gorget",

@@ -29,7 +29,8 @@ function get_sets()
 		input /macro book 3; \
 		input /macro set 1; \
 		input /lockstyleset 20; \
-		gs equip sets.idle")
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)
@@ -37,8 +38,6 @@ function precast(spell, position)
 	if spell.type == "JobAbility" then
 		if spell.english == "Benediction" then
 			equip(sets.precast.benediction)
-		elseif spell.english == "Sublimation" then
-			equip(sets.sublimation)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
@@ -75,8 +74,7 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
-		if spell.english == "Sublimation" or
-		    buffactive_sublimation() then
+		if spell.english == "Sublimation" or buffactive_sublimation() then
 			equip(sets.sublimation)
 		end
 	elseif player.status == "Engaged" then

@@ -22,7 +22,8 @@ function get_sets()
 		input /macro book 20; \
 		input /macro set 1; \
 		input /lockstyleset 97; \
-		gs equip sets.idle")
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)
@@ -61,6 +62,9 @@ end
 
 function aftercast(spell)
 	equip(sets.idle)
+	if spell.english == "Sublimation" or buffactive_sublimation() then
+		equip(sets.sublimation)
+	end
 end
 
 function status_change(new, old)

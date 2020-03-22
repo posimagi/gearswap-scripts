@@ -1,5 +1,5 @@
 sets.tp={
-    ammo="Ginsen",
+    ammo="Yamarang",
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
     hands="Aya. Manopolas +2",

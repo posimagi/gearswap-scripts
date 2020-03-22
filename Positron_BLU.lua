@@ -9,6 +9,7 @@ function get_sets()
 
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
+	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
 
 	send_command(
@@ -25,6 +26,9 @@ end
 
 function midcast(spell)
 	equip(sets.midcast.mab)
+	if spell.english:contains("Aquaveil") then
+		equip(sets.midcast.aquaveil)
+	end
 end
 
 function aftercast(spell)

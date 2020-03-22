@@ -4,10 +4,12 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all-th.lua") -- sets.th
 
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
+	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
 	include("dnc/ws-magical.lua") -- sets.ws.magical
@@ -23,6 +25,11 @@ function get_sets()
 
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
+
+	_HYBRID = false
+	if _HYBRID then
+		sets.tp = sets.tp.hybrid
+	end
 
 	send_command(
 		"wait 5; \
@@ -66,6 +73,10 @@ function precast(spell, position)
 		equip(sets.precast.sambas)
 	elseif spell.type == "Jig" then
 		equip(sets.precast.jigs)
+	elseif spell.type == "Ninjutsu" then
+		if spell.english:contains("Utsusemi") then
+			equip(sets.precast.utsusemi)
+		end
 	end
 end
 

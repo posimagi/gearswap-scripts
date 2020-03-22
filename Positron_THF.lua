@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
+
 	include("thf/idle.lua") -- sets.idle
 	include("thf/th.lua") -- sets.th
 	include("thf/tp.lua") -- sets.tp
@@ -14,6 +16,8 @@ function get_sets()
 	include("thf/precast-flee.lua") -- sets.precast.flee
 
 	include("func/buffactive_sata.lua") -- buffactive_sata()
+
+	_TH = true
 
 	send_command(
 		"wait 5; \
@@ -36,6 +40,10 @@ function precast(spell, position)
 		if spell.english:contains("Flee") then
 			equip(sets.precast.flee)
 		end
+	elseif spell.type == "Ninjutsu" then
+		if spell.english:contains("Utsusemi") then
+			equip(sets.precast.utsusemi)
+		end
 	end
 end
 
@@ -46,18 +54,25 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
-		-- equip(sets.tp)
-		equip(sets.tp, sets.th)
-		if buffactive_sata() then
+		equip(sets.tp)
+		if _TH then
 			equip(sets.th)
 		end
+		if spell.english:contains("Sneak Attack") or spell.english:contains("Trick Attack") then
+			equip(sets.th)
+		elseif buffactive_sata() then
+			equip(sets.th)
+		end
+		
 	end
 end
 
 function status_change(new, old)
 	if new == "Engaged" then
-		-- equip(sets.tp)
-		equip(sets.tp, sets.th)
+		equip(sets.tp)
+		if _TH then
+			equip(sets.th)
+		end
 		if buffactive_sata() then
 			equip(sets.th)
 		end
@@ -72,8 +87,10 @@ function buff_change(name, gain, buff_details)
 			equip(sets.th)
 		else
 			if player.status == "Engaged" then
-				-- equip(sets.tp)
-				equip(sets.tp, sets.th)
+				equip(sets.tp)
+				if _TH then
+					equip(sets.th)
+				end
 			elseif player.status == "Idle" then
 				equip(sets.idle)
 			end

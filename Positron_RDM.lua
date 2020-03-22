@@ -11,6 +11,7 @@ function get_sets()
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/ws.lua") -- sets.ws
 
+	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all-stoneskin.lua") -- sets.stoneskin
 	
 	sets.ws.sanguineblade = {} -- placeholder
@@ -80,6 +81,10 @@ function midcast(spell)
 		equip(sets.midcast.healing)
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
+	elseif spell.type == "Ninjutsu" then
+		if spell.english:contains("Utsusemi") then
+			equip(sets.precast.utsusemi)
+		end
 	end
 end
 

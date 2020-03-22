@@ -1,4 +1,5 @@
 sets.ws={
+    ammo="C. Palug Stone",
     head="Pill. Bonnet +2",
     body="Meg. Cuirie +2",
     hands="Meg. Gloves +2",

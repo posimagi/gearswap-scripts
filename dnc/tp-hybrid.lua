@@ -1,8 +1,8 @@
-sets.tp={
+sets.tp.hybrid={
     ammo="Yamarang",
     head="Malignance Chapeau",
     body="Mummu Jacket +2",
-    hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
+    hands="Malignance Gloves",
     legs="Malignance Tights",
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
     neck="Combatant's Torque",
@@ -10,6 +10,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
-    back={ name="Toetapper Mantle", augments={'"Store TP"+3','"Dual Wield"+5','Weapon skill damage +1%',}},
+    right_ring="Defending Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

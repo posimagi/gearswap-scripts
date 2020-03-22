@@ -9,6 +9,7 @@ function get_sets()
 	include("cor/ws.lua") -- sets.ws
 
 	include("all-obi.lua") -- sets.obi
+	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("cor/ws-leadensalute.lua") -- sets.ws.leadensalute
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
@@ -39,6 +40,10 @@ function precast(spell, position)
 			equip(sets.precast.phantomroll)
 		elseif spell.english:contains("Loaded Deck") then
 			equip(sets.precast.loadeddeck)
+		end
+	elseif spell.type == "Ninjutsu" then
+		if spell.english:contains("Utsusemi") then
+			equip(sets.precast.utsusemi)
 		end
 	end
 end
