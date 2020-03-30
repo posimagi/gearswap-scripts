@@ -1,7 +1,7 @@
 sets.ws={
     ammo="C. Palug Stone",
     head="Malignance Chapeau",
-    body="Meg. Cuirie +2",
+    body={ name="Herculean Vest", augments={'Accuracy+11','Weapon skill damage +4%','STR+8','Attack+7',}},
     hands="Maxixi Bangles +3",
     legs={ name="Horos Tights +3", augments={'Enhances "Saber Dance" effect',}},
     feet={ name="Herculean Boots", augments={'Accuracy+22','Weapon skill damage +4%','DEX+7','Attack+3',}},

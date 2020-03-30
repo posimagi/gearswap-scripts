@@ -1,6 +1,6 @@
 sets.idle={
     head="Malignance Chapeau",
-    body="Mummu Jacket +2",
+    body="Meg. Cuirie +2",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
@@ -8,7 +8,7 @@ sets.idle={
     waist="Eschan Stone",
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
-    left_ring="Fortified Ring",
+    left_ring="Warden's Ring",
     right_ring="Defending Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

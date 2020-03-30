@@ -1,5 +1,4 @@
 sets.tp={
-    ammo="Jukukik Feather",
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
     hands="Aya. Manopolas +2",

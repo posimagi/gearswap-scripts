@@ -7,13 +7,16 @@ function get_sets()
 	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("thf/idle.lua") -- sets.idle
+	include("thf/domain.lua") -- sets.domain
 	include("thf/th.lua") -- sets.th
 	include("thf/tp.lua") -- sets.tp
 	include("thf/ws.lua") -- sets.ws
 	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
 
+	include("thf/precast-despoil.lua") -- sets.precast.despoil
 	include("thf/precast-flee.lua") -- sets.precast.flee
+	include("thf/precast-steal.lua") -- sets.precast.steal
 
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 
@@ -39,6 +42,10 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Flee") then
 			equip(sets.precast.flee)
+		elseif spell.english:contains("Steal") then
+			equip(sets.precast.steal)
+		elseif spell.english:contains("Despoil") then
+			equip(sets.precast.despoil)
 		end
 	elseif spell.type == "Ninjutsu" then
 		if spell.english:contains("Utsusemi") then

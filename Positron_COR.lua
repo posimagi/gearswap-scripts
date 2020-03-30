@@ -14,6 +14,7 @@ function get_sets()
 	include("cor/ws-leadensalute.lua") -- sets.ws.leadensalute
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
+	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
 	send_command(
 		"wait 5; \
@@ -40,6 +41,8 @@ function precast(spell, position)
 			equip(sets.precast.phantomroll)
 		elseif spell.english:contains("Loaded Deck") then
 			equip(sets.precast.loadeddeck)
+		elseif spell.english:contains("Wild Card") then
+			equip(sets.precast.wildcard)
 		end
 	elseif spell.type == "Ninjutsu" then
 		if spell.english:contains("Utsusemi") then

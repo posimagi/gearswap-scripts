@@ -1,7 +1,7 @@
 sets.ws={
     ammo="Knobkierrie",
     head="Mummu Bonnet +2",
-    body="Reiki Osode",
+    body="Mummu Jacket +2",
     hands="Malignance Gloves",
     legs="Hiza. Hizayoroi +2",
     feet={ name="Herculean Boots", augments={'Accuracy+22','Weapon skill damage +4%','DEX+7','Attack+3',}},

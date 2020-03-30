@@ -1,6 +1,6 @@
 sets.idle={
     head="Malignance Chapeau",
-    body="Mummu Jacket +2",
+    body="Meg. Cuirie +2",
     hands="Malignance Gloves",
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",

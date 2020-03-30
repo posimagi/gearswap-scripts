@@ -9,7 +9,7 @@ sets.tp={
     waist="Ioskeha Belt",
     left_ear="Cessance Earring",
     right_ear="Telos Earring",
-    left_ring="Flamma Ring",
-    right_ring="Hizamaru Ring",
+    left_ring="Ilabrat Ring",
+    right_ring="Flamma Ring",
     back={ name="Takaha Mantle", augments={'STR+1','"Zanshin"+1','"Store TP"+3',}},
 }

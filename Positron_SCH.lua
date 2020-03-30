@@ -17,6 +17,8 @@ function get_sets()
 	include("all-stoneskin.lua") -- sets.stoneskin
 	include("all-midcast-darkness.lua") -- sets.midcast.darkness
 
+	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
+
 	send_command(
 		"wait 5; \
 		input /macro book 20; \

@@ -9,6 +9,7 @@ sets.idle={
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Fortified Ring",
+    -- left_ring="Warden's Ring",
     right_ring="Defending Ring",
     back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
 }
