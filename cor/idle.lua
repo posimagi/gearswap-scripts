@@ -8,7 +8,7 @@ sets.idle={
     waist="Eschan Stone",
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
-    left_ring="Fortified Ring",
+    left_ring="Gelatinous Ring +1",
     right_ring="Defending Ring",
     back="Gunslinger's Cape",
 }

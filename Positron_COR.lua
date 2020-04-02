@@ -4,14 +4,14 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all/obi.lua") -- sets.obi
+	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+
 	include("cor/idle.lua") -- sets.idle
 	include("cor/tp.lua") -- sets.tp
 	include("cor/ws.lua") -- sets.ws
-
-	include("all-obi.lua") -- sets.obi
-	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
-
 	include("cor/ws-leadensalute.lua") -- sets.ws.leadensalute
+
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard

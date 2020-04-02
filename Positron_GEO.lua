@@ -4,29 +4,32 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
 
-    include("geo/idle.lua") -- sets.idle
-    include("all-th.lua") -- sets.th
+    include("all/th.lua") -- sets.th
 
+    include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
+
+    include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
+
+    include("geo/idle.lua") -- sets.idle
     include("geo/fastcast.lua") -- sets.fastcast
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 
-    -- include('geo/midcast-enfeebling.lua')           -- sets.midcast.enfeebling
-    -- include('geo/midcast-enhancing.lua')            -- sets.midcast.enhancing
-    -- include('geo/midcast-healing.lua')              -- sets.midcast.healing
-    include("geo/midcast-geomancy.lua") -- sets.midcast.geomancy
-    include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
+    -- include('geo/midcast-enhancing.lua') -- sets.midcast.enhancing
+    -- include('geo/midcast-enfeebling.lua') -- sets.midcast.enfeebling
     include("geo/midcast-geocolure.lua") -- sets.midcast.geocolure
+    include("geo/midcast-geomancy.lua") -- sets.midcast.geomancy
+    -- include('geo/midcast-healing.lua') -- sets.midcast.healing
+    include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
     include("geo/midcast-mb.lua") -- sets.midcast.mb
-
-    include("all-stoneskin.lua") -- sets.stoneskin
 
     send_command(
         "wait 5; \
         input /macro book 10; \
         input /macro set 10; \
         input /lockstyleset 51; \
-        gs equip sets.idle")
+        gs equip sets.idle"
+    )
 end
 
 function precast(spell, position)
@@ -52,7 +55,7 @@ function midcast(spell)
     elseif spell.skill == "Enhancing Magic" then
         equip(sets.midcast.enhancing)
         if spell.english:contains("Stoneskin") then
-            equip(sets.stoneskin)
+            equip(sets.midcast.stoneskin)
         end
     elseif spell.skill == "Healing Magic" then
         equip(sets.midcast.healing)

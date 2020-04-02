@@ -4,12 +4,15 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
-	include("all-stoneskin.lua") -- sets.stoneskin
+	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
+
+	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("smn/idle.lua") -- sets.idle
 	include("smn/summoning.lua") -- sets.summoning
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
+
 	include("smn/midcast-bp.lua") -- sets.midcast.bp
 
 	send_command(
@@ -17,7 +20,8 @@ function get_sets()
 		input /macro book 15; \
 		input /macro set 1; \
 		input /lockstyle on; \
-		gs equip sets.idle")
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)

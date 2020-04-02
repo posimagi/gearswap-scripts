@@ -4,11 +4,15 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
-	include("all-th.lua") -- sets.th
-	include("all-stoneskin.lua") -- sets.stoneskin
+	include("all/th.lua") -- sets.th
+	
+	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
+	
+	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
+	
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
 

@@ -9,7 +9,7 @@ sets.idle={
     waist="Eschan Stone",
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
-    left_ring="Warden's Ring",
+    left_ring="Gelatinous Ring +1",
     right_ring="Defending Ring",
     back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
 }

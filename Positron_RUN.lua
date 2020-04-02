@@ -3,38 +3,37 @@ function get_sets()
     sets.precast = {}
     sets.midcast = {}
     sets.aftercast = {}
-    
-    include("run/idle.lua") -- sets.idle
-    include("run/tp.lua") -- sets.tp
-    include("run/ws.lua") -- sets.ws
+
     include("run/enmity.lua") -- sets.enmity
     include("run/fastcast.lua") -- sets.fastcast
+    include("run/idle.lua") -- sets.idle
     include("run/interrupt.lua") -- sets.interrupt
+    include("run/tp.lua") -- sets.tp
+    include("run/ws.lua") -- sets.ws
 
     send_command(
         "wait 5; \
         input /macro book 7; \
         input /macro set 10; \
         input /lockstyle on; \
-        gs equip sets.idle")
+        gs equip sets.idle"
+    )
 end
 
 function precast(spell, position)
-    if spell.type == "WhiteMagic" or
-       spell.type == "BlueMagic" then
-		equip(sets.fastcast)
-	elseif spell.type == "WeaponSkill" then
+    if spell.type == "WhiteMagic" or spell.type == "BlueMagic" then
+        equip(sets.fastcast)
+    elseif spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
     -- if spell.english:contains("Meditate") then
-      -- equip(sets.precast.meditate)
+    -- equip(sets.precast.meditate)
     -- end
     end
 end
 
 function midcast(spell)
-    if spell.type == "BlueMagic" or
-       spell.skill == "Divine Magic" then
+    if spell.type == "BlueMagic" or spell.skill == "Divine Magic" then
         equip(sets.interrupt, sets.enmity)
     end
 end

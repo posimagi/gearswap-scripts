@@ -8,7 +8,7 @@ sets.idle={
     waist="Ioskeha Belt",
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
-    left_ring="Warden's Ring",
+    left_ring="Gelatinous Ring +1",
     right_ring="Defending Ring",
     back={ name="Takaha Mantle", augments={'STR+1','"Zanshin"+1','"Store TP"+3',}},
 }

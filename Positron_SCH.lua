@@ -4,8 +4,13 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
-	include("sch/idle.lua") -- sets.idle
+	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
+
+	include("all/midcast-darkness.lua") -- sets.midcast.darkness
+	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
+
 	include("sch/fastcast.lua") -- sets.fastcast
+	include("sch/idle.lua") -- sets.idle
 	include("sch/th.lua") -- sets.th
 
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -13,9 +18,6 @@ function get_sets()
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
 	include("sch/midcast-helix.lua") -- sets.midcast.helix
 	include("sch/midcast-mb.lua") -- sets.midcast.mb
-
-	include("all-stoneskin.lua") -- sets.stoneskin
-	include("all-midcast-darkness.lua") -- sets.midcast.darkness
 
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
@@ -41,7 +43,7 @@ function midcast(spell)
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Stoneskin") then
-			equip(sets.stoneskin)
+			equip(sets.midcast.stoneskin)
 		end
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
@@ -74,5 +76,8 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+		if buffactive_sublimation() then
+			equip(sets.sublimation)
+		end
 	end
 end

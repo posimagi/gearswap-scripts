@@ -4,10 +4,10 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
-	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
+	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
-	include("thf/idle.lua") -- sets.idle
 	include("thf/domain.lua") -- sets.domain
+	include("thf/idle.lua") -- sets.idle
 	include("thf/th.lua") -- sets.th
 	include("thf/tp.lua") -- sets.tp
 	include("thf/ws.lua") -- sets.ws
@@ -27,14 +27,14 @@ function get_sets()
 		input /macro book 6; \
 		input /macro set 10; \
 		input /lockstyleset 50; \
-		gs equip sets.idle")
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains("Rudra's Storm") or
-		   spell.english:contains("Mandalic Stab") then
+		if spell.english:contains("Rudra's Storm") or spell.english:contains("Mandalic Stab") then
 			equip(sets.ws.singlehit)
 		elseif spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
@@ -70,7 +70,6 @@ function aftercast(spell)
 		elseif buffactive_sata() then
 			equip(sets.th)
 		end
-		
 	end
 end
 

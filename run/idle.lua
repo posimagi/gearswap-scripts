@@ -8,7 +8,7 @@ sets.idle={
     neck="Twilight Torque",
     left_ear="Odnowa Earring",
     right_ear="Odnowa Earring +1",
-    left_ring="Fortified Ring",
+    left_ring="Gelatinous Ring +1",
     right_ring="Defending Ring",
     back={ name="Evasionist's Cape", augments={'Enmity+7','"Embolden"+10',}},
 }

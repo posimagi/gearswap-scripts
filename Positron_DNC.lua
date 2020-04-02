@@ -4,8 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
-	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
-	include("all-th.lua") -- sets.th
+	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+	include("all/th.lua") -- sets.th
 
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
@@ -14,17 +14,18 @@ function get_sets()
 	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 
-	include("dnc/precast-steps.lua") -- sets.precast.steps
-	include("dnc/precast-waltzes.lua") -- sets.precast.waltzes
-	include("dnc/precast-sambas.lua") -- sets.precast.sambas
+	include("dnc/climacticflourish.lua") -- sets.climacticflourish
+	include("dnc/strikingflourish.lua") -- sets.strikingflourish
+
 	include("dnc/precast-jigs.lua") -- sets.precast.jigs
 	-- include("dnc/precast-nofootrise.lua") -- sets.precast.nofootrise
 	include("dnc/precast-reverseflourish.lua") -- sets.precast.reverseflourish
-	include("dnc/strikingflourish.lua") -- sets.strikingflourish
-	include("dnc/climacticflourish.lua") -- sets.climacticflourish
+	include("dnc/precast-sambas.lua") -- sets.precast.sambas
+	include("dnc/precast-steps.lua") -- sets.precast.steps
+	include("dnc/precast-waltzes.lua") -- sets.precast.waltzes
 
-	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
+	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 
 	_HYBRID = false
 	if _HYBRID then
@@ -36,7 +37,8 @@ function get_sets()
 		input /macro book 6; \
 		input /macro set 9; \
 		input /lockstyleset 98; \
-		gs equip sets.idle")
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)

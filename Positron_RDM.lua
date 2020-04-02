@@ -4,6 +4,15 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all/impact.lua") -- sets.impact
+
+	include("all/precast-enhancing.lua") -- sets.precast.enhancing
+	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
+
+	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+
+	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
+
 	include("rdm/enspell.lua") -- sets.enspell
 	include("rdm/fastcast.lua") -- sets.fastcast
 	include("rdm/idle.lua") -- sets.idle
@@ -11,20 +20,16 @@ function get_sets()
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/ws.lua") -- sets.ws
 
-	include("all-precast-utsusemi.lua") -- sets.precast.utsusemi
-	include("all-stoneskin.lua") -- sets.stoneskin
-	
-	sets.ws.sanguineblade = {} -- placeholder
-	-- include('rdm-ws-sanguineblade.lua')      -- sets.ws.sanguineblade
-
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
-	include("rdm/precast-enhancing.lua") -- sets.precast.enhancing
 
 	include("rdm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("rdm/midcast-mb.lua") -- sets.midcast.mb
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
+
+	sets.ws.sanguineblade = {} -- placeholder
+	-- include('rdm-ws-sanguineblade.lua')      -- sets.ws.sanguineblade
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
 
@@ -33,11 +38,11 @@ function get_sets()
 		input /macro book 5; \
 		input /macro set 1; \
 		input /lockstyleset 40; \
-		gs equip sets.idle")
+		gs equip sets.idle"
+	)
 end
 
 function sub_job_change(new, old)
-
 end
 
 function precast(spell, position)
@@ -54,8 +59,13 @@ function precast(spell, position)
 		equip(sets.fastcast)
 		if spell.skill == "Enhancing Magic" then
 			equip(sets.precast.enhancing)
-		elseif spell.english:contains("Impact") then
-			equip(sets.impact)
+			if spell.english:contains("Stoneskin") then
+				equip(sets.precast.stoneskin)
+			end
+		elseif spell.skill == "Elemental Magic" then
+			if spell.english:contains("Impact") then
+				equip(sets.impact)
+			end
 		end
 	end
 end
@@ -73,7 +83,7 @@ function midcast(spell)
 		elseif spell.english:contains("En") then
 			equip(sets.midcast.enhancingskill)
 		elseif spell.english:contains("Stoneskin") then
-			equip(sets.stoneskin)
+			equip(sets.midcast.stoneskin)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)
@@ -81,6 +91,9 @@ function midcast(spell)
 		equip(sets.midcast.healing)
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
+		if spell.english:contains("Impact") then
+			equip(sets.impact)
+		end
 	elseif spell.type == "Ninjutsu" then
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
