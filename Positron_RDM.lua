@@ -22,9 +22,11 @@ function get_sets()
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
 
+	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("rdm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
+	include("rdm/midcast-healing.lua") -- sets.midcast.healing
 	include("rdm/midcast-mb.lua") -- sets.midcast.mb
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
 
@@ -89,6 +91,9 @@ function midcast(spell)
 		equip(sets.midcast.enfeebling)
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
+		if spell.name:contains("Cursna") then
+			equip(sets.midcast.cursna)
+		end
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
 		if spell.english:contains("Impact") then

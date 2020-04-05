@@ -13,6 +13,7 @@ function get_sets()
 	include("sch/idle.lua") -- sets.idle
 	include("sch/th.lua") -- sets.th
 
+	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
@@ -47,6 +48,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
+		if spell.name:contains("Cursna") then
+			equip(sets.midcast.cursna)
+		end
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
 		if spell.english:contains("helix") then

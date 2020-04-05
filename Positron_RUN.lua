@@ -26,9 +26,7 @@ function precast(spell, position)
     elseif spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
-    -- if spell.english:contains("Meditate") then
-    -- equip(sets.precast.meditate)
-    -- end
+        equip(sets.enmity)
     end
 end
 
