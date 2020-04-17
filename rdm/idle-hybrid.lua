@@ -1,9 +1,9 @@
-sets.idle={
+sets.idle.hybrid={
     ammo="Homiliary",
     head={ name="Viti. Chapeau +2", augments={'Enhances "Dia III" effect','Enhances "Slow II" effect',}},
     body="Shamash Robe",
     hands="Malignance Gloves",
-    legs="Carmine Cuisses +1",
+    legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Twilight Torque",
     waist="Eschan Stone",

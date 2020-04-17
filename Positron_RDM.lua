@@ -16,6 +16,7 @@ function get_sets()
 	include("rdm/enspell.lua") -- sets.enspell
 	include("rdm/fastcast.lua") -- sets.fastcast
 	include("rdm/idle.lua") -- sets.idle
+	include("rdm/idle-hybrid.lua") -- sets.idle.hybrid
 	include("rdm/th.lua") -- sets.th
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/ws.lua") -- sets.ws
@@ -34,6 +35,11 @@ function get_sets()
 	-- include('rdm-ws-sanguineblade.lua')      -- sets.ws.sanguineblade
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
+
+	_HYBRID = false
+	if _HYBRID then
+		sets.idle = sets.idle.hybrid
+	end
 
 	send_command(
 		"wait 5; \

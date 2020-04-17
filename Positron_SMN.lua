@@ -2,6 +2,7 @@ function get_sets()
 	sets = {}
 	sets.precast = {}
 	sets.midcast = {}
+	sets.petmidcast = {}
 	sets.aftercast = {}
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -13,7 +14,7 @@ function get_sets()
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
 
-	include("smn/midcast-bp.lua") -- sets.midcast.bp
+	include("smn/petmidcast-bp.lua") -- sets.petmidcast.bp
 
 	send_command(
 		"wait 5; \
@@ -33,12 +34,18 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+end
+
+function pet_midcast(spell)
 	if spell.type == "BloodPactRage" then
-		equip(sets.midcast.bp)
+		equip(sets.petmidcast.bp)
 	end
 end
 
 function aftercast(spell)
+end
+
+function pet_aftercast(spell)
 	equip(sets.idle)
 end
 

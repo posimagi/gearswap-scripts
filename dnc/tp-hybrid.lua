@@ -1,7 +1,7 @@
 sets.tp.hybrid={
     ammo="Yamarang",
     head="Malignance Chapeau",
-    body="Mummu Jacket +2",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},

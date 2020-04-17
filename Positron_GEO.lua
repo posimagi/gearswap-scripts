@@ -73,4 +73,7 @@ function aftercast(spell)
 end
 
 function status_change(new, old)
+    if new == "Idle" then
+        equip(sets.idle)
+    end
 end

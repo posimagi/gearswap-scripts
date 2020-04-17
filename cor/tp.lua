@@ -1,6 +1,6 @@
 sets.tp={
     head="Malignance Chapeau",
-    body="Mummu Jacket +2",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",

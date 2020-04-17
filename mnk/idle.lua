@@ -1,7 +1,7 @@
 sets.idle={
     ammo="Ginsen",
     head="Malignance Chapeau",
-    body="Emet Harness",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Crier's Gaiters",

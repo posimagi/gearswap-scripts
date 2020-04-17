@@ -1,5 +1,6 @@
 sets.midcast.enhancing={
     ammo="Hydrocera",
+    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
     body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
     hands="Arbatel Bracers +1",
     legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},

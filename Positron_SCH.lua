@@ -11,6 +11,7 @@ function get_sets()
 
 	include("sch/fastcast.lua") -- sets.fastcast
 	include("sch/idle.lua") -- sets.idle
+	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
 
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna

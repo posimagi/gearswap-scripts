@@ -1,7 +1,7 @@
 sets.tp={
     ammo="Yamarang",
     head="Malignance Chapeau",
-    body="Mummu Jacket +2",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
@@ -10,6 +10,7 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
+    -- right_ring="Epona's Ring",
+    right_ring="Apate Ring",
     back={ name="Toetapper Mantle", augments={'"Store TP"+3','"Dual Wield"+5','Weapon skill damage +1%',}},
 }

@@ -1,6 +1,6 @@
 sets.idle={
     head="Malignance Chapeau",
-    body="Meg. Cuirie +2",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Jute Boots +1",
