@@ -1,5 +1,5 @@
 sets.idle={
-    ammo="Homiliary",
+    ammo="Staunch Tathlum",
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
     hands="Aya. Manopolas +2",

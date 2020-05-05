@@ -3,7 +3,7 @@ sets.idle={
     body="Con. Doublet +1",
     hands={ name="Merlinic Dastanas", augments={'Pet: Accuracy+14 Pet: Rng. Acc.+14','Blood Pact Dmg.+9','Pet: DEX+9','Pet: Mag. Acc.+7','Pet: "Mag.Atk.Bns."+13',}},
     legs="Volte Brais",
-    feet={ name="Apogee Pumps", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7',}},
+    feet={ name="Apogee Pumps +1", augments={'Pet: Attack+25','Pet: "Mag.Atk.Bns."+25','Blood Pact Dmg.+8',}},
     neck="Adad Amulet",
     waist="Incarnation Sash",
     left_ear="Gelos Earring",

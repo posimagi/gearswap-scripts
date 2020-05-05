@@ -1,11 +1,12 @@
 sets.idle={
+    ammo="Yamarang",
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Jute Boots +1",
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Flume Belt",
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Gelatinous Ring +1",

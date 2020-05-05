@@ -16,7 +16,7 @@ function get_sets()
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 
     -- include('geo/midcast-enhancing.lua') -- sets.midcast.enhancing
-    -- include('geo/midcast-enfeebling.lua') -- sets.midcast.enfeebling
+    include('geo/midcast-enfeebling.lua') -- sets.midcast.enfeebling
     include("geo/midcast-geocolure.lua") -- sets.midcast.geocolure
     include("geo/midcast-geomancy.lua") -- sets.midcast.geomancy
     -- include('geo/midcast-healing.lua') -- sets.midcast.healing

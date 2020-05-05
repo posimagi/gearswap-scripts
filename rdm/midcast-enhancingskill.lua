@@ -1,5 +1,5 @@
 sets.midcast.enhancingskill={
-    hands={ name="Viti. Gloves +1", augments={'Enhances "Phalanx II" effect',}},
+    hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
     legs="Atrophy Tights +3",
     feet="Leth. Houseaux +1",
     neck="Incanter's Torque",

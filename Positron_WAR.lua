@@ -47,6 +47,8 @@ end
 function status_change(new, old)
     if world.zone:contains("Abyssea") then
         disable("head", "neck", "waist")
+    else
+        enable("head", "neck", "waist")
     end
     if new == "Engaged" then
         equip(sets.tp)

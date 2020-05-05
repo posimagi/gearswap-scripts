@@ -1,6 +1,6 @@
 sets.midcast.enfeebling={
     ammo="Regal Gem",
-    head={ name="Viti. Chapeau +2", augments={'Enhances "Dia III" effect','Enhances "Slow II" effect',}},
+    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body="Atrophy Tabard +3",
     hands="Leth. Gantherots +1",
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},

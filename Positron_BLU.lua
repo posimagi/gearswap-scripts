@@ -3,8 +3,6 @@ function get_sets()
 	sets.precast = {}
 	sets.midcast = {}
 	sets.aftercast = {}
-
-	include("all/th.lua") -- sets.th
 	
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 	
@@ -12,6 +10,7 @@ function get_sets()
 
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
+	include("blu/th.lua") -- sets.th
 	
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
@@ -32,6 +31,8 @@ function midcast(spell)
 	equip(sets.midcast.mab)
 	if spell.english:contains("Aquaveil") then
 		equip(sets.midcast.aquaveil)
+	elseif spell.english:contains("Dream Flower") then
+		equip(sets.th)
 	end
 end
 

@@ -1,6 +1,6 @@
 sets.midcast.healing={
     ammo="Hydrocera",
-    legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
+    legs="Atrophy Tights +3",
     feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     neck="Incanter's Torque",
     waist="Rumination Sash",

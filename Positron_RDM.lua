@@ -20,6 +20,7 @@ function get_sets()
 	include("rdm/th.lua") -- sets.th
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/ws.lua") -- sets.ws
+	include("rdm/ws-magical.lua") -- sets.ws.magical
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
 
@@ -29,6 +30,7 @@ function get_sets()
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("rdm/midcast-healing.lua") -- sets.midcast.healing
 	include("rdm/midcast-mb.lua") -- sets.midcast.mb
+	include("rdm/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	sets.ws.sanguineblade = {} -- placeholder
@@ -58,6 +60,8 @@ function precast(spell, position)
 		equip(sets.ws)
 		if spell.english:contains("Sanguine Blade") then
 			equip(sets.ws.sanguineblade)
+		elseif spell.english:contains("Aeolian Edge") then
+			equip(sets.ws.magical)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Chainspell") then
@@ -90,6 +94,10 @@ function midcast(spell)
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("En") then
 			equip(sets.midcast.enhancingskill)
+		elseif spell.english:contains("Gain") then
+			equip(sets.midcast.enhancingskill)
+		elseif spell.english:contains("Phalanx") then
+			equip(sets.midcast.enhancingskill, sets.midcast.phalanx)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		end

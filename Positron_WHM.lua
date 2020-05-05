@@ -5,6 +5,7 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("all/impact.lua") -- sets.impact
+	include("all/obi.lua") -- sets.obi
 	include("all/th.lua") -- sets.th
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
@@ -31,7 +32,7 @@ function get_sets()
 
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
-	_HYBRID = false
+	_HYBRID = true
 	if _HYBRID then
 		sets.idle = sets.idle.hybrid
 	end
@@ -72,6 +73,9 @@ function midcast(spell)
 		equip(sets.midcast.healing)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
+		end
+		if world.weather_element == "Light" then
+			equip(sets.obi)
 		end
 	elseif spell.skill == "Enfeebling Magic" then
 		equip(sets.midcast.enfeebling)
