@@ -9,6 +9,6 @@ sets.tp={
     waist="Reiki Yotai",
     left_ear="Suppanomimi",
     right_ear="Sherida Earring",
-    left_ring="Ayanmo Ring",
+    left_ring="Ilabrat Ring",
     right_ring="Jhakri Ring",
 }

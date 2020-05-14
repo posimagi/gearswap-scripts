@@ -2,9 +2,7 @@ function get_sets()
     sets = {}
     sets.precast = {}
     sets.midcast = {}
-    sets.aftercast = {}
-
-    include("all/th.lua") -- sets.th
+    sets.aftercast = {}    
 
     include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
@@ -12,6 +10,7 @@ function get_sets()
 
     include("geo/idle.lua") -- sets.idle
     include("geo/fastcast.lua") -- sets.fastcast
+    include("geo/th.lua") -- sets.th
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 

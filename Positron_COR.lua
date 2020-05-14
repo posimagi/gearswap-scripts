@@ -10,7 +10,8 @@ function get_sets()
 	include("cor/idle.lua") -- sets.idle
 	include("cor/tp.lua") -- sets.tp
 	include("cor/ws.lua") -- sets.ws
-	include("cor/ws-leadensalute.lua") -- sets.ws.leadensalute
+	include("cor/ws-dark.lua") -- sets.ws.dark
+	include("cor/ws-magical.lua") -- sets.ws.magical
 
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
@@ -29,10 +30,13 @@ function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		if spell.english:contains("Leaden Salute") then
-			equip(sets.ws.leadensalute)
+			equip(sets.ws.magical, sets.ws.dark)
 			if world.weather_element == "Dark" then
 				equip(sets.obi)
 			end
+		elseif spell.english:contains("Wildfire") or
+			   spell.english:contains("Aeolian Edge") then
+			equip(sets.ws.magical)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)

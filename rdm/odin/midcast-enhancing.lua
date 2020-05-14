@@ -1,0 +1,16 @@
+sets.midcast.enhancing={
+    main="Daybreak",
+    sub="Ammurapi Shield",
+    ammo="Regal Gem",
+    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
+    body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
+    hands="Atrophy Gloves +3",
+    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +5',}},
+    feet="Leth. Houseaux +1",
+    neck="Incanter's Torque",
+    waist="Embla Sash",
+    left_ear="Regal Earring",
+    left_ring="Lebeche Ring",
+    right_ring="Kishar Ring",
+    back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +7','Enha.mag. skill +9','Mag. Acc.+2','Enh. Mag. eff. dur. +18',}},
+}

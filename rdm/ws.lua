@@ -8,7 +8,7 @@ sets.ws={
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Sherida Earring",
-    left_ring="Ayanmo Ring",
-    right_ring="Jhakri Ring",
+    left_ring="Ilabrat Ring",
+    right_ring="Rufescent Ring",
     back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 }

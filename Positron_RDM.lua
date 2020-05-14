@@ -38,6 +38,14 @@ function get_sets()
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
 
+	_ODIN = false
+	if _ODIN then
+		include("rdm/odin/midcast-enfeebling.lua") -- sets.midcast.enfeebling
+		include("rdm/odin/midcast-enhancing.lua") -- sets.midcast.enhancing
+		include("rdm/odin/midcast-healing.lua") -- sets.midcast.healing
+		include("rdm/odin/tp.lua") -- sets.tp
+	end
+
 	_HYBRID = false
 	if _HYBRID then
 		sets.idle = sets.idle.hybrid

@@ -5,7 +5,7 @@ sets.idle={
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     legs="Volte Brais",
     feet="Crier's Gaiters",
-    neck="Twilight Torque",
+    neck="Loricate Torque +1",
     waist="Eschan Stone",
     left_ear="Etiolation Earring",
     right_ear="Eabani Earring",

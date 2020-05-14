@@ -5,9 +5,9 @@ sets.tp={
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",
     neck="Combatant's Torque",
-    waist="Sailfi Belt +1",
+    waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
-    left_ring="Mummu Ring",
+    left_ring="Ilabrat Ring",
     right_ring="Epona's Ring",
 }
