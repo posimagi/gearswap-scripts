@@ -1,4 +1,5 @@
 sets.idle={
+    ammo="Yamarang",
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",

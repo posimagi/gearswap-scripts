@@ -5,7 +5,7 @@ sets.midcast.enhancing={
     head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
     body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
     hands="Atrophy Gloves +3",
-    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +5',}},
+    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
     feet="Leth. Houseaux +1",
     neck="Incanter's Torque",
     waist="Embla Sash",

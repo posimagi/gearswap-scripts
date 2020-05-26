@@ -1,7 +1,7 @@
 sets.ws={
     ammo="C. Palug Stone",
-    head="Pill. Bonnet +2",
-    body={ name="Herculean Vest", augments={'Accuracy+9','Weapon skill damage +3%','DEX+13','Attack+5',}},
+    head="Pill. Bonnet +3",
+    body={ name="Herculean Vest", augments={'Attack+27','Weapon skill damage +4%','DEX+3','Accuracy+11',}},
     hands="Meg. Gloves +2",
     legs="Mummu Kecks +2",
     feet={ name="Herculean Boots", augments={'Accuracy+22','Weapon skill damage +4%','DEX+7','Attack+3',}},

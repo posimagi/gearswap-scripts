@@ -8,6 +8,6 @@ sets.midcast.mb={
     waist="Eschan Stone",
     left_ear="Regal Earring",
     right_ear="Barkaro. Earring",
-    left_ring="Jhakri Ring",
+    left_ring="Freke Ring",
     right_ring="Mujin Band",
 }

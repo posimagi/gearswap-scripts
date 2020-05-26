@@ -3,7 +3,7 @@ sets.midcast.enfeebling={
     hands="Inyan. Dastanas +2",
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
     neck="Incanter's Torque",
-    waist="Rumination Sash",
+    waist="Luminary Sash",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Vertigo Ring",

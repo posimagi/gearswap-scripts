@@ -32,7 +32,7 @@ function get_sets()
 
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
-	_HYBRID = true
+	_HYBRID = false
 	if _HYBRID then
 		sets.idle = sets.idle.hybrid
 	end

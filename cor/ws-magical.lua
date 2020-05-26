@@ -6,7 +6,7 @@ sets.ws.magical={
     feet={ name="Lanun Bottes +2", augments={'Enhances "Wild Card" effect',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",
-    left_ear="Crematio Earring",
+    left_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Acumen Ring",
 }

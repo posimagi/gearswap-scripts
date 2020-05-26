@@ -6,7 +6,7 @@ sets.midcast.enfeebling={
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
     feet="Jhakri Pigaches +2",
     neck="Incanter's Torque",
-    waist="Rumination Sash",
+    waist="Luminary Sash",
     left_ear="Regal Earring",
     right_ear="Barkaro. Earring",
     left_ring="Jhakri Ring",
