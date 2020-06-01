@@ -1,7 +1,7 @@
 sets.idle={
     ammo="Staunch Tathlum",
     head="Aya. Zucchetto +2",
-    body="Ayanmo Corazza +2",
+    body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
     hands="Aya. Manopolas +2",
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Erilaz Greaves +1",

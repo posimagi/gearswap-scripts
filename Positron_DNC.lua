@@ -7,6 +7,7 @@ function get_sets()
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/th.lua") -- sets.th
 
+	include("dnc/fastcast.lua") -- sets.fastcast
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
@@ -76,6 +77,7 @@ function precast(spell, position)
 	elseif spell.type == "Jig" then
 		equip(sets.precast.jigs)
 	elseif spell.type == "Ninjutsu" then
+		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
 		end

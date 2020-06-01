@@ -22,10 +22,13 @@ function get_sets()
 	include("rdm/ws-magical.lua") -- sets.ws.magical
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
+	include("rdm/precast-enfeebling.lua") -- sets.precast.enfeebling
 
 	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
-	include("rdm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
+	include("rdm/midcast-enfeeblingaccuracy.lua") -- sets.midcast.enfeeblingaccuracy
+	include("rdm/midcast-enfeeblingpotency.lua") -- sets.midcast.enfeeblingpotency
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
+	include("rdm/midcast-enhancingself.lua") -- sets.midcast.enhancingself
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("rdm/midcast-healing.lua") -- sets.midcast.healing
 	include("rdm/midcast-mb.lua") -- sets.midcast.mb
@@ -33,6 +36,33 @@ function get_sets()
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
+
+	_VARIABLE_POTENCY = T{
+		"Addle",
+		"Addle II",
+		"Blind",
+		"Blind II",
+		"Distract",
+		"Distract II",
+		"Distract III",
+		"Frazzle",
+		"Frazzle II",
+		"Frazzle III",
+		"Paralyze",
+		"Paralyze II",
+		"Poison",
+		"Poison II",
+		"Poisonga",
+		"Slow",
+		"Slow II"
+	}
+	
+	_MAGICAL_WS = T{
+		"Aeolian Edge",
+		"Red Lotus Blade",
+		"Sanguine Blade",
+		"Seraph Blade",
+	}
 
 	_ODIN = false
 	if _ODIN then
@@ -62,9 +92,7 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains("Aeolian Edge") or
-		   spell.english:contains("Seraph Blade") or
-		   spell.english:contains("Sanguine Blade") then
+		if _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 		end
 	elseif spell.type == "JobAbility" then
@@ -73,7 +101,9 @@ function precast(spell, position)
 		end
 	else
 		equip(sets.fastcast)
-		if spell.skill == "Enhancing Magic" then
+		if spell.skill == "Enfeebling Magic" then
+			equip(sets.precast.enfeebling)
+		elseif spell.skill == "Enhancing Magic" then
 			equip(sets.precast.enhancing)
 			if spell.english:contains("Stoneskin") then
 				equip(sets.precast.stoneskin)
@@ -88,12 +118,19 @@ end
 
 function midcast(spell)
 	if spell.skill == "Enfeebling Magic" then
-		equip(sets.midcast.enfeebling)
+		if _VARIABLE_POTENCY:contains(spell.name) then
+			equip(sets.midcast.enfeeblingpotency)
+		else
+			equip(sets.midcast.enfeeblingaccuracy)
+		end
 		if spell.english:contains("Dia") then
 			equip(sets.th)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
+		if spell.target.type == "SELF" then
+			equip(sets.midcast.enhancingself)
+		end
 		if spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("En") then
@@ -102,7 +139,7 @@ function midcast(spell)
 			equip(sets.midcast.enhancingskill)
 		elseif spell.english:contains("Phalanx") then
 			equip(sets.midcast.enhancingskill)
-			if spell.targets['Self'] then
+			if spell.target.type == "SELF" then
 				equip(sets.midcast.phalanx)
 			end
 		elseif spell.english:contains("Stoneskin") then

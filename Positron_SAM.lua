@@ -14,7 +14,7 @@ function get_sets()
         input /macro book 12; \
         input /macro set 1; \
 		input /lockstyleset 49; \
-		gs equip sets.idle")
+        gs equip sets.idle")
 end
 
 function precast(spell, position)

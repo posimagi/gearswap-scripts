@@ -4,7 +4,7 @@ sets.tp.hybrid={
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
-    feet="Malignance Boots",
+    feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
     neck="Loricate Torque +1",
     waist="Reiki Yotai",
     left_ear="Telos Earring",

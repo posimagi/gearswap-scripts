@@ -4,6 +4,7 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
 
+    include("run/engaged.lua") -- sets.engaged
     include("run/enmity.lua") -- sets.enmity
     include("run/fastcast.lua") -- sets.fastcast
     include("run/idle.lua") -- sets.idle
@@ -39,14 +40,14 @@ function get_sets()
 
     _OFFENSIVE = false
     if _OFFENSIVE then
-        include("run/tp-offensive.lua") -- sets.tp
+        sets.engaged = sets.tp
     end
 
     send_command(
         "wait 5; \
         input /macro book 7; \
         input /macro set 10; \
-        input /lockstyle on; \
+        input /lockstyleset 94; \
         gs equip sets.idle"
     )
 end
@@ -77,13 +78,13 @@ function aftercast(spell)
     if player.status == "Idle" then
         equip(sets.idle)
     elseif player.status == "Engaged" then
-        equip(sets.idle, sets.tp)
+        equip(sets.idle, sets.engaged)
     end
 end
 
 function status_change(new, old)
     if new == "Engaged" then
-        equip(sets.idle, sets.tp)
+        equip(sets.idle, sets.engaged)
     elseif new == "Idle" then
         equip(sets.idle)
     end
