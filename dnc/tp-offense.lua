@@ -1,16 +1,15 @@
-sets.tp={
+sets.tp.offense={
     ammo="Yamarang",
     head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
+    body={ name="Horos Casaque +3", augments={'Enhances "No Foot Rise" effect',}},
+    hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
     legs="Malignance Tights",
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
     neck="Combatant's Torque",
-    waist="Reiki Yotai",
+    waist="Windbuffet Belt +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
-    -- right_ring="Epona's Ring",
-    right_ring="Petrov Ring",
+    right_ring="Epona's Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

@@ -8,6 +8,6 @@ sets.tp={
     waist="Eschan Stone",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
-    left_ring="Apate Ring",
+    left_ring="Ilabrat Ring",
     right_ring="Petrov Ring",
 }

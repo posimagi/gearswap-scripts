@@ -8,5 +8,5 @@ sets.ws.magical={
     waist="Eschan Stone",
     left_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Acumen Ring",
+    right_ring="Dingir Ring",
 }

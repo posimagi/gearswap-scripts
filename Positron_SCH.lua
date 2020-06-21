@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all/obi.lua") -- sets.obi
+
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
 	include("all/midcast-darkness.lua") -- sets.midcast.darkness
@@ -54,6 +56,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
+		if spell.element == world.weather_element then
+			equip(sets.obi)
+		end
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
 			if spell.english:contains("Noctohelix") then

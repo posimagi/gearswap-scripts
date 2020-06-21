@@ -25,7 +25,7 @@ function get_sets()
 	send_command(
 		"wait 5; \
 		input /macro book 6; \
-		input /macro set 10; \
+		input /macro set 2; \
 		input /lockstyleset 50; \
 		gs equip sets.idle"
 	)

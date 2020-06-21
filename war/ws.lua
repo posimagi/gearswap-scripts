@@ -9,7 +9,7 @@ sets.ws={
     waist="Ioskeha Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Flamma Ring",
+    left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
     back="Agema Cape",
 }

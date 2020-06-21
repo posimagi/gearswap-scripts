@@ -9,7 +9,7 @@ sets.tp={
     waist="Black Belt",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    left_ring="Epona's Ring",
-    right_ring="Hizamaru Ring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Epona's Ring",
     back="Agema Cape",
 }

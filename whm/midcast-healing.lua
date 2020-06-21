@@ -1,5 +1,5 @@
 sets.midcast.healing={
-    ammo="Hydrocera",
+    ammo="Staunch Tathlum",
     head="Ebers Cap +1",
     body="Ebers Bliaud +1",
     hands="Theophany Mitts +2",

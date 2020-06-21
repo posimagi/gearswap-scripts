@@ -18,12 +18,15 @@ function get_sets()
 	include("rdm/idle-hybrid.lua") -- sets.idle.hybrid
 	include("rdm/th.lua") -- sets.th
 	include("rdm/tp.lua") -- sets.tp
+	include("rdm/tp-hybrid.lua") -- sets.tp.hybrid
 	include("rdm/ws.lua") -- sets.ws
 	include("rdm/ws-magical.lua") -- sets.ws.magical
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
 	include("rdm/precast-enfeebling.lua") -- sets.precast.enfeebling
 
+	include("rdm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
+	include("rdm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("rdm/midcast-enfeeblingaccuracy.lua") -- sets.midcast.enfeeblingaccuracy
 	include("rdm/midcast-enfeeblingpotency.lua") -- sets.midcast.enfeeblingpotency
@@ -72,9 +75,16 @@ function get_sets()
 		include("rdm/odin/tp.lua") -- sets.tp
 	end
 
+	_LILITH = false
+	if _LILITH then
+		include("rdm/lilith/tp.lua") -- sets.tp
+		sets.enspell = sets.tp
+	end
+
 	_HYBRID = false
 	if _HYBRID then
 		sets.idle = sets.idle.hybrid
+		sets.tp = sets.tp.hybrid
 	end
 
 	send_command(
@@ -133,6 +143,10 @@ function midcast(spell)
 		end
 		if spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
+		elseif spell.english:contains("Aquaveil") then
+			equip(sets.midcast.enhancingskill, sets.midcast.aquaveil)
+		elseif spell.english:contains("Bar") then
+			equip(sets.midcast.enhancingskill, sets.midcast.barspell)
 		elseif spell.english:contains("En") then
 			equip(sets.midcast.enhancingskill)
 		elseif spell.english:contains("Gain") then

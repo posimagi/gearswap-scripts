@@ -9,6 +9,8 @@ function get_sets()
     include("sam/ws.lua") -- sets.ws
     include("sam/ws-multihit.lua") -- sets.ws.multihit
 
+    include("sam/precast-meditate.lua") -- sets.precast.meditate
+
     send_command(
         "wait 5; \
         input /macro book 12; \
@@ -24,9 +26,9 @@ function precast(spell, position)
             equip(sets.ws.multihit)
         end
     elseif spell.type == "JobAbility" then
-    -- if spell.english:contains("Meditate") then
-      -- equip(sets.precast.meditate)
-    -- end
+        if spell.english:contains("Meditate") then
+            equip(sets.precast.meditate)
+        end
     end
 end
 

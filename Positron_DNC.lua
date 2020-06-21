@@ -11,6 +11,7 @@ function get_sets()
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
+	include("dnc/tp-offense.lua") -- sets.tp.offense
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
 	include("dnc/ws-magical.lua") -- sets.ws.magical
@@ -19,7 +20,7 @@ function get_sets()
 	include("dnc/strikingflourish.lua") -- sets.strikingflourish
 
 	include("dnc/precast-jigs.lua") -- sets.precast.jigs
-	-- include("dnc/precast-nofootrise.lua") -- sets.precast.nofootrise
+	include("dnc/precast-nofootrise.lua") -- sets.precast.nofootrise
 	include("dnc/precast-reverseflourish.lua") -- sets.precast.reverseflourish
 	include("dnc/precast-sambas.lua") -- sets.precast.sambas
 	include("dnc/precast-steps.lua") -- sets.precast.steps
@@ -27,6 +28,11 @@ function get_sets()
 
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
+
+	_OFFENSE = false
+	if _OFFENSE then
+		sets.tp = sets.tp.offense
+	end
 
 	_HYBRID = false
 	if _HYBRID then
@@ -36,7 +42,7 @@ function get_sets()
 	send_command(
 		"wait 5; \
 		input /macro book 6; \
-		input /macro set 9; \
+		input /macro set 10; \
 		input /lockstyleset 98; \
 		gs equip sets.idle"
 	)
@@ -58,7 +64,7 @@ function precast(spell, position)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("No Foot Rise") then
-		-- equip(sets.precast.nofootrise)
+			equip(sets.precast.nofootrise)
 		end
 	elseif spell.type:contains("Flourish") then
 		if spell.english:contains("Reverse") then

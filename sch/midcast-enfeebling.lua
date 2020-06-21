@@ -1,5 +1,5 @@
 sets.midcast.enfeebling={
-    ammo="Hydrocera",
+    ammo="Pemphredo Tathlum",
     head="Jhakri Coronal +2",
     body="Jhakri Robe +2",
     hands="Jhakri Cuffs +2",
@@ -8,7 +8,7 @@ sets.midcast.enfeebling={
     neck="Incanter's Torque",
     waist="Luminary Sash",
     left_ear="Regal Earring",
-    right_ear="Barkaro. Earring",
+    right_ear="Malignance Earring",
     left_ring="Jhakri Ring",
     right_ring="Kishar Ring",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},

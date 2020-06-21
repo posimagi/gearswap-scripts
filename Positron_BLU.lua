@@ -14,6 +14,7 @@ function get_sets()
 	
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
+	include("blu/midcast-refresh.lua") -- sets.midcast.refresh
 
 	send_command(
 		"wait 5; \
@@ -31,6 +32,9 @@ function midcast(spell)
 	equip(sets.midcast.mab)
 	if spell.english:contains("Aquaveil") then
 		equip(sets.midcast.aquaveil)
+	elseif spell.english:contains("Refresh") or
+		   spell.english:contains("Battery Charge") then
+		equip(sets.midcast.refresh)
 	elseif spell.english:contains("Dream Flower") then
 		equip(sets.th)
 	end

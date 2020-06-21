@@ -9,6 +9,6 @@ sets.tp={
     waist="Ioskeha Belt",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Niqmaddu Ring",
     right_ring="Epona's Ring",
 }

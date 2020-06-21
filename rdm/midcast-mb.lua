@@ -9,7 +9,7 @@ sets.midcast.mb={
     waist="Eschan Stone",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
-    left_ring="Jhakri Ring",
-    right_ring="Mujin Band",
+    left_ring="Freke Ring",
+    right_ring="Jhakri Ring",
     back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 }

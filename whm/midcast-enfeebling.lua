@@ -1,5 +1,5 @@
 sets.midcast.enfeebling={
-    ammo="Hydrocera",
+    ammo="Pemphredo Tathlum",
     hands="Inyan. Dastanas +2",
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
     neck="Incanter's Torque",
