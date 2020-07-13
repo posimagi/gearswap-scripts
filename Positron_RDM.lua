@@ -88,15 +88,22 @@ function get_sets()
 	end
 
 	send_command(
-		"wait 5; \
-		input /macro book 5; \
+		"input /macro book 5; \
 		input /macro set 1; \
+		wait 5; \
 		input /lockstyleset 40; \
 		gs equip sets.idle"
 	)
 end
 
 function sub_job_change(new, old)
+	send_command(
+		"input /macro book 5; \
+		input /macro set 1; \
+		wait 10;\
+		input /lockstyleset 40; \
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)

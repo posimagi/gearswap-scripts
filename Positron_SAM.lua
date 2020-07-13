@@ -12,9 +12,9 @@ function get_sets()
     include("sam/precast-meditate.lua") -- sets.precast.meditate
 
     send_command(
-        "wait 5; \
-        input /macro book 12; \
+        "input /macro book 12; \
         input /macro set 1; \
+        wait 5; \
 		input /lockstyleset 49; \
         gs equip sets.idle")
 end

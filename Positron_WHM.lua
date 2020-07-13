@@ -20,11 +20,13 @@ function get_sets()
 	include("whm/tp.lua") -- sets.tp
 	include("whm/ws.lua") -- sets.ws
 
-	include("whm/precast-benediction.lua") -- sets.precast.Benediction
+	include("whm/precast-benediction.lua") -- sets.precast.benediction
+	include("whm/precast-devotion.lua") -- sets.precast.devotion
 	include("whm/precast-healing.lua") -- sets.precast.healing
 
 	include("whm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("whm/midcast-cursna.lua") -- sets.midcast.cursna
+	include("whm/midcast-divine.lua") -- sets.midcast.divine
 	include("whm/midcast-healing.lua") -- sets.midcast.healing
 	include("whm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("whm/midcast-enhancing.lua") -- sets.midcast.enhancing
@@ -38,9 +40,19 @@ function get_sets()
 	end
 
 	send_command(
-		"wait 5; \
-		input /macro book 3; \
+		"input /macro book 3; \
 		input /macro set 1; \
+		wait 5; \
+		input /lockstyleset 20; \
+		gs equip sets.idle"
+	)
+end
+
+function sub_job_change(new, old)
+	send_command(
+		"input /macro book 3; \
+		input /macro set 1; \
+		wait 10; \
 		input /lockstyleset 20; \
 		gs equip sets.idle"
 	)
@@ -58,6 +70,8 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english == "Benediction" then
 			equip(sets.precast.benediction)
+		elseif spell.english == "Devotion" then
+			equip(sets.precast.devotion)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
@@ -74,7 +88,7 @@ function midcast(spell)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end
-		if world.weather_element == "Light" then
+		if world.weather_element == spell.element then
 			equip(sets.obi)
 		end
 	elseif spell.skill == "Enfeebling Magic" then
@@ -84,11 +98,15 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
-		if spell.english:contains("Regen") then
+		if spell.english:contains("Erase") then
+			equip(sets.midcast.healing)
+		elseif spell.english:contains("Regen") then
 			equip(sets.midcast.regen)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		end
+	elseif spell.skill == "Divine Magic" then
+		equip(sets.midcast.enfeebling, sets.midcast.divine)
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)
 	elseif spell.skill == "Elemental Magic" then

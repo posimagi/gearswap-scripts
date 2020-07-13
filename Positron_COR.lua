@@ -18,12 +18,22 @@ function get_sets()
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
 	send_command(
-		"wait 5; \
-		input /macro book 11; \
+		"input /macro book 11; \
 		input /macro set 10; \
+		wait 5; \
 		input /lockstyleset 96; \
 		gs equip sets.idle"
 	) -- lockstyle
+end
+
+function sub_job_change(new, old)
+	send_command(
+		"input /macro book 11; \
+		input /macro set 10; \
+		wait 10; \
+		input /lockstyleset 96; \
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)

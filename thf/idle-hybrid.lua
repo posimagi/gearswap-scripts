@@ -1,11 +1,11 @@
-sets.idle={
+sets.idle.hybrid={
     ammo="Yamarang",
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
-    feet="Jute Boots +1",
-    neck="Sanctity Necklace",
+    feet="Malignance Boots",
+    neck="Loricate Torque +1",
     waist="Flume Belt",
     left_ear="Etiolation Earring",
     right_ear="Odnowa Earring +1",

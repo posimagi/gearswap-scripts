@@ -4,7 +4,7 @@ sets.midcast.enfeeblingpotency={
     body="Lethargy Sayon +1",
     hands="Leth. Gantherots +1",
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
-    feet={ name="Vitiation Boots +1", augments={'Immunobreak Chance',}},
+    feet={ name="Vitiation Boots +2", augments={'Immunobreak Chance',}},
     neck={ name="Dls. Torque +1", augments={'Path: A',}},
     waist="Luminary Sash",
     left_ear="Regal Earring",

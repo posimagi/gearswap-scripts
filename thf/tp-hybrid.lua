@@ -1,15 +1,15 @@
-sets.idle={
+sets.tp.hybrid={
     ammo="Yamarang",
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
-    feet="Jute Boots +1",
-    neck="Sanctity Necklace",
-    waist="Flume Belt",
-    left_ear="Etiolation Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Gelatinous Ring +1",
+    feet="Malignance Boots",
+    neck="Combatant's Torque",
+    waist="Reiki Yotai",
+    left_ear="Telos Earring",
+    right_ear="Sherida Earring",
+    left_ring="Ilabrat Ring",
     right_ring="Defending Ring",
     back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 }

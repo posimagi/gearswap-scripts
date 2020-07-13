@@ -44,9 +44,9 @@ function get_sets()
     end
 
     send_command(
-        "wait 5; \
-        input /macro book 7; \
+        "input /macro book 7; \
         input /macro set 10; \
+        wait 5; \
         input /lockstyleset 94; \
         gs equip sets.idle"
     )
@@ -59,6 +59,8 @@ function precast(spell, position)
         equip(sets.ws)
     elseif _ABILITY:contains(spell.type) then
         equip(sets.enmity, sets.precast[spell.name])
+    elseif spell.type == "Item" then
+        equip(sets.cursna)
     end
 end
 
@@ -71,6 +73,8 @@ function midcast(spell)
         elseif spell.english:contains("Phalanx") then
             equip(sets.midcast.phalanx)
         end
+    elseif spell.type == "Item" then
+        equip(sets.cursna)
     end
 end
 

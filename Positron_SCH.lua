@@ -22,13 +22,14 @@ function get_sets()
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
 	include("sch/midcast-helix.lua") -- sets.midcast.helix
 	include("sch/midcast-mb.lua") -- sets.midcast.mb
+	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
 	send_command(
-		"wait 5; \
-		input /macro book 20; \
+		"input /macro book 20; \
 		input /macro set 1; \
+		wait 5; \
 		input /lockstyleset 97; \
 		gs equip sets.idle"
 	)
@@ -46,7 +47,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
-		if spell.english:contains("Stoneskin") then
+		if spell.english:contains("Refresh") then
+			equip(sets.midcast.refresh)
+		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		end
 	elseif spell.skill == "Healing Magic" then

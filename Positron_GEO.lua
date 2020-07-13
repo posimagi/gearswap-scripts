@@ -14,18 +14,28 @@ function get_sets()
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 
-    -- include('geo/midcast-enhancing.lua') -- sets.midcast.enhancing
+    include('geo/midcast-enhancing.lua') -- sets.midcast.enhancing
     include('geo/midcast-enfeebling.lua') -- sets.midcast.enfeebling
     include("geo/midcast-geocolure.lua") -- sets.midcast.geocolure
     include("geo/midcast-geomancy.lua") -- sets.midcast.geomancy
-    -- include('geo/midcast-healing.lua') -- sets.midcast.healing
+    include('geo/midcast-healing.lua') -- sets.midcast.healing
     include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
     include("geo/midcast-mb.lua") -- sets.midcast.mb
 
     send_command(
-        "wait 5; \
-        input /macro book 10; \
+        "input /macro book 10; \
         input /macro set 10; \
+        wait 5; \
+        input /lockstyleset 51; \
+        gs equip sets.idle"
+    )
+end
+
+function sub_job_change(new, old)
+    send_command(
+        "input /macro book 10; \
+        input /macro set 10; \
+        wait 10; \
         input /lockstyleset 51; \
         gs equip sets.idle"
     )

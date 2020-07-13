@@ -5,9 +5,9 @@ sets.tp={
     legs="Aya. Cosciales +2",
     feet="Aya. Gambieras +2",
     neck="Combatant's Torque",
-    waist="Windbuffet Belt +1",
+    waist="Eschan Stone",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Petrov Ring",
+    right_ring="Defending Ring",
 }

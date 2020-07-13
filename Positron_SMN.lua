@@ -17,9 +17,9 @@ function get_sets()
 	include("smn/petmidcast-bp.lua") -- sets.petmidcast.bp
 
 	send_command(
-		"wait 5; \
-		input /macro book 15; \
+		"input /macro book 15; \
 		input /macro set 1; \
+		wait 5; \
 		input /lockstyle on; \
 		gs equip sets.idle"
 	)

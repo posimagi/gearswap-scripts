@@ -8,8 +8,11 @@ function get_sets()
 
 	include("thf/domain.lua") -- sets.domain
 	include("thf/idle.lua") -- sets.idle
+	include("thf/idle-hybrid.lua") -- sets.idle.hybrid
 	include("thf/th.lua") -- sets.th
+	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
+	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
 	include("thf/ws.lua") -- sets.ws
 	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
@@ -20,12 +23,25 @@ function get_sets()
 
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 
-	_TH = true
+	_HYBRID = false
+	if _HYBRID then
+		sets.idle = sets.idle.hybrid
+		sets.tp = sets.tp.hybrid
+	end
+
+	_TH = "minimal"
+	if _TH == "full" then
+		sets.tp = set_combine(sets.tp, sets.th)
+	elseif _TH == "minimal" then
+		sets.tp = set_combine(sets.tp, sets.th.minimal)
+	elseif _TH == "none" then
+		-- do nothing
+	end
 
 	send_command(
-		"wait 5; \
-		input /macro book 6; \
+		"input /macro book 6; \
 		input /macro set 2; \
+		wait 5; \
 		input /lockstyleset 50; \
 		gs equip sets.idle"
 	)
@@ -62,9 +78,6 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
-		if _TH then
-			equip(sets.th)
-		end
 		if spell.english:contains("Sneak Attack") or spell.english:contains("Trick Attack") then
 			equip(sets.th)
 		elseif buffactive_sata() then
@@ -76,9 +89,6 @@ end
 function status_change(new, old)
 	if new == "Engaged" then
 		equip(sets.tp)
-		if _TH then
-			equip(sets.th)
-		end
 		if buffactive_sata() then
 			equip(sets.th)
 		end
@@ -94,9 +104,6 @@ function buff_change(name, gain, buff_details)
 		else
 			if player.status == "Engaged" then
 				equip(sets.tp)
-				if _TH then
-					equip(sets.th)
-				end
 			elseif player.status == "Idle" then
 				equip(sets.idle)
 			end

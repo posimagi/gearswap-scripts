@@ -8,17 +8,15 @@ function get_sets()
 	
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
-	include("blu/fastcast.lua") -- sets.fastcast
-	include("blu/idle.lua") -- sets.idle
-	include("blu/th.lua") -- sets.th
-	include("blu/tp.lua") -- sets.tp
+	include("brd/fastcast.lua") -- sets.fastcast
+	include("brd/idle.lua") -- sets.idle
+	include("brd/tp.lua") -- sets.tp
+	include("brd/ws.lua") -- sets.ws
 	
-	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
-	include("blu/midcast-mab.lua") -- sets.midcast.mab
-	include("blu/midcast-refresh.lua") -- sets.midcast.refresh
+	include("brd/midcast-songs.lua") -- sets.midcast.songs
 
 	send_command(
-		"input /macro book 16; \
+		"input /macro book 10; \
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyle on; \
@@ -27,17 +25,17 @@ end
 
 function precast(spell, position)
 	equip(sets.fastcast)
+	if spell.english:contains("Stoneskin") then
+		equip(sets.precast.stoneskin)
+	elseif spell.type == "WeaponSkill" then
+		equip(sets.ws)
+	end
 end
 
 function midcast(spell)
-	equip(sets.midcast.mab)
-	if spell.english:contains("Aquaveil") then
-		equip(sets.midcast.aquaveil)
-	elseif spell.english:contains("Refresh") or
-		   spell.english:contains("Battery Charge") then
-		equip(sets.midcast.refresh)
-	elseif spell.english:contains("Dream Flower") then
-		equip(sets.th)
+	equip(sets.midcast.songs)
+	if spell.english:contains("Stoneskin") then
+		equip(sets.midcast.stoneskin)
 	end
 end
 

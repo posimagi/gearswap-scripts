@@ -14,7 +14,7 @@ function get_sets()
 		input /macro book 1; \
         input /macro set 2; \
         gs equip sets.ws; \
-        wait 1; \
+        wait 3; \
         input /lockstyle on; \
         wait 1; \
 		gs equip sets.idle"
