@@ -6,7 +6,7 @@ sets.ws={
     legs="Flamma Dirs +2",
     feet="Sulev. Leggings +2",
     neck="Unmoving Collar +1",
-    waist="Ioskeha Belt",
+    waist="Ioskeha Belt +1",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Niqmaddu Ring",

@@ -1,5 +1,5 @@
 sets.precast["Vallation"]={
-    body="Runeist Coat +1",
+    body="Runeist's Coat +2",
     legs={ name="Futhark Trousers +1", augments={'Enhances "Inspire" effect',}},
 }
 

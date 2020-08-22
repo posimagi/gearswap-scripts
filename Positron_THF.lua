@@ -7,8 +7,11 @@ function get_sets()
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("thf/domain.lua") -- sets.domain
+	include("thf/fastcast.lua") -- sets.fastcast
 	include("thf/idle.lua") -- sets.idle
 	include("thf/idle-hybrid.lua") -- sets.idle.hybrid
+	include("thf/ra.lua") -- sets.ra
+	include("thf/regen.lua") -- sets.regen
 	include("thf/th.lua") -- sets.th
 	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
@@ -29,9 +32,16 @@ function get_sets()
 		sets.tp = sets.tp.hybrid
 	end
 
+	_IDLE_REGEN = true
+	if _IDLE_REGEN then
+		sets.idle = set_combine(sets.idle, sets.regen)
+	end
+
 	_TH = "minimal"
 	if _TH == "full" then
 		sets.tp = set_combine(sets.tp, sets.th)
+		sets.ws = set_combine(sets.ws, sets.th)
+		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
 	elseif _TH == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
 	elseif _TH == "none" then
@@ -64,9 +74,12 @@ function precast(spell, position)
 			equip(sets.precast.despoil)
 		end
 	elseif spell.type == "Ninjutsu" then
+		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
 		end
+	elseif spell.action_type == "Ranged Attack" then
+		equip(sets.ra)
 	end
 end
 

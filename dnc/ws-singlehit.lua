@@ -1,4 +1,4 @@
 sets.ws.singlehit={
-    neck="Caro Necklace",
+    neck={ name="Etoile Gorget", augments={'Path: A',}},
     waist="Grunfeld Rope",
 }

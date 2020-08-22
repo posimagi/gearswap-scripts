@@ -3,6 +3,6 @@ sets.ws.magical={
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     right_ear="Friomisi Earring",
-    left_ring="Vertigo Ring",
+    left_ring="Tamas Ring",
     right_ring="Acumen Ring",
 }

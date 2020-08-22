@@ -4,25 +4,28 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
     
-    include("mnk/idle.lua") -- sets.idle
-    include("mnk/tp.lua") -- sets.tp
-    include("mnk/ws.lua") -- sets.ws
+    include("drg/idle.lua") -- sets.idle
+    include("drg/tp.lua") -- sets.tp
+    include("drg/ws.lua") -- sets.ws
 
     send_command(
-        "input /macro book 2; \
-        input /macro set 2; \
-		wait 5; \
+		"wait 5; \
+		input /macro book 12; \
+        input /macro set 9; \
+        gs equip sets.ws; \
+        wait 3; \
         input /lockstyle on; \
-        gs equip sets.idle")
+        wait 1; \
+		gs equip sets.idle"
+	)
 end
+
+_TH = true
 
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
-    -- if spell.english:contains("Meditate") then
-      -- equip(sets.precast.meditate)
-    -- end
     end
 end
 
@@ -40,10 +43,11 @@ end
 function status_change(new, old)
     if new == "Engaged" then
         equip(sets.tp)
+        if _TH then
+			equip(sets.th)
+        end
+        
     elseif new == "Idle" then
         equip(sets.idle)
     end
-end
-
-function buff_change(name, gain, buff_details)
 end

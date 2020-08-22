@@ -1,5 +1,7 @@
 sets.engaged={
     ammo="Yamarang",
+    head="Turms Cap",
+    body="Runeist's Coat +2",
     hands="Turms Mittens",
     legs="Eri. Leg Guards +1",
     waist="Engraved Belt",

@@ -6,7 +6,7 @@ sets.tp={
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Aya. Gambieras +2",
     neck="Combatant's Torque",
-    waist="Ioskeha Belt",
+    waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",

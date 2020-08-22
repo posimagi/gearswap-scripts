@@ -104,6 +104,8 @@ function midcast(spell)
 			equip(sets.midcast.regen)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
+		elseif spell.english:contains("Bar") then
+			equip(sets.midcast.barspell)
 		end
 	elseif spell.skill == "Divine Magic" then
 		equip(sets.midcast.enfeebling, sets.midcast.divine)

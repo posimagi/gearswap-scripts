@@ -1,10 +1,12 @@
-sets.ws={
+sets.exported={
+    main="Trishula",
+    sub="Utu Grip",
     ammo="Knobkierrie",
-    head="Mummu Bonnet +2",
-    body="Mummu Jacket +2",
-    hands="Mummu Wrists +2",
-    legs="Hiza. Hizayoroi +2",
-    feet={ name="Herculean Boots", augments={'"Store TP"+1','Pet: Attack+2 Pet: Rng.Atk.+2','Weapon skill damage +6%','Accuracy+7 Attack+7',}},
+    head="Flam. Zucchetto +2",
+    body="Nzingha Cuirass",
+    hands="Flam. Manopolas +2",
+    legs="Flamma Dirs +2",
+    feet="Flam. Gambieras +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

@@ -8,6 +8,7 @@ function get_sets()
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("cor/idle.lua") -- sets.idle
+	include("cor/ra.lua") -- sets.ra
 	include("cor/tp.lua") -- sets.tp
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
@@ -62,6 +63,8 @@ function precast(spell, position)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
 		end
+	elseif spell.action_type == "Ranged Attack" then
+		equip(sets.ra)
 	end
 end
 

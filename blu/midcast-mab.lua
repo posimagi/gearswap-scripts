@@ -8,7 +8,7 @@ sets.midcast.mab={
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     left_ear="Regal Earring",
-    right_ear="Hecate's Earring",
+    right_ear="Friomisi Earring",
     left_ring="Jhakri Ring",
     right_ring="Acumen Ring",
     back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},

@@ -10,6 +10,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Epona's Ring",
+    right_ring="Ilabrat Ring",
     back="Agema Cape",
 }

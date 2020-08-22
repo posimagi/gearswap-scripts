@@ -10,7 +10,10 @@ function get_sets()
 
     include("geo/idle.lua") -- sets.idle
     include("geo/fastcast.lua") -- sets.fastcast
+    include("geo/naked.lua") -- sets.naked
     include("geo/th.lua") -- sets.th
+    include("geo/tp.lua") -- sets.tp
+    include("geo/weapon.lua") -- sets.weapon
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 
@@ -21,6 +24,16 @@ function get_sets()
     include('geo/midcast-healing.lua') -- sets.midcast.healing
     include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
     include("geo/midcast-mb.lua") -- sets.midcast.mb
+    include("geo/midcast-refresh.lua") -- sets.midcast.refresh
+
+    _TIER_ONE_NUKES = T{
+        "Fire",
+        "Blizzard",
+        "Aero",
+        "Stone",
+        "Thunder",
+        "Water",
+    }
 
     send_command(
         "input /macro book 10; \
@@ -65,11 +78,16 @@ function midcast(spell)
         equip(sets.midcast.enhancing)
         if spell.english:contains("Stoneskin") then
             equip(sets.midcast.stoneskin)
+        elseif spell.english:contains("Refresh") then
+            equip(sets.midcast.refresh)
         end
     elseif spell.skill == "Healing Magic" then
         equip(sets.midcast.healing)
     elseif spell.skill == "Elemental Magic" then
         equip(sets.midcast.mb)
+        if _TIER_ONE_NUKES:contains(spell.english) and world.area == "Outer Ra'Kaznar [U]" then
+            equip(sets.naked)
+        end
     elseif spell.skill == "Dark Magic" then
         if spell.english:contains("Bio") then
             equip(sets.th)
@@ -78,11 +96,20 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-    equip(sets.idle)
+    if _TIER_ONE_NUKES:contains(spell.english) and world.area == "Outer Ra'Kaznar [U]" then
+        equip(sets.weapon)
+    end
+    if player.status == "Engaged" then
+        equip(sets.tp)
+    elseif player.status == "Idle" then
+        equip(sets.idle)
+    end
 end
 
 function status_change(new, old)
-    if new == "Idle" then
+    if player.status == "Engaged" then
+        equip(sets.tp)
+    elseif player.status == "Idle" then
         equip(sets.idle)
     end
 end
