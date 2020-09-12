@@ -5,14 +5,22 @@ function get_sets()
     sets.aftercast = {}
     
     include("mnk/idle.lua") -- sets.idle
+    include("mnk/idle-hybrid.lua") -- sets.idle.hybrid
     include("mnk/tp.lua") -- sets.tp
+    include("mnk/tp-hybrid.lua") -- sets.tp.hybrid
     include("mnk/ws.lua") -- sets.ws
+
+    _HYBRID = false
+    if _HYBRID then
+		sets.idle = sets.idle.hybrid
+		sets.tp = sets.tp.hybrid
+	end
 
     send_command(
         "input /macro book 2; \
         input /macro set 2; \
 		wait 5; \
-        input /lockstyle on; \
+        input /lockstyleset 92; \
         gs equip sets.idle")
 end
 
@@ -20,9 +28,7 @@ function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
-    -- if spell.english:contains("Meditate") then
-      -- equip(sets.precast.meditate)
-    -- end
+        
     end
 end
 

@@ -1,4 +1,5 @@
 sets.ws={
+    ammo="Hasty Pinion +1",
     head={ name="Piety Cap +2", augments={'Enhances "Devotion" effect',}},
     body={ name="Piety Briault +3", augments={'Enhances "Benediction" effect',}},
     hands="Aya. Manopolas +2",
@@ -10,4 +11,5 @@ sets.ws={
     right_ear="Cessance Earring",
     left_ring="Ilabrat Ring",
     right_ring="Rufescent Ring",
+    back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},
 }

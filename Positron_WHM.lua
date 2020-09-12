@@ -23,6 +23,7 @@ function get_sets()
 	include("whm/precast-benediction.lua") -- sets.precast.benediction
 	include("whm/precast-devotion.lua") -- sets.precast.devotion
 	include("whm/precast-healing.lua") -- sets.precast.healing
+	include("whm/precast-martyr.lua") -- sets.precast.martyt
 
 	include("whm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("whm/midcast-cursna.lua") -- sets.midcast.cursna
@@ -72,6 +73,8 @@ function precast(spell, position)
 			equip(sets.precast.benediction)
 		elseif spell.english == "Devotion" then
 			equip(sets.precast.devotion)
+		elseif spell.english == "Martyr" then
+			equip(sets.precast.martyr)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)

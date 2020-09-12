@@ -1,4 +1,3 @@
-sets.midcast.divine={
+sets.precast.martyr={
     hands={ name="Piety Mitts +2", augments={'Enhances "Martyr" effect',}},
-    neck="Incanter's Torque",
 }

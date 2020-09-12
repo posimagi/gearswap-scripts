@@ -9,6 +9,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Jhakri Ring",
-    right_ring="Defending Ring",
+    right_ring="Petrov Ring",
     back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
 }

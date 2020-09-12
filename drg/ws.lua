@@ -1,6 +1,4 @@
-sets.exported={
-    main="Trishula",
-    sub="Utu Grip",
+sets.ws={
     ammo="Knobkierrie",
     head="Flam. Zucchetto +2",
     body="Nzingha Cuirass",

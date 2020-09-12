@@ -4,7 +4,7 @@ sets.idle={
     body="Shamash Robe",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     legs="Volte Brais",
-    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    feet="Crier's Gaiters",
     neck="Loricate Torque +1",
     waist="Eschan Stone",
     left_ear="Etiolation Earring",

@@ -1,15 +1,15 @@
 sets.tp.hybrid={
-    ammo="Yamarang",
+    ammo="Ginsen",
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Combatant's Torque",
-    waist="Reiki Yotai",
+    waist="Black Belt",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
     right_ring="Defending Ring",
-    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','"Regen"+5',}},
+    back="Agema Cape",
 }

@@ -13,6 +13,7 @@ function get_sets()
 	include("thf/ra.lua") -- sets.ra
 	include("thf/regen.lua") -- sets.regen
 	include("thf/th.lua") -- sets.th
+	include("thf/th-medium.lua") -- sets.th.medium
 	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
 	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
@@ -37,11 +38,13 @@ function get_sets()
 		sets.idle = set_combine(sets.idle, sets.regen)
 	end
 
-	_TH = "minimal"
+	_TH = "medium"
 	if _TH == "full" then
 		sets.tp = set_combine(sets.tp, sets.th)
 		sets.ws = set_combine(sets.ws, sets.th)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
+	elseif _TH == "medium" then
+		sets.tp = set_combine(sets.tp, sets.th.medium)
 	elseif _TH == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
 	elseif _TH == "none" then
@@ -52,6 +55,16 @@ function get_sets()
 		"input /macro book 6; \
 		input /macro set 2; \
 		wait 5; \
+		input /lockstyleset 50; \
+		gs equip sets.idle"
+	)
+end
+
+function sub_job_change(new, old)
+	send_command(
+		"input /macro book 6; \
+		input /macro set 2; \
+		wait 10; \
 		input /lockstyleset 50; \
 		gs equip sets.idle"
 	)
@@ -80,6 +93,8 @@ function precast(spell, position)
 		end
 	elseif spell.action_type == "Ranged Attack" then
 		equip(sets.ra)
+	else
+		equip(sets.fastcast)
 	end
 end
 

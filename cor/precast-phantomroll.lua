@@ -5,5 +5,5 @@ sets.precast.phantomroll={
     legs={ name="Desultor Tassets", augments={'"Phantom Roll" ability delay -5','Movement speed +8%+2',}},
     neck="Regal Necklace",
     right_ring="Luzaf's Ring",
-    back={ name="Gunslinger's Cape", augments={'Enmity-1','"Mag.Atk.Bns."+2','"Phantom Roll" ability delay -4',}},
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

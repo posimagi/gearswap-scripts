@@ -1,6 +1,6 @@
 sets.midcast.enfeebling={
     ammo="Pemphredo Tathlum",
-    hands="Inyan. Dastanas +2",
+    hands={ name="Piety Mitts +2", augments={'Enhances "Martyr" effect',}},
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
     feet={ name="Piety Duckbills +2", augments={'Enhances "Afflatus Solace" effect',}},
     neck="Incanter's Torque",

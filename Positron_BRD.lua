@@ -13,6 +13,8 @@ function get_sets()
 	include("brd/tp.lua") -- sets.tp
 	include("brd/ws.lua") -- sets.ws
 	
+	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
+	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
 
 	send_command(
@@ -36,6 +38,11 @@ function midcast(spell)
 	equip(sets.midcast.songs)
 	if spell.english:contains("Stoneskin") then
 		equip(sets.midcast.stoneskin)
+	elseif spell.skill == "Healing Magic" then
+		equip(sets.midcast.healing)
+		if spell.name:contains("Cursna") then
+			equip(sets.midcast.cursna)
+		end
 	end
 end
 

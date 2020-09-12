@@ -14,6 +14,7 @@ function get_sets()
     include("geo/th.lua") -- sets.th
     include("geo/tp.lua") -- sets.tp
     include("geo/weapon.lua") -- sets.weapon
+    include("geo/ws.lua") -- sets.ws
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
 

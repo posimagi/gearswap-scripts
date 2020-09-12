@@ -1,4 +1,5 @@
 sets.tp={
+    ammo="Hasty Pinion +1",
     head="Aya. Zucchetto +2",
     body="Ayanmo Corazza +2",
     hands="Aya. Manopolas +2",
@@ -10,4 +11,5 @@ sets.tp={
     right_ear="Cessance Earring",
     left_ring="Ilabrat Ring",
     right_ring="Petrov Ring",
+    back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},
 }

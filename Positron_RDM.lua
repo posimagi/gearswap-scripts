@@ -80,6 +80,13 @@ function get_sets()
 		include("rdm/lilith/tp.lua") -- sets.tp
 		sets.enspell = sets.tp
 	end
+	
+	_SEALED_FATE = false
+	if _SEALED_FATE then
+		include("rdm/sealed-fate/tp-damage.lua") -- sets.tp
+		-- include("rdm/sealed-fate/tp-accuracy.lua") -- sets.tp
+		sets.enspell = sets.tp
+	end
 
 	_HYBRID = false
 	if _HYBRID then

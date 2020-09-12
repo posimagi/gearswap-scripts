@@ -9,24 +9,29 @@ function get_sets()
     include("war/tp.lua") -- sets.tp
     include("war/ws.lua") -- sets.ws
 
+    include("war/precast-aggressor.lua") -- sets.precast.aggressor
+    include("war/precast-bloodrage.lua") -- sets.precast.bloodrage
+
     send_command(
-		"wait 5; \
-		input /macro book 1; \
-        input /macro set 2; \
-        gs equip sets.ws; \
-        wait 3; \
-        input /lockstyle on; \
-        wait 1; \
+		"input /macro book 1; \
+        input /macro set 1; \
+        wait 5; \
+        input /lockstyleset 93; \
 		gs equip sets.idle"
 	)
 end
 
-_TH = true
+_TH = false
 
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
+        if spell.english:contains("Aggressor") then
+            equip(sets.precast.aggressor)
+        elseif spell.english:contains("Blood Rage") then
+            equip(sets.precast.bloodrage)
+        end
     end
 end
 
