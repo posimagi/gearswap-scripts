@@ -43,7 +43,7 @@ gavialis_properties["Darksday"] = {
 function gavialis(spell)
     if gavialis_properties[world.day]:contains(spell.wsA) or
        gavialis_properties[world.day]:contains(spell.wsB) or
-       gavialis_properties[world.day]:contains(spell.wsB) then
+       gavialis_properties[world.day]:contains(spell.wsC) then
         return true
     end
     return false
