@@ -1,3 +1,3 @@
 sets.precast.aggressor={
-    body={ name="Agoge Lorica", augments={'Enhances "Aggressive Aim" effect',}},
+    body={ name="Agoge Lorica +1", augments={'Enhances "Aggressive Aim" effect',}},
 }

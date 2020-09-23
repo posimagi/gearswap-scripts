@@ -16,6 +16,7 @@ function get_sets()
 
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
+	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
 	send_command(
@@ -51,6 +52,8 @@ function precast(spell, position)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)
+	elseif spell.type == "CorsairShot" then
+		equip(sets.precast.quickdraw)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Double-Up") then
 			equip(sets.precast.phantomroll)

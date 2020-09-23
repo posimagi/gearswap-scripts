@@ -1,6 +1,8 @@
 sets.idle={
     ammo="Staunch Tathlum",
+    head="Flam. Zucchetto +2",
     body="Emet Harness",
+    legs="Flamma Dirs +2",
     feet="Hermes' Sandals",
     neck="Loricate Torque +1",
     waist="Flume Belt",

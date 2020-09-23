@@ -32,8 +32,22 @@ function get_sets()
 	include("whm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("whm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
+	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
 
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
+
+	_STATUSREMOVAL = T{
+		"Poisona",
+		"Paralyna",
+		"Blindna",
+		"Silena",
+		"Stona",
+		"Viruna",
+		"Cursna",
+		"Erase",
+		"Esuna",
+		"Sacrifice",
+	}
 
 	_HYBRID = false
 	if _HYBRID then
@@ -88,6 +102,9 @@ end
 function midcast(spell)
 	if spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
+		if _STATUSREMOVAL:contains(spell.name) then
+			equip(sets.midcast.statusremoval)
+		end
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end

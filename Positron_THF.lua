@@ -45,6 +45,7 @@ function get_sets()
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
 	elseif _TH == "medium" then
 		sets.tp = set_combine(sets.tp, sets.th.medium)
+		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
 	elseif _TH == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
 	elseif _TH == "none" then

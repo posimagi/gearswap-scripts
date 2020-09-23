@@ -1,3 +1,3 @@
 sets.precast.martyr={
-    hands={ name="Piety Mitts +2", augments={'Enhances "Martyr" effect',}},
+    hands={ name="Piety Mitts +3", augments={'Enhances "Martyr" effect',}},
 }
