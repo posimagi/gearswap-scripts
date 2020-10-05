@@ -5,7 +5,7 @@ sets.petmidcast.bp={
     legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},
     feet={ name="Apogee Pumps +1", augments={'Pet: Attack+25','Pet: "Mag.Atk.Bns."+25','Blood Pact Dmg.+8',}},
     neck="Shulmanu Collar",
-    waist="Incarnation Sash",
+    waist="Regal Belt",
     left_ear="Gelos Earring",
     right_ear="Evans Earring",
     left_ring="Evoker's Ring",

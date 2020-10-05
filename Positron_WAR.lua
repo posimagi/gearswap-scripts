@@ -10,7 +10,9 @@ function get_sets()
     include("war/ws.lua") -- sets.ws
 
     include("war/precast-aggressor.lua") -- sets.precast.aggressor
+    include("war/precast-berserk.lua") -- sets.precast.berserk
     include("war/precast-bloodrage.lua") -- sets.precast.bloodrage
+    include("war/precast-warcry.lua") -- sets.precast.warcry
 
     send_command(
 		"input /macro book 1; \
@@ -29,8 +31,12 @@ function precast(spell, position)
     elseif spell.type == "JobAbility" then
         if spell.english:contains("Aggressor") then
             equip(sets.precast.aggressor)
+        elseif spell.english:contains("Berserk") then
+            equip(sets.precast.berserk)
         elseif spell.english:contains("Blood Rage") then
             equip(sets.precast.bloodrage)
+        elseif spell.english:contains("Warcry") then
+            equip(sets.precast.warcry)
         end
     end
 end

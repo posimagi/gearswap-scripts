@@ -19,6 +19,7 @@ function get_sets()
 	include("whm/sublimation.lua") -- sets.sublimation
 	include("whm/tp.lua") -- sets.tp
 	include("whm/ws.lua") -- sets.ws
+	include("whm/ws-singlehit.lua") -- sets.ws.singlehit
 
 	include("whm/precast-benediction.lua") -- sets.precast.benediction
 	include("whm/precast-devotion.lua") -- sets.precast.devotion
@@ -31,6 +32,8 @@ function get_sets()
 	include("whm/midcast-healing.lua") -- sets.midcast.healing
 	include("whm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("whm/midcast-enhancing.lua") -- sets.midcast.enhancing
+	include("whm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
+	include("whm/midcast-mb.lua") -- sets.midcast.mb
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
 
@@ -47,6 +50,15 @@ function get_sets()
 		"Erase",
 		"Esuna",
 		"Sacrifice",
+	}
+
+	_SINGLE_HIT_WS = T{
+		"Brainshaker",
+		"Skullbreaker",
+		"True Strike",
+		"Judgment",
+		"Black Halo",
+		"Mystic Boon",
 	}
 
 	_HYBRID = false
@@ -92,6 +104,9 @@ function precast(spell, position)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if _SINGLE_HIT_WS:contains(spell.english) then
+			equip(sets.ws.singlehit)
+		end
 	else
 		if spell.english:contains("Impact") then
 			equip(sets.impact)
@@ -126,9 +141,14 @@ function midcast(spell)
 			equip(sets.midcast.stoneskin)
 		elseif spell.english:contains("Bar") then
 			equip(sets.midcast.barspell)
+		elseif spell.english:contains("Boost") then
+			equip(sets.midcast.enhancingskill)
 		end
 	elseif spell.skill == "Divine Magic" then
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
+		if spell.english:contains("Holy") then
+			equip(sets.midcast.mb)
+		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)
 	elseif spell.skill == "Elemental Magic" then

@@ -2,7 +2,7 @@ sets.idle={
     ammo="Staunch Tathlum",
     head={ name="Amalric Coif +1", augments={'INT+12','Mag. Acc.+25','Enmity-6',}},
     body="Shamash Robe",
-    hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    hands="Volte Gloves",
     legs="Volte Brais",
     feet="Crier's Gaiters",
     neck="Loricate Torque +1",

@@ -1,0 +1,15 @@
+sets.midcast.mb={
+    ammo="Pemphredo Tathlum",
+    head={ name="Chironic Hat", augments={'Attack+30','CHR+1','Phalanx +4','Mag. Acc.+11 "Mag.Atk.Bns."+11',}},
+    body="Shamash Robe",
+    hands="Volte Gloves",
+    legs="Volte Brais",
+    feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
+    neck="Mizu. Kubikazari",
+    waist="Eschan Stone",
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring="Freke Ring",
+    right_ring="Mujin Band",
+    back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Cure" potency +10%','Occ. inc. resist. to stat. ailments+10',}},
+}

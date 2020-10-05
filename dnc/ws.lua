@@ -1,10 +1,10 @@
 sets.ws={
     ammo="C. Palug Stone",
     head="Malignance Chapeau",
-    body={ name="Herculean Vest", augments={'Attack+27','Weapon skill damage +4%','DEX+3','Accuracy+11',}},
+    body={ name="Herculean Vest", augments={'Accuracy+7','Weapon skill damage +4%','DEX+11',}},
     hands="Maxixi Bangles +3",
     legs={ name="Horos Tights +3", augments={'Enhances "Saber Dance" effect',}},
-    feet={ name="Herculean Boots", augments={'"Store TP"+1','Pet: Attack+2 Pet: Rng.Atk.+2','Weapon skill damage +6%','Accuracy+7 Attack+7',}},
+    feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','DEX+11','Accuracy+6','Attack+1',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

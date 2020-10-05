@@ -1,13 +1,13 @@
-sets.ws={
+sets.ws.singlehit={
     ammo="Oreiad's Tathlum",
     head={ name="Piety Cap +2", augments={'Enhances "Devotion" effect',}},
     body={ name="Piety Briault +3", augments={'Enhances "Benediction" effect',}},
     hands={ name="Piety Mitts +3", augments={'Enhances "Martyr" effect',}},
     legs="Aya. Cosciales +2",
     feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Telos Earring",
+    neck={ name="Clr. Torque +1", augments={'Path: A',}},
+    waist="Luminary Sash",
+    left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Rufescent Ring",

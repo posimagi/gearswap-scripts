@@ -4,7 +4,7 @@ sets.ws={
     body="Mummu Jacket +2",
     hands="Mummu Wrists +2",
     legs="Hiza. Hizayoroi +2",
-    feet={ name="Herculean Boots", augments={'"Store TP"+1','Pet: Attack+2 Pet: Rng.Atk.+2','Weapon skill damage +6%','Accuracy+7 Attack+7',}},
+    feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','DEX+11','Accuracy+6','Attack+1',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
