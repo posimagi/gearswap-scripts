@@ -1,7 +1,7 @@
 sets.ws={
     head="Jhakri Coronal +2",
     body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
-    hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+    hands="Jhakri Cuffs +2",
     legs="Jhakri Slops +2",
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     neck="Sanctity Necklace",

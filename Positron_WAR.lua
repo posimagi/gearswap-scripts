@@ -4,6 +4,7 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
     
+    include("war/fastcast.lua") -- sets.fastcast
     include("war/idle.lua") -- sets.idle
     include("war/th.lua") -- sets.th
     include("war/tp.lua") -- sets.tp
@@ -12,6 +13,7 @@ function get_sets()
     include("war/precast-aggressor.lua") -- sets.precast.aggressor
     include("war/precast-berserk.lua") -- sets.precast.berserk
     include("war/precast-bloodrage.lua") -- sets.precast.bloodrage
+    include("war/precast-tomahawk.lua") -- sets.precast.tomahawk
     include("war/precast-warcry.lua") -- sets.precast.warcry
 
     send_command(
@@ -35,9 +37,13 @@ function precast(spell, position)
             equip(sets.precast.berserk)
         elseif spell.english:contains("Blood Rage") then
             equip(sets.precast.bloodrage)
+        elseif spell.english:contains("Tomahawk") then
+            equip(sets.precast.tomahawk)
         elseif spell.english:contains("Warcry") then
             equip(sets.precast.warcry)
         end
+    else
+        equip(sets.idle, sets.fastcast)
     end
 end
 

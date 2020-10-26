@@ -1,8 +1,8 @@
 sets.midcast.enhancingskill={
-    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
+    head="Umuthi Hat",
     hands="Inyan. Dastanas +2",
-    legs={ name="Piety Pantaln. +1", augments={'Enhances "Afflatus Misery" effect',}},
-    feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
+    legs={ name="Piety Pantaln. +2", augments={'Enhances "Afflatus Misery" effect',}},
+    feet="Ebers Duckbills +1",
     neck="Incanter's Torque",
     waist="Embla Sash",
     right_ear="Andoaa Earring",

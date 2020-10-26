@@ -17,15 +17,21 @@ function get_sets()
 	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
 	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
+	include("thf/weapon.lua") -- sets.weapon
 	include("thf/ws.lua") -- sets.ws
 	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
 
 	include("thf/precast-despoil.lua") -- sets.precast.despoil
 	include("thf/precast-flee.lua") -- sets.precast.flee
+	include("thf/precast-hide.lua") -- sets.precast.hide
 	include("thf/precast-steal.lua") -- sets.precast.steal
+	include("thf/precast-waltzes.lua") -- sets.precast.waltzes
 
 	include("func/buffactive_sata.lua") -- buffactive_sata()
+
+	_ALL_SLOTS = T{"range", "ammo", "head", "body", "hands", "legs", "feet",
+				   "neck", "waist", "left_ear", "right_ear", "left_ring", "right_ring", "back"}
 
 	_HYBRID = false
 	if _HYBRID then
@@ -80,12 +86,16 @@ function precast(spell, position)
 			equip(sets.ws.magical)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Flee") then
+		if spell.english:contains("Despoil") then
+			equip(sets.precast.despoil)
+		elseif spell.english:contains("Flee") then
 			equip(sets.precast.flee)
+		elseif spell.english:contains("Hide") then
+			equip(sets.precast.hide)
 		elseif spell.english:contains("Steal") then
 			equip(sets.precast.steal)
-		elseif spell.english:contains("Despoil") then
-			equip(sets.precast.despoil)
+		elseif spell.english:contains("Waltz") then
+			equip(sets.precast.waltzes)
 		end
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.fastcast)
@@ -136,6 +146,16 @@ function buff_change(name, gain, buff_details)
 			elseif player.status == "Idle" then
 				equip(sets.idle)
 			end
+		end
+	elseif name == "Mobilization" then
+		if not gain then
+			equip(sets.domain)
+			disable(_ALL_SLOTS)
+		end
+	elseif name == "Elvorseal" then
+		if not gain then
+			enable(_ALL_SLOTS)
+			equip(sets.idle, sets.weapon)
 		end
 	end
 end

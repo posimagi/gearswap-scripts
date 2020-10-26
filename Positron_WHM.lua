@@ -26,6 +26,7 @@ function get_sets()
 	include("whm/precast-healing.lua") -- sets.precast.healing
 	include("whm/precast-martyr.lua") -- sets.precast.martyt
 
+	include("whm/midcast-auspice.lua") -- sets.midcast.auspice
 	include("whm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("whm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("whm/midcast-divine.lua") -- sets.midcast.divine
@@ -140,9 +141,11 @@ function midcast(spell)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		elseif spell.english:contains("Bar") then
-			equip(sets.midcast.barspell)
+			equip(sets.midcast.enhancingskill, sets.midcast.barspell)
 		elseif spell.english:contains("Boost") then
 			equip(sets.midcast.enhancingskill)
+		elseif spell.english:contains("Auspice") then
+			equip(sets.midcast.auspice)
 		end
 	elseif spell.skill == "Divine Magic" then
 		equip(sets.midcast.enfeebling, sets.midcast.divine)

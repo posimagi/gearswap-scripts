@@ -20,6 +20,7 @@ function get_sets()
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/tp-hybrid.lua") -- sets.tp.hybrid
 	include("rdm/ws.lua") -- sets.ws
+	include("rdm/ws-dark.lua") -- sets.ws.dark
 	include("rdm/ws-magical.lua") -- sets.ws.magical
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
@@ -63,16 +64,21 @@ function get_sets()
 	_MAGICAL_WS = T{
 		"Aeolian Edge",
 		"Red Lotus Blade",
-		"Sanguine Blade",
 		"Seraph Blade",
+	}
+
+	_DARK_WS = T{
+		"Sanguine Blade",
 	}
 
 	_ODIN = false
 	if _ODIN then
+		include("rdm/odin/idle.lua") -- sets.idle
+		include("rdm/odin/enspell.lua") -- sets.enspell
+		include("rdm/odin/tp.lua") -- sets.tp
 		include("rdm/odin/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 		include("rdm/odin/midcast-enhancing.lua") -- sets.midcast.enhancing
 		include("rdm/odin/midcast-healing.lua") -- sets.midcast.healing
-		include("rdm/odin/tp.lua") -- sets.tp
 	end
 
 	_LILITH = false
@@ -116,7 +122,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _MAGICAL_WS:contains(spell.name) then
+		if _DARK_WS:contains(spell.name) then
+			equip(sets.ws.dark)
+		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 		end
 	elseif spell.type == "JobAbility" then
@@ -172,6 +180,8 @@ function midcast(spell)
 			end
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
+		elseif spell.english:contains("Temper") then
+			equip(sets.midcast.enhancingskill)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)

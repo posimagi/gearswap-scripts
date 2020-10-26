@@ -8,7 +8,7 @@ sets.midcast.mb={
     neck="Mizu. Kubikazari",
     waist="Hachirin-no-Obi",
     left_ear="Regal Earring",
-    right_ear="Barkaro. Earring",
+    right_ear="Malignance Earring",
     left_ring="Freke Ring",
     right_ring="Mujin Band",
     back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
