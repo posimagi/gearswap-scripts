@@ -11,5 +11,5 @@ sets.midcast.enhancing={
     right_ear="Eabani Earring",
     left_ring="Lebeche Ring",
     right_ring="Kishar Ring",
-    back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +10','Mag. Acc.+8','Enh. Mag. eff. dur. +19',}},
+    back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +1','Enha.mag. skill +2','Enh. Mag. eff. dur. +20',}},
 }

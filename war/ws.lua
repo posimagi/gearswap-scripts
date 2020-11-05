@@ -1,7 +1,7 @@
 sets.ws={
     ammo="Knobkierrie",
     head="Flam. Zucchetto +2",
-    body="Nzingha Cuirass",
+    body={ name="Agoge Lorica +3", augments={'Enhances "Aggressive Aim" effect',}},
     hands="Flam. Manopolas +2",
     legs="Flamma Dirs +2",
     feet="Sulev. Leggings +2",
@@ -11,5 +11,5 @@ sets.ws={
     right_ear="Telos Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
-    back="Agema Cape",
+    back={ name="Cichol's Mantle", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 }

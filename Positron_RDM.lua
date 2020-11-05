@@ -185,6 +185,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)
+		if spell.english:contains("Bio") then
+			equip(sets.th)
+		end
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
 		if spell.name:contains("Cursna") then

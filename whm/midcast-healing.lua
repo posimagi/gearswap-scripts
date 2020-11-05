@@ -2,7 +2,7 @@ sets.midcast.healing={
     ammo="Staunch Tathlum",
     head="Ebers Cap +1",
     body="Ebers Bliaud +1",
-    hands="Theophany Mitts +2",
+    hands="Theophany Mitts +3",
     legs="Ebers Pant. +1",
     feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
     neck={ name="Clr. Torque +1", augments={'Path: A',}},

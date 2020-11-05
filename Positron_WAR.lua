@@ -4,6 +4,8 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
     
+    include("all/doom.lua") -- sets.doom
+
     include("war/fastcast.lua") -- sets.fastcast
     include("war/idle.lua") -- sets.idle
     include("war/th.lua") -- sets.th
@@ -61,6 +63,17 @@ function aftercast(spell)
     end
 end
 
+function buff_change(name, gain, buff_details)
+    if name == "Doom" then
+        if gain then
+            equip(sets.doom)
+            disable("neck", "left_ring")
+        else
+            enable("neck", "left_ring")
+        end
+    end
+end
+
 function status_change(new, old)
     if world.zone:contains("Abyssea") then
         disable("head", "neck", "waist")
@@ -72,7 +85,6 @@ function status_change(new, old)
         if _TH then
 			equip(sets.th)
         end
-        
     elseif new == "Idle" then
         equip(sets.idle)
     end

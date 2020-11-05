@@ -1,7 +1,7 @@
 sets.ws={
     ammo="Knobkierrie",
     head="Flam. Zucchetto +2",
-    body="Nzingha Cuirass",
+    body="Flamma Korazin +2",
     hands="Flam. Manopolas +2",
     legs="Flamma Dirs +2",
     feet="Flam. Gambieras +2",
