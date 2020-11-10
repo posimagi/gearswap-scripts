@@ -8,8 +8,8 @@ sets.idle={
     neck="Loricate Torque +1",
     waist="Flume Belt",
     left_ear="Etiolation Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Gelatinous Ring +1",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
     back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 }

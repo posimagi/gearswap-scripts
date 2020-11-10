@@ -10,5 +10,5 @@ sets.petmidcast.bp={
     right_ear="Evans Earring",
     left_ring="Evoker's Ring",
     right_ring="C. Palug Ring",
-    back="Scintillating Cape",
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10',}},
 }

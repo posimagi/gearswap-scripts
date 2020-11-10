@@ -8,7 +8,7 @@ sets.midcast.enfeebling={
     waist="Luminary Sash",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
-    left_ring="Gelatinous Ring +1",
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Kishar Ring",
     back={ name="Lifestream Cape", augments={'Geomancy Skill +9','Indi. eff. dur. +20','Pet: Damage taken -1%',}},
 }

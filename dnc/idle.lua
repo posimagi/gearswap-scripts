@@ -8,8 +8,8 @@ sets.idle={
     neck="Sanctity Necklace",
     waist="Flume Belt",
     left_ear="Etiolation Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Gelatinous Ring +1",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }

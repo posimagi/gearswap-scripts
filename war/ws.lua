@@ -11,5 +11,5 @@ sets.ws={
     right_ear="Telos Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
-    back={ name="Cichol's Mantle", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

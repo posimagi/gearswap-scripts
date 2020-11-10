@@ -7,8 +7,8 @@ sets.idle={
     neck="Loricate Torque +1",
     waist="Isa Belt",
     left_ear="Etiolation Earring",
-    right_ear="Odnowa Earring +1",
-    left_ring="Gelatinous Ring +1",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
     back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
 }
