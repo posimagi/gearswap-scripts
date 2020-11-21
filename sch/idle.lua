@@ -6,7 +6,7 @@ sets.idle={
     legs="Volte Brais",
     feet="Crier's Gaiters",
     neck="Loricate Torque +1",
-    waist="Eschan Stone",
+    waist="Carrier's Sash",
     left_ear="Etiolation Earring",
     right_ear="Eabani Earring",
     left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},

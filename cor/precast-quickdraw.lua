@@ -1,5 +1,5 @@
 sets.precast.quickdraw={
-    head="Laksa. Hat +1",
+    head="Laksa. Tricorne +1",
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs="Laksa. Trews +2",

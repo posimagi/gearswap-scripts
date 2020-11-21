@@ -1,7 +1,7 @@
 sets.idle={
     head="Flam. Zucchetto +2",
     body="Flamma Korazin +2",
-    hands="Flam. Manopolas +2",
+    hands="Kurys Gloves",
     legs="Flamma Dirs +2",
     feet="Danzo Sune-Ate",
     neck="Loricate Torque +1",

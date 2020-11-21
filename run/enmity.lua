@@ -2,6 +2,7 @@ sets.enmity={
     ammo="Sapience Orb",
     head="Halitus Helm",
     body="Emet Harness",
+    hands="Kurys Gloves",
     legs="Eri. Leg Guards +1",
     feet="Erilaz Greaves +1",
     neck="Unmoving Collar +1",

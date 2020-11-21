@@ -6,10 +6,12 @@ function get_sets()
     
     include("all/doom.lua") -- sets.doom
 
+    include("war/enmity.lua") -- sets.enmity
     include("war/fastcast.lua") -- sets.fastcast
     include("war/idle.lua") -- sets.idle
     include("war/th.lua") -- sets.th
     include("war/tp.lua") -- sets.tp
+    include("war/tp-hybrid.lua") -- sets.tp.hybrid
     include("war/ws.lua") -- sets.ws
 
     include("war/precast-aggressor.lua") -- sets.precast.aggressor
@@ -17,6 +19,13 @@ function get_sets()
     include("war/precast-bloodrage.lua") -- sets.precast.bloodrage
     include("war/precast-tomahawk.lua") -- sets.precast.tomahawk
     include("war/precast-warcry.lua") -- sets.precast.warcry
+
+    _HYBRID = false
+    if _HYBRID then
+        sets.tp = sets.tp.hybrid
+    end
+    
+    _TH = false
 
     send_command(
 		"input /macro book 1; \
@@ -27,11 +36,12 @@ function get_sets()
 	)
 end
 
-_TH = false
-
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
+        if spell.english:contains("Fell Cleave") then
+            equip(sets.th)
+        end
     elseif spell.type == "JobAbility" then
         if spell.english:contains("Aggressor") then
             equip(sets.precast.aggressor)
@@ -39,8 +49,10 @@ function precast(spell, position)
             equip(sets.precast.berserk)
         elseif spell.english:contains("Blood Rage") then
             equip(sets.precast.bloodrage)
+        elseif spell.english:contains("Provoke") then
+            equip(sets.enmity, sets.th)
         elseif spell.english:contains("Tomahawk") then
-            equip(sets.precast.tomahawk)
+            equip(sets.precast.tomahawk, sets.th)
         elseif spell.english:contains("Warcry") then
             equip(sets.precast.warcry)
         end

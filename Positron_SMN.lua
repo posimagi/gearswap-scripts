@@ -14,6 +14,8 @@ function get_sets()
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
 
+	include("smn/midcast-refresh.lua") -- sets.midcast.refresh
+
 	include("smn/petmidcast-bp.lua") -- sets.petmidcast.bp
 
 	send_command(
@@ -34,15 +36,21 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+    if spell.english:contains("Refresh") then
+		equip(sets.midcast.refresh)
+	end
 end
 
 function pet_midcast(spell)
 	if spell.type == "BloodPactRage" then
 		equip(sets.petmidcast.bp)
+	elseif spell.type == "BloodPactWard" then
+		equip(sets.summoning)
 	end
 end
 
 function aftercast(spell)
+	equip(sets.idle)
 end
 
 function pet_aftercast(spell)
