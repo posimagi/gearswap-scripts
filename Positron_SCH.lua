@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
 	include("all/obi.lua") -- sets.obi
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -15,6 +17,8 @@ function get_sets()
 	include("sch/idle.lua") -- sets.idle
 	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
+
+	include("sch/precast-healing.lua") -- sets.precast.healing
 
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -37,6 +41,9 @@ end
 
 function precast(spell, position)
 	equip(sets.fastcast)
+	if spell.skill == "Healing Magic" then
+		equip(sets.precast.healing)
+	end
 end
 
 function midcast(spell)
@@ -59,9 +66,7 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
-		if spell.element == world.weather_element then
-			equip(sets.obi)
-		end
+		obi_check(spell)
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
 			if spell.english:contains("Noctohelix") then

@@ -1,7 +1,7 @@
 sets.domain={
-    main="Mercurial Kris",
-    sub="Ridill",
-    range="Raider's Bmrng.",
+    -- main="Mercurial Kris",
+    -- sub="Ridill",
+    ammo="Yamarang",
     head="Mummu Bonnet +2",
     body="Mummu Jacket +2",
     hands="Mummu Wrists +2",

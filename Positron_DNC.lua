@@ -7,11 +7,13 @@ function get_sets()
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/th.lua") -- sets.th
 
+	include("dnc/enmity.lua") -- sets.enmity
 	include("dnc/fastcast.lua") -- sets.fastcast
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
 	include("dnc/tp-offense.lua") -- sets.tp.offense
+	include("dnc/turtle.lua") -- sets.turtle
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
 	include("dnc/ws-magical.lua") -- sets.ws.magical
@@ -77,12 +79,14 @@ function precast(spell, position)
 			equip(sets.precast.nofootrise)
 		end
 	elseif spell.type:contains("Flourish") then
-		if spell.english:contains("Reverse") then
+		if spell.english:contains("Animated") then
+			equip(sets.enmity)
+		elseif spell.english:contains("Climactic") then
+			equip(sets.climacticflourish)
+		elseif spell.english:contains("Reverse") then
 			equip(sets.precast.reverseflourish)
 		elseif spell.english:contains("Striking") then
 			equip(sets.strikingflourish)
-		elseif spell.english:contains("Climactic") then
-			equip(sets.climacticflourish)
 		end
 	elseif spell.type == "Step" then
 		equip(sets.precast.steps)

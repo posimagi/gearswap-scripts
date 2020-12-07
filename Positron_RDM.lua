@@ -25,6 +25,7 @@ function get_sets()
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
 	include("rdm/precast-enfeebling.lua") -- sets.precast.enfeebling
+	include("rdm/precast-healing.lua") -- sets.precast.healing
 
 	include("rdm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("rdm/midcast-barspell.lua") -- sets.midcast.barspell
@@ -144,6 +145,8 @@ function precast(spell, position)
 			if spell.english:contains("Impact") then
 				equip(sets.impact)
 			end
+		elseif spell.skill == "Healing Magic" then
+			equip(sets.precast.healing)
 		end
 	end
 end

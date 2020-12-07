@@ -9,6 +9,7 @@ function get_sets()
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("smn/fastcast.lua") -- sets.fastcast
 	include("smn/idle.lua") -- sets.idle
 	include("smn/summoning.lua") -- sets.summoning
 
@@ -28,16 +29,25 @@ function get_sets()
 end
 
 function precast(spell, position)
+	equip(sets.fastcast)
 	if spell.type == "SummonerPact" then
 		equip(sets.summoning)
 	elseif spell.type == "BloodPactRage" then
 		equip(sets.precast.bp)
+	elseif spell.skill == "Healing Magic" then
+		equip(sets.precast.healing)
+	elseif spell.english:contains("Stoneskin") then
+		equip(sets.precast.stoneskin)
 	end
 end
 
 function midcast(spell)
-    if spell.english:contains("Refresh") then
+	if spell.skill == "Healing Magic" then
+		equip(sets.midcast.healing)
+    elseif spell.english:contains("Refresh") then
 		equip(sets.midcast.refresh)
+	elseif spell.english:contains("Stoneskin") then
+		equip(sets.midcast.stoneskin)
 	end
 end
 

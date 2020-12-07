@@ -28,6 +28,7 @@ function get_sets()
 	include("thf/precast-steal.lua") -- sets.precast.steal
 	include("thf/precast-waltzes.lua") -- sets.precast.waltzes
 
+	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 
 	_ALL_SLOTS = T{"range", "ammo", "head", "body", "hands", "legs", "feet",
@@ -117,6 +118,9 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+		if buffactive_elvorseal() then
+			equip(sets.domain)
+		end
 		if spell.english:contains("Sneak Attack") or spell.english:contains("Trick Attack") then
 			equip(sets.th)
 		elseif buffactive_sata() then
@@ -128,6 +132,9 @@ end
 function status_change(new, old)
 	if new == "Engaged" then
 		equip(sets.tp)
+		if buffactive_elvorseal() then
+			equip(sets.domain)
+		end
 		if buffactive_sata() then
 			equip(sets.th)
 		end
@@ -150,12 +157,10 @@ function buff_change(name, gain, buff_details)
 	elseif name == "Mobilization" then
 		if not gain then
 			equip(sets.domain)
-			disable(_ALL_SLOTS)
 		end
 	elseif name == "Elvorseal" then
 		if not gain then
-			enable(_ALL_SLOTS)
-			equip(sets.idle, sets.weapon)
+			equip(sets.idle)
 		end
 	end
 end

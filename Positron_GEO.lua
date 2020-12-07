@@ -14,9 +14,11 @@ function get_sets()
     include("geo/th.lua") -- sets.th
     include("geo/tp.lua") -- sets.tp
     include("geo/weapon.lua") -- sets.weapon
+    include("geo/weapon-mb.lua") -- sets.weapon.mb
     include("geo/ws.lua") -- sets.ws
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
+    include("geo/precast-healing.lua") -- sets.precast.healing
 
     include('geo/midcast-enhancing.lua') -- sets.midcast.enhancing
     include('geo/midcast-enfeebling.lua') -- sets.midcast.enfeebling
@@ -59,6 +61,8 @@ function precast(spell, position)
     equip(sets.fastcast)
     if spell.english:contains("Bolster") then
         equip(sets.precast.bolster)
+    elseif spell.skill == "Healing Magic" then
+        equip(sets.precast.healing)
     end
 end
 
@@ -86,8 +90,12 @@ function midcast(spell)
         equip(sets.midcast.healing)
     elseif spell.skill == "Elemental Magic" then
         equip(sets.midcast.mb)
-        if _TIER_ONE_NUKES:contains(spell.english) and world.area == "Outer Ra'Kaznar [U]" then
-            equip(sets.naked)
+        if world.area == "Outer Ra'Kaznar [U]" then
+            if _TIER_ONE_NUKES:contains(spell.english) then
+                equip(sets.naked)
+            else
+                equip(sets.weapon.mb)
+            end
         end
     elseif spell.skill == "Dark Magic" then
         if spell.english:contains("Bio") then
@@ -97,7 +105,7 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-    if _TIER_ONE_NUKES:contains(spell.english) and world.area == "Outer Ra'Kaznar [U]" then
+    if world.area == "Outer Ra'Kaznar [U]" and spell.skill == "Elemental Magic" then
         equip(sets.weapon)
     end
     if player.status == "Engaged" then

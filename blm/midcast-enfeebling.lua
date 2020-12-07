@@ -1,0 +1,15 @@
+sets.midcast.enfeebling={
+    ammo="Pemphredo Tathlum",
+    head="Jhakri Coronal +2",
+    body="Shamash Robe",
+    hands="Jhakri Cuffs +2",
+    legs="Jhakri Slops +2",
+    feet="Jhakri Pigaches +2",
+    neck="Sanctity Necklace",
+    waist="Luminary Sash",
+    left_ear="Barkaro. Earring",
+    right_ear="Malignance Earring",
+    left_ring="Jhakri Ring",
+    right_ring="Kishar Ring",
+    back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+}

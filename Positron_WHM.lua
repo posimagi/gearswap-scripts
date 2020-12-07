@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 	include("all/th.lua") -- sets.th
@@ -124,9 +126,7 @@ function midcast(spell)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end
-		if world.weather_element == spell.element then
-			equip(sets.obi)
-		end
+		obi_check(spell)
 	elseif spell.skill == "Enfeebling Magic" then
 		equip(sets.midcast.enfeebling)
 		if spell.english:contains("Dia") then

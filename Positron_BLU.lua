@@ -4,6 +4,10 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 	
+	include("func/obi_check.lua") -- obi_check()
+
+	include("all/obi.lua") -- sets.obi
+
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 	
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
@@ -31,6 +35,7 @@ end
 
 function midcast(spell)
 	equip(sets.midcast.mab)
+	obi_check(spell)
 	if spell.english:contains("Aquaveil") then
 		equip(sets.midcast.aquaveil)
 	elseif spell.english:contains("Refresh") or

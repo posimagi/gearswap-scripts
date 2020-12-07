@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
 	include("all/obi.lua") -- sets.obi
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
@@ -43,9 +45,7 @@ function precast(spell, position)
 		equip(sets.ws)
 		if spell.english:contains("Leaden Salute") then
 			equip(sets.ws.magical, sets.ws.dark)
-			if world.weather_element == "Dark" then
-				equip(sets.obi)
-			end
+			obi_check(spell)
 		elseif spell.english:contains("Wildfire") or
 			   spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
