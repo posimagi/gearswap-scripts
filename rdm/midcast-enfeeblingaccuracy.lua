@@ -11,5 +11,5 @@ sets.midcast.enfeeblingaccuracy={
     right_ear="Snotra Earring",
     left_ring="Ayanmo Ring",
     right_ring="Kishar Ring",
-    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
+    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
 }

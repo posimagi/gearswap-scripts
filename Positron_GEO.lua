@@ -43,7 +43,9 @@ function get_sets()
         input /macro set 10; \
         wait 5; \
         input /lockstyleset 51; \
-        gs equip sets.idle"
+        gs equip sets.idle; \
+        wait 1; \
+        gs equip sets.weapon"
     )
 end
 
