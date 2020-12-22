@@ -63,11 +63,14 @@ function precast(spell, position)
 			equip(sets.precast.wildcard)
 		end
 	elseif spell.type == "Ninjutsu" then
+		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
 		end
 	elseif spell.action_type == "Ranged Attack" then
 		equip(sets.ra)
+	else
+		equip(sets.fastcast)
 	end
 end
 

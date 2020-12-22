@@ -5,7 +5,7 @@ sets.tp={
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Reiki Yotai",
     left_ear="Suppanomimi",
     right_ear="Sherida Earring",

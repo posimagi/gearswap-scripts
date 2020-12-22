@@ -6,7 +6,7 @@ sets.naked={
     hands="Carpenter's Gloves",
     legs="Shedir Seraweels",
     feet="Crier's Gaiters",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Embla Sash",
     left_ear="Etiolation Earring",
     right_ear="Loquac. Earring",

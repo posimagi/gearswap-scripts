@@ -4,7 +4,7 @@ sets.ws={
     body={ name="Herculean Vest", augments={'Accuracy+7','Weapon skill damage +4%','DEX+11',}},
     hands="Malignance Gloves",
     legs="Hiza. Hizayoroi +2",
-    feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','DEX+11','Accuracy+6','Attack+1',}},
+    feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
     neck="Caro Necklace",
     waist="Grunfeld Rope",
     left_ear="Telos Earring",

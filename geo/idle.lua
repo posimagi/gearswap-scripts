@@ -4,7 +4,7 @@ sets.idle={
     hands="Geo. Mitaines +3",
     legs="Volte Brais",
     feet="Azimuth Gaiters +1",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Isa Belt",
     left_ear="Etiolation Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},

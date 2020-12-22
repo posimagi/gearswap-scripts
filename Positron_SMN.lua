@@ -19,11 +19,14 @@ function get_sets()
 
 	include("smn/petmidcast-bp.lua") -- sets.petmidcast.bp
 
+	_ALL_SLOTS = T{"range", "ammo", "head", "body", "hands", "legs", "feet",
+				   "neck", "waist", "left_ear", "right_ear", "left_ring", "right_ring", "back"}
+
 	send_command(
 		"input /macro book 15; \
 		input /macro set 1; \
 		wait 5; \
-		input /lockstyle on; \
+		input /lockstyleset 87; \
 		gs equip sets.idle"
 	)
 end
@@ -68,4 +71,15 @@ function pet_aftercast(spell)
 end
 
 function status_change(new, old)
+end
+
+function buff_change(name, gain, buff_details)
+	if name == "Astral Conduit" then
+		if gain then
+			equip(sets.petmidcast.bp)
+			disable(_ALL_SLOTS)
+		else
+			enable(_ALL_SLOTS)
+		end
+	end
 end

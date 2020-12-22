@@ -5,7 +5,7 @@ sets.idle.hybrid={
     hands="Aya. Manopolas +2",
     legs="Aya. Cosciales +2",
     feet="Aya. Gambieras +2",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear="Etiolation Earring",
     right_ear="Eabani Earring",

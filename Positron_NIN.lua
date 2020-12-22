@@ -8,6 +8,7 @@ function get_sets()
 
 	include("nin/idle.lua") -- sets.idle
 	include("nin/fastcast.lua") -- sets.fastcast
+	include("nin/ninjutsu.lua") -- sets.ninjutsu
 	include("nin/tp.lua") -- sets.tp
 	include("nin/ws.lua") -- sets.ws
 
@@ -49,7 +50,10 @@ end
 
 function midcast(spell)
 	if spell.type == "Ninjutsu" then
-		equip(sets.midcast.utsusemi)
+		equip(sets.ninjutsu)
+		if spell.english:contains("Utsusemi") then
+			equip(sets.midcast.utsusemi)
+		end
 	end
 end
 

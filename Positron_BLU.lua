@@ -7,6 +7,7 @@ function get_sets()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
+	include("all/th.lua") -- sets.th
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 	
@@ -14,7 +15,6 @@ function get_sets()
 
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
-	include("blu/th.lua") -- sets.th
 	include("blu/tp.lua") -- sets.tp
 	
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
@@ -34,15 +34,15 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	equip(sets.midcast.mab)
+	equip(sets.idle, sets.midcast.mab)
 	obi_check(spell)
 	if spell.english:contains("Aquaveil") then
 		equip(sets.midcast.aquaveil)
 	elseif spell.english:contains("Refresh") or
 		   spell.english:contains("Battery Charge") then
 		equip(sets.midcast.refresh)
-	elseif spell.english:contains("Dream Flower") then
-		equip(sets.th)
+	elseif spell.english:contains("Dream Flower") or spell.english:contains("Yawn") then
+		equip(sets.idle, sets.th)
 	end
 end
 

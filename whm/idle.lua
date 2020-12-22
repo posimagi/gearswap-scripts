@@ -5,7 +5,7 @@ sets.idle={
     hands="Volte Gloves",
     legs="Volte Brais",
     feet="Crier's Gaiters",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
     left_ear="Etiolation Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},

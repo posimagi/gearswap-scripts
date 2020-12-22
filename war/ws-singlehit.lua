@@ -1,0 +1,15 @@
+sets.ws.singlehit={
+    ammo="Knobkierrie",
+    head="Flam. Zucchetto +2",
+    body={ name="Agoge Lorica +3", augments={'Enhances "Aggressive Aim" effect',}},
+    hands="Flam. Manopolas +2",
+    legs="Flamma Dirs +2",
+    feet="Sulev. Leggings +2",
+    neck="Caro Necklace",
+    waist="Grunfeld Rope",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Ishvara Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Regal Ring",
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}

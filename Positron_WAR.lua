@@ -8,11 +8,13 @@ function get_sets()
 
     include("war/enmity.lua") -- sets.enmity
     include("war/fastcast.lua") -- sets.fastcast
+    include("war/fencer.lua") -- sets.fencer
     include("war/idle.lua") -- sets.idle
     include("war/th.lua") -- sets.th
     include("war/tp.lua") -- sets.tp
     include("war/tp-hybrid.lua") -- sets.tp.hybrid
     include("war/ws.lua") -- sets.ws
+    include("war/ws-singlehit.lua") -- sets.ws.singlehit
 
     include("war/precast-aggressor.lua") -- sets.precast.aggressor
     include("war/precast-berserk.lua") -- sets.precast.berserk
@@ -39,7 +41,12 @@ end
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
-        if spell.english:contains("Fell Cleave") then
+        if spell.english:contains("Savage Blade") or spell.english:contains("Ukko's Fury") then
+            equip(sets.ws.singlehit)
+            if player.equipment.sub:contains("Blurred Shield") then
+                equip(sets.fencer)
+            end
+        elseif spell.english:contains("Fell Cleave") then
             equip(sets.th)
         end
     elseif spell.type == "JobAbility" then

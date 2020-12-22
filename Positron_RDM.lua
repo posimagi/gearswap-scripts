@@ -5,6 +5,7 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("all/impact.lua") -- sets.impact
+	include("all/obi.lua") -- sets.obi
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -41,6 +42,7 @@ function get_sets()
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
+	include("func/obi_check.lua") -- obi_check()
 
 	_VARIABLE_POTENCY = T{
 		"Addle",
@@ -125,8 +127,10 @@ function precast(spell, position)
 		equip(sets.ws)
 		if _DARK_WS:contains(spell.name) then
 			equip(sets.ws.dark)
+			obi_check(spell)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
+			obi_check(spell)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Chainspell") then
@@ -193,6 +197,7 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
+		obi_check(spell)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end
@@ -201,6 +206,7 @@ function midcast(spell)
 		if spell.english:contains("Impact") then
 			equip(sets.impact)
 		end
+		obi_check(spell)
 	elseif spell.type == "Ninjutsu" then
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)

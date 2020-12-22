@@ -9,15 +9,22 @@ function get_sets()
     include("drg/ws.lua") -- sets.ws
 
     send_command(
-		"wait 5; \
-		input /macro book 12; \
+		"input /macro book 12; \
         input /macro set 9; \
-        gs equip sets.ws; \
-        wait 3; \
-        input /lockstyle on; \
-        wait 1; \
+        wait 5; \
+        input /lockstyleset 88; \
 		gs equip sets.idle"
-	)
+    )
+end
+
+function sub_job_change(new, old)
+	send_command(
+		"input /macro book 12; \
+        input /macro set 9; \
+        wait 10; \
+        input /lockstyleset 88; \
+		gs equip sets.idle"
+    )
 end
 
 _TH = true
@@ -26,6 +33,9 @@ function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
+        if spell.english:contains("Jump") then
+            equip(sets.tp)
+        end
     end
 end
 

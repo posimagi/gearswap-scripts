@@ -3,4 +3,9 @@ sets.ra={
     legs={ name="Adhemar Kecks", augments={'AGI+10','"Rapid Shot"+10','Enmity-5',}},
     feet="Meg. Jam. +2",
     neck="Iskur Gorget",
+    waist="Eschan Stone",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Regal Ring",
+    right_ring="Dingir Ring",
 }

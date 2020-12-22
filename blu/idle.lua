@@ -5,7 +5,7 @@ sets.idle={
     hands="Malignance Gloves",
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt",
     left_ear="Etiolation Earring",
     right_ear="Eabani Earring",

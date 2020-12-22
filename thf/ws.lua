@@ -4,7 +4,7 @@ sets.ws={
     body={ name="Herculean Vest", augments={'Accuracy+7','Weapon skill damage +4%','DEX+11',}},
     hands="Meg. Gloves +2",
     legs="Mummu Kecks +2",
-    feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','DEX+11','Accuracy+6','Attack+1',}},
+    feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

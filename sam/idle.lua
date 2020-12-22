@@ -4,7 +4,7 @@ sets.idle={
     hands="Kurys Gloves",
     legs="Flamma Dirs +2",
     feet="Danzo Sune-Ate",
-    neck="Loricate Torque +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
     left_ear="Etiolation Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
