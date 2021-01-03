@@ -25,8 +25,10 @@ function get_sets()
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
 	include("sch/midcast-helix.lua") -- sets.midcast.helix
+	include("sch/midcast-light.lua") -- sets.midcast.light
 	include("sch/midcast-mb.lua") -- sets.midcast.mb
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
+	include("sch/midcast-regen.lua") -- sets.midcast.regen
 
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
@@ -56,6 +58,8 @@ function midcast(spell)
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
+		elseif spell.english:contains("Regen") then
+			equip(sets.midcast.regen)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		end
@@ -69,7 +73,9 @@ function midcast(spell)
 		obi_check(spell)
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
-			if spell.english:contains("Noctohelix") then
+			if spell.english:contains("Luminohelix") then
+				equip(sets.midcast.light)
+			elseif spell.english:contains("Noctohelix") then
 				equip(sets.midcast.darkness)
 			end
 		elseif spell.english:contains("Kaustra") then

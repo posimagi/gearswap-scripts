@@ -12,6 +12,7 @@ function get_sets()
 	include("smn/fastcast.lua") -- sets.fastcast
 	include("smn/idle.lua") -- sets.idle
 	include("smn/summoning.lua") -- sets.summoning
+	include("smn/tp.lua") -- sets.tp
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
 
@@ -71,6 +72,11 @@ function pet_aftercast(spell)
 end
 
 function status_change(new, old)
+    if new == "Engaged" then
+        equip(sets.tp)
+    elseif new == "Idle" then
+        equip(sets.idle)
+    end
 end
 
 function buff_change(name, gain, buff_details)

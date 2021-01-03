@@ -1,8 +1,8 @@
 sets.ws={
     ammo="Knobkierrie",
     head="Flam. Zucchetto +2",
-    body="Flamma Korazin +2",
-    hands="Flam. Manopolas +2",
+    body="Sulevia's Plate. +2",
+    hands="Sulev. Gauntlets +2",
     legs="Flamma Dirs +2",
     feet="Flam. Gambieras +2",
     neck="Fotia Gorget",

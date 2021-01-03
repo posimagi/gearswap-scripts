@@ -16,6 +16,7 @@ function get_sets()
 
 	include("blm/fastcast.lua") -- sets.fastcast
 	include("blm/idle.lua") -- sets.idle
+	include("blm/manawall.lua") -- sets.manawall
 --	include("blm/th.lua") -- sets.th
 	include("blm/ws.lua") -- sets.ws
 	include("blm/ws-myrkr.lua") -- sets.ws.myrkr
@@ -43,7 +44,7 @@ function get_sets()
 		"input /macro book 4; \
 		input /macro set 1; \
 		wait 5; \
-		input /lockstyle on; \
+		input /lockstyleset 86; \
 		gs equip sets.idle"
 	)
 end
@@ -121,6 +122,17 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+	end
+end
+
+function buff_change(name, gain, buff_details)
+	if name == "Mana Wall" then
+		if gain then
+			equip(sets.manawall)
+			disable("feet", "back")
+		else
+			enable("feet", "back")
+		end
 	end
 end
 

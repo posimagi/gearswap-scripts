@@ -8,6 +8,10 @@ function get_sets()
     include("drg/tp.lua") -- sets.tp
     include("drg/ws.lua") -- sets.ws
 
+    include("drg/precast-angon.lua") -- sets.precast.angon
+    include("drg/precast-callwyvern.lua") -- sets.precast.callwyvern
+    include("drg/precast-spiritlink.lua") -- sets.precast.spiritlink
+
     send_command(
 		"input /macro book 12; \
         input /macro set 9; \
@@ -35,6 +39,12 @@ function precast(spell, position)
     elseif spell.type == "JobAbility" then
         if spell.english:contains("Jump") then
             equip(sets.tp)
+        elseif spell.english:contains("Call Wyvern") then
+            equip(sets.precast.callwyvern)
+        elseif spell.english:contains("Spirit Link") then
+            equip(sets.precast.spiritlink)
+        elseif spell.english:contains("Angon") then
+            equip(sets.precast.angon)
         end
     end
 end

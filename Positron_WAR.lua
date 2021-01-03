@@ -22,6 +22,16 @@ function get_sets()
     include("war/precast-tomahawk.lua") -- sets.precast.tomahawk
     include("war/precast-warcry.lua") -- sets.precast.warcry
 
+    _SINGLE_HIT_WS = T{ 
+        "Savage Blade",
+        "Ukko's Fury",
+    }
+
+    _FENCER = false
+    if _FENCER then
+        include("war/tp-fencer.lua") -- sets.tp
+    end
+
     _HYBRID = false
     if _HYBRID then
         sets.tp = sets.tp.hybrid
@@ -41,11 +51,8 @@ end
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
-        if spell.english:contains("Savage Blade") or spell.english:contains("Ukko's Fury") then
+        if _SINGLE_HIT_WS:contains(spell.english) then
             equip(sets.ws.singlehit)
-            if player.equipment.sub:contains("Blurred Shield") then
-                equip(sets.fencer)
-            end
         elseif spell.english:contains("Fell Cleave") then
             equip(sets.th)
         end
@@ -90,15 +97,16 @@ function buff_change(name, gain, buff_details)
         else
             enable("neck", "left_ring")
         end
+    elseif name == "Visitant" then
+        if gain then
+            disable("head", "neck", "waist")
+        else
+            enable("head", "neck", "waist")
+        end
     end
 end
 
 function status_change(new, old)
-    if world.zone:contains("Abyssea") then
-        disable("head", "neck", "waist")
-    else
-        enable("head", "neck", "waist")
-    end
     if new == "Engaged" then
         equip(sets.tp)
         if _TH then

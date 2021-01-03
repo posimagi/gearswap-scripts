@@ -1,4 +1,6 @@
 sets.idle={
+    main="Daybreak",
+    sub="Genmei Shield",
     ammo="Homiliary",
     head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
     body="Shamash Robe",

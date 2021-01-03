@@ -3,7 +3,7 @@ sets.idle={
     body="Ayanmo Corazza +2",
     hands="Volte Gloves",
     legs="Volte Brais",
-    feet="Brioso Slippers +2",
+    feet="Fili Cothurnes +1",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt",
     left_ear="Etiolation Earring",

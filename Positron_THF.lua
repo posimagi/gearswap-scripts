@@ -28,6 +28,8 @@ function get_sets()
 	include("thf/precast-steal.lua") -- sets.precast.steal
 	include("thf/precast-waltzes.lua") -- sets.precast.waltzes
 
+	include("thf/midcast-phalanx.lua") -- sets.midcast.phalanx
+
 	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 
@@ -111,6 +113,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+	if spell.english:contains("Phalanx") then
+		equip(sets.midcast.phalanx)
+	end
 end
 
 function aftercast(spell)

@@ -12,7 +12,10 @@ function get_sets()
 	include("brd/idle.lua") -- sets.idle
 	include("brd/tp.lua") -- sets.tp
 	include("brd/ws.lua") -- sets.ws
-	
+
+	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
+	include("brd/precast-troubadour.lua") -- sets.precast.troubadour
+
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
@@ -26,17 +29,26 @@ function get_sets()
 end
 
 function precast(spell, position)
-	equip(sets.fastcast)
-	if spell.english:contains("Stoneskin") then
-		equip(sets.precast.stoneskin)
+	if spell.type == "JobAbility" then
+		if spell.english:contains("Nightingale") then
+			equip(sets.precast.nightingale)
+		elseif spell.english:contains("Troubadour") then
+			equip(sets.precast.troubadour)
+		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
+	else
+		equip(sets.fastcast)
+		if spell.english:contains("Stoneskin") then
+			equip(sets.precast.stoneskin)
+		end
 	end
 end
 
 function midcast(spell)
-	equip(sets.midcast.songs)
-	if spell.english:contains("Stoneskin") then
+	if spell.type == "BardSong" then
+		equip(sets.midcast.songs)
+	elseif spell.english:contains("Stoneskin") then
 		equip(sets.midcast.stoneskin)
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)

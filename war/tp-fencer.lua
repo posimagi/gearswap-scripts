@@ -1,4 +1,4 @@
-sets.tp.hybrid={
+sets.tp={
     ammo="Ginsen",
     head="Hjarrandi Helm",
     body="Hjarrandi Breast.",
@@ -7,9 +7,9 @@ sets.tp.hybrid={
     feet="Flam. Gambieras +2",
     neck={ name="Warrior's Beads", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
-    left_ear="Etiolation Earring",
-    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-    right_ring="Defending Ring",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Petrov Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

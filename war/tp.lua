@@ -5,7 +5,7 @@ sets.tp={
     hands="Sulev. Gauntlets +2",
     legs="Pumm. Cuisses +2",
     feet="Flam. Gambieras +2",
-    neck="Combatant's Torque",
+    neck={ name="Warrior's Beads", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
     left_ear="Suppanomimi",
     right_ear="Telos Earring",

@@ -1,4 +1,6 @@
 sets.midcast.healing={
+    main="Daybreak",
+    sub="Ammurapi Shield",
     ammo="Staunch Tathlum",
     body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
     legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
