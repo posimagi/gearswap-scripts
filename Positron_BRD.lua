@@ -19,6 +19,12 @@ function get_sets()
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
+	include("brd/midcast-songs-offensive.lua") -- sets.midcast.songs.offensive
+
+	_OFFENSIVE_SONGS = T{
+		"Carnage Elegy",
+		"Pining Nocturne",
+	} -- TODO: improve this
 
 	send_command(
 		"input /macro book 10; \
@@ -26,6 +32,16 @@ function get_sets()
 		wait 5; \
 		input /lockstyleset 91; \
 		gs equip sets.idle")
+end
+
+function sub_job_change(new, old)
+	send_command(
+		"input /macro book 10; \
+		input /macro set 1; \
+		wait 10; \
+		input /lockstyleset 91; \
+		gs equip sets.idle"
+	)
 end
 
 function precast(spell, position)
@@ -48,6 +64,9 @@ end
 function midcast(spell)
 	if spell.type == "BardSong" then
 		equip(sets.midcast.songs)
+		if _OFFENSIVE_SONGS:contains(spell.english) then
+			equip(sets.midcast.songs.offensive)
+		end
 	elseif spell.english:contains("Stoneskin") then
 		equip(sets.midcast.stoneskin)
 	elseif spell.skill == "Healing Magic" then

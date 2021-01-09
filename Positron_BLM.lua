@@ -17,7 +17,6 @@ function get_sets()
 	include("blm/fastcast.lua") -- sets.fastcast
 	include("blm/idle.lua") -- sets.idle
 	include("blm/manawall.lua") -- sets.manawall
---	include("blm/th.lua") -- sets.th
 	include("blm/ws.lua") -- sets.ws
 	include("blm/ws-myrkr.lua") -- sets.ws.myrkr
 
@@ -26,9 +25,7 @@ function get_sets()
 	include("blm/midcast-drain.lua") -- sets.midcast.drain
 	include("blm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("blm/midcast-enhancing.lua") -- sets.midcast.enhancing
---	include("blm/midcast-healing.lua") -- sets.midcast.healing
 	include("blm/midcast-mb.lua") -- sets.midcast.mb
---	include("blm/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("blm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	_DRAIN_SPELLS = T{
@@ -53,8 +50,8 @@ function sub_job_change(new, old)
 	send_command(
 		"input /macro book 4; \
 		input /macro set 1; \
-		wait 10;\
-		input /lockstyle on; \
+		wait 10; \
+		input /lockstyleset 86; \
 		gs equip sets.idle"
 	)
 end

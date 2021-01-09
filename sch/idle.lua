@@ -1,6 +1,6 @@
 sets.idle={
-    main="Daybreak",
-    sub="Genmei Shield",
+    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
+    sub="Kaja Grip",
     ammo="Homiliary",
     head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
     body="Shamash Robe",

@@ -1,6 +1,6 @@
 sets.idle={
     head="Inyanga Tiara +2",
-    body="Ayanmo Corazza +2",
+    body="Inyanga Jubbah +2",
     hands="Volte Gloves",
     legs="Volte Brais",
     feet="Fili Cothurnes +1",

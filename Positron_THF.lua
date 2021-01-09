@@ -28,6 +28,7 @@ function get_sets()
 	include("thf/precast-steal.lua") -- sets.precast.steal
 	include("thf/precast-waltzes.lua") -- sets.precast.waltzes
 
+	include("thf/midcast-mb.lua") -- sets.midcast.mb
 	include("thf/midcast-phalanx.lua") -- sets.midcast.phalanx
 
 	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
@@ -52,9 +53,11 @@ function get_sets()
 		sets.tp = set_combine(sets.tp, sets.th)
 		sets.ws = set_combine(sets.ws, sets.th)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
+		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th)
 	elseif _TH == "medium" then
 		sets.tp = set_combine(sets.tp, sets.th.medium)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
+		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th.medium)
 	elseif _TH == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
 	elseif _TH == "none" then
@@ -113,9 +116,12 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	if spell.english:contains("Phalanx") then
+	if spell.skill == "Elemental Magic" then
+		equip(sets.midcast.mb)
+	elseif spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
 	end
+	
 end
 
 function aftercast(spell)

@@ -21,6 +21,8 @@ function get_sets()
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
+	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
+
 	send_command(
 		"input /macro book 11; \
 		input /macro set 10; \
@@ -75,6 +77,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+	if spell.english:contains("Phalanx") then
+		equip(sets.midcast.phalanx)
+	end
 end
 
 function aftercast(spell)
