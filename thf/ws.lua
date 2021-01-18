@@ -3,7 +3,7 @@ sets.ws={
     head="Pill. Bonnet +3",
     body={ name="Herculean Vest", augments={'Accuracy+7','Weapon skill damage +4%','DEX+11',}},
     hands="Meg. Gloves +2",
-    legs="Mummu Kecks +2",
+    legs="Pill. Culottes +2",
     feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",

@@ -20,6 +20,7 @@ function get_sets()
 	include("rdm/th.lua") -- sets.th
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/tp-hybrid.lua") -- sets.tp.hybrid
+	include("rdm/weapon.lua") -- sets.weapon
 	include("rdm/ws.lua") -- sets.ws
 	include("rdm/ws-dark.lua") -- sets.ws.dark
 	include("rdm/ws-magical.lua") -- sets.ws.magical

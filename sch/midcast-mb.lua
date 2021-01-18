@@ -1,6 +1,6 @@
 sets.midcast.mb={
     main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Kaja Grip",
+    sub="Khonsu",
     ammo="Pemphredo Tathlum",
     head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
     body="Jhakri Robe +2",

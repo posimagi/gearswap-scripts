@@ -46,16 +46,17 @@ end
 
 function precast(spell, position)
 	if spell.type == "JobAbility" then
-		if spell.english:contains("Nightingale") then
-			equip(sets.precast.nightingale)
-		elseif spell.english:contains("Troubadour") then
-			equip(sets.precast.troubadour)
+		if spell.english:contains("Nightingale") or 
+		   spell.english:contains("Troubadour") then
+			equip(sets.precast.nightingale, sets.precast.troubadour)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
 	else
 		equip(sets.fastcast)
-		if spell.english:contains("Stoneskin") then
+		if spell.type == "BardSong" then
+			equip(sets.precast.songs)
+		elseif spell.english:contains("Stoneskin") then
 			equip(sets.precast.stoneskin)
 		end
 	end
@@ -78,7 +79,10 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if player.status == "Idle" then
+	if spell.english:contains("Nightingale") or 
+	   spell.english:contains("Troubadour") then
+		-- do nothing
+	elseif player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)

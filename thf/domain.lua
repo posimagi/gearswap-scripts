@@ -1,12 +1,8 @@
 sets.domain={
-    -- main="Mercurial Kris",
-    -- sub="Ridill",
     ammo="Yamarang",
     head="Mummu Bonnet +2",
     body="Mummu Jacket +2",
     hands="Mummu Wrists +2",
-    legs="Mummu Kecks +2",
-    feet="Mummu Gamash. +2",
     neck="Sanctity Necklace",
     waist="Reiki Yotai",
     left_ear="Suppanomimi",

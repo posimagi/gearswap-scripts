@@ -4,12 +4,16 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
     
+    include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+    
+    include("drg/fastcast.lua") -- sets.fastcast
     include("drg/idle.lua") -- sets.idle
     include("drg/tp.lua") -- sets.tp
     include("drg/ws.lua") -- sets.ws
 
     include("drg/precast-angon.lua") -- sets.precast.angon
     include("drg/precast-callwyvern.lua") -- sets.precast.callwyvern
+    include("drg/precast-jump.lua") -- sets.precast.jump
     include("drg/precast-spiritlink.lua") -- sets.precast.spiritlink
 
     send_command(
@@ -38,7 +42,7 @@ function precast(spell, position)
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
         if spell.english:contains("Jump") then
-            equip(sets.tp)
+            equip(sets.tp, sets.precast.jump)
         elseif spell.english:contains("Call Wyvern") then
             equip(sets.precast.callwyvern)
         elseif spell.english:contains("Spirit Link") then
@@ -46,6 +50,11 @@ function precast(spell, position)
         elseif spell.english:contains("Angon") then
             equip(sets.precast.angon)
         end
+    else
+        equip(sets.fastcast)
+        if spell.english:contains("Utsusemi") then
+			equip(sets.precast.utsusemi)
+		end
     end
 end
 

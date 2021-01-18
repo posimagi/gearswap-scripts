@@ -1,5 +1,5 @@
 sets.tp={
-    main="Aern Dagger",
+    main="Esikuva",
     sub="Norgish Dagger",
     ammo="Ginsen",
     head="Malignance Chapeau",

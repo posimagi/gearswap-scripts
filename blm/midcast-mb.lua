@@ -1,6 +1,6 @@
 sets.midcast.mb={
     main={ name="Lathi", augments={'MP+80','INT+20','"Mag.Atk.Bns."+20',}},
-    sub="Kaja Grip",
+    sub="Khonsu",
     ammo="Pemphredo Tathlum",
     head="Jhakri Coronal +2",
     body="Spae. Coat +1",

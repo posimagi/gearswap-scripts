@@ -8,7 +8,7 @@ sets.idle.hybrid={
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear="Etiolation Earring",
-    right_ear="Eabani Earring",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
     back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
