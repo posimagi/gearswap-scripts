@@ -7,9 +7,9 @@ sets.tp={
     feet="Malignance Boots",
     neck="Combatant's Torque",
     waist="Reiki Yotai",
-    left_ear="Telos Earring",
-    right_ear="Cessance Earring",
+    left_ear="Suppanomimi",
+    right_ear="Telos Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Petrov Ring",
+    right_ring="Gere Ring",
     back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

@@ -16,7 +16,10 @@ function get_sets()
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
 	include("blu/tp.lua") -- sets.tp
+	include("blu/ws.lua") -- sets.ws
 	
+	include("blu/precast-diffusion.lua") -- sets.precast.diffusion
+
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-mab.lua") -- sets.midcast.mab
 	include("blu/midcast-phalanx.lua") -- sets.midcast.phalanx
@@ -31,7 +34,13 @@ function get_sets()
 end
 
 function precast(spell, position)
-	equip(sets.fastcast)
+	if spell.type == "JobAbility" then
+		
+	elseif spell.type == "WeaponSkill" then
+		equip(sets.ws)
+	else
+		equip(sets.fastcast)
+	end
 end
 
 function midcast(spell)
@@ -46,6 +55,9 @@ function midcast(spell)
 		equip(sets.midcast.phalanx)
 	elseif spell.english:contains("Dream Flower") or spell.english:contains("Yawn") then
 		equip(sets.idle, sets.th)
+	end
+	if buffactive["Diffusion"] then
+		equip(sets.precast.diffusion)
 	end
 end
 

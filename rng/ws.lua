@@ -1,13 +1,13 @@
-sets.ra={
+sets.ws={
     head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
+    body="Meg. Cuirie +2",
+    hands="Meg. Gloves +2",
     legs={ name="Adhemar Kecks", augments={'AGI+10','"Rapid Shot"+10','Enmity-5',}},
     feet="Meg. Jam. +2",
-    neck="Iskur Gorget",
-    waist="Eschan Stone",
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
     left_ear="Telos Earring",
-    right_ear="Sherida Earring",
+    right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Dingir Ring",
     right_ring="Regal Ring",
 }

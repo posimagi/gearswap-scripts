@@ -19,10 +19,12 @@ function get_sets()
 	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
 	include("thf/weapon.lua") -- sets.weapon
 	include("thf/ws.lua") -- sets.ws
+	include("thf/ws-critical.lua") -- sets.ws.critical
 	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
 
 	include("thf/precast-despoil.lua") -- sets.precast.despoil
+	include("thf/precast-feint.lua") -- sets.precast.feint
 	include("thf/precast-flee.lua") -- sets.precast.flee
 	include("thf/precast-hide.lua") -- sets.precast.hide
 	include("thf/precast-steal.lua") -- sets.precast.steal
@@ -71,6 +73,11 @@ function get_sets()
 		input /lockstyleset 50; \
 		gs equip sets.idle"
 	)
+	if player.sub_job == "NIN" then
+		send_command(
+			"input /macro set 1;"
+		)
+	end
 end
 
 function sub_job_change(new, old)
@@ -81,6 +88,11 @@ function sub_job_change(new, old)
 		input /lockstyleset 50; \
 		gs equip sets.idle"
 	)
+	if player.sub_job == "NIN" then
+		send_command(
+			"input /macro set 1;"
+		)
+	end
 end
 
 function precast(spell, position)
@@ -91,9 +103,14 @@ function precast(spell, position)
 		elseif spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
 		end
+		if buffactive_sata() then
+			equip(sets.ws.critical)
+		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Despoil") then
 			equip(sets.precast.despoil)
+		elseif spell.english:contains("Feint") then
+			equip(sets.precast.feint)
 		elseif spell.english:contains("Flee") then
 			equip(sets.precast.flee)
 		elseif spell.english:contains("Hide") then

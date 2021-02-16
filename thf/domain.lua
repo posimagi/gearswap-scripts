@@ -8,6 +8,6 @@ sets.domain={
     left_ear="Suppanomimi",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
+    right_ring="Gere Ring",
     back={ name="Canny Cape", augments={'DEX+1','AGI+2','"Dual Wield"+5','Crit. hit damage +3%',}},
 }

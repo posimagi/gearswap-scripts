@@ -5,7 +5,7 @@ sets.tp.hybrid={
     hands="Sulev. Gauntlets +2",
     legs="Pumm. Cuisses +2",
     feet="Flam. Gambieras +2",
-    neck={ name="Warrior's Beads", augments={'Path: A',}},
+    neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
     left_ear="Etiolation Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},

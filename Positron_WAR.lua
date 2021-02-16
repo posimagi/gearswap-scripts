@@ -5,12 +5,12 @@ function get_sets()
     sets.aftercast = {}
     
     include("all/doom.lua") -- sets.doom
+    include("all/th.lua") -- sets.th
 
     include("war/enmity.lua") -- sets.enmity
     include("war/fastcast.lua") -- sets.fastcast
     include("war/fencer.lua") -- sets.fencer
     include("war/idle.lua") -- sets.idle
-    include("war/th.lua") -- sets.th
     include("war/tp.lua") -- sets.tp
     include("war/tp-hybrid.lua") -- sets.tp.hybrid
     include("war/ws.lua") -- sets.ws
@@ -21,6 +21,11 @@ function get_sets()
     include("war/precast-bloodrage.lua") -- sets.precast.bloodrage
     include("war/precast-tomahawk.lua") -- sets.precast.tomahawk
     include("war/precast-warcry.lua") -- sets.precast.warcry
+
+    _AOE_WS = T{
+        "Fell Cleave",
+        "Circle Blade",
+    }
 
     _SINGLE_HIT_WS = T{ 
         "Savage Blade",
@@ -53,7 +58,7 @@ function precast(spell, position)
         equip(sets.ws)
         if _SINGLE_HIT_WS:contains(spell.english) then
             equip(sets.ws.singlehit)
-        elseif spell.english:contains("Fell Cleave") then
+        elseif _AOE_WS:contains(spell.english) then
             equip(sets.th)
         end
     elseif spell.type == "JobAbility" then
@@ -63,6 +68,8 @@ function precast(spell, position)
             equip(sets.precast.berserk)
         elseif spell.english:contains("Blood Rage") then
             equip(sets.precast.bloodrage)
+        elseif spell.english:contains("Mighty Strikes") then
+            equip(sets.precast.mightystrikes)
         elseif spell.english:contains("Provoke") then
             equip(sets.enmity, sets.th)
         elseif spell.english:contains("Tomahawk") then
@@ -97,13 +104,9 @@ function buff_change(name, gain, buff_details)
         else
             enable("neck", "left_ring")
         end
-    elseif name == "Visitant" then
-        if gain then
-            disable("head", "neck", "waist")
-        else
-            enable("head", "neck", "waist")
-        end
     end
+    -- elseif name == "Visitant" then
+    --end
 end
 
 function status_change(new, old)

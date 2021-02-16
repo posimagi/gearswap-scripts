@@ -1,3 +1,3 @@
 sets.precast.steal={
-    feet="Pill. Poulaines +2",
+    feet="Pill. Poulaines +3",
 }

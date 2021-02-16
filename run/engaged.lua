@@ -1,8 +1,8 @@
 sets.engaged={
     ammo="Yamarang",
     head="Turms Cap",
-    -- body="Runeist's Coat +2",
-    body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
+    body="Runeist's Coat +2",
+    -- body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
     hands="Turms Mittens",
     legs="Eri. Leg Guards +1",
     waist="Engraved Belt",

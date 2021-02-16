@@ -1,3 +1,3 @@
 sets.precast.nightingale={
-    feet={ name="Bihu Slippers", augments={'Enhances "Nightingale" effect',}},
+    feet={ name="Bihu Slippers +1", augments={'Enhances "Nightingale" effect',}},
 }

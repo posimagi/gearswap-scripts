@@ -4,6 +4,7 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
@@ -15,6 +16,7 @@ function get_sets()
 
 	include("sch/fastcast.lua") -- sets.fastcast
 	include("sch/idle.lua") -- sets.idle
+	include("sch/perpetuance.lua") -- sets.perpetuance
 	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
 
@@ -29,8 +31,6 @@ function get_sets()
 	include("sch/midcast-mb.lua") -- sets.midcast.mb
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
-
-	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
 	send_command(
 		"input /macro book 20; \
@@ -62,6 +62,9 @@ function midcast(spell)
 			equip(sets.midcast.regen)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
+		end
+		if buffactive["Perpetuance"] then
+			equip(sets.perpetuance)
 		end
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
