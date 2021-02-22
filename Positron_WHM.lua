@@ -8,7 +8,6 @@ function get_sets()
 
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
-	include("all/th.lua") -- sets.th
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -19,6 +18,7 @@ function get_sets()
 	include("whm/idle.lua") -- sets.idle
 	include("whm/idle-hybrid.lua") -- sets.idle.hybrid
 	include("whm/sublimation.lua") -- sets.sublimation
+	include("whm/th.lua") -- sets.th
 	include("whm/tp.lua") -- sets.tp
 	include("whm/ws.lua") -- sets.ws
 	include("whm/ws-singlehit.lua") -- sets.ws.singlehit
@@ -71,6 +71,7 @@ function get_sets()
 
 	send_command(
 		"input /macro book 3; \
+		wait 1; \
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 20; \
@@ -81,6 +82,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"input /macro book 3; \
+		wait 1; \
 		input /macro set 1; \
 		wait 10; \
 		input /lockstyleset 20; \

@@ -10,7 +10,6 @@ function get_sets()
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("cor/idle.lua") -- sets.idle
-	include("cor/ra.lua") -- sets.ra
 	include("cor/tp.lua") -- sets.tp
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
@@ -19,12 +18,15 @@ function get_sets()
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
+	include("cor/precast-ra.lua") -- sets.precast.ra
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
 	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
+	include("cor/midcast-ra.lua") -- sets.midcast.ra
 
 	send_command(
 		"input /macro book 11; \
+		wait 1; \
 		input /macro set 10; \
 		wait 5; \
 		input /lockstyleset 96; \
@@ -35,6 +37,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"input /macro book 11; \
+		wait 1; \
 		input /macro set 10; \
 		wait 10; \
 		input /lockstyleset 96; \
@@ -70,7 +73,7 @@ function precast(spell, position)
 			equip(sets.precast.utsusemi)
 		end
 	elseif spell.action_type == "Ranged Attack" then
-		equip(sets.ra)
+		equip(sets.precast.ra)
 	else
 		equip(sets.fastcast)
 	end
@@ -79,6 +82,8 @@ end
 function midcast(spell)
 	if spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
+	elseif spell.action_type == "Ranged Attack" then
+		equip(sets.midcast.ra)
 	end
 end
 

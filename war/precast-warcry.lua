@@ -1,3 +1,3 @@
 sets.precast.warcry={
-    head={ name="Agoge Mask +1", augments={'Enhances "Savagery" effect',}},
+    head={ name="Agoge Mask +2", augments={'Enhances "Savagery" effect',}},
 }

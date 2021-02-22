@@ -25,6 +25,7 @@ function get_sets()
 
 	send_command(
 		"input /macro book 15; \
+		wait 1; \
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 87; \

@@ -1,8 +1,8 @@
 sets.ws.singlehit={
     ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
+    head={ name="Agoge Mask +2", augments={'Enhances "Savagery" effect',}},
     body="Pumm. Lorica +2",
-    hands={ name="Odyssean Gauntlets", augments={'Attack+21','Weapon skill damage +4%',}},
+    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +3%','STR+14','Accuracy+14',}},
     legs="Flamma Dirs +2",
     feet="Sulev. Leggings +2",
     neck={ name="War. Beads +2", augments={'Path: A',}},

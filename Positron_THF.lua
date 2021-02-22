@@ -83,6 +83,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"input /macro book 6; \
+		wait 1; \
 		input /macro set 2; \
 		wait 10; \
 		input /lockstyleset 50; \
@@ -90,7 +91,8 @@ function sub_job_change(new, old)
 	)
 	if player.sub_job == "NIN" then
 		send_command(
-			"input /macro set 1;"
+			"wait 1; \
+			input /macro set 1;"
 		)
 	end
 end
@@ -117,9 +119,9 @@ function precast(spell, position)
 			equip(sets.precast.hide)
 		elseif spell.english:contains("Steal") then
 			equip(sets.precast.steal)
-		elseif spell.english:contains("Waltz") then
-			equip(sets.precast.waltzes)
 		end
+	elseif spell.type == "Waltz" then
+		equip(sets.precast.waltzes)
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then

@@ -10,6 +10,7 @@ function get_sets()
 
 	include("brd/fastcast.lua") -- sets.fastcast
 	include("brd/idle.lua") -- sets.idle
+	include("brd/th.lua") -- sets.th
 	include("brd/tp.lua") -- sets.tp
 	include("brd/ws.lua") -- sets.ws
 
@@ -28,6 +29,7 @@ function get_sets()
 
 	send_command(
 		"input /macro book 10; \
+		wait 1; \
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 91; \
@@ -37,6 +39,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"input /macro book 10; \
+		wait 1; \
 		input /macro set 1; \
 		wait 10; \
 		input /lockstyleset 91; \
@@ -75,6 +78,8 @@ function midcast(spell)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end
+	elseif spell.english:contains("Dia") then
+		equip(sets.th)
 	end
 end
 

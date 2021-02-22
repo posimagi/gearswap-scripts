@@ -32,8 +32,14 @@ function get_sets()
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
 
+	_REGEN_DURATION = true
+	if _REGEN_DURATION then
+		include("sch/midcast-regen-duration.lua") -- sets.midcast.regen
+	end
+
 	send_command(
 		"input /macro book 20; \
+		wait 1; \
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 97; \

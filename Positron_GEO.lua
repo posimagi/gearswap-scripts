@@ -40,6 +40,7 @@ function get_sets()
 
     send_command(
         "input /macro book 10; \
+        wait 1; \
         input /macro set 10; \
         wait 5; \
         input /lockstyleset 51; \
@@ -52,6 +53,7 @@ end
 function sub_job_change(new, old)
     send_command(
         "input /macro book 10; \
+        wait 1; \
         input /macro set 10; \
         wait 10; \
         input /lockstyleset 51; \
