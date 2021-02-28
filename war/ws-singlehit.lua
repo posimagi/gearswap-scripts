@@ -1,9 +1,9 @@
 sets.ws.singlehit={
     ammo="Knobkierrie",
-    head={ name="Agoge Mask +2", augments={'Enhances "Savagery" effect',}},
-    body="Pumm. Lorica +2",
+    head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+    body="Pumm. Lorica +3",
     hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +3%','STR+14','Accuracy+14',}},
-    legs="Flamma Dirs +2",
+    legs={ name="Valorous Hose", augments={'Accuracy+6','Weapon skill damage +4%','VIT+14',}},
     feet="Sulev. Leggings +2",
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Grunfeld Rope",

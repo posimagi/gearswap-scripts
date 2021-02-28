@@ -9,6 +9,7 @@ function get_sets()
 	include("all/obi.lua") -- sets.obi
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
+	include("cor/fastcast.lua") -- sets.fastcast
 	include("cor/idle.lua") -- sets.idle
 	include("cor/tp.lua") -- sets.tp
 	include("cor/ws.lua") -- sets.ws

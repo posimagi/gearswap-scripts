@@ -10,6 +10,7 @@ function get_sets()
 	include("thf/fastcast.lua") -- sets.fastcast
 	include("thf/idle.lua") -- sets.idle
 	include("thf/idle-hybrid.lua") -- sets.idle.hybrid
+	include("thf/magian.lua") -- sets.magian
 	include("thf/ra.lua") -- sets.ra
 	include("thf/regen.lua") -- sets.regen
 	include("thf/th.lua") -- sets.th
