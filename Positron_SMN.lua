@@ -59,6 +59,9 @@ end
 function pet_midcast(spell)
 	if spell.type == "BloodPactRage" then
 		equip(sets.petmidcast.bp)
+		if spell.english:contains("Perfect Defense") then
+			equip(sets.summoning)
+		end
 	elseif spell.type == "BloodPactWard" then
 		equip(sets.summoning)
 	end

@@ -4,15 +4,18 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
-	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
-
+	include("nin/enmity.lua") -- sets.enmity
 	include("nin/idle.lua") -- sets.idle
 	include("nin/fastcast.lua") -- sets.fastcast
 	include("nin/ninjutsu.lua") -- sets.ninjutsu
 	include("nin/tp.lua") -- sets.tp
 	include("nin/ws.lua") -- sets.ws
 
+	include("nin/precast-utsusemi.lua") -- sets.precast.utsusemi
+
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
+
+	_TANK = true
 
 	send_command(
 		"input /macro book 13; \
@@ -53,6 +56,9 @@ end
 function midcast(spell)
 	if spell.type == "Ninjutsu" then
 		equip(sets.ninjutsu)
+		if buffactive['Yonin'] or buffactive['Enmity Boost'] then
+			equip(sets.enmity)
+		end
 		if spell.english:contains("Utsusemi") then
 			equip(sets.midcast.utsusemi)
 		end

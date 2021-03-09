@@ -7,10 +7,9 @@ sets.tp={
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
     neck={ name="Etoile Gorget", augments={'Path: A',}},
     waist="Reiki Yotai",
-    left_ear="Telos Earring",
+    left_ear="Cessance Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
-    -- right_ring="Epona's Ring",
-    right_ring="Petrov Ring",
+    right_ring="Gere Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }

@@ -1,7 +1,7 @@
 sets.midcast.enfeebling={
     ammo="Pemphredo Tathlum",
     head="Jhakri Coronal +2",
-    body="Shamash Robe",
+    body="Spaekona's Coat +2",
     hands="Jhakri Cuffs +2",
     legs="Jhakri Slops +2",
     feet="Jhakri Pigaches +2",

@@ -10,5 +10,5 @@ sets.idle={
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring="Evoker's Ring",
     right_ring="Defending Ring",
-    back={ name="Conveyance Cape", augments={'Summoning magic skill +3','Pet: Enmity+11','Blood Pact ab. del. II -3',}},
+    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10',}},
 }

@@ -9,6 +9,7 @@ function get_sets()
     include("run/fastcast.lua") -- sets.fastcast
     include("run/idle.lua") -- sets.idle
     include("run/interrupt.lua") -- sets.interrupt
+    include("run/th.lua") -- sets.th
     include("run/tp.lua") -- sets.tp
     include("run/ws.lua") -- sets.ws
 
@@ -58,6 +59,9 @@ function precast(spell, position)
         equip(sets.fastcast)
     elseif spell.type == "WeaponSkill" then
         equip(sets.ws)
+        if spell.name:contains("Shockwave") then
+            equip(sets.th)
+        end
     elseif _ABILITY:contains(spell.type) then
         equip(sets.enmity, sets.precast[spell.name])
     elseif spell.type == "Item" then

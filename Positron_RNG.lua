@@ -7,6 +7,7 @@ function get_sets()
     include("rng/idle.lua") -- sets.idle
     include("rng/tp.lua") -- sets.tp
     include("rng/ws.lua") -- sets.ws
+    include("rng/ws-magical.lua") -- sets.ws.magical
 
     include("rng/precast-ra.lua") -- sets.precast.ra
 
@@ -17,13 +18,18 @@ function get_sets()
         wait 1; \
         input /macro set 1; \
         wait 5; \
-		input /lockstyle on; \
+		input /lockstyleset 85; \
         gs equip sets.idle")
 end
 
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
+        if spell.english:contains("Aeolian Edge") or
+           spell.english:contains("Wildfire") or
+           spell.english:contains("Trueflight") then
+            equip(sets.ws.magical)
+        end
     elseif spell.type == "JobAbility" then
         
     elseif spell.action_type == "Ranged Attack" then

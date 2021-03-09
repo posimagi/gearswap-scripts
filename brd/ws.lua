@@ -1,6 +1,6 @@
 sets.ws={
     head="Aya. Zucchetto +2",
-    body="Ayanmo Corazza +2",
+    body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
     hands="Aya. Manopolas +2",
     legs="Aya. Cosciales +2",
     feet="Aya. Gambieras +2",

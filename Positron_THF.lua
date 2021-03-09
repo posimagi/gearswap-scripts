@@ -24,6 +24,7 @@ function get_sets()
 	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
 
+	include("thf/precast-accomplice.lua") -- sets.precast.accomplice
 	include("thf/precast-despoil.lua") -- sets.precast.despoil
 	include("thf/precast-feint.lua") -- sets.precast.feint
 	include("thf/precast-flee.lua") -- sets.precast.flee
@@ -110,7 +111,10 @@ function precast(spell, position)
 			equip(sets.ws.critical)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Despoil") then
+		if spell.english:contains("Accomplice") or
+		   spell.english:contains("Collaborator") then
+			-- equip(sets.precast.accomplice)
+		elseif spell.english:contains("Despoil") then
 			equip(sets.precast.despoil)
 		elseif spell.english:contains("Feint") then
 			equip(sets.precast.feint)

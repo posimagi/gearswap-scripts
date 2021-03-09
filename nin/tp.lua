@@ -1,7 +1,8 @@
 sets.tp={
-    ammo="Yamarang",
+    -- ammo="Yamarang",
+    ammo="Happo Shuriken",
     head="Malignance Chapeau",
-    body="Malignance Tabard",
+    body={ name="Mochi. Chainmail +3", augments={'Enhances "Sange" effect',}},
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",

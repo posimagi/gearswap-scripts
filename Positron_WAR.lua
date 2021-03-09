@@ -32,9 +32,13 @@ function get_sets()
         "Ukko's Fury",
     }
 
+    _FENCER_WEAPONS = T{
+        "Blurred Shield +1",
+    }
+
     _FENCER = false
     if _FENCER then
-        include("war/tp-fencer.lua") -- sets.tp
+        
     end
 
     _HYBRID = false
@@ -118,5 +122,13 @@ function status_change(new, old)
         end
     elseif new == "Idle" then
         equip(sets.idle)
+    end
+end
+
+function self_command(command)
+    if command == "fencer" then
+        include("war/tp-fencer.lua") -- sets.tp
+    elseif command == "dualwield" then
+        include("war/tp.lua") -- sets.tp
     end
 end
