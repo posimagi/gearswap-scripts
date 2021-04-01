@@ -1,7 +1,7 @@
 sets.midcast.enhancingskill={
     head="Umuthi Hat",
     hands="Inyan. Dastanas +2",
-    legs={ name="Piety Pantaln. +2", augments={'Enhances "Afflatus Misery" effect',}},
+    legs={ name="Piety Pantaln. +3", augments={'Enhances "Afflatus Misery" effect',}},
     feet="Ebers Duckbills +1",
     neck="Incanter's Torque",
     waist="Embla Sash",

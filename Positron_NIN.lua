@@ -4,27 +4,40 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all/doom.lua") -- sets.doom
+
 	include("nin/enmity.lua") -- sets.enmity
 	include("nin/idle.lua") -- sets.idle
 	include("nin/fastcast.lua") -- sets.fastcast
 	include("nin/ninjutsu.lua") -- sets.ninjutsu
 	include("nin/tp.lua") -- sets.tp
 	include("nin/ws.lua") -- sets.ws
+	include("nin/ws-singlehit.lua") -- sets.ws.singlehit
 
 	include("nin/precast-utsusemi.lua") -- sets.precast.utsusemi
 
+	include("nin/midcast-mb.lua") -- sets.midcast.mb
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
 
-	_TANK = true
+	_SINGLE_HIT_WS = T{
+		"Blade: Hi",
+		"Blade: Kamu",
+	}
 
 	send_command(
 		"input /macro book 13; \
 		wait 1; \
-		input /macro set 9; \
+		input /macro set 10; \
 		wait 5; \
 		input /lockstyleset 95; \
 		gs equip sets.idle"
 	)
+	if player.sub_job == "DNC" then
+		send_command(
+			"wait 3; \
+			input /macro set 9;"
+		)
+	end
 end
 
 function sub_job_change(new, old)
@@ -41,6 +54,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if _SINGLE_HIT_WS:contains(spell.english) then
+			equip(sets.ws.singlehit)
+		end
 	elseif spell.type == "JobAbility" then
 		equip(sets.enmity)
 	elseif spell.type == "Ninjutsu" then
@@ -61,6 +77,8 @@ function midcast(spell)
 		end
 		if spell.english:contains("Utsusemi") then
 			equip(sets.midcast.utsusemi)
+		elseif spell.english:contains("ton: ") then
+			equip(sets.midcast.mb)
 		end
 	end
 end
@@ -71,6 +89,17 @@ function aftercast(spell)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end
+end
+
+function buff_change(name, gain, buff_details)
+    if name == "Doom" then
+        if gain then
+            equip(sets.doom)
+            disable("neck", "left_ring")
+        else
+            enable("neck", "left_ring")
+        end
+    end
 end
 
 function status_change(new, old)

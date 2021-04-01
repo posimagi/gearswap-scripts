@@ -68,11 +68,21 @@ function pet_midcast(spell)
 end
 
 function aftercast(spell)
-	equip(sets.idle)
+	if spell.type ~= "BloodPactRage" and spell.type ~= "BloodPactWard" then
+		if player.status == "Idle" then
+			equip(sets.idle)
+		elseif player.status == "Engaged" then
+			equip(sets.tp)
+		end
+	end
 end
 
 function pet_aftercast(spell)
-	equip(sets.idle)
+	if player.status == "Idle" then
+		equip(sets.idle)
+	elseif player.status == "Engaged" then
+		equip(sets.tp)
+	end
 end
 
 function status_change(new, old)

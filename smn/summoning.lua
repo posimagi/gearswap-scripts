@@ -1,4 +1,9 @@
 sets.summoning={
+    -- head="Baayami Hat",
+    -- body="Baayami Robe",
+    -- hands="Baayami Cuffs",
+    -- legs="Baayami Slops",
+    -- feet="Baayami Sabots",
     head="Beckoner's Horn +1",
     hands="Inyan. Dastanas +2",
     neck="Incanter's Torque",

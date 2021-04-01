@@ -4,6 +4,7 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/impact.lua") -- sets.impact
@@ -39,8 +40,6 @@ function get_sets()
 	include("whm/midcast-mb.lua") -- sets.midcast.mb
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
-
-	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 
 	_STATUSREMOVAL = T{
 		"Poisona",
@@ -151,8 +150,10 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Divine Magic" then
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
-		if spell.english:contains("Holy") then
+		if spell.english:contains("Holy") or 
+		   spell.english:contains("Banish") then
 			equip(sets.midcast.mb)
+		   	obi_check(spell)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)

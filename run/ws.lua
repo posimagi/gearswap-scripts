@@ -8,7 +8,7 @@ sets.ws={
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Sherida Earring",
+    right_ear="Odr Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
 }

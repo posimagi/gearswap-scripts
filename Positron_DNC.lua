@@ -12,11 +12,11 @@ function get_sets()
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
-	include("dnc/tp-offense.lua") -- sets.tp.offense
 	include("dnc/turtle.lua") -- sets.turtle
 	include("dnc/ws.lua") -- sets.ws
-	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
+	include("dnc/ws-critical.lua") -- sets.ws.critical
 	include("dnc/ws-magical.lua") -- sets.ws.magical
+	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
 
 	include("dnc/climacticflourish.lua") -- sets.climacticflourish
 	include("dnc/strikingflourish.lua") -- sets.strikingflourish
@@ -30,11 +30,6 @@ function get_sets()
 
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
-
-	_OFFENSE = false
-	if _OFFENSE then
-		sets.tp = sets.tp.offense
-	end
 
 	_HYBRID = false
 	if _HYBRID then
@@ -69,6 +64,8 @@ function precast(spell, position)
 			equip(sets.ws.singlehit)
 		elseif spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
+		elseif spell.english:contains("Evisceration") then
+			equip(sets.ws.critical)
 		end
 		if buffactive_strikingflourish() then
 			equip(sets.strikingflourish)

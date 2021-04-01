@@ -7,9 +7,9 @@ sets.midcast.healing={
     feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
     neck={ name="Clr. Torque +1", augments={'Path: A',}},
     waist="Luminary Sash",
-    left_ear="Glorious Earring",
-    right_ear="Mendi. Earring",
-    left_ring="Tamas Ring",
+    left_ear="Mendi. Earring",
+    right_ear="Glorious Earring",
+    left_ring="Menelaus's Ring",
     right_ring="Lebeche Ring",
     back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
 }

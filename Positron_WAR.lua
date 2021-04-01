@@ -27,7 +27,8 @@ function get_sets()
         "Circle Blade",
     }
 
-    _SINGLE_HIT_WS = T{ 
+    _SINGLE_HIT_WS = T{
+        "Cloudsplitter",
         "Savage Blade",
         "Ukko's Fury",
     }
@@ -102,16 +103,24 @@ function aftercast(spell)
 end
 
 function buff_change(name, gain, buff_details)
-    if name == "Doom" then
+    if name == "doom" then -- "doom" is explicitly lowercase
         if gain then
             equip(sets.doom)
             disable("neck", "left_ring")
         else
             enable("neck", "left_ring")
+            if player.status == "Idle" then
+                equip(sets.idle)
+            elseif player.status == "Engaged" then
+                equip(sets.tp)
+                if _TH then
+                    equip(sets.th)
+                end
+            end
         end
     end
     -- elseif name == "Visitant" then
-    --end
+    -- end
 end
 
 function status_change(new, old)

@@ -15,6 +15,7 @@ function get_sets()
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
 	include("cor/ws-magical.lua") -- sets.ws.magical
+	include("cor/ws-singlehit.lua") -- sets.ws.singlehit
 
 	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
@@ -55,6 +56,8 @@ function precast(spell, position)
 		elseif spell.english:contains("Wildfire") or
 			   spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
+		elseif spell.english:contains("Savage Blade") then
+			equip(sets.ws.singlehit)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)

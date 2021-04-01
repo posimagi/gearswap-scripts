@@ -3,7 +3,7 @@ sets.ws={
     head="Flam. Zucchetto +2",
     body={ name="Agoge Lorica +3", augments={'Enhances "Aggressive Aim" effect',}},
     hands="Flam. Manopolas +2",
-    legs="Flamma Dirs +2",
+    legs="Pumm. Cuisses +3",
     feet="Sulev. Leggings +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",

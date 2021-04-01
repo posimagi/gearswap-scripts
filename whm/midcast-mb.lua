@@ -4,7 +4,7 @@ sets.midcast.mb={
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",
-    feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
+    feet="Bunzi's Sabots",
     neck="Mizu. Kubikazari",
     waist="Eschan Stone",
     left_ear="Regal Earring",

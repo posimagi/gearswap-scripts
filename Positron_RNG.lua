@@ -5,13 +5,16 @@ function get_sets()
     sets.aftercast = {}
     
     include("rng/idle.lua") -- sets.idle
+    include("rng/fastcast.lua") -- sets.fastcast
     include("rng/tp.lua") -- sets.tp
     include("rng/ws.lua") -- sets.ws
     include("rng/ws-magical.lua") -- sets.ws.magical
 
     include("rng/precast-ra.lua") -- sets.precast.ra
+    include("rng/precast-waltzes.lua") -- sets.precast.waltzes
 
     include("rng/midcast-ra.lua") -- sets.midcast.ra
+    include("rng/midcast-phalanx.lua") -- sets.midcast.phalanx
 
     send_command(
         "input /macro book 11; \
@@ -32,15 +35,21 @@ function precast(spell, position)
         end
     elseif spell.type == "JobAbility" then
         
+    elseif spell.type == "Waltz" then
+		equip(sets.precast.waltzes)
     elseif spell.action_type == "Ranged Attack" then
         equip(sets.precast.ra)
+    else
+        equip(sets.fastcast)
     end
 end
 
 function midcast(spell)
     if spell.action_type == "Ranged Attack" then
         equip(sets.midcast.ra)
-    end
+    elseif spell.english:contains("Phalanx") then
+		equip(sets.midcast.phalanx)
+	end
 end
 
 function aftercast(spell)

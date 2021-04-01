@@ -1,4 +1,4 @@
 sets.impact={
-    head="",
+    head=empty,
     body="Twilight Cloak",
 }

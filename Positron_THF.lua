@@ -52,7 +52,7 @@ function get_sets()
 		sets.idle = set_combine(sets.idle, sets.regen)
 	end
 
-	_TH = "medium"
+	_TH = "minimal"
 	if _TH == "full" then
 		sets.tp = set_combine(sets.tp, sets.th)
 		sets.ws = set_combine(sets.ws, sets.th)
@@ -64,6 +64,8 @@ function get_sets()
 		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th.medium)
 	elseif _TH == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
+		sets.ws.magical = set_combine(sets.ws.magical, sets.th.minimal)
+		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th.minimal)
 	elseif _TH == "none" then
 		-- do nothing
 	end
@@ -72,7 +74,7 @@ function get_sets()
 		"input /macro book 6; \
 		input /macro set 2; \
 		wait 5; \
-		input /lockstyleset 50; \
+		input /lockstyleset 48; \
 		gs equip sets.idle"
 	)
 	if player.sub_job == "NIN" then
@@ -88,7 +90,7 @@ function sub_job_change(new, old)
 		wait 1; \
 		input /macro set 2; \
 		wait 10; \
-		input /lockstyleset 50; \
+		input /lockstyleset 48; \
 		gs equip sets.idle"
 	)
 	if player.sub_job == "NIN" then
@@ -113,7 +115,7 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Accomplice") or
 		   spell.english:contains("Collaborator") then
-			-- equip(sets.precast.accomplice)
+			equip(sets.precast.accomplice)
 		elseif spell.english:contains("Despoil") then
 			equip(sets.precast.despoil)
 		elseif spell.english:contains("Feint") then

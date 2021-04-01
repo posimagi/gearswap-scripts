@@ -3,7 +3,7 @@ sets.idle={
     head="Hjarrandi Helm",
     body="Hjarrandi Breast.",
     hands="Sulev. Gauntlets +2",
-    legs="Flamma Dirs +2",
+    legs="Pumm. Cuisses +3",
     feet="Hermes' Sandals",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt",

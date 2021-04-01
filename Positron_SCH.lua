@@ -16,6 +16,7 @@ function get_sets()
 
 	include("sch/fastcast.lua") -- sets.fastcast
 	include("sch/idle.lua") -- sets.idle
+	include("sch/naked.lua") -- sets.naked
 	include("sch/perpetuance.lua") -- sets.perpetuance
 	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
@@ -36,6 +37,15 @@ function get_sets()
 	if _REGEN_DURATION then
 		include("sch/midcast-regen-duration.lua") -- sets.midcast.regen
 	end
+
+	_TIER_ONE_NUKES = T{
+        "Fire",
+        "Blizzard",
+        "Aero",
+        "Stone",
+        "Thunder",
+        "Water",
+    }
 
 	send_command(
 		"input /macro book 20; \
@@ -60,6 +70,7 @@ function midcast(spell)
 		if spell.english:contains("Dia") then
 			equip(sets.th)
 		end
+		obi_check(spell)
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Refresh") then
@@ -77,6 +88,7 @@ function midcast(spell)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end
+		obi_check(spell)
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.mb)
 		obi_check(spell)
@@ -90,10 +102,16 @@ function midcast(spell)
 		elseif spell.english:contains("Kaustra") then
 			equip(sets.midcast.darkness)
 		end
+		if world.area == "Outer Ra'Kaznar [U]" then
+            if _TIER_ONE_NUKES:contains(spell.english) then
+                equip(sets.naked)
+			end
+		end
 	elseif spell.skill == "Dark Magic" then
 		if spell.english:contains("Bio") then
 			equip(sets.th)
 		end
+		obi_check(spell)
 	end
 end
 
