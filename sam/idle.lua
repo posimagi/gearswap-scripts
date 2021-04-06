@@ -3,7 +3,7 @@ sets.idle={
     body="Flamma Korazin +2",
     hands="Kurys Gloves",
     legs="Flamma Dirs +2",
-    feet="Danzo Sune-Ate",
+    feet="Flam. Gambieras +2",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Ioskeha Belt +1",
     left_ear="Etiolation Earring",

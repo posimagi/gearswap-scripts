@@ -1,6 +1,6 @@
 sets.midcast.songs.offensive={
     head="Inyanga Tiara +2",
-    body="Inyanga Jubbah +2",
+    body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
     hands="Inyan. Dastanas +2",
     legs="Inyanga Shalwar +2",
     feet="Brioso Slippers +2",

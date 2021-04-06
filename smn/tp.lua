@@ -1,4 +1,5 @@
 sets.tp={
+    feet="Bunzi's Sabots",
     neck="Combatant's Torque",
     waist="Eschan Stone",
     left_ear="Cessance Earring",

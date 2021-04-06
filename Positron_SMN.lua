@@ -16,6 +16,7 @@ function get_sets()
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
 
+	include("smn/midcast-healing.lua") -- sets.midcast.healing
 	include("smn/midcast-refresh.lua") -- sets.midcast.refresh
 
 	include("smn/petmidcast-bp.lua") -- sets.petmidcast.bp
@@ -37,7 +38,8 @@ function precast(spell, position)
 	equip(sets.fastcast)
 	if spell.type == "SummonerPact" then
 		equip(sets.summoning)
-	elseif spell.type == "BloodPactRage" then
+	elseif spell.type == "BloodPactRage" or
+	       spell.type == "BloodPactWard" then
 		equip(sets.precast.bp)
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.precast.healing)

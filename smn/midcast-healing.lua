@@ -1,4 +1,4 @@
-sets.midacst.healing={
+sets.midcast.healing={
     head="Inyanga Tiara +2",
     body="Inyanga Jubbah +2",
     hands="Inyan. Dastanas +2",

@@ -22,9 +22,18 @@ function get_sets()
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
 	include("brd/midcast-songs-offensive.lua") -- sets.midcast.songs.offensive
 
+	_PRE_SONG_ABILITIES = T{
+		"Nightingale",
+		"Troubadour",
+		"Marcato",
+		"Tenuto",
+		"Pianissimo",
+	}
+
 	_OFFENSIVE_SONGS = T{
 		"Carnage Elegy",
 		"Pining Nocturne",
+		"Magic Finale",
 	} -- TODO: improve this
 
 	send_command(
@@ -59,6 +68,9 @@ function precast(spell, position)
 		equip(sets.fastcast)
 		if spell.type == "BardSong" then
 			equip(sets.precast.songs)
+			if buffactive['Nightingale'] then
+				midcast(spell)
+			end
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.precast.stoneskin)
 		end
@@ -84,8 +96,7 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if spell.english:contains("Nightingale") or 
-	   spell.english:contains("Troubadour") then
+	if _PRE_SONG_ABILITIES:contains(spell.english) then
 		-- do nothing
 	elseif player.status == "Idle" then
 		equip(sets.idle)
