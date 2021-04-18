@@ -12,6 +12,7 @@ function get_sets()
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
+	include("all/midcast-darkness.lua") -- sets.midcast.darkness
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("blm/fastcast.lua") -- sets.fastcast
@@ -22,6 +23,7 @@ function get_sets()
 
 	include("blm/precast-healing.lua") -- sets.precast.healing
 
+	include("blm/midcast-dark.lua") -- sets.midcast.dark
 	include("blm/midcast-drain.lua") -- sets.midcast.drain
 	include("blm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("blm/midcast-enhancing.lua") -- sets.midcast.enhancing
@@ -99,7 +101,7 @@ function midcast(spell)
 			equip(sets.midcast.stoneskin)
 		end
 	elseif spell.skill == "Dark Magic" then
-		equip(sets.midcast.dark)
+		equip(sets.midcast.mb, sets.midcast.dark, sets.midcast.darkness)
 		if _DRAIN_SPELLS:contains(spell.english) then
 			equip(sets.midcast.drain)
 		end

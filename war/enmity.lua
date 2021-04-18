@@ -3,5 +3,5 @@ sets.enmity={
     head="Halitus Helm",
     body="Emet Harness +1",
     neck="Unmoving Collar +1",
-    right_ring="Petrov Ring",
+    left_ring="Petrov Ring",
 }

@@ -12,13 +12,15 @@ function get_sets()
     include("war/fencer.lua") -- sets.fencer
     include("war/idle.lua") -- sets.idle
     include("war/tp.lua") -- sets.tp
-    include("war/tp-hybrid.lua") -- sets.tp.hybrid
     include("war/ws.lua") -- sets.ws
-    include("war/ws-singlehit.lua") -- sets.ws.singlehit
+    include("war/ws-accuracy.lua") -- sets.ws.accuracy
+    include("war/ws-multihit.lua") -- sets.ws.multihit
 
     include("war/precast-aggressor.lua") -- sets.precast.aggressor
     include("war/precast-berserk.lua") -- sets.precast.berserk
     include("war/precast-bloodrage.lua") -- sets.precast.bloodrage
+    include("war/precast-defender.lua") -- sets.precast.defender
+    include("war/precast-mightystrikes.lua") -- sets.precast.mightystrikes
     include("war/precast-tomahawk.lua") -- sets.precast.tomahawk
     include("war/precast-warcry.lua") -- sets.precast.warcry
 
@@ -27,10 +29,19 @@ function get_sets()
         "Circle Blade",
     }
 
-    _SINGLE_HIT_WS = T{
-        "Cloudsplitter",
-        "Savage Blade",
-        "Ukko's Fury",
+    _ACCURACY_WS = T{
+        "Full Break",
+        "Steel Cyclone",
+        "Ukko's Fury", -- hurts damage, but improves TP gain for multistep
+    }
+
+    _MULTI_HIT_WS = T{
+        "Decimation",
+        "Rampage",
+        "Resolution",
+        "Requiescat",
+        "Ruinator",
+        "Vorpal Blade",
     }
 
     _FENCER_WEAPONS = T{
@@ -41,11 +52,6 @@ function get_sets()
     if _FENCER then
         
     end
-
-    _HYBRID = false
-    if _HYBRID then
-        sets.tp = sets.tp.hybrid
-    end
     
     _TH = false
 
@@ -54,7 +60,7 @@ function get_sets()
         wait 1; \
         input /macro set 1; \
         wait 5; \
-        input /lockstyleset 93; \
+        input /lockstyleset 73; \
 		gs equip sets.idle"
 	)
 end
@@ -62,9 +68,12 @@ end
 function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
-        if _SINGLE_HIT_WS:contains(spell.english) then
-            equip(sets.ws.singlehit)
-        elseif _AOE_WS:contains(spell.english) then
+        if _MULTI_HIT_WS:contains(spell.english) then
+            equip(sets.ws.multihit)
+        elseif _ACCURACY_WS:contains(spell.english) then
+            equip(sets.ws.accuracy)
+        end
+        if _AOE_WS:contains(spell.english) then
             equip(sets.th)
         end
     elseif spell.type == "JobAbility" then
@@ -74,6 +83,8 @@ function precast(spell, position)
             equip(sets.precast.berserk)
         elseif spell.english:contains("Blood Rage") then
             equip(sets.precast.bloodrage)
+        elseif spell.english:contains("Defender") then
+            equip(sets.precast.defender)
         elseif spell.english:contains("Mighty Strikes") then
             equip(sets.precast.mightystrikes)
         elseif spell.english:contains("Provoke") then
@@ -136,8 +147,8 @@ end
 
 function self_command(command)
     if command == "fencer" then
-        include("war/tp-fencer.lua") -- sets.tp
-    elseif command == "dualwield" then
         include("war/tp.lua") -- sets.tp
+    elseif command == "dualwield" then
+        include("war/tp-dualwield.lua") -- sets.tp
     end
 end

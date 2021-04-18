@@ -1,4 +1,4 @@
 sets.precast.tomahawk={
     ammo="Thr. Tomahawk",
-    feet={ name="Agoge Calligae +2", augments={'Enhances "Tomahawk" effect',}},
+    feet={ name="Agoge Calligae +3", augments={'Enhances "Tomahawk" effect',}},
 }

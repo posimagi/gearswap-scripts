@@ -6,6 +6,7 @@ function get_sets()
     
     include("sam/idle.lua") -- sets.idle
     include("sam/tp.lua") -- sets.tp
+    include("sam/turtle.lua") -- sets.turtle
     include("sam/ws.lua") -- sets.ws
     include("sam/ws-multihit.lua") -- sets.ws.multihit
 

@@ -24,6 +24,7 @@ function get_sets()
 	include("rdm/ws.lua") -- sets.ws
 	include("rdm/ws-dark.lua") -- sets.ws.dark
 	include("rdm/ws-magical.lua") -- sets.ws.magical
+	include("rdm/ws-multihit.lua") -- sets.ws.multihit
 
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
 	include("rdm/precast-enfeebling.lua") -- sets.precast.enfeebling
@@ -65,14 +66,21 @@ function get_sets()
 		"Slow II"
 	}
 	
+	_DARK_WS = T{
+		"Sanguine Blade",
+	}
+	
 	_MAGICAL_WS = T{
 		"Aeolian Edge",
 		"Red Lotus Blade",
 		"Seraph Blade",
 	}
 
-	_DARK_WS = T{
-		"Sanguine Blade",
+	_MULTI_HIT_WS = T{
+		"Vorpal Blade",
+		"Death Blossom",
+		"Chant du Cygne",
+		"Requiescat",
 	}
 
 	_ODIN = false
@@ -134,6 +142,8 @@ function precast(spell, position)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Chainspell") then

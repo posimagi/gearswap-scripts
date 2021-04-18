@@ -18,6 +18,7 @@ function get_sets()
     include("geo/ws.lua") -- sets.ws
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
+    include("geo/precast-fullcircle.lua") -- sets.precast.fullcircle
     include("geo/precast-healing.lua") -- sets.precast.healing
 
     include('geo/midcast-enhancing.lua') -- sets.midcast.enhancing
@@ -65,6 +66,8 @@ function precast(spell, position)
     equip(sets.fastcast)
     if spell.english:contains("Bolster") then
         equip(sets.precast.bolster)
+    elseif spell.english:contains("Full Circle") then
+        equip(sets.precast.fullcircle)
     elseif spell.skill == "Healing Magic" then
         equip(sets.precast.healing)
     end

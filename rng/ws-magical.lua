@@ -9,4 +9,5 @@ sets.ws.magical={
     left_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
+    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
 }

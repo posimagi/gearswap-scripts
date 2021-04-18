@@ -1,0 +1,15 @@
+sets.turtle={
+    ammo="Staunch Tathlum",
+    head="Ken. Jinpachi +1",
+    body="Ken. Samue +1",
+    hands={ name="Sakonji Kote +1", augments={'Enhances "Blade Bash" effect',}},
+    legs="Ken. Hakama +1",
+    feet="Ken. Sune-Ate +1",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Carrier's Sash",
+    left_ear="Etiolation Earring",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    right_ring="Defending Ring",
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Damage taken-5%',}},
+}
