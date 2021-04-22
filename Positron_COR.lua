@@ -17,10 +17,10 @@ function get_sets()
 	include("cor/ws-magical.lua") -- sets.ws.magical
 	include("cor/ws-singlehit.lua") -- sets.ws.singlehit
 
-	include("cor/precast-loadeddeck.lua") -- sets.precast.loadeddeck
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
 	include("cor/precast-ra.lua") -- sets.precast.ra
+	include("cor/precast-randomdeal.lua") -- sets.precast.randomdeal
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
 	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
@@ -56,6 +56,7 @@ function precast(spell, position)
 		elseif spell.english:contains("Wildfire") or
 			   spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
+			obi_check(spell)
 		elseif spell.english:contains("Savage Blade") then
 			equip(sets.ws.singlehit)
 		end
@@ -66,8 +67,8 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Double-Up") then
 			equip(sets.precast.phantomroll)
-		elseif spell.english:contains("Loaded Deck") then
-			equip(sets.precast.loadeddeck)
+		elseif spell.english:contains("Random Deal") then
+			equip(sets.precast.randomdeal)
 		elseif spell.english:contains("Wild Card") then
 			equip(sets.precast.wildcard)
 		end

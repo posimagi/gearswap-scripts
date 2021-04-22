@@ -1,8 +1,9 @@
 sets.ws={
     ammo="Knobkierrie",
     head="Flam. Zucchetto +2",
-    body="Flamma Korazin +2",
+    body="Sakonji Domaru +3",
     hands="Flam. Manopolas +2",
+    -- legs="Wakido Haidate +3",
     legs="Hiza. Hizayoroi +2",
     feet="Flam. Gambieras +2",
     neck="Caro Necklace",

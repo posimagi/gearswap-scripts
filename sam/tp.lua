@@ -2,7 +2,7 @@ sets.tp={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
     body="Flamma Korazin +2",
-    hands="Flam. Manopolas +2",
+    hands="Wakido Kote +2",
     legs="Flamma Dirs +2",
     feet="Flam. Gambieras +2",
     neck="Combatant's Torque",

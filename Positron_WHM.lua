@@ -152,7 +152,7 @@ function midcast(spell)
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
 		if spell.english:contains("Holy") or 
 		   spell.english:contains("Banish") then
-			equip(sets.midcast.mb)
+			equip(sets.midcast.mb, sets.midcast.holy)
 		   	obi_check(spell)
 		end
 	elseif spell.skill == "Dark Magic" then

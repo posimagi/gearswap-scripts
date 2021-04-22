@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/buffactive_darkarts.lua") -- buffactive_darkarts()
+	include("func/buffactive_lightarts.lua") -- buffactive_lightarts()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
@@ -21,7 +23,9 @@ function get_sets()
 	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
 
+	include("sch/precast-grimoire.lua") -- sets.precast.grimoire
 	include("sch/precast-healing.lua") -- sets.precast.healing
+	include("sch/precast-tabularasa.lua") -- sets.precast.tabularasa
 
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -33,7 +37,7 @@ function get_sets()
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
 
-	_REGEN_DURATION = true
+	_REGEN_DURATION = false
 	if _REGEN_DURATION then
 		include("sch/midcast-regen-duration.lua") -- sets.midcast.regen
 	end
@@ -58,19 +62,30 @@ function get_sets()
 end
 
 function precast(spell, position)
-	equip(sets.fastcast)
-	if spell.skill == "Healing Magic" then
-		equip(sets.precast.healing)
+	if spell.type == "JobAbility" then
+		if spell.english:contains("Tabula Rasa") then
+			equip(sets.precast.tabularasa)
+		end
+	else
+		equip(sets.fastcast)
+		if spell.skill == "Healing Magic" then
+			equip(sets.precast.healing)
+		end
+		if spell.type == "WhiteMagic" and buffactive_lightarts() then
+			equip(sets.precast.grimoire)
+		elseif spell.type == "BlackMagic" and buffactive_darkarts() then
+			equip(sets.precast.grimoire)
+		end
 	end
 end
 
 function midcast(spell)
 	if spell.skill == "Enfeebling Magic" then
 		equip(sets.midcast.enfeebling)
+		obi_check(spell)
 		if spell.english:contains("Dia") then
 			equip(sets.th)
 		end
-		obi_check(spell)
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Refresh") then

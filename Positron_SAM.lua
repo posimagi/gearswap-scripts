@@ -8,9 +8,11 @@ function get_sets()
     include("sam/tp.lua") -- sets.tp
     include("sam/turtle.lua") -- sets.turtle
     include("sam/ws.lua") -- sets.ws
+    include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
     include("sam/ws-multihit.lua") -- sets.ws.multihit
 
     include("sam/precast-meditate.lua") -- sets.precast.meditate
+    include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
 
     send_command(
         "input /macro book 12; \
@@ -27,9 +29,16 @@ function precast(spell, position)
         if spell.english:contains("Rana") then
             equip(sets.ws.multihit)
         end
+        if buffactive['Meikyo Shisui'] then
+            equip(sets.ws.meikyoshisui)
+        elseif buffactive['Sekkanoki'] then
+            equip(sets.ws.sekkanoki)
+        end
     elseif spell.type == "JobAbility" then
         if spell.english:contains("Meditate") then
             equip(sets.precast.meditate)
+        elseif spell.english:contains("Shikikoyo") then
+            equip(sets.precast.shikikoyo)
         end
     end
 end
