@@ -102,6 +102,7 @@ function precast(spell, position)
 		end
 	end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
 end

@@ -4,7 +4,7 @@ sets.midcast.mb={
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",
-    feet="Bunzi's Sabots",
+    feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Mizu. Kubikazari",
     waist="Eschan Stone",
     left_ear="Regal Earring",

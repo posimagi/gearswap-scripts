@@ -4,7 +4,7 @@ sets.tp={
     body="Ayanmo Corazza +2",
     hands="Aya. Manopolas +2",
     legs="Aya. Cosciales +2",
-    feet="Bunzi's Sabots",
+    feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Combatant's Torque",
     waist="Grunfeld Rope",
     left_ear="Telos Earring",

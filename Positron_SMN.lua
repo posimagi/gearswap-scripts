@@ -29,7 +29,7 @@ function get_sets()
 		wait 1; \
 		input /macro set 1; \
 		wait 5; \
-		input /lockstyleset 87; \
+		input /lockstyleset 80; \
 		gs equip sets.idle"
 	)
 end
@@ -47,6 +47,7 @@ function precast(spell, position)
 		equip(sets.precast.stoneskin)
 	end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
 	if spell.skill == "Healing Magic" then

@@ -43,6 +43,7 @@ function precast(spell, position)
 		equip(sets.fastcast)
 	end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
 	equip(sets.idle, sets.midcast.mab)

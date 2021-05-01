@@ -4,7 +4,7 @@ sets.idle.hybrid={
     body="Shamash Robe",
     hands="Aya. Manopolas +2",
     legs="Aya. Cosciales +2",
-    feet="Bunzi's Sabots",
+    feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear="Etiolation Earring",

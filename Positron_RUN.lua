@@ -68,6 +68,7 @@ function precast(spell, position)
         equip(sets.cursna)
     end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
     equip(sets.interrupt, sets.enmity)

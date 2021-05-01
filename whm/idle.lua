@@ -4,7 +4,7 @@ sets.idle={
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",
-    feet="Bunzi's Sabots",
+    feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
     left_ear="Etiolation Earring",

@@ -68,6 +68,7 @@ function precast(spell, position)
 		equip(sets.fastcast)
 	end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
 	if spell.type == "Ninjutsu" then

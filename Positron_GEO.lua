@@ -72,6 +72,7 @@ function precast(spell, position)
         equip(sets.precast.healing)
     end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
     if spell.skill == "Geomancy" then

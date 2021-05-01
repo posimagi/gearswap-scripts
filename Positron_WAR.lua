@@ -88,7 +88,7 @@ function precast(spell, position)
         elseif spell.english:contains("Mighty Strikes") then
             equip(sets.precast.mightystrikes)
         elseif spell.english:contains("Provoke") then
-            equip(sets.enmity, sets.th)
+            equip(sets.enmity) --, sets.th)
         elseif spell.english:contains("Tomahawk") then
             equip(sets.precast.tomahawk, sets.th)
         elseif spell.english:contains("Warcry") then
@@ -98,6 +98,7 @@ function precast(spell, position)
         equip(sets.idle, sets.fastcast)
     end
 end
+include("func/ws_distance_check.lua")
 
 function midcast(spell)
 end
