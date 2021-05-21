@@ -24,6 +24,14 @@ function get_sets()
 		"Blade: Kamu",
 	}
 
+	_MAGICAL_WS = T{
+		"Blade: Teki",
+		"Blade: To",
+		"Blade: Chi",
+		"Blade: Ei",
+		"Blade: Yu",
+	}
+
 	send_command(
 		"input /macro book 13; \
 		wait 1; \
@@ -54,7 +62,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _SINGLE_HIT_WS:contains(spell.english) then
+		if 
+				_SINGLE_HIT_WS:contains(spell.english) or
+				_MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.singlehit)
 		end
 	elseif spell.type == "JobAbility" then
@@ -73,7 +83,9 @@ include("func/ws_distance_check.lua")
 function midcast(spell)
 	if spell.type == "Ninjutsu" then
 		equip(sets.ninjutsu)
-		if buffactive['Yonin'] or buffactive['Enmity Boost'] then
+		if 
+				buffactive['Yonin'] or 
+				buffactive['Enmity Boost'] then
 			equip(sets.enmity)
 		end
 		if spell.english:contains("Utsusemi") then

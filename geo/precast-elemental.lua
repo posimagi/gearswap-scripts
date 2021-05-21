@@ -1,4 +1,3 @@
-sets.precast.fullcircle={
-    head="Azimuth Hood +1",
+sets.precast.elemental={
     hands={ name="Bagua Mitaines +1", augments={'Enhances "Curative Recantation" effect',}},
 }

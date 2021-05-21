@@ -2,7 +2,7 @@ sets.tp={
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
-    legs="Malignance Tights",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",
     neck="Combatant's Torque",
     waist="Eschan Stone",
@@ -10,5 +10,5 @@ sets.tp={
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
     right_ring="Petrov Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
+    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }

@@ -38,8 +38,9 @@ function precast(spell, position)
 	equip(sets.fastcast)
 	if spell.type == "SummonerPact" then
 		equip(sets.summoning)
-	elseif spell.type == "BloodPactRage" or
-	       spell.type == "BloodPactWard" then
+	elseif 
+			spell.type == "BloodPactRage" or
+			spell.type == "BloodPactWard" then
 		equip(sets.precast.bp)
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.precast.healing)
@@ -71,7 +72,9 @@ function pet_midcast(spell)
 end
 
 function aftercast(spell)
-	if spell.type ~= "BloodPactRage" and spell.type ~= "BloodPactWard" then
+	if 
+			spell.type ~= "BloodPactRage" and 
+			spell.type ~= "BloodPactWard" then
 		if player.status == "Idle" then
 			equip(sets.idle)
 		elseif player.status == "Engaged" then

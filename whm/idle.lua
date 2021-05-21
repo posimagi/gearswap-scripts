@@ -1,6 +1,6 @@
 sets.idle={
     ammo="Homiliary",
-    head="Inyanga Tiara +2",
+    head="Nyame Helm",
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",

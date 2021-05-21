@@ -1,9 +1,9 @@
 sets.ws={
     ammo="Oreiad's Tathlum",
-    head={ name="Piety Cap +2", augments={'Enhances "Devotion" effect',}},
+    head="Nyame Helm",
     body={ name="Piety Briault +3", augments={'Enhances "Benediction" effect',}},
     hands={ name="Piety Mitts +3", augments={'Enhances "Martyr" effect',}},
-    legs="Aya. Cosciales +2",
+    legs="Nyame Flanchard",
     feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",

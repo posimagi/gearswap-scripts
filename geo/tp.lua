@@ -1,8 +1,8 @@
 sets.tp={
-    head="Jhakri Coronal +2",
+    head="Nyame Helm",
     body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
     hands="Jhakri Cuffs +2",
-    legs="Jhakri Slops +2",
+    legs="Nyame Flanchard",
     feet="Jhakri Pigaches +2",
     neck="Combatant's Torque",
     waist="Grunfeld Rope",

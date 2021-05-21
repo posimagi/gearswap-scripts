@@ -104,7 +104,9 @@ end
 function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains("Rudra's Storm") or spell.english:contains("Mandalic Stab") then
+		if 
+				spell.english:contains("Rudra's Storm") or 
+				spell.english:contains("Mandalic Stab") then
 			equip(sets.ws.singlehit)
 		elseif spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
@@ -113,8 +115,9 @@ function precast(spell, position)
 			equip(sets.ws.critical)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Accomplice") or
-		   spell.english:contains("Collaborator") then
+		if 
+				spell.english:contains("Accomplice") or
+				spell.english:contains("Collaborator") then
 			equip(sets.precast.accomplice)
 		elseif spell.english:contains("Despoil") then
 			equip(sets.precast.despoil)
@@ -182,7 +185,9 @@ function status_change(new, old)
 end
 
 function buff_change(name, gain, buff_details)
-	if name == "Sneak Attack" or name == "Trick Attack" then
+	if 
+			name == "Sneak Attack" or 
+			name == "Trick Attack" then
 		if gain then
 			equip(sets.th)
 		else

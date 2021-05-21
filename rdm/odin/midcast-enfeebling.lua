@@ -1,6 +1,6 @@
 sets.midcast.enfeeblingaccuracy={
     main={ name="Crocea Mors", augments={'Path: C',}},
-    sub="Naegling",
+    sub="Daybreak",
     ammo="Regal Gem",
     head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body="Atrophy Tabard +3",
@@ -16,4 +16,4 @@ sets.midcast.enfeeblingaccuracy={
     back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
 }
 
-sets.midcast.enfeeblingpotency = sets.midcast.enfeeblingaccuracy
+-- sets.midcast.enfeeblingpotency = sets.midcast.enfeeblingaccuracy

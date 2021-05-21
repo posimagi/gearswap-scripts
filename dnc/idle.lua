@@ -5,6 +5,7 @@ sets.idle={
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Tandava Crackows",
+    -- feet="Malignance Boots",
     neck="Bathy Choker +1",
     waist="Engraved Belt",
     left_ear="Etiolation Earring",

@@ -17,6 +17,7 @@ function get_sets()
 	include("blu/idle.lua") -- sets.idle
 	include("blu/tp.lua") -- sets.tp
 	include("blu/ws.lua") -- sets.ws
+	include("blu/ws-multihit.lua") -- sets.ws.multihit
 	
 	include("blu/precast-diffusion.lua") -- sets.precast.diffusion
 
@@ -38,7 +39,11 @@ function precast(spell, position)
 	if spell.type == "JobAbility" then
 		
 	elseif spell.type == "WeaponSkill" then
-		equip(sets.ws)
+		if spell.english:contains("Chant du Cygne") then
+			equip(sets.ws.multihit)
+		else
+			equip(sets.ws)
+		end
 	else
 		equip(sets.fastcast)
 	end
@@ -46,20 +51,30 @@ end
 include("func/ws_distance_check.lua")
 
 function midcast(spell)
-	equip(sets.idle, sets.midcast.mab)
-	obi_check(spell)
-	if spell.english:contains("Aquaveil") then
-		equip(sets.midcast.aquaveil)
-	elseif spell.english:contains("Refresh") or
-		   spell.english:contains("Battery Charge") then
-		equip(sets.midcast.refresh)
-	elseif spell.english:contains("Phalanx") then
-		equip(sets.midcast.phalanx)
-	elseif spell.english:contains("Dream Flower") or spell.english:contains("Yawn") then
-		equip(sets.idle, sets.th)
-	end
-	if buffactive["Diffusion"] then
-		equip(sets.precast.diffusion)
+	if spell.type == "JobAbility" then
+		
+	elseif spell.type == "WeaponSkill" then
+
+	else
+		if spell.english:contains("Aquaveil") then
+			equip(sets.idle, sets.midcast.aquaveil)
+		elseif 
+				spell.english:contains("Refresh") or
+				spell.english:contains("Battery Charge") then
+			equip(sets.idle, sets.midcast.refresh)
+		elseif spell.english:contains("Phalanx") then
+			equip(sets.idle, sets.midcast.phalanx)
+		elseif 
+				spell.english:contains("Dream Flower") or 
+				spell.english:contains("Yawn") then
+			equip(sets.idle, sets.th)
+		else
+			equip(sets.idle, sets.midcast.mab)
+			obi_check(spell)
+		end
+		if buffactive["Diffusion"] then
+			equip(sets.precast.diffusion)
+		end
 	end
 end
 

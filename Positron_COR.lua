@@ -53,8 +53,9 @@ function precast(spell, position)
 		if spell.english:contains("Leaden Salute") then
 			equip(sets.ws.magical, sets.ws.dark)
 			obi_check(spell)
-		elseif spell.english:contains("Wildfire") or
-			   spell.english:contains("Aeolian Edge") then
+		elseif 
+				spell.english:contains("Wildfire") or
+				spell.english:contains("Aeolian Edge") then
 			equip(sets.ws.magical)
 			obi_check(spell)
 		elseif spell.english:contains("Savage Blade") then

@@ -3,7 +3,7 @@ sets.ws={
     head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
     hands="Atrophy Gloves +3",
-    legs="Jhakri Slops +2",
+    legs="Nyame Flanchard",
     feet="Jhakri Pigaches +2",
     neck="Caro Necklace",
     waist="Grunfeld Rope",

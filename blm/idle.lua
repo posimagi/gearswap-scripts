@@ -1,6 +1,6 @@
 sets.idle={
     ammo="Staunch Tathlum",
-    head={ name="Amalric Coif +1", augments={'INT+12','Mag. Acc.+25','Enmity-6',}},
+    head="Nyame Helm",
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",

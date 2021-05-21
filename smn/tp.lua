@@ -1,4 +1,7 @@
 sets.tp={
+    head="Nyame Helm",
+    body="Con. Doublet +3",
+    legs="Nyame Flanchard",
     feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Combatant's Torque",
     waist="Eschan Stone",

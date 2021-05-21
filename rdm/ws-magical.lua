@@ -3,7 +3,7 @@ sets.ws.magical={
     head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body={ name="Merlinic Jubbah", augments={'Weapon skill damage +3%','"Store TP"+2','"Treasure Hunter"+2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
     hands="Jhakri Cuffs +2",
-    legs="Jhakri Slops +2",
+    legs="Nyame Flanchard",
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",

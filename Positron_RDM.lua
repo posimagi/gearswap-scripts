@@ -101,9 +101,8 @@ function get_sets()
 	
 	_SEALED_FATE = false
 	if _SEALED_FATE then
-		include("rdm/sealed-fate/tp-damage.lua") -- sets.tp
-		-- include("rdm/sealed-fate/tp-accuracy.lua") -- sets.tp
-		sets.enspell = sets.tp
+		include("rdm/sealed-fate/tp.lua") -- sets.tp
+		-- sets.enspell = sets.tp
 	end
 
 	_HYBRID = false

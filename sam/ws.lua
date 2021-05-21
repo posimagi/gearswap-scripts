@@ -1,6 +1,6 @@
 sets.ws={
     ammo="Knobkierrie",
-    head="Flam. Zucchetto +2",
+    head="Nyame Helm",
     body="Sakonji Domaru +3",
     hands="Flam. Manopolas +2",
     -- legs="Wakido Haidate +3",

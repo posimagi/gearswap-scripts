@@ -71,16 +71,17 @@ end
 include("func/ws_distance_check.lua")
 
 function midcast(spell)
-    equip(sets.interrupt, sets.enmity)
+    equip(sets.idle, sets.interrupt, sets.enmity)
     if spell.skill == "Enhancing Magic" then
-        equip(sets.midcast.enhancing)
-        if spell.english:contains("Refresh") then
-            equip(sets.midcast.refresh)
+        if spell.english:contains("Foil") then
+            equip(sets.idle, sets.interrupt, sets.enmity)
+        elseif spell.english:contains("Refresh") then
+            equip(sets.idle, sets.interrupt, sets.midcast.refresh)
         elseif spell.english:contains("Phalanx") then
-            equip(sets.midcast.phalanx)
+            equip(sets.idle, sets.interrupt, sets.midcast.phalanx)
         end
     elseif spell.type == "Item" then
-        equip(sets.cursna)
+        equip(sets.idle, sets.cursna)
     end
 end
 

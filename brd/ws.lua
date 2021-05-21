@@ -1,8 +1,8 @@
 sets.ws={
-    head="Aya. Zucchetto +2",
+    head="Nyame Helm",
     body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
     hands="Aya. Manopolas +2",
-    legs="Aya. Cosciales +2",
+    legs="Nyame Flanchard",
     feet="Aya. Gambieras +2",
     neck="Caro Necklace",
     waist="Grunfeld Rope",

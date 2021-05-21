@@ -5,11 +5,10 @@ sets.tp={
     hands="Malignance Gloves",
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",
-    neck="Combatant's Torque",
+    neck="Bathy Choker +1",
     waist="Reiki Yotai",
-    left_ear="Telos Earring",
-    right_ear="Cessance Earring",
-    left_ring="Ilabrat Ring",
-    right_ring="Epona's Ring",
-    back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+    left_ear="Telos Earring", -- Dignitary's Earring?
+    right_ear="Sherida Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
 }

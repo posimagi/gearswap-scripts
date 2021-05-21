@@ -5,6 +5,7 @@ function get_sets()
     sets.aftercast = {}
     
     include("all/doom.lua") -- sets.doom
+    include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
     include("all/th.lua") -- sets.th
 
     include("war/enmity.lua") -- sets.enmity
@@ -94,6 +95,11 @@ function precast(spell, position)
         elseif spell.english:contains("Warcry") then
             equip(sets.precast.warcry)
         end
+    elseif spell.type == "Ninjutsu" then
+		equip(sets.idle, sets.fastcast)
+		if spell.english:contains("Utsusemi") then
+			equip(sets.precast.utsusemi)
+		end
     else
         equip(sets.idle, sets.fastcast)
     end

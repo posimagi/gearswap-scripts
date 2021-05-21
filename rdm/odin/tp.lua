@@ -1,7 +1,7 @@
 sets.tp={
     main="Esikuva",
     sub="Norgish Dagger",
-    ammo="Ginsen",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Malignance Chapeau",
     body="Malignance Tabard",
     hands="Malignance Gloves",
@@ -9,7 +9,8 @@ sets.tp={
     feet="Malignance Boots",
     neck="Combatant's Torque",
     waist="Reiki Yotai",
-    left_ear="Suppanomimi",
+    -- left_ear="Suppanomimi",
+    left_ear="Telos Earring", --
     right_ear="Sherida Earring",
     left_ring="Ayanmo Ring",
     right_ring="Jhakri Ring",

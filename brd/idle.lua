@@ -1,5 +1,5 @@
 sets.idle={
-    head="Inyanga Tiara +2",
+    head="Nyame Helm",
     body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
     hands="Volte Gloves",
     legs="Volte Brais",

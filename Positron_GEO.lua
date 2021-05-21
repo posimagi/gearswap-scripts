@@ -18,6 +18,7 @@ function get_sets()
     include("geo/ws.lua") -- sets.ws
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
+    include("geo/precast-elemental.lua") -- sets.precast.elemental
     include("geo/precast-fullcircle.lua") -- sets.precast.fullcircle
     include("geo/precast-healing.lua") -- sets.precast.healing
 
@@ -70,6 +71,8 @@ function precast(spell, position)
         equip(sets.precast.fullcircle)
     elseif spell.skill == "Healing Magic" then
         equip(sets.precast.healing)
+    elseif spell.skill == "Elemental Magic" then
+        equip(sets.precast.elemental)
     end
 end
 include("func/ws_distance_check.lua")
@@ -113,7 +116,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-    if world.area == "Outer Ra'Kaznar [U]" and spell.skill == "Elemental Magic" then
+    if 
+            world.area == "Outer Ra'Kaznar [U]" and 
+            spell.skill == "Elemental Magic" then
         equip(sets.weapon)
     end
     if player.status == "Engaged" then

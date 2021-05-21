@@ -2,7 +2,7 @@ sets.idle={
     main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
     sub="Khonsu",
     ammo="Homiliary",
-    head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
+    head="Nyame Helm",
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",

@@ -58,8 +58,9 @@ end
 
 function precast(spell, position)
 	if spell.type == "JobAbility" then
-		if spell.english:contains("Nightingale") or 
-		   spell.english:contains("Troubadour") then
+		if 
+				spell.english:contains("Nightingale") or 
+				spell.english:contains("Troubadour") then
 			equip(sets.precast.nightingale, sets.precast.troubadour)
 		end
 	elseif spell.type == "WeaponSkill" then

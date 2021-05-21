@@ -1,6 +1,6 @@
 sets.midcast.mb={
     ammo="Pemphredo Tathlum",
-    head={ name="Chironic Hat", augments={'Attack+30','CHR+1','Phalanx +4','Mag. Acc.+11 "Mag.Atk.Bns."+11',}},
+    head="Nyame Helm",
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",
