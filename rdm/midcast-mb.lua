@@ -6,7 +6,7 @@ sets.midcast.mb={
     legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst dmg.+5%','CHR+9','Mag. Acc.+11',}},
     feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
     neck="Mizu. Kubikazari",
-    waist="Eschan Stone",
+    waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",

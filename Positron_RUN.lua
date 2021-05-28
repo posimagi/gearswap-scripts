@@ -10,7 +10,6 @@ function get_sets()
     include("run/idle.lua") -- sets.idle
     include("run/interrupt.lua") -- sets.interrupt
     include("run/th.lua") -- sets.th
-    include("run/tp.lua") -- sets.tp
     include("run/ws.lua") -- sets.ws
 
     -- sets.embolden
@@ -39,11 +38,6 @@ function get_sets()
         "Effusion",
     }
 
-    _OFFENSIVE = false
-    if _OFFENSIVE then
-        sets.engaged = sets.tp
-    end
-
     send_command(
         "input /macro book 7; \
         wait 1; \
@@ -56,7 +50,10 @@ end
 
 function precast(spell, position)
     if _MAGIC:contains(spell.type) then
-        equip(sets.fastcast)
+        equip(sets.idle, sets.fastcast)
+        if spell.skill == "Enhancing Magic" then
+            equip(sets.precast.enhancing)
+        end
     elseif spell.type == "WeaponSkill" then
         equip(sets.ws)
         if spell.name:contains("Shockwave") then
@@ -73,12 +70,13 @@ include("func/ws_distance_check.lua")
 function midcast(spell)
     equip(sets.idle, sets.interrupt, sets.enmity)
     if spell.skill == "Enhancing Magic" then
+        equip(sets.midcast.enhancing)
         if spell.english:contains("Foil") then
             equip(sets.idle, sets.interrupt, sets.enmity)
         elseif spell.english:contains("Refresh") then
             equip(sets.idle, sets.interrupt, sets.midcast.refresh)
         elseif spell.english:contains("Phalanx") then
-            equip(sets.idle, sets.interrupt, sets.midcast.phalanx)
+            equip(sets.midcast.phalanx)
         end
     elseif spell.type == "Item" then
         equip(sets.idle, sets.cursna)

@@ -6,7 +6,7 @@ sets.ws.dark={
     legs="Jhakri Slops +2",
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",

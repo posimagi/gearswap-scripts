@@ -1,3 +1,3 @@
 sets.midcast.helix={
-    waist="Eschan Stone",
+    waist="Sacro Cord",
 }

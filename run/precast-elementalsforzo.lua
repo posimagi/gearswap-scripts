@@ -1,3 +1,3 @@
 sets.precast["Elemental Sforzo"]={
-    body={ name="Futhark Coat +1", augments={'Enhances "Elemental Sforzo" effect',}},
+    body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
 }

@@ -107,6 +107,10 @@ function midcast(spell)
             else
                 equip(sets.weapon.mb)
             end
+        else
+            if player.tp < 1000 then
+                equip(sets.weapon.mb)
+            end
         end
     elseif spell.skill == "Dark Magic" then
         if spell.english:contains("Bio") then
@@ -119,6 +123,10 @@ function aftercast(spell)
     if 
             world.area == "Outer Ra'Kaznar [U]" and 
             spell.skill == "Elemental Magic" then
+        equip(sets.weapon)
+    elseif
+            spell.skill == "Elemental Magic" and
+            player.tp < 1000 then
         equip(sets.weapon)
     end
     if player.status == "Engaged" then

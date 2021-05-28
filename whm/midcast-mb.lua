@@ -6,7 +6,7 @@ sets.midcast.mb={
     legs="Volte Brais",
     feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Mizu. Kubikazari",
-    waist="Eschan Stone",
+    waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",
     left_ring="Freke Ring",

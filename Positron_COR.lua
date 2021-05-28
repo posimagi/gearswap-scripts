@@ -65,6 +65,7 @@ function precast(spell, position)
 		equip(sets.precast.phantomroll)
 	elseif spell.type == "CorsairShot" then
 		equip(sets.precast.quickdraw)
+		obi_check(spell)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Double-Up") then
 			equip(sets.precast.phantomroll)

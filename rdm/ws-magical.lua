@@ -6,7 +6,7 @@ sets.ws.magical={
     legs="Nyame Flanchard",
     feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    waist="Sacro Cord",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Regal Earring",
     left_ring="Freke Ring",

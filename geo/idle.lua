@@ -1,9 +1,9 @@
 sets.idle={
-    head="Azimuth Hood +1",
+    head="Nyame Helm",
     body="Shamash Robe",
     hands="Geo. Mitaines +3",
     legs="Volte Brais",
-    feet="Azimuth Gaiters +1",
+    feet="Geo. Sandals +3",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
     left_ear="Etiolation Earring",
