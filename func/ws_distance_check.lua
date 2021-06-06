@@ -5,7 +5,7 @@ function precast(spell, position)
 	if 
 			spell.type == "WeaponSkill" and
 			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+		add_to_chat(8, spell.name.." aborted because target is out of range.")
 		cancel_spell()
 		return
 	end

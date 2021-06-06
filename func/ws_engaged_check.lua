@@ -4,7 +4,7 @@ function precast(spell, position)
 	if 
 			spell.type == "WeaponSkill" and
 			player.status ~= "Engaged" then
-		add_to_chat("canceled: not engaged")
+		add_to_chat(8, spell.name.." aborted because you are not engaged.")
 		cancel_spell()
 		return
 	end
