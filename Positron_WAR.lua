@@ -67,6 +67,24 @@ function get_sets()
 end
 
 function precast(spell, position)
+	-- WS Engaged Check
+	if
+			spell.type == "WeaponSkill" and
+			player.status ~= "Engaged" then
+		cancel_spell()
+		return
+	end
+
+	-- WS Distance Check
+	_RANGE_MULTIPLIER = 1.642276421172564
+	if 
+			spell.type == "WeaponSkill" and
+			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
+		add_to_chat(8, spell.name.." aborted due to target out of range.")
+		cancel_spell()
+		return
+	end
+
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
         if _MULTI_HIT_WS:contains(spell.english) then
@@ -89,7 +107,7 @@ function precast(spell, position)
         elseif spell.english:contains("Mighty Strikes") then
             equip(sets.precast.mightystrikes)
         elseif spell.english:contains("Provoke") then
-            equip(sets.enmity) --, sets.th)
+            equip(sets.enmity, sets.th)
         elseif spell.english:contains("Tomahawk") then
             equip(sets.precast.tomahawk, sets.th)
         elseif spell.english:contains("Warcry") then
@@ -104,7 +122,6 @@ function precast(spell, position)
         equip(sets.idle, sets.fastcast)
     end
 end
-include("func/ws_distance_check.lua")
 
 function midcast(spell)
 end

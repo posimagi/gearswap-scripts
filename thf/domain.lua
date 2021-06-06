@@ -9,5 +9,5 @@ sets.domain={
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
     right_ring="Gere Ring",
-    back={ name="Canny Cape", augments={'DEX+1','AGI+2','"Dual Wield"+5','Crit. hit damage +3%',}},
+    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','"Regen"+5',}},
 }
