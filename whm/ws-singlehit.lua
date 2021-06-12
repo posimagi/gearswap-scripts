@@ -1,7 +1,7 @@
 sets.ws.singlehit={
     ammo="Oreiad's Tathlum",
     head="Nyame Helm",
-    body={ name="Piety Briault +3", augments={'Enhances "Benediction" effect',}},
+    body={ name="Piety Bliaut +3", augments={'Enhances "Benediction" effect',}},
     hands={ name="Piety Mitts +3", augments={'Enhances "Martyr" effect',}},
     legs="Nyame Flanchard",
     feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},

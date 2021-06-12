@@ -27,6 +27,7 @@ function get_sets()
 	include("sch/precast-healing.lua") -- sets.precast.healing
 	include("sch/precast-tabularasa.lua") -- sets.precast.tabularasa
 
+	include("sch/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
@@ -106,7 +107,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
-		if spell.english:contains("Refresh") then
+		if spell.english:contains("Aquaveil") then
+			equip(sets.midcast.aquaveil)
+		elseif spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Regen") then
 			equip(sets.midcast.regen)

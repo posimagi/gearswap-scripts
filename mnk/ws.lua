@@ -11,5 +11,4 @@ sets.ws={
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",
-    back="Agema Cape",
 }

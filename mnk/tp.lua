@@ -11,5 +11,4 @@ sets.tp={
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Gere Ring",
-    back="Agema Cape",
 }

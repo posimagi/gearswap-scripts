@@ -11,5 +11,4 @@ sets.tp.hybrid={
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
     right_ring="Defending Ring",
-    back="Agema Cape",
 }

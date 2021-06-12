@@ -21,6 +21,7 @@ function get_sets()
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
 	include("cor/precast-ra.lua") -- sets.precast.ra
 	include("cor/precast-randomdeal.lua") -- sets.precast.randomdeal
+	include("cor/precast-waltzes.lua") -- sets.precast.waltzes
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
 	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
@@ -92,6 +93,8 @@ function precast(spell, position)
 		elseif spell.english:contains("Wild Card") then
 			equip(sets.precast.wildcard)
 		end
+	elseif spell.type == "Waltz" then
+		equip(sets.precast.waltzes)
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then

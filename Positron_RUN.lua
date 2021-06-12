@@ -11,6 +11,7 @@ function get_sets()
     include("run/interrupt.lua") -- sets.interrupt
     include("run/th.lua") -- sets.th
     include("run/ws.lua") -- sets.ws
+    include("run/ws-multihit.lua") -- sets.ws.multihit
 
     -- sets.embolden
     
@@ -74,7 +75,9 @@ function precast(spell, position)
         end
     elseif spell.type == "WeaponSkill" then
         equip(sets.ws)
-        if spell.name:contains("Shockwave") then
+        if spell.name:contains("Resolution") then
+            equip(sets.ws.multihit)
+        elseif spell.name:contains("Shockwave") then
             equip(sets.th)
         end
     elseif _ABILITY:contains(spell.type) then

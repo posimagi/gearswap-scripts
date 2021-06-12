@@ -6,5 +6,4 @@ sets.enmity={
     right_ear="Friomisi Earring",
     left_ring="Supershear Ring",
     right_ring="Petrov Ring",
-    back="Agema Cape",
 }
