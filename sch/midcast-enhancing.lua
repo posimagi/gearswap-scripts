@@ -1,7 +1,7 @@
 sets.midcast.enhancing={
     main="Daybreak",
     sub="Ammurapi Shield",
-    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
+    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
     body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
     hands="Arbatel Bracers +1",
     legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},

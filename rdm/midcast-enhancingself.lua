@@ -1,6 +1,6 @@
 sets.midcast.enhancingself={
     ammo="Regal Gem",
-    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
+    head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
     body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
     hands="Atrophy Gloves +3",
     legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},

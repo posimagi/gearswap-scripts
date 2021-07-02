@@ -1,0 +1,15 @@
+sets.hpdown={
+    ammo="Staunch Tathlum",
+    head=empty,
+    body=empty,
+    hands=empty,
+    legs=empty,
+    feet=empty,
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist=empty,
+    left_ear=empty,
+    right_ear=empty,
+    left_ring=empty,
+    right_ring="Defending Ring",
+    back=empty,
+}

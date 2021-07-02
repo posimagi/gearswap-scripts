@@ -39,6 +39,11 @@ function get_sets()
         "Effusion",
     }
 
+    _TAG_SPELLS = T{
+        "Jettatura",
+        "Poisonga",
+    }
+
     send_command(
         "input /macro book 7; \
         wait 1; \
@@ -88,13 +93,15 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-    equip(sets.idle, sets.interrupt, sets.enmity)
-    if spell.skill == "Enhancing Magic" then
+    equip(sets.idle, sets.enmity)
+    if _TAG_SPELLS:contains(spell.english) then
+        equip(sets.idle, sets.interrupt)
+    elseif spell.skill == "Enhancing Magic" then
         equip(sets.midcast.enhancing)
         if spell.english:contains("Foil") then
             equip(sets.idle, sets.interrupt, sets.enmity)
         elseif spell.english:contains("Refresh") then
-            equip(sets.idle, sets.interrupt, sets.midcast.refresh)
+            equip(sets.idle, sets.midcast.refresh)
         elseif spell.english:contains("Phalanx") then
             equip(sets.midcast.phalanx)
         end

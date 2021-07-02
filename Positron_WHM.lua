@@ -16,12 +16,14 @@ function get_sets()
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("whm/fastcast.lua") -- sets.fastcast
+	include("whm/hpdown.lua") -- sets.hpdown
 	include("whm/idle.lua") -- sets.idle
-	include("whm/idle-hybrid.lua") -- sets.idle.hybrid
 	include("whm/sublimation.lua") -- sets.sublimation
 	include("whm/th.lua") -- sets.th
 	include("whm/tp.lua") -- sets.tp
 	include("whm/ws.lua") -- sets.ws
+	include("whm/ws-clubskill.lua") -- sets.ws.clubskill
+	include("whm/ws-hp.lua") -- sets.ws.hp
 	include("whm/ws-singlehit.lua") -- sets.ws.singlehit
 
 	include("whm/precast-benediction.lua") -- sets.precast.benediction
@@ -29,8 +31,10 @@ function get_sets()
 	include("whm/precast-healing.lua") -- sets.precast.healing
 	include("whm/precast-martyr.lua") -- sets.precast.martyt
 
+	include("whm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("whm/midcast-auspice.lua") -- sets.midcast.auspice
 	include("whm/midcast-barspell.lua") -- sets.midcast.barspell
+	include("whm/midcast-curaga.lua") -- sets.midcast.curaga
 	include("whm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("whm/midcast-divine.lua") -- sets.midcast.divine
 	include("whm/midcast-healing.lua") -- sets.midcast.healing
@@ -63,10 +67,10 @@ function get_sets()
 		"Mystic Boon",
 	}
 
-	_HYBRID = false
-	if _HYBRID then
-		sets.idle = sets.idle.hybrid
-	end
+	_MOONLIGHT = T{
+		"Starlight",
+		"Moonlight",
+	}
 
 	send_command(
 		"input /macro book 3; \
@@ -128,6 +132,10 @@ function precast(spell, position)
 		equip(sets.ws)
 		if _SINGLE_HIT_WS:contains(spell.english) then
 			equip(sets.ws.singlehit)
+		elseif _MOONLIGHT:contains(spell.english) then
+			equip(sets.ws.clubskill)
+		elseif spell.english:contains("Dagan") then
+			equip(sets.ws.hp)
 		end
 	else
 		if spell.english:contains("Impact") then
@@ -139,13 +147,19 @@ end
 function midcast(spell)
 	if spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
-		if _STATUSREMOVAL:contains(spell.name) then
+		if 
+				spell.english:contains("Curaga") or
+				spell.english:contains("Cura") then
+			equip(sets.midcast.curaga)
+			obi_check(spell)
+		elseif _STATUSREMOVAL:contains(spell.name) then
 			equip(sets.midcast.statusremoval)
+			if spell.name:contains("Cursna") then
+				equip(sets.midcast.cursna)
+			end
+		else
+			obi_check(spell)
 		end
-		if spell.name:contains("Cursna") then
-			equip(sets.midcast.cursna)
-		end
-		obi_check(spell)
 	elseif spell.skill == "Enfeebling Magic" then
 		equip(sets.midcast.enfeebling)
 		if spell.english:contains("Dia") then
@@ -165,6 +179,8 @@ function midcast(spell)
 			equip(sets.midcast.enhancingskill)
 		elseif spell.english:contains("Auspice") then
 			equip(sets.midcast.auspice)
+		elseif spell.english:contains("Aquaveil") then
+			equip(sets.midcast.aquaveil)
 		end
 	elseif spell.skill == "Divine Magic" then
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
@@ -185,7 +201,9 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
-		if spell.english == "Sublimation" or buffactive_sublimation() then
+		if 
+				spell.english == "Sublimation" or 
+				buffactive_sublimation() then
 			equip(sets.sublimation)
 		end
 	elseif player.status == "Engaged" then
@@ -201,5 +219,19 @@ function status_change(new, old)
 		if buffactive_sublimation() then
 			equip(sets.sublimation)
 		end
+	end
+end
+
+function self_command(command)
+    if command == "hp" then
+		send_command(
+			"gs equip sets.hpdown; \
+			wait 1; \
+			gs equip sets.idle; \
+			gs disable all; \
+			input /ma \"Cure IV\" <me>; \
+			wait 3; \
+			gs enable all;"
+		)
 	end
 end

@@ -9,6 +9,7 @@ function get_sets()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
+	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -137,6 +138,8 @@ function midcast(spell)
 			end
 		elseif spell.english:contains("Kaustra") then
 			equip(sets.midcast.darkness)
+		elseif spell.english:contains("Impact") then
+			equip(sets.impact)
 		end
 		if world.area == "Outer Ra'Kaznar [U]" then
 			if _TIER_ONE_NUKES:contains(spell.english) then
