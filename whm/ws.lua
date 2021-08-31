@@ -1,5 +1,5 @@
 sets.ws={
-    ammo="Oreiad's Tathlum",
+    ammo="Crepuscular Pebble",
     head="Nyame Helm",
     body={ name="Piety Bliaut +3", augments={'Enhances "Benediction" effect',}},
     hands={ name="Piety Mitts +3", augments={'Enhances "Martyr" effect',}},
@@ -11,5 +11,5 @@ sets.ws={
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="Ilabrat Ring",
     right_ring="Rufescent Ring",
-    back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','MND+10','Weapon skill damage +10%',}},
 }

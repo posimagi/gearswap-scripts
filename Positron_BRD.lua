@@ -17,6 +17,7 @@ function get_sets()
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
 	include("brd/precast-troubadour.lua") -- sets.precast.troubadour
 
+	include("brd/midcast-ballad.lua") -- sets.midcast.ballad
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
@@ -31,9 +32,14 @@ function get_sets()
 	}
 
 	_OFFENSIVE_SONGS = T{
+		"Battlefield Elegy",
 		"Carnage Elegy",
-		"Pining Nocturne",
+		"Foe Lullaby",
+		"Foe Lullaby II",
+		"Horde Lullaby",
+		"Horde Lullaby II",
 		"Magic Finale",
+		"Pining Nocturne",
 	} -- TODO: improve this
 
 	send_command(
@@ -101,6 +107,8 @@ function midcast(spell)
 		equip(sets.midcast.songs)
 		if _OFFENSIVE_SONGS:contains(spell.english) then
 			equip(sets.midcast.songs.offensive)
+		elseif spell.english:contains("Ballad") then
+			equip(sets.midcast.ballad)
 		end
 	elseif spell.english:contains("Stoneskin") then
 		equip(sets.midcast.stoneskin)

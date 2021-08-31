@@ -1,6 +1,6 @@
 sets.midcast.mb={
-    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Khonsu",
+    main={ name="Bunzi's Rod", augments={'Path: A',}},
+    sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
     head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
     body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},

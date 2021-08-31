@@ -1,0 +1,15 @@
+sets.idle={
+    ammo="Staunch Tathlum",
+    head="Sakpata's Helm",
+    body="Sakpata's Plate",
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet="Sulev. Leggings +2",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Flume Belt",
+    left_ear="Etiolation Earring",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    right_ring="Defending Ring",
+    back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
+}

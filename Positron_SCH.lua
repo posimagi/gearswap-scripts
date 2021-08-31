@@ -23,6 +23,7 @@ function get_sets()
 	include("sch/perpetuance.lua") -- sets.perpetuance
 	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
+	include("sch/tp.lua") -- sets.tp
 
 	include("sch/precast-grimoire.lua") -- sets.precast.grimoire
 	include("sch/precast-healing.lua") -- sets.precast.healing
@@ -95,6 +96,11 @@ function precast(spell, position)
 			equip(sets.precast.grimoire)
 		elseif spell.type == "BlackMagic" and buffactive_darkarts() then
 			equip(sets.precast.grimoire)
+		end
+		if spell.skill == "Elemental Magic" then
+			if spell.english:contains("Impact") then
+				equip(sets.impact)
+			end
 		end
 	end
 end

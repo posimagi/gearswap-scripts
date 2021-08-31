@@ -137,7 +137,6 @@ function precast(spell, position)
 		elseif spell.english:contains("Dagan") then
 			equip(sets.ws.hp)
 		end
-	else
 		if spell.english:contains("Impact") then
 			equip(sets.impact)
 		end

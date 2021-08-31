@@ -8,11 +8,20 @@ function get_sets()
     include("sam/tp.lua") -- sets.tp
     include("sam/turtle.lua") -- sets.turtle
     include("sam/ws.lua") -- sets.ws
+    include("sam/ws-magical.lua") -- sets.ws.magical
     include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
     include("sam/ws-multihit.lua") -- sets.ws.multihit
+    include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
 
     include("sam/precast-meditate.lua") -- sets.precast.meditate
     include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
+
+    _MAGICAL_WS = T{
+		"Tachi: Goten",
+		"Tachi: Kagero",
+		"Tachi: Jinpu",
+        "Tachi: Koki",
+	}
 
     send_command(
         "input /macro book 12; \
@@ -46,6 +55,8 @@ function precast(spell, position)
         equip(sets.ws)
         if spell.english:contains("Rana") then
             equip(sets.ws.multihit)
+        elseif _MAGICAL_WS:contains(spell.english) then
+            equip(sets.ws.magical)
         end
         if buffactive['Meikyo Shisui'] then
             equip(sets.ws.meikyoshisui)

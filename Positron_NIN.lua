@@ -38,7 +38,8 @@ function get_sets()
 		input /macro set 10; \
 		wait 5; \
 		input /lockstyleset 95; \
-		gs equip sets.idle"
+		gs equip sets.idle \
+		du blinking self combat on"
 	)
 	if player.sub_job == "DNC" then
 		send_command(

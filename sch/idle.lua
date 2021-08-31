@@ -1,6 +1,6 @@
 sets.idle={
-    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
-    sub="Khonsu",
+    main="Daybreak",
+    sub="Genmei Shield",
     ammo="Homiliary",
     head="Nyame Helm",
     body="Shamash Robe",

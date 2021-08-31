@@ -15,6 +15,7 @@ function get_sets()
     include("rng/ws-magical.lua") -- sets.ws.magical
     include("rng/ws-singlehit.lua") -- sets.ws.singlehit
 
+    include("rng/precast-eagleeyeshot.lua") -- sets.precast.eagleeyeshot
     include("rng/precast-ra.lua") -- sets.precast.ra
     include("rng/precast-waltzes.lua") -- sets.precast.waltzes
 
@@ -86,6 +87,9 @@ function precast(spell, position)
     elseif spell.type == "JobAbility" then
         if _AMMO_CONSUMING_ABILITIES:contains(spell.english) then
             ammo_check(spell)
+        end
+        if spell.english:contains("Eagle Eye Shot") then
+            equip(sets.precast.eagleeyeshot)
         end
     elseif spell.type == "Waltz" then
 		equip(sets.precast.waltzes)
