@@ -161,6 +161,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.interrupted and spell.english:contains("Sleep") then
+		return
+    end
 	equip(sets.idle)
 	if spell.english == "Sublimation" or buffactive_sublimation() then
 		equip(sets.sublimation)

@@ -1,7 +1,7 @@
 sets.ws={
     ammo="Knobkierrie",
     head="Nyame Helm",
-    body="Sakonji Domaru +3",
+    body={ name="Sakonji Domaru +3", augments={'Enhances "Overwhelm" effect',}},
     hands="Flam. Manopolas +2",
     legs="Wakido Haidate +3",
     feet="Flam. Gambieras +2",

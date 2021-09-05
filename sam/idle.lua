@@ -1,7 +1,7 @@
 sets.idle={
     head="Nyame Helm",
     body="Flamma Korazin +2",
-    hands="Sakonji Kote +1",
+    hands={ name="Sakonji Kote +1", augments={'Enhances "Blade Bash" effect',}},
     legs="Nyame Flanchard",
     feet="Flam. Gambieras +2",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},

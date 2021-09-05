@@ -12,6 +12,6 @@ sets.tp={
     -- left_ear="Suppanomimi",
     left_ear="Telos Earring", --
     right_ear="Sherida Earring",
-    left_ring="Ayanmo Ring",
-    right_ring="Jhakri Ring",
+    left_ring="Ilabrat Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 }

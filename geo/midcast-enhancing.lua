@@ -4,6 +4,6 @@ sets.midcast.enhancing={
     neck="Incanter's Torque",
     waist="Embla Sash",
     left_ear="Regal Earring",
-    left_ring="Jhakri Ring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Kishar Ring",
 }

@@ -9,7 +9,7 @@ sets.ws={
     waist="Fotia Belt",
     left_ear="Telos Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Ilabrat Ring",
-    right_ring="Rufescent Ring",
+    left_ring="Rufescent Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','MND+10','Weapon skill damage +10%',}},
 }

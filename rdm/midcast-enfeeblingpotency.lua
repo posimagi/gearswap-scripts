@@ -9,7 +9,7 @@ sets.midcast.enfeeblingpotency={
     waist="Luminary Sash",
     left_ear="Regal Earring",
     right_ear="Snotra Earring",
-    left_ring="Tamas Ring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Kishar Ring",
     back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
 }

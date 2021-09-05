@@ -1,5 +1,5 @@
 sets.ws.singlehit={
-    body={ name="Herculean Vest", augments={'Accuracy+7','Weapon skill damage +4%','DEX+11',}},
+    body="Laksa. Frac +3",
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Caro Necklace",
     waist="Grunfeld Rope",

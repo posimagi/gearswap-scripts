@@ -4,17 +4,23 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
 	include("all/doom.lua") -- sets.doom
+	include("all/obi.lua") -- sets.obi
 
 	include("nin/enmity.lua") -- sets.enmity
+	include("nin/futae.lua") -- sets.futae
 	include("nin/idle.lua") -- sets.idle
 	include("nin/fastcast.lua") -- sets.fastcast
 	include("nin/ninjutsu.lua") -- sets.ninjutsu
+	include("nin/tools.lua") -- sets.tools (for validate only)
 	include("nin/tp.lua") -- sets.tp
 	include("nin/ws.lua") -- sets.ws
 	include("nin/ws-singlehit.lua") -- sets.ws.singlehit
 
 	include("nin/precast-utsusemi.lua") -- sets.precast.utsusemi
+	include("nin/precast-waltzes.lua") -- sets.precast.waltzes
 
 	include("nin/midcast-mb.lua") -- sets.midcast.mb
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
@@ -35,26 +41,18 @@ function get_sets()
 	send_command(
 		"input /macro book 13; \
 		wait 1; \
-		input /macro set 10; \
+		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 95; \
-		gs equip sets.idle \
-		du blinking self combat on"
+		gs equip sets.idle; \
+		gs validate shihei fuda; \
+		du blinking self combat on;"
 	)
-	if player.sub_job == "DNC" then
-		send_command(
-			"wait 3; \
-			input /macro set 9;"
-		)
-	end
 end
 
 function sub_job_change(new, old)
 	send_command(
-		"input /macro book 13; \
-		wait 1; \
-		input /macro set 9; \
-		wait 10; \
+		"wait 10; \
 		input /lockstyleset 95; \
 		gs equip sets.idle"
 	)
@@ -88,6 +86,8 @@ function precast(spell, position)
 		end
 	elseif spell.type == "JobAbility" then
 		equip(sets.enmity)
+	elseif spell.type == "Waltz" then
+		equip(sets.precast.waltzes)
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then
@@ -110,12 +110,18 @@ function midcast(spell)
 			equip(sets.midcast.utsusemi)
 		elseif spell.english:contains("ton: ") then
 			equip(sets.midcast.mb)
+			obi_check(spell)
+			if buffactive['Futae'] then
+				equip(sets.futae)
+			end
 		end
 	end
 end
 
 function aftercast(spell)
-	if player.status == "Idle" then
+	if spell.interrupted and spell.english:contains("ton: ") then
+		return
+	elseif player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)

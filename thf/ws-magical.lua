@@ -4,6 +4,6 @@ sets.ws.magical={
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     right_ear="Friomisi Earring",
-    left_ring="Tamas Ring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Dingir Ring",
 }

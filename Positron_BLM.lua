@@ -51,10 +51,7 @@ end
 
 function sub_job_change(new, old)
 	send_command(
-		"input /macro book 4; \
-		wait 1; \
-		input /macro set 1; \
-		wait 10; \
+		"wait 10; \
 		input /lockstyleset 86; \
 		gs equip sets.idle"
 	)
@@ -137,6 +134,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.interrupted and spell.english:contains("Sleep") then
+		return
+    end
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then

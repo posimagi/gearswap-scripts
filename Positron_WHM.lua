@@ -84,10 +84,7 @@ end
 
 function sub_job_change(new, old)
 	send_command(
-		"input /macro book 3; \
-		wait 1; \
-		input /macro set 1; \
-		wait 10; \
+		"wait 10; \
 		input /lockstyleset 20; \
 		gs equip sets.idle"
 	)

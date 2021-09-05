@@ -53,10 +53,7 @@ end
 
 function sub_job_change(new, old)
 	send_command(
-		"input /macro book 10; \
-		wait 1; \
-		input /macro set 1; \
-		wait 10; \
+		"wait 10; \
 		input /lockstyleset 91; \
 		gs equip sets.idle"
 	)
@@ -123,6 +120,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.interrupted and spell.english:contains("Elegy") then
+		return
+    end
 	if _PRE_SONG_ABILITIES:contains(spell.english) then
 		-- do nothing
 	elseif player.status == "Idle" then

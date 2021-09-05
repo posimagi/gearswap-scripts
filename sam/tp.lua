@@ -2,7 +2,7 @@ sets.tp={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
     body="Flamma Korazin +2",
-    hands="Wakido Kote +2",
+    hands="Wakido Kote +3",
     legs="Nyame Flanchard",
     feet="Flam. Gambieras +2",
     neck="Combatant's Torque",
@@ -10,6 +10,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Niqmaddu Ring",
-    right_ring="Ilabrat Ring",
+    right_ring="Regal Ring",
     back={ name="Takaha Mantle", augments={'STR+1','"Zanshin"+1','"Store TP"+3',}},
 }

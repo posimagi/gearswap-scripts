@@ -54,10 +54,7 @@ end
 
 function sub_job_change(new, old)
     send_command(
-        "input /macro book 10; \
-        wait 1; \
-        input /macro set 10; \
-        wait 10; \
+        "wait 10; \
         input /lockstyleset 51; \
         gs equip sets.idle"
     )
@@ -137,6 +134,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+    if spell.interrupted and spell.english:contains("Sleep") then
+		return
+    end
     if 
             world.area == "Outer Ra'Kaznar [U]" and 
             spell.skill == "Elemental Magic" then

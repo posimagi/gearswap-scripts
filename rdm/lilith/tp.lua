@@ -9,7 +9,7 @@ sets.tp={
     waist="Reiki Yotai",
     left_ear="Suppanomimi",
     right_ear="Sherida Earring",
-    left_ring="Ayanmo Ring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
     back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +7','Enha.mag. skill +9','Mag. Acc.+2','Enh. Mag. eff. dur. +18',}},
 }

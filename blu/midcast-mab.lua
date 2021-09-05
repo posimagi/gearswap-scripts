@@ -9,7 +9,7 @@ sets.midcast.mab={
     waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Friomisi Earring",
-    left_ring="Jhakri Ring",
-    right_ring="Acumen Ring",
+    left_ring="Tamas Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
 }

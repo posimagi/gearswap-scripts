@@ -8,5 +8,6 @@ sets.ws.myrkr={
     waist="Luminary Sash",
     left_ear="Etiolation Earring",
     right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="Tamas Ring",
+    left_ring="Lebeche Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 }

@@ -9,7 +9,6 @@ sets.fastcast={
     waist="Embla Sash",
     left_ear="Etiolation Earring",
     right_ear="Malignance Earring",
-    left_ring="Jhakri Ring",
     right_ring="Kishar Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 }
