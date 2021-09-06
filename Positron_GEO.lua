@@ -56,7 +56,8 @@ function sub_job_change(new, old)
     send_command(
         "wait 10; \
         input /lockstyleset 51; \
-        gs equip sets.idle"
+        gs equip sets.idle; \
+		du blinking self all off;"
     )
 end
 

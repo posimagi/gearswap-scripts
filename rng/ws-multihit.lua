@@ -1,4 +1,4 @@
-sets.ws.critical={
+sets.ws.multihit={
     head="Mummu Bonnet +2",
     body="Meg. Cuirie +2",
     hands="Meg. Gloves +2",

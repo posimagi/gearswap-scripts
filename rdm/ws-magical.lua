@@ -1,15 +1,8 @@
 sets.ws.magical={
     ammo="Pemphredo Tathlum",
-    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body={ name="Merlinic Jubbah", augments={'Weapon skill damage +3%','"Store TP"+2','"Treasure Hunter"+2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
     hands="Jhakri Cuffs +2",
-    legs="Nyame Flanchard",
-    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
     neck="Sanctity Necklace",
     waist="Sacro Cord",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Regal Earring",
     left_ring="Freke Ring",
-    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}},
 }

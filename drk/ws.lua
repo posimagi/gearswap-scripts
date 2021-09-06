@@ -1,9 +1,9 @@
 sets.ws={
     ammo="Knobkierrie",
-    head="Sakpata's Helm",
-    body="Sakpata's Plate",
-    hands={ name="Odyssean Gauntlets", augments={'Weapon skill damage +3%','STR+14','Accuracy+14',}},
-    legs={ name="Valorous Hose", augments={'Accuracy+6','Weapon skill damage +4%','VIT+14',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Sulev. Leggings +2",
     neck="Unmoving Collar +1",
     waist="Fotia Belt",

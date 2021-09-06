@@ -14,9 +14,8 @@ function get_sets()
 	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
 	include("dnc/turtle.lua") -- sets.turtle
 	include("dnc/ws.lua") -- sets.ws
-	include("dnc/ws-critical.lua") -- sets.ws.critical
 	include("dnc/ws-magical.lua") -- sets.ws.magical
-	include("dnc/ws-singlehit.lua") -- sets.ws.singlehit
+	include("dnc/ws-multihit.lua") -- sets.ws.multihit
 
 	include("dnc/climacticflourish.lua") -- sets.climacticflourish
 	include("dnc/strikingflourish.lua") -- sets.strikingflourish
@@ -31,6 +30,18 @@ function get_sets()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 
+	_MAGICAL_WS = T{
+		"Aeolian Edge",
+		"Cyclone",
+		"Gust Slash",
+	}
+
+    _MULTI_HIT_WS = T{
+		"Dancing Edge",
+        "Evisceration",
+		"Exenterator",
+    }
+
 	_HYBRID = false
 	if _HYBRID then
 		sets.tp = sets.tp.hybrid
@@ -42,7 +53,8 @@ function get_sets()
 		input /macro set 10; \
 		wait 5; \
 		input /lockstyleset 98; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 end
 
@@ -75,12 +87,11 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains("Rudra's Storm") then
-			equip(sets.ws.singlehit)
-		elseif spell.english:contains("Aeolian Edge") then
+		if _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
-		elseif spell.english:contains("Evisceration") then
-			equip(sets.ws.critical)
+			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		end
 		if buffactive_strikingflourish() then
 			equip(sets.strikingflourish)

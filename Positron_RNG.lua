@@ -11,9 +11,9 @@ function get_sets()
     include("rng/fastcast.lua") -- sets.fastcast
     include("rng/tp.lua") -- sets.tp
     include("rng/ws.lua") -- sets.ws
-    include("rng/ws-critical.lua") -- sets.ws.critical
     include("rng/ws-magical.lua") -- sets.ws.magical
-    include("rng/ws-singlehit.lua") -- sets.ws.singlehit
+    include("rng/ws-multihit.lua") -- sets.ws.multihit
+    include("rng/ws-ranged.lua") -- sets.ws.ranged
 
     include("rng/precast-eagleeyeshot.lua") -- sets.precast.eagleeyeshot
     include("rng/precast-ra.lua") -- sets.precast.ra
@@ -24,12 +24,19 @@ function get_sets()
 
     include("func/ammo_check.lua") -- ammo_check()
     include("func/obi_check.lua") -- obi_check()
-
+    
     _MAGICAL_WS = T{
 		"Aeolian Edge",
+        "Flaming Arrow",
+        "Hot Shot",
         "Trueflight",
         "Wildfire",
 	}
+
+    _MULTI_HIT_WS = T{
+        "Evisceration",
+        "Jishnu's Radiance",
+    }
 
     _RANGED_SKILLS = T{
         "Archery",
@@ -48,7 +55,8 @@ function get_sets()
         input /macro set 1; \
         wait 5; \
 		input /lockstyleset 85; \
-        gs equip sets.idle")
+        gs equip sets.idle; \
+		du blinking self all off;")
 end
 
 function precast(spell, position)
@@ -73,16 +81,17 @@ function precast(spell, position)
     if spell.type == "WeaponSkill" then
         if _RANGED_SKILLS:contains(spell.skill) then
             ammo_check(spell)
+            equip(sets.ws, sets.ws.ranged)
+        else
+            equip(sets.ws)
         end
         if _MAGICAL_WS:contains(spell.english) then
             equip(sets.ws.magical)
             obi_check(spell)
-        elseif spell.english:contains("Jishnu's Radiance") then
-            equip(sets.ws.critical)
+        elseif _MULTI_HIT_WS:contains(spell.english) then
+            equip(sets.ws.multihit)
         elseif spell.english:contains("Savage Blade") then
             equip(sets.ws.singlehit)
-        else
-            equip(sets.ws)
         end
     elseif spell.type == "JobAbility" then
         if _AMMO_CONSUMING_ABILITIES:contains(spell.english) then

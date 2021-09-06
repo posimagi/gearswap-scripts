@@ -38,6 +38,18 @@ function get_sets()
 	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 
+	_MAGICAL_WS = T{
+		"Aeolian Edge",
+		"Cyclone",
+		"Gust Slash",
+	}
+
+	_MULTI_HIT_WS = T{
+		"Dancing Edge",
+        "Evisceration",
+		"Exenterator",
+    }
+
 	_ALL_SLOTS = T{"range", "ammo", "head", "body", "hands", "legs", "feet",
 				   "neck", "waist", "left_ear", "right_ear", "left_ring", "right_ring", "back"}
 
@@ -75,7 +87,8 @@ function get_sets()
 		input /macro set 2; \
 		wait 5; \
 		input /lockstyleset 46; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 	if player.sub_job == "NIN" then
 		send_command(
@@ -122,12 +135,11 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if 
-				spell.english:contains("Rudra's Storm") or 
-				spell.english:contains("Mandalic Stab") then
-			equip(sets.ws.singlehit)
-		elseif spell.english:contains("Aeolian Edge") then
+		if _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
+			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		end
 		if buffactive_sata() then
 			equip(sets.ws.critical)

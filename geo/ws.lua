@@ -1,9 +1,9 @@
 sets.ws={
-    head="Jhakri Coronal +2",
-    body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Jhakri Cuffs +2",
-    legs="Jhakri Slops +2",
-    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

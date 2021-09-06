@@ -13,6 +13,7 @@ function get_sets()
 	include("smn/idle.lua") -- sets.idle
 	include("smn/summoning.lua") -- sets.summoning
 	include("smn/tp.lua") -- sets.tp
+	include("smn/ws.lua") -- sets.ws
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
 
@@ -44,7 +45,8 @@ function get_sets()
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 80; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 end
 
@@ -76,6 +78,8 @@ function precast(spell, position)
 		equip(sets.precast.healing)
 	elseif spell.english:contains("Stoneskin") then
 		equip(sets.precast.stoneskin)
+	elseif spell.type == "WeaponSkill" then
+		equip(sets.ws)
 	end
 end
 

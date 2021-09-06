@@ -1,10 +1,10 @@
 sets.ws={
     ammo="Knobkierrie",
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Sakonji Domaru +3", augments={'Enhances "Overwhelm" effect',}},
-    hands="Flam. Manopolas +2",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Wakido Haidate +3",
-    feet="Flam. Gambieras +2",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Caro Necklace",
     waist="Grunfeld Rope",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

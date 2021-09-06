@@ -9,6 +9,6 @@ sets.tp={
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Petrov Ring",
+    right_ring="Epona's Ring",
     back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }

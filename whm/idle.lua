@@ -1,6 +1,6 @@
 sets.idle={
     ammo="Homiliary",
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",

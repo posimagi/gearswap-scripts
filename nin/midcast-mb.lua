@@ -1,9 +1,9 @@
 sets.midcast.mb={
     ammo="Pemphredo Tathlum",
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body="Malignance Tabard",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-    legs="Nyame Flanchard",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Mochi. Kyahan +3", augments={'Enh. Ninj. Mag. Acc/Cast Time Red.',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",

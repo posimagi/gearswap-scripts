@@ -24,7 +24,7 @@ function get_sets()
 	include("whm/ws.lua") -- sets.ws
 	include("whm/ws-clubskill.lua") -- sets.ws.clubskill
 	include("whm/ws-hp.lua") -- sets.ws.hp
-	include("whm/ws-singlehit.lua") -- sets.ws.singlehit
+	include("whm/ws-multihit.lua") -- sets.ws.multihit
 
 	include("whm/precast-benediction.lua") -- sets.precast.benediction
 	include("whm/precast-devotion.lua") -- sets.precast.devotion
@@ -45,6 +45,22 @@ function get_sets()
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
 
+
+	_MAGICAL_WS = T{
+		"Flash Nova",
+		"Seraph Strike",
+	}
+
+	_MOONLIGHT = T{
+		"Moonlight",
+		"Starlight",
+	}
+	
+	_MULTI_HIT_WS = T{
+        "Hexa Strike",
+		"Realmrazer",
+    }
+
 	_STATUSREMOVAL = T{
 		"Poisona",
 		"Paralyna",
@@ -58,27 +74,14 @@ function get_sets()
 		"Sacrifice",
 	}
 
-	_SINGLE_HIT_WS = T{
-		"Brainshaker",
-		"Skullbreaker",
-		"True Strike",
-		"Judgment",
-		"Black Halo",
-		"Mystic Boon",
-	}
-
-	_MOONLIGHT = T{
-		"Starlight",
-		"Moonlight",
-	}
-
 	send_command(
 		"input /macro book 3; \
 		wait 1; \
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 20; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 end
 
@@ -127,8 +130,11 @@ function precast(spell, position)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _SINGLE_HIT_WS:contains(spell.english) then
-			equip(sets.ws.singlehit)
+		if _MAGICAL_WS:contains(spell.name) then
+			equip(sets.ws.magical)
+			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		elseif _MOONLIGHT:contains(spell.english) then
 			equip(sets.ws.clubskill)
 		elseif spell.english:contains("Dagan") then

@@ -1,6 +1,6 @@
 sets.midcast.mb={
     ammo="Pemphredo Tathlum",
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",
     hands="Volte Gloves",
     legs="Volte Brais",

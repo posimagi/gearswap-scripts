@@ -3,7 +3,7 @@ sets.tp={
     head="Flam. Zucchetto +2",
     body="Flamma Korazin +2",
     hands="Wakido Kote +3",
-    legs="Nyame Flanchard",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Flam. Gambieras +2",
     neck="Combatant's Torque",
     waist="Ioskeha Belt +1",

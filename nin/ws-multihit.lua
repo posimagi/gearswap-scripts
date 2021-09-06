@@ -1,0 +1,15 @@
+sets.ws.multihit={
+    ammo="C. Palug Stone",
+    head="Malignance Chapeau",
+    body={ name="Herculean Vest", augments={'Accuracy+7','Weapon skill damage +4%','DEX+11',}},
+    hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
+    legs="Jokushu Haidate",
+    feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Odr Earring",
+    right_ear="Telos Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+}

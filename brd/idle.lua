@@ -1,5 +1,5 @@
 sets.idle={
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
     hands="Volte Gloves",
     legs="Volte Brais",

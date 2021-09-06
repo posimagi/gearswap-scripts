@@ -3,7 +3,7 @@ sets.tp={
     head="Hjarrandi Helm",
     body="Hjarrandi Breast.",
     hands="Flam. Manopolas +2",
-    legs="Nyame Flanchard",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Flam. Gambieras +2",
     neck="Combatant's Torque",
     waist="Ioskeha Belt +1",

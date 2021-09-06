@@ -1,5 +1,5 @@
 sets.idle={
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",
     hands="Geo. Mitaines +3",
     legs="Volte Brais",

@@ -7,7 +7,7 @@ sets.ws={
     feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    right_ear="Odr Earring",
+    left_ear="Odr Earring",
     right_ear="Sherida Earring",
     left_ring="Niqmaddu Ring",
     right_ring="Regal Ring",

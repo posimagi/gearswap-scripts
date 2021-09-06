@@ -22,7 +22,9 @@ function get_sets()
         input /macro set 2; \
 		wait 5; \
         input /lockstyleset 92; \
-        gs equip sets.idle")
+        gs equip sets.idle; \
+		du blinking self all off;"
+    )
 end
 
 function precast(spell, position)

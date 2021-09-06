@@ -24,6 +24,7 @@ function get_sets()
 	include("sch/sublimation.lua") -- sets.sublimation
 	include("sch/th.lua") -- sets.th
 	include("sch/tp.lua") -- sets.tp
+	include("sch/ws.lua") -- sets.ws
 
 	include("sch/precast-grimoire.lua") -- sets.precast.grimoire
 	include("sch/precast-healing.lua") -- sets.precast.healing
@@ -60,7 +61,8 @@ function get_sets()
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 97; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 end
 
@@ -83,7 +85,9 @@ function precast(spell, position)
 		return
 	end
 
-	if spell.type == "JobAbility" then
+	if spell.type == "WeaponSkill" then
+		equip(sets.ws)
+	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Tabula Rasa") then
 			equip(sets.precast.tabularasa)
 		end

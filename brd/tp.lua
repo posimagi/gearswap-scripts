@@ -1,8 +1,8 @@
 sets.tp={
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body="Ayanmo Corazza +2",
     hands="Aya. Manopolas +2",
-    legs="Nyame Flanchard",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Combatant's Torque",
     waist="Eschan Stone",

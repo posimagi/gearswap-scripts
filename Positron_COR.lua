@@ -15,7 +15,7 @@ function get_sets()
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
 	include("cor/ws-magical.lua") -- sets.ws.magical
-	include("cor/ws-singlehit.lua") -- sets.ws.singlehit
+	include("cor/ws-multihit.lua") -- sets.ws.multihit
 
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
@@ -27,13 +27,31 @@ function get_sets()
 	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("cor/midcast-ra.lua") -- sets.midcast.ra
 
+	_DARK_WS = T{
+		"Leaden Salute",
+	}
+
+	_MAGICAL_WS = T{
+		"Aeolian Edge",
+		"Hot Shot",
+		"Red Lotus Blade",
+		"Sanguine Blade",
+		"Seraph Blade",
+		"Wildfire",
+	}
+
+    _MULTI_HIT_WS = T{
+        "Evisceration",
+    }
+
 	send_command(
 		"input /macro book 11; \
 		wait 1; \
 		input /macro set 10; \
 		wait 5; \
 		input /lockstyleset 96; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 end
 
@@ -66,16 +84,14 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if spell.english:contains("Leaden Salute") then
+		if _DARK_WS:contains(spell.name) then
 			equip(sets.ws.magical, sets.ws.dark)
 			obi_check(spell)
-		elseif 
-				spell.english:contains("Wildfire") or
-				spell.english:contains("Aeolian Edge") then
+		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
-		elseif spell.english:contains("Savage Blade") then
-			equip(sets.ws.singlehit)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)

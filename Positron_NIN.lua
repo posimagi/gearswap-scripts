@@ -17,7 +17,8 @@ function get_sets()
 	include("nin/tools.lua") -- sets.tools (for validate only)
 	include("nin/tp.lua") -- sets.tp
 	include("nin/ws.lua") -- sets.ws
-	include("nin/ws-singlehit.lua") -- sets.ws.singlehit
+	include("nin/ws-magical.lua") -- sets.ws.magical
+	include("nin/ws-multihit.lua") -- sets.ws.multihit
 
 	include("nin/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("nin/precast-waltzes.lua") -- sets.precast.waltzes
@@ -25,18 +26,21 @@ function get_sets()
 	include("nin/midcast-mb.lua") -- sets.midcast.mb
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
 
-	_SINGLE_HIT_WS = T{
-		"Blade: Hi",
-		"Blade: Kamu",
-	}
-
 	_MAGICAL_WS = T{
 		"Blade: Teki",
 		"Blade: To",
 		"Blade: Chi",
 		"Blade: Ei",
 		"Blade: Yu",
+		"Tachi: Jinpu",
 	}
+
+	_MULTI_HIT_WS = T{
+		"Blade: Jin",
+		"Blade: Ku",
+		"Blade: Shun",
+        "Evisceration",
+    }
 
 	send_command(
 		"input /macro book 13; \
@@ -79,10 +83,11 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if 
-				_SINGLE_HIT_WS:contains(spell.english) or
-				_MAGICAL_WS:contains(spell.english) then
-			equip(sets.ws.singlehit)
+		if _MAGICAL_WS:contains(spell.name) then
+			equip(sets.ws.magical)
+			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		end
 	elseif spell.type == "JobAbility" then
 		equip(sets.enmity)

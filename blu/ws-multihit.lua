@@ -3,7 +3,7 @@ sets.ws.multihit={
     head="Malignance Chapeau",
     body="Ayanmo Corazza +2",
     hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
-    legs="Nyame Flanchard",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",

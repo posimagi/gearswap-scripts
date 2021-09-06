@@ -117,7 +117,8 @@ function get_sets()
 		input /macro set 1; \
 		wait 5; \
 		input /lockstyleset 40; \
-		gs equip sets.idle"
+		gs equip sets.idle; \
+		du blinking self all off;"
 	)
 end
 
@@ -151,7 +152,7 @@ function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		if _DARK_WS:contains(spell.name) then
-			equip(sets.ws.dark)
+			equip(sets.ws.magical, sets.ws.dark)
 			obi_check(spell)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)

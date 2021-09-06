@@ -1,8 +1,8 @@
 sets.ws.magical={
-    head="Nyame Helm",
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
-    legs="Nyame Flanchard",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",

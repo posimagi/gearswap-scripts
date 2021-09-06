@@ -6,7 +6,9 @@ sets.ws.magical={
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",
-    right_ear="Friomisi Earring",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Ishvara Earring",
     left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-    right_ring="Dingir Ring",
+    right_ring="Regal Ring",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

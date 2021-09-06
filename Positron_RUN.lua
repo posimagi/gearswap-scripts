@@ -50,7 +50,8 @@ function get_sets()
         input /macro set 10; \
         wait 5; \
         input /lockstyleset 94; \
-        gs equip sets.idle"
+        gs equip sets.idle; \
+		du blinking self all off;"
     )
 end
 
