@@ -1,5 +1,6 @@
 sets.fastcast={
     ammo="Sapience Orb",
+    body="Dread Jupon",
     hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
     neck="Voltsurge Torque",
     left_ear="Etiolation Earring",

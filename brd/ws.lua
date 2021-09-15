@@ -9,5 +9,5 @@ sets.ws={
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Ilabrat Ring",
-    right_ring="Apate Ring",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 }

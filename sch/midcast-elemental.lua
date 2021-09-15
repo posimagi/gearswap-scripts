@@ -1,9 +1,10 @@
-sets.midcast.mb={
+sets.midcast.elemental={
     main={ name="Bunzi's Rod", augments={'Path: A',}},
     sub="Ammurapi Shield",
     ammo="Pemphredo Tathlum",
     head={ name="Peda. M.Board +2", augments={'Enh. "Altruism" and "Focalization"',}},
     body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
+    -- body="Acad. Gown +2",
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
     legs={ name="Peda. Pants +3", augments={'Enhances "Tabula Rasa" effect',}},
     -- feet="Arbatel Loafers +1",

@@ -37,7 +37,7 @@ function get_sets()
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
 	include("sch/midcast-helix.lua") -- sets.midcast.helix
 	include("sch/midcast-light.lua") -- sets.midcast.light
-	include("sch/midcast-mb.lua") -- sets.midcast.mb
+	include("sch/midcast-elemental.lua") -- sets.midcast.elemental
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
 
@@ -137,7 +137,7 @@ function midcast(spell)
 		end
 		obi_check(spell)
 	elseif spell.skill == "Elemental Magic" then
-		equip(sets.midcast.mb)
+		equip(sets.midcast.elemental)
 		obi_check(spell)
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)

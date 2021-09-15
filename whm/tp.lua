@@ -1,10 +1,10 @@
 sets.tp={
     ammo="Hasty Pinion +1",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Ayanmo Corazza +2",
-    hands="Aya. Manopolas +2",
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Bunzi's Sabots", augments={'Path: A',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Combatant's Torque",
     waist="Grunfeld Rope",
     left_ear="Telos Earring",

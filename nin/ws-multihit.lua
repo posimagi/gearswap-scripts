@@ -9,7 +9,7 @@ sets.ws.multihit={
     waist="Fotia Belt",
     left_ear="Odr Earring",
     right_ear="Telos Earring",
-    left_ring="Epona's Ring",
-    right_ring="Gere Ring",
+    left_ring="Gere Ring",
+    right_ring="Epona's Ring",
     back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

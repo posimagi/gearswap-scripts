@@ -39,7 +39,7 @@ function get_sets()
 	include("rdm/midcast-enhancingself.lua") -- sets.midcast.enhancingself
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("rdm/midcast-healing.lua") -- sets.midcast.healing
-	include("rdm/midcast-mb.lua") -- sets.midcast.mb
+	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("rdm/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
 
@@ -230,7 +230,7 @@ function midcast(spell)
 			equip(sets.midcast.cursna)
 		end
 	elseif spell.skill == "Elemental Magic" then
-		equip(sets.midcast.mb)
+		equip(sets.midcast.elemental)
 		if spell.english:contains("Impact") then
 			equip(sets.impact)
 		end

@@ -9,6 +9,7 @@ function get_sets()
     include("run/fastcast.lua") -- sets.fastcast
     include("run/idle.lua") -- sets.idle
     include("run/interrupt.lua") -- sets.interrupt
+    include("run/naked.lua") -- sets.naked
     include("run/th.lua") -- sets.th
     include("run/ws.lua") -- sets.ws
     include("run/ws-multihit.lua") -- sets.ws.multihit

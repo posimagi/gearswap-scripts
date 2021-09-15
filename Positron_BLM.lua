@@ -18,6 +18,7 @@ function get_sets()
 	include("blm/fastcast.lua") -- sets.fastcast
 	include("blm/idle.lua") -- sets.idle
 	include("blm/manawall.lua") -- sets.manawall
+	include("blm/tp.lua") -- sets.tp
 	include("blm/ws.lua") -- sets.ws
 	include("blm/ws-myrkr.lua") -- sets.ws.myrkr
 
@@ -27,7 +28,7 @@ function get_sets()
 	include("blm/midcast-drain.lua") -- sets.midcast.drain
 	include("blm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("blm/midcast-enhancing.lua") -- sets.midcast.enhancing
-	include("blm/midcast-mb.lua") -- sets.midcast.mb
+	include("blm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("blm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	_DRAIN_SPELLS = T{
@@ -117,7 +118,7 @@ function midcast(spell)
 			equip(sets.midcast.stoneskin)
 		end
 	elseif spell.skill == "Dark Magic" then
-		equip(sets.midcast.mb, sets.midcast.dark, sets.midcast.darkness)
+		equip(sets.midcast.elemental, sets.midcast.dark, sets.midcast.darkness)
 		if _DRAIN_SPELLS:contains(spell.english) then
 			equip(sets.midcast.drain)
 		end
@@ -126,7 +127,7 @@ function midcast(spell)
 		equip(sets.midcast.healing)
 		obi_check(spell)
 	elseif spell.skill == "Elemental Magic" then
-		equip(sets.midcast.mb)
+		equip(sets.midcast.elemental)
 		obi_check(spell)
 		if spell.english:contains("Impact") then
 			equip(sets.impact)

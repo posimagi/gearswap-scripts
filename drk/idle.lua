@@ -4,7 +4,7 @@ sets.idle={
     body="Sakpata's Plate",
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
-    feet="Sulev. Leggings +2",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Flume Belt",
     left_ear="Etiolation Earring",

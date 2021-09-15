@@ -28,7 +28,7 @@ function get_sets()
     include("geo/midcast-geomancy.lua") -- sets.midcast.geomancy
     include('geo/midcast-healing.lua') -- sets.midcast.healing
     include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
-    include("geo/midcast-mb.lua") -- sets.midcast.mb
+    include("geo/midcast-elemental.lua") -- sets.midcast.elemental
     include("geo/midcast-refresh.lua") -- sets.midcast.refresh
 
     _TIER_ONE_NUKES = T{
@@ -115,7 +115,7 @@ function midcast(spell)
     elseif spell.skill == "Healing Magic" then
         equip(sets.midcast.healing)
     elseif spell.skill == "Elemental Magic" then
-        equip(sets.midcast.mb)
+        equip(sets.midcast.elemental)
         if world.area == "Outer Ra'Kaznar [U]" then
             if _TIER_ONE_NUKES:contains(spell.english) then
                 equip(sets.naked)

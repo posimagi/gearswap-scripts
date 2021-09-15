@@ -1,10 +1,10 @@
-sets.midcast.mab={
+sets.midcast.elemental={
     ammo="Pemphredo Tathlum",
-    head="Jhakri Coronal +2",
-    body="Jhakri Robe +2",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-    legs="Jhakri Slops +2",
-    feet="Jhakri Pigaches +2",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Sanctity Necklace",
     waist="Sacro Cord",
     left_ear="Regal Earring",

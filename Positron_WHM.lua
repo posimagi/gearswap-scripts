@@ -41,7 +41,7 @@ function get_sets()
 	include("whm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("whm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("whm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
-	include("whm/midcast-mb.lua") -- sets.midcast.mb
+	include("whm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
 
@@ -188,7 +188,7 @@ function midcast(spell)
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
 		if spell.english:contains("Holy") or 
 		   spell.english:contains("Banish") then
-			equip(sets.midcast.mb, sets.midcast.holy)
+			equip(sets.midcast.elemental, sets.midcast.holy)
 		   	obi_check(spell)
 		end
 	elseif spell.skill == "Dark Magic" then

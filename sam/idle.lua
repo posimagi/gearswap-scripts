@@ -1,9 +1,9 @@
 sets.idle={
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Flamma Korazin +2",
-    hands={ name="Sakonji Kote +1", augments={'Enhances "Blade Bash" effect',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Flam. Gambieras +2",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
     left_ear="Etiolation Earring",

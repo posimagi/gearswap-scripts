@@ -23,10 +23,11 @@ function get_sets()
 	include("nin/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("nin/precast-waltzes.lua") -- sets.precast.waltzes
 
-	include("nin/midcast-mb.lua") -- sets.midcast.mb
+	include("nin/midcast-elemental.lua") -- sets.midcast.elemental
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
 
 	_MAGICAL_WS = T{
+		"Aeolian Edge",
 		"Blade: Teki",
 		"Blade: To",
 		"Blade: Chi",
@@ -49,7 +50,6 @@ function get_sets()
 		wait 5; \
 		input /lockstyleset 95; \
 		gs equip sets.idle; \
-		gs validate shihei fuda; \
 		du blinking self combat on;"
 	)
 end
@@ -114,7 +114,7 @@ function midcast(spell)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.midcast.utsusemi)
 		elseif spell.english:contains("ton: ") then
-			equip(sets.midcast.mb)
+			equip(sets.midcast.elemental)
 			obi_check(spell)
 			if buffactive['Futae'] then
 				equip(sets.futae)

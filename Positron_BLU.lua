@@ -22,7 +22,7 @@ function get_sets()
 	include("blu/precast-diffusion.lua") -- sets.precast.diffusion
 
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
-	include("blu/midcast-mab.lua") -- sets.midcast.mab
+	include("blu/midcast-mab.lua") -- sets.midcast.elemental
 	include("blu/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("blu/midcast-refresh.lua") -- sets.midcast.refresh
 
@@ -88,7 +88,7 @@ function midcast(spell)
 				spell.english:contains("Yawn") then
 			equip(sets.idle, sets.th)
 		else
-			equip(sets.idle, sets.midcast.mab)
+			equip(sets.idle, sets.midcast.elemental)
 			obi_check(spell)
 		end
 		if buffactive["Diffusion"] then

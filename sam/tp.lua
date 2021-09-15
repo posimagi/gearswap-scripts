@@ -1,10 +1,10 @@
 sets.tp={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Flam. Zucchetto +2",
-    body="Flamma Korazin +2",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Wakido Kote +3",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Flam. Gambieras +2",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Combatant's Torque",
     waist="Ioskeha Belt +1",
     left_ear="Telos Earring",

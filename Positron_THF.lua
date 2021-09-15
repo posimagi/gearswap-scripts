@@ -21,8 +21,8 @@ function get_sets()
 	include("thf/weapon.lua") -- sets.weapon
 	include("thf/ws.lua") -- sets.ws
 	include("thf/ws-critical.lua") -- sets.ws.critical
-	include("thf/ws-singlehit.lua") -- sets.ws.singlehit
 	include("thf/ws-magical.lua") -- sets.ws.magical
+	include("thf/ws-multihit.lua") -- sets.ws.multihit
 
 	include("thf/precast-accomplice.lua") -- sets.precast.accomplice
 	include("thf/precast-despoil.lua") -- sets.precast.despoil
@@ -32,16 +32,20 @@ function get_sets()
 	include("thf/precast-steal.lua") -- sets.precast.steal
 	include("thf/precast-waltzes.lua") -- sets.precast.waltzes
 
-	include("thf/midcast-mb.lua") -- sets.midcast.mb
+	include("thf/midcast-elemental.lua") -- sets.midcast.elemental
 	include("thf/midcast-phalanx.lua") -- sets.midcast.phalanx
 
 	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
+	include("func/obi_check.lua") -- obi_check()
 
 	_MAGICAL_WS = T{
 		"Aeolian Edge",
 		"Cyclone",
 		"Gust Slash",
+		"Red Lotus Blade",
+		"Sanguine Blade",
+		"Seraph Blade",
 	}
 
 	_MULTI_HIT_WS = T{
@@ -69,15 +73,15 @@ function get_sets()
 		sets.tp = set_combine(sets.tp, sets.th)
 		sets.ws = set_combine(sets.ws, sets.th)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
-		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th)
+		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th)
 	elseif _TH == "medium" then
 		sets.tp = set_combine(sets.tp, sets.th.medium)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
-		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th.medium)
+		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.medium)
 	elseif _TH == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
-		sets.midcast.mb = set_combine(sets.midcast.mb, sets.th.medium)
+		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.medium)
 	elseif _TH == "none" then
 		-- do nothing
 	end
@@ -178,7 +182,7 @@ end
 
 function midcast(spell)
 	if spell.skill == "Elemental Magic" then
-		equip(sets.midcast.mb)
+		equip(sets.midcast.elemental)
 	elseif spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
 	end

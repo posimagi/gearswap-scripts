@@ -4,7 +4,7 @@ sets.tp={
     body="Sakpata's Plate",
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Sulev. Leggings +2",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Combatant's Torque",
     waist="Ioskeha Belt +1",
     left_ear="Telos Earring",

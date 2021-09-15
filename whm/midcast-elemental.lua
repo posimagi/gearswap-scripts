@@ -1,9 +1,9 @@
-sets.midcast.mb={
+sets.midcast.elemental={
     ammo="Pemphredo Tathlum",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",
-    hands="Volte Gloves",
-    legs="Volte Brais",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Mizu. Kubikazari",
     waist="Sacro Cord",
