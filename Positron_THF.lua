@@ -90,7 +90,7 @@ function get_sets()
 		"input /macro book 6; \
 		input /macro set 2; \
 		wait 5; \
-		input /lockstyleset 46; \
+		input /lockstyleset 26; \
 		gs equip sets.idle; \
 		du blinking self all off;"
 	)
@@ -107,7 +107,7 @@ function sub_job_change(new, old)
 		wait 1; \
 		input /macro set 2; \
 		wait 10; \
-		input /lockstyleset 48; \
+		input /lockstyleset 26; \
 		gs equip sets.idle"
 	)
 	if player.sub_job == "NIN" then

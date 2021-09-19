@@ -116,7 +116,7 @@ function get_sets()
 		wait 1; \
 		input /macro set 1; \
 		wait 5; \
-		input /lockstyleset 40; \
+		input /lockstyleset 25; \
 		gs equip sets.idle; \
 		du blinking self all off;"
 	)
@@ -125,7 +125,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"wait 10; \
-		input /lockstyleset 40; \
+		input /lockstyleset 25; \
 		gs equip sets.idle"
 	)
 end

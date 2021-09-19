@@ -29,6 +29,7 @@ function get_sets()
 
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
+	include("func/obi_check.lua") -- obi_check()
 
 	_MAGICAL_WS = T{
 		"Aeolian Edge",
@@ -52,7 +53,7 @@ function get_sets()
 		wait 1; \
 		input /macro set 10; \
 		wait 5; \
-		input /lockstyleset 98; \
+		input /lockstyleset 39; \
 		gs equip sets.idle; \
 		du blinking self all off;"
 	)
@@ -61,7 +62,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"wait 10; \
-		input /lockstyleset 98; \
+		input /lockstyleset 39; \
 		gs equip sets.idle"
 	)
 end

@@ -1,4 +1,4 @@
 sets.weapon={
     main="Idris",
-    sub="Genmei Shield",
+    sub="Ammurapi Shield",
 }

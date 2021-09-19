@@ -3,7 +3,7 @@ sets.tp={
     ammo="Date Shuriken",
     head="Malignance Chapeau",
     body={ name="Mochi. Chainmail +3", augments={'Enhances "Sange" effect',}},
-    hands="Hachiya Tekko +2",
+    hands="Hachiya Tekko +3",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck={ name="Ninja Nodowa +1", augments={'Path: A',}},

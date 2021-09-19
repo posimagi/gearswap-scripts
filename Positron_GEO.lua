@@ -14,7 +14,6 @@ function get_sets()
     include("geo/th.lua") -- sets.th
     include("geo/tp.lua") -- sets.tp
     include("geo/weapon.lua") -- sets.weapon
-    include("geo/weapon-mb.lua") -- sets.weapon.mb
     include("geo/ws.lua") -- sets.ws
 
     include("geo/precast-bolster.lua") -- sets.precast.bolster
@@ -81,10 +80,14 @@ function precast(spell, position)
 	end
 
     equip(sets.fastcast)
-    if spell.english:contains("Bolster") then
-        equip(sets.precast.bolster)
-    elseif spell.english:contains("Full Circle") then
-        equip(sets.precast.fullcircle)
+    if spell.type == "WeaponSkill" then
+        equip(sets.ws)
+    elseif spell.type == "JobAbility" then
+        if spell.english:contains("Bolster") then
+            equip(sets.precast.bolster)
+        elseif spell.english:contains("Full Circle") then
+            equip(sets.precast.fullcircle)
+        end
     elseif spell.skill == "Healing Magic" then
         equip(sets.precast.healing)
     elseif spell.skill == "Elemental Magic" then
@@ -116,16 +119,10 @@ function midcast(spell)
         equip(sets.midcast.healing)
     elseif spell.skill == "Elemental Magic" then
         equip(sets.midcast.elemental)
-        if world.area == "Outer Ra'Kaznar [U]" then
-            if _TIER_ONE_NUKES:contains(spell.english) then
+        if 
+            world.area == "Outer Ra'Kaznar [U]" and
+            _TIER_ONE_NUKES:contains(spell.english) then
                 equip(sets.naked)
-            else
-                equip(sets.weapon.mb)
-            end
-        else
-            if player.tp < 1000 then
-                equip(sets.weapon.mb)
-            end
         end
     elseif spell.skill == "Dark Magic" then
         if spell.english:contains("Bio") then
@@ -141,10 +138,6 @@ function aftercast(spell)
     if 
             world.area == "Outer Ra'Kaznar [U]" and 
             spell.skill == "Elemental Magic" then
-        equip(sets.weapon)
-    elseif
-            spell.skill == "Elemental Magic" and
-            player.tp < 1000 then
         equip(sets.weapon)
     end
     if player.status == "Engaged" then

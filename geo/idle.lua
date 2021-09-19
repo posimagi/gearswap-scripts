@@ -1,8 +1,8 @@
 sets.idle={
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head="Azimuth Hood +1",
     body="Shamash Robe",
     hands="Geo. Mitaines +3",
-    legs="Volte Brais",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Geo. Sandals +3",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",

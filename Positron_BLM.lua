@@ -29,6 +29,7 @@ function get_sets()
 	include("blm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("blm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("blm/midcast-elemental.lua") -- sets.midcast.elemental
+	include("blm/midcast-elementaldebuff.lua") -- sets.midcast.elementaldebuff
 	include("blm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	_DRAIN_SPELLS = T{
@@ -40,12 +41,21 @@ function get_sets()
 		"Drain III",
 	}
 
+	_ELEMENTAL_DEBUFFS = T{
+		"Shock",
+		"Rasp",
+		"Choke",
+		"Frost",
+		"Burn",
+		"Drown",
+	}
+
 	send_command(
 		"input /macro book 4; \
 		wait 1; \
 		input /macro set 1; \
 		wait 5; \
-		input /lockstyleset 86; \
+		input /lockstyleset 24; \
 		gs equip sets.idle; \
 		du blinking self all off;"
 	)
@@ -131,6 +141,8 @@ function midcast(spell)
 		obi_check(spell)
 		if spell.english:contains("Impact") then
 			equip(sets.impact)
+		elseif _ELEMENTAL_DEBUFFS:contains(spell.english) then
+			equip(sets.midcast.elementaldebuff)
 		end
 	end
 end

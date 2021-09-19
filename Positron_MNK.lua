@@ -21,7 +21,7 @@ function get_sets()
         wait 1; \
         input /macro set 2; \
 		wait 5; \
-        input /lockstyleset 92; \
+        input /lockstyleset 22; \
         gs equip sets.idle; \
 		du blinking self all off;"
     )
