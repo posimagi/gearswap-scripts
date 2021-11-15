@@ -1,0 +1,15 @@
+sets.naked={
+    ammo="Staunch Tathlum",
+    head="Wh. Rarab Cap +1",
+    body="Carpenter's Smock",
+    hands="Carpenter's Gloves",
+    legs="Shedir Seraweels",
+    feet="Waders",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Flume Belt",
+    left_ear="Etiolation Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Kishar Ring",
+    right_ring="Defending Ring",
+    back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
+}

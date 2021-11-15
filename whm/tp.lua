@@ -1,6 +1,6 @@
 sets.tp={
     ammo="Hasty Pinion +1",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head={ name="Bunzi's Hat", augments={'Path: A',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -8,8 +8,8 @@ sets.tp={
     neck="Combatant's Torque",
     waist="Grunfeld Rope",
     left_ear="Telos Earring",
-    right_ear="Cessance Earring",
+    right_ear="Crep. Earring",
     left_ring="Ilabrat Ring",
     right_ring="Petrov Ring",
-    back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','MND+10','Weapon skill damage +10%',}},
+    back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Occ. inc. resist. to stat. ailments+10',}},
 }

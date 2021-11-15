@@ -16,6 +16,7 @@ function get_sets()
 	include("cor/ws-dark.lua") -- sets.ws.dark
 	include("cor/ws-magical.lua") -- sets.ws.magical
 	include("cor/ws-multihit.lua") -- sets.ws.multihit
+	include("cor/ws-ranged.lua") -- sets.ws.ranged
 
 	include("cor/precast-phantomroll.lua") -- sets.precast.phantomroll
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
@@ -43,7 +44,17 @@ function get_sets()
 
     _MULTI_HIT_WS = T{
         "Evisceration",
+		"Requiescat",
     }
+
+	_RANGED_WS = T{
+		"Detonator",
+		"Last Stand",
+		"Numbing Shot",
+		"Sniper Shot",
+		"Slug Shot",
+		"Split Shot",
+	}
 
 	send_command(
 		"input /macro book 11; \
@@ -85,14 +96,16 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _DARK_WS:contains(spell.name) then
+		if _DARK_WS:contains(spell.english) then
 			equip(sets.ws.magical, sets.ws.dark)
 			obi_check(spell)
-		elseif _MAGICAL_WS:contains(spell.name) then
+		elseif _MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.magical)
 			obi_check(spell)
-		elseif _MULTI_HIT_WS:contains(spell.name) then
+		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)
+		elseif _RANGED_WS:contains(spell.english) then
+			equip(sets.ws.ranged)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)

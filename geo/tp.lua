@@ -7,7 +7,7 @@ sets.tp={
     neck="Combatant's Torque",
     waist="Grunfeld Rope",
     left_ear="Telos Earring",
-    right_ear="Cessance Earring",
+    right_ear="Crep. Earring",
     left_ring="Varar Ring +1",
     right_ring="Petrov Ring",
     back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},

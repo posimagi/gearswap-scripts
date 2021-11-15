@@ -7,7 +7,7 @@ sets.tp={
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
     neck={ name="Etoile Gorget", augments={'Path: A',}},
     waist="Reiki Yotai",
-    left_ear="Cessance Earring",
+    left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring="Ilabrat Ring",
     right_ring="Gere Ring",

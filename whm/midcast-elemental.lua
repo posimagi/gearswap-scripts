@@ -1,6 +1,6 @@
 sets.midcast.elemental={
     ammo="Pemphredo Tathlum",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head={ name="Bunzi's Hat", augments={'Path: A',}},
     body="Shamash Robe",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},

@@ -10,11 +10,19 @@ function get_sets()
     include("drg/idle.lua") -- sets.idle
     include("drg/tp.lua") -- sets.tp
     include("drg/ws.lua") -- sets.ws
+    include("drg/ws-singlehit.lua") -- sets.ws.singlehit
 
     include("drg/precast-angon.lua") -- sets.precast.angon
     include("drg/precast-callwyvern.lua") -- sets.precast.callwyvern
     include("drg/precast-jump.lua") -- sets.precast.jump
     include("drg/precast-spiritlink.lua") -- sets.precast.spiritlink
+
+    _SINGLE_HIT_WS = T{
+        "Raiden Thrust",
+        "Sonic Thrust",
+        "Camlann's Torment",
+        "Savage Blade",
+    }
 
     send_command(
 		"input /macro book 12; \
@@ -58,6 +66,9 @@ function precast(spell, position)
 
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
+        if _SINGLE_HIT_WS:contains(spell.name) then
+			equip(sets.ws.singlehit)
+        end
     elseif spell.type == "JobAbility" then
         if spell.english:contains("Jump") then
             equip(sets.tp, sets.precast.jump)

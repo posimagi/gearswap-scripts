@@ -20,6 +20,10 @@ function get_sets()
 	include("brd/midcast-ballad.lua") -- sets.midcast.ballad
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
+	include("brd/midcast-madrigal.lua") -- sets.midcast.madrigal
+	include("brd/midcast-march.lua") -- sets.midcast.march
+	include("brd/midcast-minuet.lua") -- sets.midcast.minuet
+	include("brd/midcast-scherzo.lua") -- sets.midcast.scherzo
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
 	include("brd/midcast-songs-offensive.lua") -- sets.midcast.songs.offensive
 
@@ -49,7 +53,7 @@ function get_sets()
 		wait 5; \
 		input /lockstyleset 30; \
 		gs equip sets.idle; \
-		du blinking self all off;"
+		du blinking self all on;"
 	)
 end
 
@@ -108,6 +112,14 @@ function midcast(spell)
 			equip(sets.midcast.songs.offensive)
 		elseif spell.english:contains("Ballad") then
 			equip(sets.midcast.ballad)
+		elseif spell.english:contains("Madrigal") then
+			equip(sets.midcast.madrigal)
+		elseif spell.english:contains("March") then
+			equip(sets.midcast.march)
+		elseif spell.english:contains("Minuet") then
+			equip(sets.midcast.minuet)
+		elseif spell.english:contains("Scherzo") then
+			equip(sets.midcast.scherzo)
 		end
 	elseif spell.english:contains("Stoneskin") then
 		equip(sets.midcast.stoneskin)

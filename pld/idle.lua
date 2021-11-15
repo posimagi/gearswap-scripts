@@ -1,9 +1,9 @@
 sets.idle={
     ammo="Staunch Tathlum",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    head="Sakpata's Helm",
+    body="Sakpata's Plate",
+    hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
@@ -11,5 +11,5 @@ sets.idle={
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
-    back={ name="Takaha Mantle", augments={'STR+1','"Zanshin"+1','"Store TP"+3',}},
+    back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

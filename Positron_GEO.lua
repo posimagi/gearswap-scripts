@@ -4,6 +4,11 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}    
 
+    include("func/obi_check.lua") -- obi_check()
+
+	include("all/impact.lua") -- sets.impact
+	include("all/obi.lua") -- sets.obi
+
     include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
     include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
@@ -92,6 +97,9 @@ function precast(spell, position)
         equip(sets.precast.healing)
     elseif spell.skill == "Elemental Magic" then
         equip(sets.precast.elemental)
+        if spell.english:contains("Impact") then
+            equip(sets.impact)
+        end
     end
 end
 
@@ -119,7 +127,10 @@ function midcast(spell)
         equip(sets.midcast.healing)
     elseif spell.skill == "Elemental Magic" then
         equip(sets.midcast.elemental)
-        if 
+        obi_check(spell)
+        if spell.english:contains("Impact") then
+			equip(sets.impact)
+        elseif
             world.area == "Outer Ra'Kaznar [U]" and
             _TIER_ONE_NUKES:contains(spell.english) then
                 equip(sets.naked)

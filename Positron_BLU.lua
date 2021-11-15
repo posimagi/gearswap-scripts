@@ -15,6 +15,7 @@ function get_sets()
 
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
+	include("blu/naked.lua") -- sets.naked
 	include("blu/tp.lua") -- sets.tp
 	include("blu/ws.lua") -- sets.ws
 	include("blu/ws-multihit.lua") -- sets.ws.multihit
@@ -22,7 +23,7 @@ function get_sets()
 	include("blu/precast-diffusion.lua") -- sets.precast.diffusion
 
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
-	include("blu/midcast-mab.lua") -- sets.midcast.elemental
+	include("blu/midcast-elemental.lua") -- sets.midcast.elemental
 	include("blu/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("blu/midcast-refresh.lua") -- sets.midcast.refresh
 

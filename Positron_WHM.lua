@@ -15,12 +15,14 @@ function get_sets()
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("whm/dispelga.lua") -- sets.dispelga
 	include("whm/fastcast.lua") -- sets.fastcast
 	include("whm/hpdown.lua") -- sets.hpdown
 	include("whm/idle.lua") -- sets.idle
 	include("whm/sublimation.lua") -- sets.sublimation
 	include("whm/th.lua") -- sets.th
 	include("whm/tp.lua") -- sets.tp
+	include("whm/weapon.lua") -- sets.weapon
 	include("whm/ws.lua") -- sets.ws
 	include("whm/ws-clubskill.lua") -- sets.ws.clubskill
 	include("whm/ws-hp.lua") -- sets.ws.hp
@@ -33,6 +35,7 @@ function get_sets()
 
 	include("whm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("whm/midcast-auspice.lua") -- sets.midcast.auspice
+	include("whm/midcast-banish.lua") -- sets.midcast.banish
 	include("whm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("whm/midcast-curaga.lua") -- sets.midcast.curaga
 	include("whm/midcast-cursna.lua") -- sets.midcast.cursna
@@ -140,9 +143,10 @@ function precast(spell, position)
 		elseif spell.english:contains("Dagan") then
 			equip(sets.ws.hp)
 		end
-		if spell.english:contains("Impact") then
-			equip(sets.impact)
-		end
+	elseif spell.english:contains("Impact") then
+		equip(sets.impact)
+	elseif spell.english:contains("Dispelga") then
+		equip(sets.dispelga)
 	end
 end
 
@@ -166,6 +170,8 @@ function midcast(spell)
 		equip(sets.midcast.enfeebling)
 		if spell.english:contains("Dia") then
 			equip(sets.th)
+		elseif spell.english:contains("Dispelga") then
+			equip(sets.dispelga)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
@@ -186,9 +192,11 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Divine Magic" then
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
-		if spell.english:contains("Holy") or 
-		   spell.english:contains("Banish") then
+		if spell.english:contains("Holy") then
 			equip(sets.midcast.elemental, sets.midcast.holy)
+		   	obi_check(spell)
+		elseif spell.english:contains("Banish") then
+			equip(sets.midcast.elemental, sets.midcast.banish)
 		   	obi_check(spell)
 		end
 	elseif spell.skill == "Dark Magic" then
@@ -210,6 +218,9 @@ function aftercast(spell)
 		end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+	end
+	if spell.english:contains("Dispelga") then
+		equip(sets.weapon)
 	end
 end
 

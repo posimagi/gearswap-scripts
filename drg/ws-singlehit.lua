@@ -1,14 +1,15 @@
-sets.ws={
+sets.ws.singlehit={
+    ammo="Knobkierrie",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    neck="Caro Necklace",
+    waist="Grunfeld Rope",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Rufescent Ring",
-    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Weapon skill damage +10%',}},
+    right_ear="Sherida Earring",
+    left_ring="Niqmaddu Ring",
+    right_ring="Regal Ring",
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

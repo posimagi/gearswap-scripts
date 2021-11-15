@@ -7,7 +7,7 @@ sets.tp={
     neck="Combatant's Torque",
     waist="Grunfeld Rope",
     left_ear="Telos Earring",
-    right_ear="Cessance Earring",
+    right_ear="Crep. Earring",
     left_ring="Varar Ring +1",
     right_ring="Petrov Ring",
 }
