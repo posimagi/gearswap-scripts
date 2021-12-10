@@ -1,7 +1,7 @@
 sets.tp={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Sakpata's Helm",
-    body="Sakpata's Plate",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Pumm. Cuisses +3",
     feet="Pumm. Calligae +3",

@@ -3,7 +3,7 @@ sets.ws.multihit={
     body="Meg. Cuirie +2",
     hands="Meg. Gloves +2",
     legs="Jokushu Haidate",
-    feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Odr Earring",

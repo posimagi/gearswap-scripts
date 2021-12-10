@@ -4,7 +4,7 @@ sets.ws={
     body="Mummu Jacket +2",
     hands="Mummu Wrists +2",
     legs="Hiza. Hizayoroi +2",
-    feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Odr Earring",

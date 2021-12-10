@@ -142,6 +142,10 @@ function precast(spell, position)
 		if _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
+			if spell.name:contains("Gust Slash") then -- FIXME: REMOVE REMOVE REMOVE
+				equip({head="",body="",hands="",legs="",feet=""})
+				send_command('wait 1.2; input /ws "Gust Slash" <t>; input /echo gust slash')
+			end
 		elseif _MULTI_HIT_WS:contains(spell.name) then
 			equip(sets.ws.multihit)
 		end

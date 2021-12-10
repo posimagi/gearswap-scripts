@@ -15,6 +15,7 @@ function get_sets()
     include("rng/ws-multihit.lua") -- sets.ws.multihit
     include("rng/ws-ranged.lua") -- sets.ws.ranged
 
+    include("rng/precast-bountyshot.lua") -- sets.precast.bountyshot
     include("rng/precast-eagleeyeshot.lua") -- sets.precast.eagleeyeshot
     include("rng/precast-ra.lua") -- sets.precast.ra
     include("rng/precast-waltzes.lua") -- sets.precast.waltzes
@@ -97,7 +98,9 @@ function precast(spell, position)
         if _AMMO_CONSUMING_ABILITIES:contains(spell.english) then
             ammo_check(spell)
         end
-        if spell.english:contains("Eagle Eye Shot") then
+        if spell.english:contains("Bounty Shot") then
+            equip(sets.precast.bountyshot)
+        elseif spell.english:contains("Eagle Eye Shot") then
             equip(sets.precast.eagleeyeshot)
         end
     elseif spell.type == "Waltz" then

@@ -1,7 +1,7 @@
 sets.ws.multihit={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-    body="Sakpata's Plate",
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs="Pumm. Cuisses +3",
     feet="Pumm. Calligae +3",

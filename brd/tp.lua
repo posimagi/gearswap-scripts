@@ -1,4 +1,5 @@
 sets.tp={
+    range={ name="Linos", augments={'Accuracy+20','"Dbl.Atk."+2','Quadruple Attack +3',}},
     head={ name="Bunzi's Hat", augments={'Path: A',}},
     body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},

@@ -4,7 +4,7 @@ sets.ws.multihit={
     body="Ayanmo Corazza +2",
     hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Herculean Boots", augments={'Weapon skill damage +5%','DEX+7',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Odr Earring",

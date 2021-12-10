@@ -1,7 +1,7 @@
 sets.idle={
     ammo="Staunch Tathlum",
-    head="Sakpata's Helm",
-    body="Sakpata's Plate",
+    head={ name="Sakpata's Helm", augments={'Path: A',}},
+    body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},

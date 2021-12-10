@@ -4,7 +4,7 @@ sets.ws={
     body="Pumm. Lorica +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet="Sulev. Leggings +2",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Grunfeld Rope",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
