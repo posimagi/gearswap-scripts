@@ -41,8 +41,10 @@ function get_sets()
     }
 
     _TAG_SPELLS = T{
+        "Geist Wall",
         "Jettatura",
         "Poisonga",
+        "Sheep Song",
     }
 
     send_command(

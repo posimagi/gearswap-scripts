@@ -17,8 +17,10 @@ function get_sets()
 	include("all/midcast-darkness.lua") -- sets.midcast.darkness
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("sch/darkarts.lua") -- sets.darkarts
 	include("sch/fastcast.lua") -- sets.fastcast
 	include("sch/idle.lua") -- sets.idle
+	include("sch/lightarts.lua") -- sets.lightarts
 	include("sch/naked.lua") -- sets.naked
 	include("sch/perpetuance.lua") -- sets.perpetuance
 	include("sch/sublimation.lua") -- sets.sublimation
@@ -32,6 +34,7 @@ function get_sets()
 
 	include("sch/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
+	include("sch/midcast-darkness.lua") -- sets.midcast.darkness
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
@@ -40,6 +43,7 @@ function get_sets()
 	include("sch/midcast-elemental.lua") -- sets.midcast.elemental
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
+	include("sch/midcast-regen-weapon.lua") -- sets.midcast.regen.weapon
 
 	_REGEN_DURATION = false
 	if _REGEN_DURATION then
@@ -90,6 +94,10 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Tabula Rasa") then
 			equip(sets.precast.tabularasa)
+		elseif spell.english:contains("Light Arts") then
+			equip(sets.lightarts)
+		elseif spell.english:contains("Dark Arts") then
+			equip(sets.darkarts)
 		end
 	else
 		equip(sets.fastcast)
@@ -124,6 +132,9 @@ function midcast(spell)
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Regen") then
 			equip(sets.midcast.regen)
+			if player.tp < 1000 then
+				equip(sets.midcast.regen.weapon)
+			end
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		end
@@ -141,9 +152,9 @@ function midcast(spell)
 		obi_check(spell)
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
-			if spell.english:contains("Luminohelix") then
-				equip(sets.midcast.light)
-			elseif spell.english:contains("Noctohelix") then
+			-- if spell.english:contains("Luminohelix") then
+			-- 	equip(sets.midcast.light)
+			if spell.english:contains("Noctohelix") then
 				equip(sets.midcast.darkness)
 			end
 		elseif spell.english:contains("Kaustra") then
@@ -169,6 +180,13 @@ function aftercast(spell)
 		return
     end
 	equip(sets.idle)
+	if player.tp < 1000 then
+		if buffactive['Light Arts'] and not spell.english:contains("Dark Arts") then
+			equip(sets.lightarts)
+		elseif buffactive['Dark Arts'] and not spell.english:contains("Light Arts") then
+			equip(sets.darkarts)
+		end
+	end
 	if spell.english == "Sublimation" or buffactive_sublimation() then
 		equip(sets.sublimation)
 	end

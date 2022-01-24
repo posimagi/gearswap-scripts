@@ -1,6 +1,4 @@
 sets.idle={
-    main="Daybreak",
-    sub="Genmei Shield",
     ammo="Homiliary",
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Shamash Robe",

@@ -29,18 +29,20 @@ function get_sets()
 	include("rdm/precast-chainspell.lua") -- sets.precast.chainspell
 	include("rdm/precast-enfeebling.lua") -- sets.precast.enfeebling
 	include("rdm/precast-healing.lua") -- sets.precast.healing
+	include("rdm/precast-ra.lua") -- sets.precast.ra
 
 	include("rdm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("rdm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
+	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("rdm/midcast-enfeeblingaccuracy.lua") -- sets.midcast.enfeeblingaccuracy
 	include("rdm/midcast-enfeeblingpotency.lua") -- sets.midcast.enfeeblingpotency
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("rdm/midcast-enhancingself.lua") -- sets.midcast.enhancingself
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("rdm/midcast-healing.lua") -- sets.midcast.healing
-	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("rdm/midcast-phalanx.lua") -- sets.midcast.phalanx
+	include("rdm/midcast-ra.lua") -- sets.midcast.ra
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
@@ -164,6 +166,8 @@ function precast(spell, position)
 		if spell.english:contains("Chainspell") then
 			equip(sets.precast.chainspell)
 		end
+	-- elseif spell.action_type == "Ranged Attack" then
+    --     equip(sets.precast.ra)
 	else
 		equip(sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
@@ -239,6 +243,8 @@ function midcast(spell)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
 		end
+	elseif spell.action_type == "Ranged Attack" then
+        equip(sets.midcast.ra)
 	end
 end
 

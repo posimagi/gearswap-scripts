@@ -4,10 +4,22 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
     
+    include("pld/enmity.lua") -- sets.enmity
     include("pld/fastcast.lua") -- sets.fastcast
     include("pld/idle.lua") -- sets.idle
+    include("pld/interrupt.lua") -- sets.interrupt
     include("pld/tp.lua") -- sets.tp
     include("pld/ws.lua") -- sets.ws
+
+    include("pld/midcast-healing.lua") -- sets.midcast.healing
+
+    _TAG_SPELLS = T{
+        "Banishga",
+        "Geist Wall",
+        "Jettatura",
+        "Poisonga",
+        "Sheep Song",
+    }
 
     send_command(
         "input /macro book 7; \
@@ -41,13 +53,20 @@ function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
-
+        equip(sets.idle, sets.enmity)
     else
         equip(sets.fastcast)
     end
 end
 
 function midcast(spell)
+    if _TAG_SPELLS:contains(spell.english) then
+        equip(sets.idle, sets.interrupt)
+    elseif spell.english:contains("Flash") then
+        equip(sets.idle, sets.enmity)
+    elseif spell.english:contains("Cure") then
+        equip(sets.midcast.healing)
+    end
 end
 
 function aftercast(spell)

@@ -7,7 +7,7 @@ sets.midcast.ra={
     neck="Iskur Gorget",
     waist="Eschan Stone",
     left_ear="Telos Earring",
-    right_ear="Sherida Earring",
+    right_ear="Crep. Earring",
     left_ring="Dingir Ring",
     right_ring="Crepuscular Ring",
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},

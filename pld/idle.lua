@@ -1,5 +1,5 @@
 sets.idle={
-    ammo="Staunch Tathlum",
+    ammo="Homiliary",
     head={ name="Sakpata's Helm", augments={'Path: A',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},

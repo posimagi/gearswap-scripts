@@ -43,6 +43,11 @@ function get_sets()
         "Evisceration",
     }
 
+	CAPPED_HASTE = true
+	if CAPPED_HASTE then
+		include("nin/tp-stp.lua") -- sets.tp
+	end
+
 	send_command(
 		"input /macro book 13; \
 		wait 1; \

@@ -1,0 +1,15 @@
+sets.tp={
+    ammo="Date Shuriken",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Ninja Nodowa +1", augments={'Path: A',}},
+    waist="Grunfeld Rope",
+    left_ear="Crep. Earring",
+    right_ear="Telos Earring",
+    left_ring="Gere Ring",
+    right_ring="Regal Ring",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+}
