@@ -10,20 +10,30 @@ function get_sets()
     include("rng/idle.lua") -- sets.idle
     include("rng/fastcast.lua") -- sets.fastcast
     include("rng/tp.lua") -- sets.tp
+    include("rng/weapon.lua") -- sets.weapon
+    include("rng/weapon-bow.lua") -- sets.weapon.bow
+    include("rng/weapon-gun.lua") -- sets.weapon.gun
+    include("rng/weapon-sword.lua") -- sets.weapon.sword
     include("rng/ws.lua") -- sets.ws
     include("rng/ws-magical.lua") -- sets.ws.magical
     include("rng/ws-multihit.lua") -- sets.ws.multihit
     include("rng/ws-ranged.lua") -- sets.ws.ranged
+    include("rng/ws-rangedmultihit.lua") -- sets.ws.rangedmultihit
 
     include("rng/precast-bountyshot.lua") -- sets.precast.bountyshot
+    include("rng/precast-camouflage.lua") -- sets.precast.camouflage
     include("rng/precast-eagleeyeshot.lua") -- sets.precast.eagleeyeshot
     include("rng/precast-ra.lua") -- sets.precast.ra
+    include("rng/precast-shadowbind.lua") -- sets.precast.shadowbind
     include("rng/precast-waltzes.lua") -- sets.precast.waltzes
 
+    include("rng/midcast-barrage.lua") -- sets.midcast.barrage
     include("rng/midcast-ra.lua") -- sets.midcast.ra
+    include("rng/midcast-ra-empyreanam.lua") -- sets.midcast.ra.empyreanam
     include("rng/midcast-phalanx.lua") -- sets.midcast.phalanx
 
     include("func/ammo_check.lua") -- ammo_check()
+    include("func/buffactive_aftermath.lua") -- buffactive_aftermath()
     include("func/obi_check.lua") -- obi_check()
     
     _MAGICAL_WS = T{
@@ -36,6 +46,9 @@ function get_sets()
 
     _MULTI_HIT_WS = T{
         "Evisceration",
+    }
+
+    _RANGED_MULTI_HIT_WS = T{
         "Jishnu's Radiance",
     }
 
@@ -91,6 +104,8 @@ function precast(spell, position)
             obi_check(spell)
         elseif _MULTI_HIT_WS:contains(spell.english) then
             equip(sets.ws.multihit)
+        elseif _RANGED_MULTI_HIT_WS:contains(spell.english) then
+            equip(sets.ws.rangedmultihit)
         elseif spell.english:contains("Savage Blade") then
             equip(sets.ws.singlehit)
         end
@@ -100,8 +115,12 @@ function precast(spell, position)
         end
         if spell.english:contains("Bounty Shot") then
             equip(sets.precast.bountyshot)
+        elseif spell.english:contains("Camouflage") then
+            equip(sets.precast.camouflage)
         elseif spell.english:contains("Eagle Eye Shot") then
             equip(sets.precast.eagleeyeshot)
+        elseif spell.english:contains("Shadowbind") then
+            equip(sets.precast.shadowbind)
         end
     elseif spell.type == "Waltz" then
 		equip(sets.precast.waltzes)
@@ -120,7 +139,14 @@ end
 
 function midcast(spell)
     if spell.action_type == "Ranged Attack" then
-        equip(sets.midcast.ra)
+        if player.equipment.range == "Gandiva" and buffactive_aftermath() then
+            equip(sets.midcast.ra.empyreanam)
+        else
+            equip(sets.midcast.ra)
+        end
+        if buffactive['Barrage'] then
+            equip(sets.midcast.barrage)
+        end
     elseif spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
 	end

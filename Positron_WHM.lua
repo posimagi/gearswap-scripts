@@ -91,7 +91,7 @@ end
 function sub_job_change(new, old)
 	send_command(
 		"wait 10; \
-		input /lockstyleset 20; \
+		input /lockstyleset 23; \
 		gs equip sets.idle"
 	)
 end
