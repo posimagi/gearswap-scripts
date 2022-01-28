@@ -10,5 +10,5 @@ sets.midcast.ra={
     right_ear="Crep. Earring",
     left_ring="Dingir Ring",
     right_ring="Crepuscular Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+    back={ name="Belenus's Cape", augments={'DEX+20','Rng.Acc.+20 Rng.Atk.+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
 }

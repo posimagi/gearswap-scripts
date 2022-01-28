@@ -3,5 +3,5 @@ sets.ws.ranged={
     right_ear="Ishvara Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
+    back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }

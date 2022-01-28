@@ -8,7 +8,7 @@ sets.ws.magical={
     waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
-    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",
-    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 }

@@ -18,7 +18,6 @@ function get_sets()
     include("rng/ws-magical.lua") -- sets.ws.magical
     include("rng/ws-multihit.lua") -- sets.ws.multihit
     include("rng/ws-ranged.lua") -- sets.ws.ranged
-    include("rng/ws-rangedmultihit.lua") -- sets.ws.rangedmultihit
 
     include("rng/precast-bountyshot.lua") -- sets.precast.bountyshot
     include("rng/precast-camouflage.lua") -- sets.precast.camouflage
@@ -46,9 +45,6 @@ function get_sets()
 
     _MULTI_HIT_WS = T{
         "Evisceration",
-    }
-
-    _RANGED_MULTI_HIT_WS = T{
         "Jishnu's Radiance",
     }
 
@@ -66,7 +62,7 @@ function get_sets()
     send_command(
         "input /macro book 11; \
         wait 1; \
-        input /macro set 1; \
+        input /macro set 2; \
         wait 5; \
 		input /lockstyleset 31; \
         gs equip sets.idle; \
@@ -104,10 +100,6 @@ function precast(spell, position)
             obi_check(spell)
         elseif _MULTI_HIT_WS:contains(spell.english) then
             equip(sets.ws.multihit)
-        elseif _RANGED_MULTI_HIT_WS:contains(spell.english) then
-            equip(sets.ws.rangedmultihit)
-        elseif spell.english:contains("Savage Blade") then
-            equip(sets.ws.singlehit)
         end
     elseif spell.type == "JobAbility" then
         if _AMMO_CONSUMING_ABILITIES:contains(spell.english) then
