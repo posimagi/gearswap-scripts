@@ -24,8 +24,22 @@ function get_sets()
 
 	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-elemental.lua") -- sets.midcast.elemental
+	include("blu/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("blu/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("blu/midcast-refresh.lua") -- sets.midcast.refresh
+
+	_ENFEEBLING_SPELLS = T{
+		"Blank Gaze",
+		"Cruel Joke",
+		"Dream Flower",
+		"Feather Tickle",
+		"Geist Wall",
+		"Reaving Wind",
+		"Sheep Song",
+		"Soporific",
+		"Tourbillion",
+		"Yawn",
+	}
 
 	send_command(
 		"input /macro book 16; \
@@ -88,6 +102,8 @@ function midcast(spell)
 				spell.english:contains("Dream Flower") or 
 				spell.english:contains("Yawn") then
 			equip(sets.idle, sets.th)
+		elseif _ENFEEBLING_SPELLS:contains(spell.english) then
+			equip(sets.idle, sets.midcast.enfeebling)
 		else
 			equip(sets.idle, sets.midcast.elemental)
 			obi_check(spell)

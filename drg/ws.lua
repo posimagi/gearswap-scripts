@@ -1,9 +1,9 @@
 sets.ws={
-    ammo="Knobkierrie",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Flam. Zucchetto +2",
-    body="Sulevia's Plate. +2",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands="Sulev. Gauntlets +2",
-    legs="Flamma Dirs +2",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet="Flam. Gambieras +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",

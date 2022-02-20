@@ -9,6 +9,8 @@ function get_sets()
     include("drk/tp.lua") -- sets.tp
     include("drk/ws.lua") -- sets.ws
 
+    include("drk/precast-lastresort.lua") -- sets.precast.lastresort
+
     send_command(
         "input /macro book 8; \
         wait 1; \
@@ -41,7 +43,9 @@ function precast(spell, position)
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
     elseif spell.type == "JobAbility" then
-
+        if spell.english:contains("Last Resort") then
+            equip(sets.precast.lastresort)
+        end
     else
         equip(sets.fastcast)
     end

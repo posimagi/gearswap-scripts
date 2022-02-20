@@ -1,6 +1,6 @@
 sets.midcast.elemental={
     ammo="Pemphredo Tathlum",
-    head={ name="Mochi. Hatsuburi +2", augments={'Enhances "Yonin" and "Innin" effect',}},
+    head={ name="Mochi. Hatsuburi +3", augments={'Enhances "Yonin" and "Innin" effect',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},

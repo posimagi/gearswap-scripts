@@ -1,8 +1,8 @@
 sets.ws={
-    ammo="Regal Gem",
-    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Atrophy Gloves +3",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Caro Necklace",

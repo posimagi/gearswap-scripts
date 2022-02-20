@@ -1,5 +1,5 @@
 sets.tp={
-    ammo="Ginsen",
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Hjarrandi Helm",
     body="Hjarrandi Breast.",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},

@@ -43,7 +43,7 @@ function get_sets()
         "Evisceration",
     }
 
-	CAPPED_HASTE = true
+	CAPPED_HASTE = false
 	if CAPPED_HASTE then
 		include("nin/tp-stp.lua") -- sets.tp
 	end

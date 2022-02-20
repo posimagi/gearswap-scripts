@@ -8,7 +8,7 @@ sets.midcast.ra={
     waist="K. Kachina Belt +1",
     left_ear="Telos Earring",
     right_ear="Crep. Earring",
-    left_ring="Dingir Ring",
-    right_ring="Crepuscular Ring",
+    left_ring="Crepuscular Ring",
+    right_ring="Dingir Ring",
     back={ name="Belenus's Cape", augments={'DEX+20','Rng.Acc.+20 Rng.Atk.+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
 }

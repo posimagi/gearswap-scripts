@@ -1,7 +1,7 @@
 sets.ws={
     head={ name="Nyame Helm", augments={'Path: B',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Meg. Gloves +2",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Arc. Braccae +3", augments={'Enhances "Eagle Eye Shot" effect',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Caro Necklace",

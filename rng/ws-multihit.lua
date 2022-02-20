@@ -1,5 +1,5 @@
 sets.ws.multihit={
-    head="Meghanada Visor +2",
+    head="Mummu Bonnet +2",
     body="Meg. Cuirie +2",
     hands="Mummu Wrists +2",
     legs="Jokushu Haidate",

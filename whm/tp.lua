@@ -1,5 +1,5 @@
 sets.tp={
-    ammo="Hasty Pinion +1",
+    ammo="Staunch Tathlum",
     head={ name="Bunzi's Hat", augments={'Path: A',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},

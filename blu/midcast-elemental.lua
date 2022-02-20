@@ -9,7 +9,7 @@ sets.midcast.elemental={
     waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Friomisi Earring",
-    left_ring="Tamas Ring",
-    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Kishar Ring",
     back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
 }

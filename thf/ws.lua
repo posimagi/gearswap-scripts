@@ -2,7 +2,7 @@ sets.ws={
     ammo="C. Palug Stone",
     head="Pill. Bonnet +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
-    hands="Meg. Gloves +2",
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Caro Necklace",

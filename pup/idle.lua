@@ -1,9 +1,8 @@
 sets.idle={
-    ammo="Homiliary",
-    head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="Shamash Robe",
+    head="Malignance Chapeau",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
-    legs="Carmine Cuisses +1",
+    legs="Malignance Tights",
     feet="Malignance Boots",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
@@ -11,5 +10,5 @@ sets.idle={
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
     right_ring="Defending Ring",
-    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
+    back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

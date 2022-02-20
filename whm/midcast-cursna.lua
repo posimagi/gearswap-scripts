@@ -1,6 +1,6 @@
 sets.midcast.cursna={
     hands={ name="Fanatic Gloves", augments={'MP+25','Healing magic skill +5','"Conserve MP"+1','"Fast Cast"+2',}},
-    legs="Th. Pantaloons +2",
+    legs="Th. Pant. +3",
     feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     neck="Debilis Medallion",
     left_ring="Menelaus's Ring",

@@ -1,5 +1,4 @@
 sets.ws.ranged={
-    hands="Meg. Gloves +2",
     right_ear="Ishvara Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",

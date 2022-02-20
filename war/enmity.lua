@@ -6,5 +6,4 @@ sets.enmity={
     left_ear="Etiolation Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring="Petrov Ring",
-    right_ring="Supershear Ring",
 }
