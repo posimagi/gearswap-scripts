@@ -7,6 +7,7 @@ function get_sets()
     include("sam/idle.lua") -- sets.idle
     include("sam/tp.lua") -- sets.tp
     include("sam/turtle.lua") -- sets.turtle
+    include("sam/weakws.lua") -- sets.weakws
     include("sam/ws.lua") -- sets.ws
     include("sam/ws-magical.lua") -- sets.ws.magical
     include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
@@ -17,11 +18,18 @@ function get_sets()
     include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
 
     _MAGICAL_WS = T{
+        "Aeolian Edge",
 		"Tachi: Goten",
 		"Tachi: Kagero",
 		"Tachi: Jinpu",
         "Tachi: Koki",
 	}
+
+    _MULTI_HIT_WS = T{
+        "Penta Thrust",
+        "Stardiver",
+        "Tachi: Rana",
+    }
 
     send_command(
         "input /macro book 12; \
@@ -55,7 +63,7 @@ function precast(spell, position)
 
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
-        if spell.english:contains("Rana") then
+        if _MULTI_HIT_WS:contains(spell.english) then
             equip(sets.ws.multihit)
         elseif _MAGICAL_WS:contains(spell.english) then
             equip(sets.ws.magical)

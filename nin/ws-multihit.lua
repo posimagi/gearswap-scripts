@@ -1,6 +1,6 @@
 sets.ws.multihit={
     ammo="C. Palug Stone",
-    head="Malignance Chapeau",
+    head={ name="Mpaca's Cap", augments={'Path: A',}},
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
     legs="Jokushu Haidate",

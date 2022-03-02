@@ -1,6 +1,6 @@
 sets.ws={
     ammo="Knobkierrie",
-    head={ name="Nyame Helm", augments={'Path: B',}},
+    head={ name="Mpaca's Cap", augments={'Path: A',}},
     body={ name="Sakonji Domaru +3", augments={'Enhances "Overwhelm" effect',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Wakido Haidate +3",
