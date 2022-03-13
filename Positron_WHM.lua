@@ -7,6 +7,7 @@ function get_sets()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
+	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 
@@ -15,7 +16,6 @@ function get_sets()
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
-	include("whm/dispelga.lua") -- sets.dispelga
 	include("whm/fastcast.lua") -- sets.fastcast
 	include("whm/hpdown.lua") -- sets.hpdown
 	include("whm/idle.lua") -- sets.idle
@@ -47,7 +47,6 @@ function get_sets()
 	include("whm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
-
 
 	_MAGICAL_WS = T{
 		"Flash Nova",
@@ -146,6 +145,9 @@ function precast(spell, position)
 	elseif spell.english:contains("Impact") then
 		equip(sets.impact)
 	elseif spell.english:contains("Dispelga") then
+		_PREVIOUS_WEAPONS = T{
+			main=player.equipment.main,
+		}
 		equip(sets.dispelga)
 	end
 end
@@ -220,7 +222,7 @@ function aftercast(spell)
 		equip(sets.tp)
 	end
 	if spell.english:contains("Dispelga") then
-		equip(sets.weapon)
+		equip(_PREVIOUS_WEAPONS)
 	end
 end
 

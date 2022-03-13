@@ -4,14 +4,25 @@ function get_sets()
     sets.midcast = {}
     sets.aftercast = {}
     
+    include("all/obi.lua") -- sets.obi
+
     include("pld/enmity.lua") -- sets.enmity
     include("pld/fastcast.lua") -- sets.fastcast
     include("pld/idle.lua") -- sets.idle
     include("pld/interrupt.lua") -- sets.interrupt
     include("pld/tp.lua") -- sets.tp
     include("pld/ws.lua") -- sets.ws
+    include("pld/ws-magical.lua") -- sets.ws.magical
 
     include("pld/midcast-healing.lua") -- sets.midcast.healing
+
+    include("func/obi_check.lua") -- obi_check()
+
+    _MAGICAL_WS = T{
+		"Aeolian Edge",
+		"Red Lotus Blade",
+		"Seraph Blade",
+	}
 
     _TAG_SPELLS = T{
         "Banishga",
@@ -52,6 +63,10 @@ function precast(spell, position)
 
     if spell.type == "WeaponSkill" then
         equip(sets.ws)
+        if _MAGICAL_WS:contains(spell.name) then
+			equip(sets.ws.magical)
+			obi_check(spell)
+        end
     elseif spell.type == "JobAbility" then
         equip(sets.idle, sets.enmity)
     else

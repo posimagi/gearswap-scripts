@@ -9,6 +9,7 @@ function get_sets()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
+	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 
@@ -35,12 +36,13 @@ function get_sets()
 	include("sch/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-darkness.lua") -- sets.midcast.darkness
+	include("sch/midcast-elemental.lua") -- sets.midcast.elemental
+	include("sch/midcast-elemental-vagary.lua") -- sets.midcast.elemental.vagary
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
 	include("sch/midcast-helix.lua") -- sets.midcast.helix
 	include("sch/midcast-light.lua") -- sets.midcast.light
-	include("sch/midcast-elemental.lua") -- sets.midcast.elemental
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
 	include("sch/midcast-regen-weapon.lua") -- sets.midcast.regen.weapon
@@ -56,7 +58,16 @@ function get_sets()
 		"Aero",
 		"Stone",
 		"Thunder",
-		"Water"
+		"Water",
+	}
+	
+	_TIER_TWO_NUKES = T{
+		"Fire II",
+		"Blizzard II",
+		"Aero II",
+		"Stone II",
+		"Thunder II",
+		"Water II",
 	}
 
 	send_command(
@@ -113,6 +124,11 @@ function precast(spell, position)
 			if spell.english:contains("Impact") then
 				equip(sets.impact)
 			end
+		elseif spell.english:contains("Dispelga") then
+			_PREVIOUS_WEAPONS = T{
+				main=player.equipment.main,
+			}
+			equip(sets.dispelga)
 		end
 	end
 end
@@ -165,6 +181,8 @@ function midcast(spell)
 		if world.area == "Outer Ra'Kaznar [U]" then
 			if _TIER_ONE_NUKES:contains(spell.english) then
 				equip(sets.naked)
+			elseif _TIER_TWO_NUKES:contains(spell.english) then
+				equip(sets.midcast.elemental.vagary)
 			end
 		end
 	elseif spell.skill == "Dark Magic" then
@@ -176,9 +194,6 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if spell.interrupted and spell.english:contains("Sleep") then
-		return
-    end
 	equip(sets.idle)
 	if player.tp < 1000 then
 		if buffactive['Light Arts'] and not spell.english:contains("Dark Arts") then
@@ -189,6 +204,9 @@ function aftercast(spell)
 	end
 	if spell.english == "Sublimation" or buffactive_sublimation() then
 		equip(sets.sublimation)
+	end
+	if spell.english:contains("Dispelga") then
+		equip(_PREVIOUS_WEAPONS)
 	end
 end
 

@@ -6,6 +6,7 @@ function get_sets()
 
     include("func/obi_check.lua") -- obi_check()
 
+    include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 
@@ -100,6 +101,11 @@ function precast(spell, position)
         if spell.english:contains("Impact") then
             equip(sets.impact)
         end
+    elseif spell.english:contains("Dispelga") then
+		_PREVIOUS_WEAPONS = T{
+			main=player.equipment.main,
+		}
+		equip(sets.dispelga)
     end
 end
 
@@ -143,9 +149,6 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-    if spell.interrupted and spell.english:contains("Sleep") then
-		return
-    end
     if 
             world.area == "Outer Ra'Kaznar [U]" and 
             spell.skill == "Elemental Magic" then
@@ -156,6 +159,9 @@ function aftercast(spell)
     elseif player.status == "Idle" then
         equip(sets.idle)
     end
+    if spell.english:contains("Dispelga") then
+		equip(_PREVIOUS_WEAPONS)
+	end
 end
 
 function status_change(new, old)

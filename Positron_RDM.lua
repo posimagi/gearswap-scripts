@@ -4,6 +4,7 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 
@@ -172,6 +173,12 @@ function precast(spell, position)
 		equip(sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
 			equip(sets.precast.enfeebling)
+			if spell.english:contains("Dispelga") then
+				_PREVIOUS_WEAPONS = T{
+					main=player.equipment.main,
+				}
+				equip(sets.dispelga)
+			end
 		elseif spell.skill == "Enhancing Magic" then
 			equip(sets.precast.enhancing)
 			if spell.english:contains("Stoneskin") then
@@ -249,9 +256,6 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if spell.interrupted and spell.english:contains("Sleep") then
-		return
-    end
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
@@ -259,6 +263,9 @@ function aftercast(spell)
 		if buffactive_enspell() then
 			equip(sets.enspell)
 		end
+	end
+	if spell.english:contains("Dispelga") then
+		equip(_PREVIOUS_WEAPONS)
 	end
 end
 
