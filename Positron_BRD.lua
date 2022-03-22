@@ -53,7 +53,7 @@ function get_sets()
 		wait 5; \
 		input /lockstyleset 30; \
 		gs equip sets.idle; \
-		du blinking self all on;"
+		du blinking self combat on;"
 	)
 end
 

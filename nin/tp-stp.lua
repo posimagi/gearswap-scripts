@@ -6,7 +6,7 @@ sets.tp={
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck={ name="Ninja Nodowa +1", augments={'Path: A',}},
-    waist="Grunfeld Rope",
+    waist="Olseni Belt",
     left_ear="Crep. Earring",
     right_ear="Telos Earring",
     left_ring="Gere Ring",

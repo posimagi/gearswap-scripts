@@ -167,8 +167,8 @@ function precast(spell, position)
 		if spell.english:contains("Chainspell") then
 			equip(sets.precast.chainspell)
 		end
-	-- elseif spell.action_type == "Ranged Attack" then
-    --     equip(sets.precast.ra)
+	elseif spell.action_type == "Ranged Attack" then
+        equip(sets.precast.ra)
 	else
 		equip(sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
@@ -256,7 +256,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if player.status == "Idle" then
+	if spell.action_type == "Ranged Attack" then
+		equip(sets.idle, sets.precast.ra)
+	elseif player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)

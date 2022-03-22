@@ -5,7 +5,7 @@ sets.tp={
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Combatant's Torque",
-    waist="Grunfeld Rope",
+    waist="Olseni Belt",
     left_ear="Telos Earring",
     right_ear="Crep. Earring",
     left_ring="Varar Ring +1",
