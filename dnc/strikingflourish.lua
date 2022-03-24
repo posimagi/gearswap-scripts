@@ -1,3 +1,3 @@
 sets.precast.strikingflourish={
-    body="Macu. Casaque +1",
+	body="Macu. Casaque +1",
 }

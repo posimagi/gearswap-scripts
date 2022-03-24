@@ -52,50 +52,49 @@ function get_sets()
 		include("sch/midcast-regen-duration.lua") -- sets.midcast.regen
 	end
 
-	_TIER_ONE_NUKES = T{
+	_TIER_ONE_NUKES = T {
 		"Fire",
 		"Blizzard",
 		"Aero",
 		"Stone",
 		"Thunder",
-		"Water",
+		"Water"
 	}
-	
-	_TIER_TWO_NUKES = T{
+
+	_TIER_TWO_NUKES = T {
 		"Fire II",
 		"Blizzard II",
 		"Aero II",
 		"Stone II",
 		"Thunder II",
-		"Water II",
+		"Water II"
 	}
 
 	send_command(
 		"input /macro book 20; \
-		wait 1; \
-		input /macro set 1; \
-		wait 5; \
-		input /lockstyleset 40; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	wait 1; \
+	input /macro set 1; \
+	wait 5; \
+	input /lockstyleset 40; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
@@ -125,8 +124,8 @@ function precast(spell, position)
 				equip(sets.impact)
 			end
 		elseif spell.english:contains("Dispelga") then
-			_PREVIOUS_WEAPONS = T{
-				main=player.equipment.main,
+			_PREVIOUS_WEAPONS = T {
+				main = player.equipment.main
 			}
 			equip(sets.dispelga)
 		end
@@ -169,7 +168,7 @@ function midcast(spell)
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
 			-- if spell.english:contains("Luminohelix") then
-			-- 	equip(sets.midcast.light)
+			--	 equip(sets.midcast.light)
 			if spell.english:contains("Noctohelix") then
 				equip(sets.midcast.darkness)
 			end
@@ -196,9 +195,9 @@ end
 function aftercast(spell)
 	equip(sets.idle)
 	if player.tp < 1000 then
-		if buffactive['Light Arts'] and not spell.english:contains("Dark Arts") then
+		if buffactive["Light Arts"] and not spell.english:contains("Dark Arts") then
 			equip(sets.lightarts)
-		elseif buffactive['Dark Arts'] and not spell.english:contains("Light Arts") then
+		elseif buffactive["Dark Arts"] and not spell.english:contains("Light Arts") then
 			equip(sets.darkarts)
 		end
 	end

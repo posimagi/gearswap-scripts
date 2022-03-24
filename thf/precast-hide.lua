@@ -1,3 +1,3 @@
 sets.precast.hide={
-    body="Pillager's Vest +2",
+	body="Pillager's Vest +2",
 }

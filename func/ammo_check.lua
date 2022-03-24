@@ -8,7 +8,7 @@ _SPECIAL_AMMO = T{
 
 function ammo_check(spell)
 	if _SPECIAL_AMMO:contains(player.equipment.ammo) then
-		add_to_chat(8, spell.name.." aborted because special ammo is equipped.")
-		cancel_spell()
+	add_to_chat(8, spell.name.." aborted because special ammo is equipped.")
+	cancel_spell()
 	end
 end

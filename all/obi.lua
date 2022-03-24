@@ -1,3 +1,3 @@
 sets.obi={
-    waist="Hachirin-no-Obi",
+	waist="Hachirin-no-Obi",
 }

@@ -26,22 +26,22 @@ function get_sets()
 	include("nin/midcast-elemental.lua") -- sets.midcast.elemental
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
 
-	_MAGICAL_WS = T{
+	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Blade: Teki",
 		"Blade: To",
 		"Blade: Chi",
 		"Blade: Ei",
 		"Blade: Yu",
-		"Tachi: Jinpu",
+		"Tachi: Jinpu"
 	}
 
-	_MULTI_HIT_WS = T{
+	_MULTI_HIT_WS = T {
 		"Blade: Jin",
 		"Blade: Ku",
 		"Blade: Shun",
-        "Evisceration",
-    }
+		"Evisceration"
+	}
 
 	CAPPED_HASTE = false
 	if CAPPED_HASTE then
@@ -50,38 +50,35 @@ function get_sets()
 
 	send_command(
 		"input /macro book 13; \
-		wait 1; \
-		input /macro set 1; \
-		wait 5; \
-		input /lockstyleset 33; \
-		gs equip sets.idle; \
-		du blinking self combat on;"
+	wait 1; \
+	input /macro set 1; \
+	wait 5; \
+	input /lockstyleset 33; \
+	gs equip sets.idle; \
+	du blinking self combat on;"
 	)
 end
 
 function sub_job_change(new, old)
-	send_command(
-		"wait 10; \
-		input /lockstyleset 95; \
-		gs equip sets.idle"
-	)
+	send_command("wait 10; \
+	input /lockstyleset 95; \
+	gs equip sets.idle")
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
@@ -111,9 +108,7 @@ end
 function midcast(spell)
 	if spell.type == "Ninjutsu" then
 		equip(sets.ninjutsu)
-		if 
-				buffactive['Yonin'] or 
-				buffactive['Enmity Boost'] then
+		if buffactive["Yonin"] or buffactive["Enmity Boost"] then
 			equip(sets.enmity)
 		end
 		if spell.english:contains("Utsusemi") then
@@ -121,7 +116,7 @@ function midcast(spell)
 		elseif spell.english:contains("ton: ") then
 			equip(sets.midcast.elemental)
 			obi_check(spell)
-			if buffactive['Futae'] then
+			if buffactive["Futae"] then
 				equip(sets.futae)
 			end
 		end
@@ -139,14 +134,14 @@ function aftercast(spell)
 end
 
 function buff_change(name, gain, buff_details)
-    if name == "Doom" then
-        if gain then
-            equip(sets.doom)
-            disable("neck", "left_ring")
-        else
-            enable("neck", "left_ring")
-        end
-    end
+	if name == "Doom" then
+		if gain then
+			equip(sets.doom)
+			disable("neck", "left_ring")
+		else
+			enable("neck", "left_ring")
+		end
+	end
 end
 
 function status_change(new, old)

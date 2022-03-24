@@ -1,3 +1,3 @@
 sets.midcast.barrage={
-    hands="Orion Bracers +1",
+	hands="Orion Bracers +1",
 }

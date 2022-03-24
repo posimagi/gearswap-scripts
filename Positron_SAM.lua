@@ -1,104 +1,103 @@
 function get_sets()
-    sets = {}
-    sets.precast = {}
-    sets.midcast = {}
-    sets.aftercast = {}
-    
-    include("sam/idle.lua") -- sets.idle
-    include("sam/tp.lua") -- sets.tp
-    include("sam/turtle.lua") -- sets.turtle
-    include("sam/weakws.lua") -- sets.weakws
-    include("sam/ws.lua") -- sets.ws
-    include("sam/ws-magical.lua") -- sets.ws.magical
-    include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
-    include("sam/ws-multihit.lua") -- sets.ws.multihit
-    include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
+	sets = {}
+	sets.precast = {}
+	sets.midcast = {}
+	sets.aftercast = {}
 
-    include("sam/precast-meditate.lua") -- sets.precast.meditate
-    include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
+	include("sam/idle.lua") -- sets.idle
+	include("sam/tp.lua") -- sets.tp
+	include("sam/turtle.lua") -- sets.turtle
+	include("sam/weakws.lua") -- sets.weakws
+	include("sam/ws.lua") -- sets.ws
+	include("sam/ws-magical.lua") -- sets.ws.magical
+	include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
+	include("sam/ws-multihit.lua") -- sets.ws.multihit
+	include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
 
-    _MAGICAL_WS = T{
-        "Aeolian Edge",
+	include("sam/precast-meditate.lua") -- sets.precast.meditate
+	include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
+
+	_MAGICAL_WS = T {
+		"Aeolian Edge",
 		"Tachi: Goten",
 		"Tachi: Kagero",
 		"Tachi: Jinpu",
-        "Tachi: Koki",
+		"Tachi: Koki"
 	}
 
-    _MULTI_HIT_WS = T{
-        "Penta Thrust",
-        "Stardiver",
-        "Tachi: Rana",
-    }
+	_MULTI_HIT_WS = T {
+		"Penta Thrust",
+		"Stardiver",
+		"Tachi: Rana"
+	}
 
-    send_command(
-        "input /macro book 12; \
-        wait 1; \
-        input /macro set 1; \
-        wait 5; \
-		input /lockstyleset 32; \
-        gs equip sets.idle; \
-		du blinking self all off;"
-    )
+	send_command(
+		"input /macro book 12; \
+	wait 1; \
+	input /macro set 1; \
+	wait 5; \
+	input /lockstyleset 32; \
+	gs equip sets.idle; \
+	du blinking self all off;"
+	)
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
 
-    if spell.type == "WeaponSkill" then
-        equip(sets.ws)
-        if _MULTI_HIT_WS:contains(spell.english) then
-            equip(sets.ws.multihit)
-        elseif _MAGICAL_WS:contains(spell.english) then
-            equip(sets.ws.magical)
-        end
-        if buffactive['Meikyo Shisui'] then
-            equip(sets.ws.meikyoshisui)
-        elseif buffactive['Sekkanoki'] then
-            equip(sets.ws.sekkanoki)
-        end
-    elseif spell.type == "JobAbility" then
-        if spell.english:contains("Meditate") then
-            equip(sets.precast.meditate)
-        elseif spell.english:contains("Shikikoyo") then
-            equip(sets.precast.shikikoyo)
-        end
-    end
+	if spell.type == "WeaponSkill" then
+		equip(sets.ws)
+		if _MULTI_HIT_WS:contains(spell.english) then
+			equip(sets.ws.multihit)
+		elseif _MAGICAL_WS:contains(spell.english) then
+			equip(sets.ws.magical)
+		end
+		if buffactive["Meikyo Shisui"] then
+			equip(sets.ws.meikyoshisui)
+		elseif buffactive["Sekkanoki"] then
+			equip(sets.ws.sekkanoki)
+		end
+	elseif spell.type == "JobAbility" then
+		if spell.english:contains("Meditate") then
+			equip(sets.precast.meditate)
+		elseif spell.english:contains("Shikikoyo") then
+			equip(sets.precast.shikikoyo)
+		end
+	end
 end
 
 function midcast(spell)
 end
 
 function aftercast(spell)
-    if player.status == "Idle" then
-        equip(sets.idle)
-    elseif player.status == "Engaged" then
-        equip(sets.tp)
-    end
+	if player.status == "Idle" then
+		equip(sets.idle)
+	elseif player.status == "Engaged" then
+		equip(sets.tp)
+	end
 end
 
 function status_change(new, old)
-    if new == "Engaged" then
-        equip(sets.tp)
-    elseif new == "Idle" then
-        equip(sets.idle)
-    end
+	if new == "Engaged" then
+		equip(sets.tp)
+	elseif new == "Idle" then
+		equip(sets.idle)
+	end
 end
 
 function buff_change(name, gain, buff_details)

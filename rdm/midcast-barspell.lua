@@ -1,3 +1,3 @@
 sets.midcast.barspell={
-    legs="Shedir Seraweels",
+	legs="Shedir Seraweels",
 }

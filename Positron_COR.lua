@@ -29,67 +29,64 @@ function get_sets()
 	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("cor/midcast-ra.lua") -- sets.midcast.ra
 
-	_DARK_WS = T{
-		"Leaden Salute",
+	_DARK_WS = T {
+		"Leaden Salute"
 	}
 
-	_MAGICAL_WS = T{
+	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Hot Shot",
 		"Red Lotus Blade",
 		"Sanguine Blade",
 		"Seraph Blade",
-		"Wildfire",
+		"Wildfire"
 	}
 
-    _MULTI_HIT_WS = T{
-        "Evisceration",
-		"Requiescat",
-    }
+	_MULTI_HIT_WS = T {
+		"Evisceration",
+		"Requiescat"
+	}
 
-	_RANGED_WS = T{
+	_RANGED_WS = T {
 		"Detonator",
 		"Last Stand",
 		"Numbing Shot",
 		"Sniper Shot",
 		"Slug Shot",
-		"Split Shot",
+		"Split Shot"
 	}
 
 	send_command(
 		"input /macro book 11; \
-		wait 1; \
-		input /macro set 10; \
-		wait 5; \
-		input /lockstyleset 37; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	wait 1; \
+	input /macro set 10; \
+	wait 5; \
+	input /lockstyleset 37; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 end
 
 function sub_job_change(new, old)
-	send_command(
-		"wait 10; \
-		input /lockstyleset 37; \
-		gs equip sets.idle"
-	)
+	send_command("wait 10; \
+	input /lockstyleset 37; \
+	gs equip sets.idle")
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end

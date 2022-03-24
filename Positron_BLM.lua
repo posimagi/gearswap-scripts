@@ -32,58 +32,55 @@ function get_sets()
 	include("blm/midcast-elementaldebuff.lua") -- sets.midcast.elementaldebuff
 	include("blm/midcast-refresh.lua") -- sets.midcast.refresh
 
-	_DRAIN_SPELLS = T{
+	_DRAIN_SPELLS = T {
 		"Aspir",
 		"Aspir II",
 		"Aspir III",
 		"Drain",
 		"Drain II",
-		"Drain III",
+		"Drain III"
 	}
 
-	_ELEMENTAL_DEBUFFS = T{
+	_ELEMENTAL_DEBUFFS = T {
 		"Shock",
 		"Rasp",
 		"Choke",
 		"Frost",
 		"Burn",
-		"Drown",
+		"Drown"
 	}
 
 	send_command(
 		"input /macro book 4; \
-		wait 1; \
-		input /macro set 1; \
-		wait 5; \
-		input /lockstyleset 24; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	wait 1; \
+	input /macro set 1; \
+	wait 5; \
+	input /lockstyleset 24; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 end
 
 function sub_job_change(new, old)
-	send_command(
-		"wait 10; \
-		input /lockstyleset 86; \
-		gs equip sets.idle"
-	)
+	send_command("wait 10; \
+	input /lockstyleset 86; \
+	gs equip sets.idle")
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
@@ -94,7 +91,6 @@ function precast(spell, position)
 			equip(sets.ws.myrkr)
 		end
 	elseif spell.type == "JobAbility" then
-
 	else
 		equip(sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
@@ -150,7 +146,7 @@ end
 function aftercast(spell)
 	if spell.interrupted and spell.english:contains("Sleep") then
 		return
-    end
+	end
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then

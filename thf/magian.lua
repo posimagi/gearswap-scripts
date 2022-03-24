@@ -1,4 +1,4 @@
 sets.magian={
-    main="Vajra",
-    sub="Mercurial Kris",
+	main="Vajra",
+	sub="Mercurial Kris",
 }

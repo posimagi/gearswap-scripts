@@ -1,4 +1,4 @@
 sets.dispelga={
-    main="Daybreak",
-    sub="Ammurapi Shield",
+	main="Daybreak",
+	sub="Ammurapi Shield",
 }

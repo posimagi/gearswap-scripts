@@ -1,4 +1,4 @@
 sets.ws.multihit={
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
+	neck="Fotia Gorget",
+	waist="Fotia Belt",
 }

@@ -31,17 +31,17 @@ function get_sets()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/obi_check.lua") -- obi_check()
 
-	_MAGICAL_WS = T{
+	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cyclone",
-		"Gust Slash",
+		"Gust Slash"
 	}
 
-    _MULTI_HIT_WS = T{
+	_MULTI_HIT_WS = T {
 		"Dancing Edge",
-        "Evisceration",
-		"Exenterator",
-    }
+		"Evisceration",
+		"Exenterator"
+	}
 
 	_HYBRID = false
 	if _HYBRID then
@@ -50,38 +50,35 @@ function get_sets()
 
 	send_command(
 		"input /macro book 6; \
-		wait 1; \
-		input /macro set 10; \
-		wait 5; \
-		input /lockstyleset 39; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	wait 1; \
+	input /macro set 10; \
+	wait 5; \
+	input /lockstyleset 39; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 end
 
 function sub_job_change(new, old)
-	send_command(
-		"wait 10; \
-		input /lockstyleset 39; \
-		gs equip sets.idle"
-	)
+	send_command("wait 10; \
+	input /lockstyleset 39; \
+	gs equip sets.idle")
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end

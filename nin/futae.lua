@@ -1,3 +1,3 @@
 sets.futae={
-    hands="Hattori Tekko +1",
+	hands="Hattori Tekko +1",
 }

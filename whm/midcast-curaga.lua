@@ -1,3 +1,3 @@
 sets.midcast.curaga={
-    body="Theo. Bliaut +3",
+	body="Theo. Bliaut +3",
 }

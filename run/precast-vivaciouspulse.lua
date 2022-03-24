@@ -1,3 +1,3 @@
 sets.precast["Vivacious Pulse"]={
-    head="Erilaz Galea +1",
+	head="Erilaz Galea +1",
 }

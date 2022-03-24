@@ -1,4 +1,4 @@
 sets.midcast.regen.weapon={
-    main="Bolelabunga",
-    sub="Ammurapi Shield",
+	main="Bolelabunga",
+	sub="Ammurapi Shield",
 }

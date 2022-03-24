@@ -49,7 +49,7 @@ function get_sets()
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
 	include("func/obi_check.lua") -- obi_check()
 
-	_VARIABLE_POTENCY = T{
+	_VARIABLE_POTENCY = T {
 		"Addle",
 		"Addle II",
 		"Blind",
@@ -68,22 +68,22 @@ function get_sets()
 		"Slow",
 		"Slow II"
 	}
-	
-	_DARK_WS = T{
-		"Sanguine Blade",
-	}
-	
-	_MAGICAL_WS = T{
-		"Aeolian Edge",
-		"Red Lotus Blade",
-		"Seraph Blade",
+
+	_DARK_WS = T {
+		"Sanguine Blade"
 	}
 
-	_MULTI_HIT_WS = T{
+	_MAGICAL_WS = T {
+		"Aeolian Edge",
+		"Red Lotus Blade",
+		"Seraph Blade"
+	}
+
+	_MULTI_HIT_WS = T {
 		"Vorpal Blade",
 		"Death Blossom",
 		"Chant du Cygne",
-		"Requiescat",
+		"Requiescat"
 	}
 
 	_ODIN = false
@@ -101,7 +101,7 @@ function get_sets()
 		include("rdm/lilith/tp.lua") -- sets.tp
 		sets.enspell = sets.tp
 	end
-	
+
 	_SEALED_FATE = false
 	if _SEALED_FATE then
 		include("rdm/sealed-fate/tp.lua") -- sets.tp
@@ -116,38 +116,35 @@ function get_sets()
 
 	send_command(
 		"input /macro book 5; \
-		wait 1; \
-		input /macro set 1; \
-		wait 5; \
-		input /lockstyleset 25; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	wait 1; \
+	input /macro set 1; \
+	wait 5; \
+	input /lockstyleset 25; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 end
 
 function sub_job_change(new, old)
-	send_command(
-		"wait 10; \
-		input /lockstyleset 25; \
-		gs equip sets.idle"
-	)
+	send_command("wait 10; \
+	input /lockstyleset 25; \
+	gs equip sets.idle")
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
@@ -168,14 +165,14 @@ function precast(spell, position)
 			equip(sets.precast.chainspell)
 		end
 	elseif spell.action_type == "Ranged Attack" then
-        equip(sets.precast.ra)
+		equip(sets.precast.ra)
 	else
 		equip(sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
 			equip(sets.precast.enfeebling)
 			if spell.english:contains("Dispelga") then
-				_PREVIOUS_WEAPONS = T{
-					main=player.equipment.main,
+				_PREVIOUS_WEAPONS = T {
+					main = player.equipment.main
 				}
 				equip(sets.dispelga)
 			end
@@ -251,7 +248,7 @@ function midcast(spell)
 			equip(sets.precast.utsusemi)
 		end
 	elseif spell.action_type == "Ranged Attack" then
-        equip(sets.midcast.ra)
+		equip(sets.midcast.ra)
 	end
 end
 

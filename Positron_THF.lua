@@ -39,23 +39,37 @@ function get_sets()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 	include("func/obi_check.lua") -- obi_check()
 
-	_MAGICAL_WS = T{
+	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cyclone",
 		"Gust Slash",
 		"Red Lotus Blade",
 		"Sanguine Blade",
-		"Seraph Blade",
+		"Seraph Blade"
 	}
 
-	_MULTI_HIT_WS = T{
+	_MULTI_HIT_WS = T {
 		"Dancing Edge",
-        "Evisceration",
-		"Exenterator",
-    }
+		"Evisceration",
+		"Exenterator"
+	}
 
-	_ALL_SLOTS = T{"range", "ammo", "head", "body", "hands", "legs", "feet",
-				   "neck", "waist", "left_ear", "right_ear", "left_ring", "right_ring", "back"}
+	_ALL_SLOTS = T {
+		"range",
+		"ammo",
+		"head",
+		"body",
+		"hands",
+		"legs",
+		"feet",
+		"neck",
+		"waist",
+		"left_ear",
+		"right_ear",
+		"left_ring",
+		"right_ring",
+		"back"
+	}
 
 	_HYBRID = false
 	if _HYBRID then
@@ -88,51 +102,46 @@ function get_sets()
 
 	send_command(
 		"input /macro book 6; \
-		input /macro set 2; \
-		wait 5; \
-		input /lockstyleset 26; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	input /macro set 2; \
+	wait 5; \
+	input /lockstyleset 26; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 	if player.sub_job == "NIN" then
-		send_command(
-			"input /macro set 1;"
-		)
+		send_command("input /macro set 1;")
 	end
 end
 
 function sub_job_change(new, old)
 	send_command(
 		"input /macro book 6; \
-		wait 1; \
-		input /macro set 2; \
-		wait 10; \
-		input /lockstyleset 26; \
-		gs equip sets.idle"
+	wait 1; \
+	input /macro set 2; \
+	wait 10; \
+	input /lockstyleset 26; \
+	gs equip sets.idle"
 	)
 	if player.sub_job == "NIN" then
-		send_command(
-			"wait 1; \
-			input /macro set 1;"
-		)
+		send_command("wait 1; \
+		input /macro set 1;")
 	end
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
@@ -149,9 +158,9 @@ function precast(spell, position)
 			equip(sets.ws.critical)
 		end
 	elseif spell.type == "JobAbility" then
-		if 
-				spell.english:contains("Accomplice") or
-				spell.english:contains("Collaborator") then
+		if spell.english:contains("Accomplice") or
+			spell.english:contains("Collaborator")
+		then
 			equip(sets.precast.accomplice)
 		elseif spell.english:contains("Despoil") then
 			equip(sets.precast.despoil)
@@ -161,9 +170,7 @@ function precast(spell, position)
 			equip(sets.precast.flee)
 		elseif spell.english:contains("Hide") then
 			equip(sets.precast.hide)
-		elseif 
-				spell.english:contains("Steal") or
-			    spell.english:contains("Mug") then
+		elseif spell.english:contains("Steal") or spell.english:contains("Mug") then
 			equip(sets.precast.steal)
 		end
 	elseif spell.type == "Waltz" then
@@ -186,7 +193,6 @@ function midcast(spell)
 	elseif spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
 	end
-	
 end
 
 function aftercast(spell)
@@ -197,7 +203,9 @@ function aftercast(spell)
 		if buffactive_elvorseal() then
 			equip(sets.domain)
 		end
-		if spell.english:contains("Sneak Attack") or spell.english:contains("Trick Attack") then
+		if spell.english:contains("Sneak Attack") or
+			spell.english:contains("Trick Attack")
+		then
 			equip(sets.th)
 		elseif buffactive_sata() then
 			equip(sets.th)
@@ -220,9 +228,7 @@ function status_change(new, old)
 end
 
 function buff_change(name, gain, buff_details)
-	if 
-			name == "Sneak Attack" or 
-			name == "Trick Attack" then
+	if name == "Sneak Attack" or name == "Trick Attack" then
 		if gain then
 			equip(sets.th)
 		else

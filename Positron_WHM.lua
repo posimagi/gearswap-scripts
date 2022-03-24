@@ -48,22 +48,22 @@ function get_sets()
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
 
-	_MAGICAL_WS = T{
+	_MAGICAL_WS = T {
 		"Flash Nova",
-		"Seraph Strike",
+		"Seraph Strike"
 	}
 
-	_MOONLIGHT = T{
+	_MOONLIGHT = T {
 		"Moonlight",
-		"Starlight",
+		"Starlight"
 	}
-	
-	_MULTI_HIT_WS = T{
-        "Hexa Strike",
-		"Realmrazer",
-    }
 
-	_STATUSREMOVAL = T{
+	_MULTI_HIT_WS = T {
+		"Hexa Strike",
+		"Realmrazer"
+	}
+
+	_STATUSREMOVAL = T {
 		"Poisona",
 		"Paralyna",
 		"Blindna",
@@ -73,43 +73,40 @@ function get_sets()
 		"Cursna",
 		"Erase",
 		"Esuna",
-		"Sacrifice",
+		"Sacrifice"
 	}
 
 	send_command(
 		"input /macro book 3; \
-		wait 1; \
-		input /macro set 1; \
-		wait 5; \
-		input /lockstyleset 23; \
-		gs equip sets.idle; \
-		du blinking self all off;"
+	wait 1; \
+	input /macro set 1; \
+	wait 5; \
+	input /lockstyleset 23; \
+	gs equip sets.idle; \
+	du blinking self all off;"
 	)
 end
 
 function sub_job_change(new, old)
-	send_command(
-		"wait 10; \
-		input /lockstyleset 23; \
-		gs equip sets.idle"
-	)
+	send_command("wait 10; \
+	input /lockstyleset 23; \
+	gs equip sets.idle")
 end
 
 function precast(spell, position)
 	-- WS Engaged Check
-	if
-			spell.type == "WeaponSkill" and
-			player.status ~= "Engaged" then
+	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
 		cancel_spell()
 		return
 	end
 
 	-- WS Distance Check
 	_RANGE_MULTIPLIER = 1.642276421172564
-	if 
-			spell.type == "WeaponSkill" and
-			spell.target.distance > (spell.range * _RANGE_MULTIPLIER + spell.target.model_size) then
-		add_to_chat(8, spell.name.." aborted due to target out of range.")
+	if spell.type == "WeaponSkill" and
+		spell.target.distance >
+		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	then
+		add_to_chat(8, spell.name .. " aborted due to target out of range.")
 		cancel_spell()
 		return
 	end
@@ -145,8 +142,8 @@ function precast(spell, position)
 	elseif spell.english:contains("Impact") then
 		equip(sets.impact)
 	elseif spell.english:contains("Dispelga") then
-		_PREVIOUS_WEAPONS = T{
-			main=player.equipment.main,
+		_PREVIOUS_WEAPONS = T {
+			main = player.equipment.main
 		}
 		equip(sets.dispelga)
 	end
@@ -155,9 +152,7 @@ end
 function midcast(spell)
 	if spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
-		if 
-				spell.english:contains("Curaga") or
-				spell.english:contains("Cura") then
+		if spell.english:contains("Curaga") or spell.english:contains("Cura") then
 			equip(sets.midcast.curaga)
 			obi_check(spell)
 		elseif _STATUSREMOVAL:contains(spell.name) then
@@ -196,10 +191,10 @@ function midcast(spell)
 		equip(sets.midcast.enfeebling, sets.midcast.divine)
 		if spell.english:contains("Holy") then
 			equip(sets.midcast.elemental, sets.midcast.holy)
-		   	obi_check(spell)
+			obi_check(spell)
 		elseif spell.english:contains("Banish") then
 			equip(sets.midcast.elemental, sets.midcast.banish)
-		   	obi_check(spell)
+			obi_check(spell)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)
@@ -213,9 +208,7 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
-		if 
-				spell.english == "Sublimation" or 
-				buffactive_sublimation() then
+		if spell.english == "Sublimation" or buffactive_sublimation() then
 			equip(sets.sublimation)
 		end
 	elseif player.status == "Engaged" then
@@ -238,15 +231,15 @@ function status_change(new, old)
 end
 
 function self_command(command)
-    if command == "hp" then
+	if command == "hp" then
 		send_command(
-			"gs equip sets.hpdown; \
-			wait 1; \
-			gs equip sets.idle; \
-			gs disable all; \
-			input /ma \"Cure IV\" <me>; \
-			wait 3; \
-			gs enable all;"
+			'gs equip sets.hpdown; \
+		wait 1; \
+		gs equip sets.idle; \
+		gs disable all; \
+		input /ma "Cure IV" <me>; \
+		wait 3; \
+		gs enable all;'
 		)
 	end
 end

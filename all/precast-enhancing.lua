@@ -1,3 +1,3 @@
 sets.precast.enhancing={
-    waist="Siegel Sash",
+	waist="Siegel Sash",
 }

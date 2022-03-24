@@ -1,4 +1,4 @@
 sets.weapon={
-    main="Vajra",
-    sub="Twashtar",
+	main="Vajra",
+	sub="Twashtar",
 }

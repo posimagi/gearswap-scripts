@@ -1,3 +1,3 @@
 sets.cursna={
-    left_ring="Purity Ring",
+	left_ring="Purity Ring",
 }

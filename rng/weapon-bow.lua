@@ -1,6 +1,6 @@
 sets.weapon.bow={
-    main="Oneiros Knife",
-    sub="Nusku Shield",
-    range="Gandiva",
-    ammo="Chrono Arrow",
+	main="Oneiros Knife",
+	sub="Nusku Shield",
+	range="Gandiva",
+	ammo="Chrono Arrow",
 }
