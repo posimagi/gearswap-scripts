@@ -6,7 +6,7 @@ sets.midcast.enfeeblingaccuracy={
 	hands="Leth. Gantherots +1",
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
 	feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
-	neck={ name="Dls. Torque +1", augments={'Path: A',}},
+	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Luminary Sash",
 	left_ear="Regal Earring",
 	right_ear="Snotra Earring",

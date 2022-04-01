@@ -12,7 +12,9 @@ function get_sets()
 	include("rng/tp.lua") -- sets.tp
 	include("rng/weapon.lua") -- sets.weapon
 	include("rng/weapon-bow.lua") -- sets.weapon.bow
+	include("rng/weapon-dagger.lua") -- sets.weapon.dagger
 	include("rng/weapon-gun.lua") -- sets.weapon.gun
+	include("rng/weapon-omen.lua") -- sets.weapon.omen
 	include("rng/weapon-sword.lua") -- sets.weapon.sword
 	include("rng/ws.lua") -- sets.ws
 	include("rng/ws-magical.lua") -- sets.ws.magical

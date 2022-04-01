@@ -2,6 +2,8 @@ sets.idle={
 	ammo="Homiliary",
 	head={ name="Bunzi's Hat", augments={'Path: A',}},
 	body="Shamash Robe",
+	--hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+	--legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	hands="Volte Gloves",
 	legs="Volte Brais",
 	feet={ name="Bunzi's Sabots", augments={'Path: A',}},

@@ -142,9 +142,13 @@ function precast(spell, position)
 	elseif spell.english:contains("Impact") then
 		equip(sets.impact)
 	elseif spell.english:contains("Dispelga") then
-		_PREVIOUS_WEAPONS = T {
-			main = player.equipment.main
-		}
+		_PREVIOUS_WEAPONS = sets.weapon
+		if sets.dispelga.main ~= player.equipment.main then
+			_PREVIOUS_WEAPONS = T {
+				main = player.equipment.main,
+				sub = player.equipment.sub
+			}
+		end
 		equip(sets.dispelga)
 	end
 end

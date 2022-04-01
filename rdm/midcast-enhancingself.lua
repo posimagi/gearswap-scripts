@@ -5,7 +5,7 @@ sets.midcast.enhancingself={
 	hands="Atrophy Gloves +3",
 	legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 	feet="Leth. Houseaux +1",
-	neck="Dls. Torque +1",
+	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Embla Sash",
 	left_ear="Regal Earring",
 	left_ring="Lebeche Ring",
