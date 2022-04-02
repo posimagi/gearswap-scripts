@@ -1,3 +1,3 @@
 sets.precast.shadowbind={
-	hands="Orion Bracers +1",
+	hands="Orion Bracers +2",
 }

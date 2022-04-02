@@ -4,6 +4,10 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/ammo_check.lua") -- ammo_check()
+	include("func/buffactive_aftermath.lua") -- buffactive_aftermath()
+	include("func/obi_check.lua") -- obi_check()
+
 	include("all/obi.lua") -- sets.obi
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
@@ -14,6 +18,7 @@ function get_sets()
 	include("rng/weapon-bow.lua") -- sets.weapon.bow
 	include("rng/weapon-dagger.lua") -- sets.weapon.dagger
 	include("rng/weapon-gun.lua") -- sets.weapon.gun
+	include("rng/weapon-magic.lua") -- sets.weapon.magic
 	include("rng/weapon-omen.lua") -- sets.weapon.omen
 	include("rng/weapon-sword.lua") -- sets.weapon.sword
 	include("rng/ws.lua") -- sets.ws
@@ -32,10 +37,6 @@ function get_sets()
 	include("rng/midcast-ra.lua") -- sets.midcast.ra
 	include("rng/midcast-ra-empyreanam.lua") -- sets.midcast.ra.empyreanam
 	include("rng/midcast-phalanx.lua") -- sets.midcast.phalanx
-
-	include("func/ammo_check.lua") -- ammo_check()
-	include("func/buffactive_aftermath.lua") -- buffactive_aftermath()
-	include("func/obi_check.lua") -- obi_check()
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",

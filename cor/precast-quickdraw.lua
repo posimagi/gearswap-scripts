@@ -1,5 +1,6 @@
 sets.precast.quickdraw={
-	head="Laksa. Tricorne +2",
+	ammo="Hauksbok Bullet",
+	head={ name="Nyame Helm", augments={'Path: B',}},
 	body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
 	hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},

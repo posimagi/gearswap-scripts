@@ -4,11 +4,13 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/ammo_check.lua") -- ammo_check()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
+	include("cor/chronobullet.lua") -- sets.chronobullet
 	include("cor/fastcast.lua") -- sets.fastcast
 	include("cor/idle.lua") -- sets.idle
 	include("cor/tp.lua") -- sets.tp
@@ -56,6 +58,12 @@ function get_sets()
 		"Split Shot"
 	}
 
+	_RANGED_SKILLS = T {
+		"Marksmanship"
+	}
+
+	_AMMO_CONSUMING_ABILITIES = T {}
+
 	send_command(
 		"input /macro book 11; \
 	wait 1; \
@@ -92,7 +100,9 @@ function precast(spell, position)
 	end
 
 	if spell.type == "WeaponSkill" then
-		equip(sets.ws)
+		if _RANGED_SKILLS:contains(spell.skill) then
+			ammo_check(spell)
+		end
 		if _DARK_WS:contains(spell.english) then
 			equip(sets.ws.magical, sets.ws.dark)
 			obi_check(spell)
@@ -110,6 +120,9 @@ function precast(spell, position)
 		equip(sets.precast.quickdraw)
 		obi_check(spell)
 	elseif spell.type == "JobAbility" then
+		if _AMMO_CONSUMING_ABILITIES:contains(spell.english) then
+			ammo_check(spell)
+		end
 		if spell.english:contains("Double-Up") then
 			equip(sets.precast.phantomroll)
 		elseif spell.english:contains("Random Deal") then
@@ -125,6 +138,7 @@ function precast(spell, position)
 			equip(sets.precast.utsusemi)
 		end
 	elseif spell.action_type == "Ranged Attack" then
+		ammo_check(spell)
 		equip(sets.precast.ra)
 	else
 		equip(sets.fastcast)
@@ -142,6 +156,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.type == "CorsairShot" then
+		equip(sets.chronobullet)
+	end
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
