@@ -18,6 +18,8 @@ function get_sets()
 	include("rdm/fastcast.lua") -- sets.fastcast
 	include("rdm/idle.lua") -- sets.idle
 	include("rdm/idle-hybrid.lua") -- sets.idle.hybrid
+	include("rdm/level60.lua") -- sets.level60
+	include("rdm/naked.lua") -- sets.naked
 	include("rdm/th.lua") -- sets.th
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/tp-hybrid.lua") -- sets.tp.hybrid
@@ -157,6 +159,13 @@ function precast(spell, position)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
+			if spell.english:contains("Cyclone") then -- FIXME!!!
+				equip(sets.idle, {
+					head={ name="Nyame Helm", augments={'Path: B',}},
+					body={ name="Nyame Mail", augments={'Path: B',}},
+					hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+				})
+			end
 		elseif _MULTI_HIT_WS:contains(spell.name) then
 			equip(sets.ws.multihit)
 		end

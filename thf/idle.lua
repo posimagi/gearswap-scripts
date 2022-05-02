@@ -5,7 +5,7 @@ sets.idle={
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet="Pill. Poulaines +3",
-	neck="Sanctity Necklace",
+	neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	waist="Flume Belt",
 	left_ear="Etiolation Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},

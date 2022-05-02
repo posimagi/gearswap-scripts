@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
 	include("all/doom.lua") -- sets.doom
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/th.lua") -- sets.th
@@ -15,6 +17,7 @@ function get_sets()
 	include("war/tp.lua") -- sets.tp
 	include("war/ws.lua") -- sets.ws
 	include("war/ws-accuracy.lua") -- sets.ws.accuracy
+	include("war/ws-magical.lua") -- sets.ws.magical
 	include("war/ws-multihit.lua") -- sets.ws.multihit
 
 	include("war/precast-aggressor.lua") -- sets.precast.aggressor
@@ -34,6 +37,14 @@ function get_sets()
 		"Full Break",
 		"Steel Cyclone",
 		"Ukko's Fury" -- hurts damage, but improves TP gain for multistep
+	}
+
+	_MAGICAL_WS = T {
+		"Aeolian Edge",
+		"Cloudsplitter",
+		"Red Lotus Blade",
+		"Sanguine Blade",
+		"Seraph Blade"
 	}
 
 	_MULTI_HIT_WS = T {
@@ -86,7 +97,10 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _MULTI_HIT_WS:contains(spell.english) then
+		if _MAGICAL_WS:contains(spell.name) then
+			equip(sets.ws.magical)
+			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)
 		elseif _ACCURACY_WS:contains(spell.english) then
 			equip(sets.ws.accuracy)

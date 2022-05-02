@@ -1,4 +1,5 @@
 sets.midcast.enhancingskill={
+	body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
 	hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
 	legs="Atrophy Tights +3",
 	feet="Leth. Houseaux +1",

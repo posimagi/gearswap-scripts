@@ -5,7 +5,7 @@ sets.midcast.healing={
 	hands="Theophany Mitts +3",
 	legs="Ebers Pant. +1",
 	feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect',}},
-	neck={ name="Clr. Torque +1", augments={'Path: A',}},
+	neck={ name="Clr. Torque +2", augments={'Path: A',}},
 	waist="Luminary Sash",
 	left_ear="Mendi. Earring",
 	right_ear="Glorious Earring",

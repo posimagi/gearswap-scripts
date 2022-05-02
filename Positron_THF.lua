@@ -5,6 +5,7 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+	include("all/obi.lua") -- sets.obi
 
 	include("thf/domain.lua") -- sets.domain
 	include("thf/fastcast.lua") -- sets.fastcast
@@ -77,7 +78,7 @@ function get_sets()
 		sets.tp = sets.tp.hybrid
 	end
 
-	_IDLE_REGEN = true
+	_IDLE_REGEN = false
 	if _IDLE_REGEN then
 		sets.idle = set_combine(sets.idle, sets.regen)
 	end
@@ -109,7 +110,8 @@ function get_sets()
 	du blinking self all off;"
 	)
 	if player.sub_job == "NIN" then
-		send_command("input /macro set 1;")
+		send_command("wait 1; \
+		input /macro set 1;")
 	end
 end
 

@@ -6,13 +6,14 @@ function get_sets()
 
 	include("all/obi.lua") -- sets.obi
 
-	include("drk/fastcast.lua") -- sets.fastcast
-	include("drk/idle.lua") -- sets.idle
-	include("drk/tp.lua") -- sets.tp
-	include("drk/ws.lua") -- sets.ws
-	include("drk/ws-magical.lua") -- sets.ws.magical
+	include("bst/fastcast.lua") -- sets.fastcast
+	include("bst/idle.lua") -- sets.idle
+	include("bst/tp.lua") -- sets.tp
+	include("bst/ws.lua") -- sets.ws
+	include("bst/ws-magical.lua") -- sets.ws.magical
 
-	include("drk/precast-lastresort.lua") -- sets.precast.lastresort
+	include("bst/precast-callbeast.lua") -- sets.precast.callbeast
+	include("bst/precast-sic.lua") -- sets.precast.sic
 
 	include("func/obi_check.lua") -- obi_check()
 
@@ -21,11 +22,11 @@ function get_sets()
 	}
 
 	send_command(
-		"input /macro book 8; \
+		"input /macro book 9; \
 	wait 1; \
 	input /macro set 1; \
 	wait 5; \
-	input /lockstyleset 28; \
+	input /lockstyleset 29; \
 	gs equip sets.idle; \
 	du blinking self all off;"
 	)
@@ -56,9 +57,11 @@ function precast(spell, position)
 			obi_check(spell)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Last Resort") then
-			equip(sets.precast.lastresort)
-		end
+		if spell.english:contains("Call Beast") then
+			equip(sets.callbeast)
+		end	
+	elseif spell.type == "Monster" then
+		equip(sets.precast.sic)
 	else
 		equip(sets.fastcast)
 	end

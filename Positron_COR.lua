@@ -13,6 +13,7 @@ function get_sets()
 	include("cor/chronobullet.lua") -- sets.chronobullet
 	include("cor/fastcast.lua") -- sets.fastcast
 	include("cor/idle.lua") -- sets.idle
+	include("cor/storetp.lua") -- sets.storetp
 	include("cor/tp.lua") -- sets.tp
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
@@ -24,6 +25,7 @@ function get_sets()
 	include("cor/precast-quickdraw.lua") -- sets.precast.quickdraw
 	include("cor/precast-ra.lua") -- sets.precast.ra
 	include("cor/precast-randomdeal.lua") -- sets.precast.randomdeal
+	include("cor/precast-snakeeye.lua") -- sets.precast.snakeeye
 	include("cor/precast-waltzes.lua") -- sets.precast.waltzes
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
@@ -63,6 +65,16 @@ function get_sets()
 	}
 
 	_AMMO_CONSUMING_ABILITIES = T {}
+
+	_QUICK_DRAW_STORE_TP = false
+	if _QUICK_DRAW_STORE_TP then
+		include("cor/precast-quickdraw-storetp.lua") -- sets.precast.quickdraw
+	end
+
+	_RA_STORE_TP = false
+	if _RA_STORE_TP then
+		sets.midcast.ra = sets.storetp
+	end
 
 	send_command(
 		"input /macro book 11; \
@@ -109,6 +121,9 @@ function precast(spell, position)
 		elseif _MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.magical)
 			obi_check(spell)
+			if spell.english:contains("Wildfire") and _RA_STORE_TP then
+				equip(sets.storetp)
+			end
 		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)
 		elseif _RANGED_WS:contains(spell.english) then
@@ -127,6 +142,8 @@ function precast(spell, position)
 			equip(sets.precast.phantomroll)
 		elseif spell.english:contains("Random Deal") then
 			equip(sets.precast.randomdeal)
+		elseif spell.english:contains("Snake Eye") then
+			equip(sets.precast.snakeeye)
 		elseif spell.english:contains("Wild Card") then
 			equip(sets.precast.wildcard)
 		end
