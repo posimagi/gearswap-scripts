@@ -1,3 +1,3 @@
 sets.precast.sharpshot={
-    legs="Orion Braccae +2",
+    legs="Orion Braccae +3",
 }

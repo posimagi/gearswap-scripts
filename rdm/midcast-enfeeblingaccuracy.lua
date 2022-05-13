@@ -1,6 +1,7 @@
 sets.midcast.enfeeblingaccuracy={
-	range="Ullr",
-	ammo="Beryllium Arrow",
+	ammo="Regal Gem",
+	-- range="Ullr",
+	-- ammo="Beryllium Arrow",
 	head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
 	body="Atrophy Tabard +3",
 	hands="Leth. Gantherots +1",

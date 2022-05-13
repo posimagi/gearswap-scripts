@@ -7,7 +7,7 @@ sets.fastcast={
 	waist="Embla Sash",
 	left_ear="Etiolation Earring",
 	right_ear="Loquac. Earring",
-	left_ring="Lebeche Ring",
+	left_ring="Rahab Ring",
 	right_ring="Kishar Ring",
 	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 }

@@ -45,10 +45,12 @@ function get_sets()
 	include("whm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("whm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("whm/midcast-elemental.lua") -- sets.midcast.elemental
+	include("whm/midcast-holy.lua") -- sets.midcast.holy
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
 
 	_MAGICAL_WS = T {
+		"Cataclysm",
 		"Flash Nova",
 		"Seraph Strike"
 	}
@@ -74,6 +76,12 @@ function get_sets()
 		"Erase",
 		"Esuna",
 		"Sacrifice"
+	}
+
+	_WEAPON_SWAP_SPELLS = T {
+		"Dispelga",
+		"Holy",
+		"Holy II"
 	}
 
 	send_command(
@@ -141,7 +149,7 @@ function precast(spell, position)
 		end
 	elseif spell.english:contains("Impact") then
 		equip(sets.impact)
-	elseif spell.english:contains("Dispelga") then
+	elseif spell.english:contains("Dispelga") then	
 		_PREVIOUS_WEAPONS = sets.weapon
 		if sets.dispelga.main ~= player.equipment.main then
 			_PREVIOUS_WEAPONS = T {
@@ -150,6 +158,11 @@ function precast(spell, position)
 			}
 		end
 		equip(sets.dispelga)
+	elseif _WEAPON_SWAP_SPELLS:contains(spell.english) then
+		_PREVIOUS_WEAPONS = T {
+			main = player.equipment.main,
+			sub = player.equipment.sub
+		}
 	end
 end
 
@@ -218,7 +231,7 @@ function aftercast(spell)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end
-	if spell.english:contains("Dispelga") then
+	if _WEAPON_SWAP_SPELLS:contains(spell.english) then
 		equip(_PREVIOUS_WEAPONS)
 	end
 end

@@ -6,6 +6,7 @@ sets.fastcast={
 	neck="Voltsurge Torque",
 	left_ear="Loquac. Earring",
 	right_ear="Malignance Earring",
+	left_ring="Rahab Ring",
 	right_ring="Kishar Ring",
 	back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 }

@@ -8,6 +8,7 @@ sets.fastcast={
 	waist="Embla Sash",
 	left_ear="Etiolation Earring",
 	right_ear="Malignance Earring",
+	left_ring="Rahab Ring",
 	right_ring="Kishar Ring",
 	back={ name="Lifestream Cape", augments={'Geomancy Skill +9','Indi. eff. dur. +20','Pet: Damage taken -1%',}},
 }

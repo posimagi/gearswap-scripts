@@ -5,5 +5,6 @@ sets.fastcast={
 	legs="Enif Cosciales",
 	neck="Voltsurge Torque",
 	left_ear="Loquac. Earring",
+	left_ring="Rahab Ring",
 	right_ring="Kishar Ring",
 }
