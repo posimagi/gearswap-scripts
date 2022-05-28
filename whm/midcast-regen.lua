@@ -3,4 +3,5 @@ sets.midcast.regen={
 	body={ name="Piety Bliaut +3", augments={'Enhances "Benediction" effect',}},
 	hands="Ebers Mitts +1",
 	legs="Th. Pant. +3",
+	feet={ name="Bunzi's Sabots", augments={'Path: A',}},
 }

@@ -7,7 +7,7 @@ sets.midcast.enhancing={
 	feet="Leth. Houseaux +1",
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Embla Sash",
-	left_ear="Regal Earring",
+	left_ear="Mimir Earring",
 	right_ear="Andoaa Earring",
 	left_ring="Lebeche Ring",
 	right_ring="Kishar Ring",

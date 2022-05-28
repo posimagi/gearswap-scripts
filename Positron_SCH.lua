@@ -45,7 +45,6 @@ function get_sets()
 	include("sch/midcast-light.lua") -- sets.midcast.light
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
-	include("sch/midcast-regen-weapon.lua") -- sets.midcast.regen.weapon
 
 	_REGEN_DURATION = false
 	if _REGEN_DURATION then
@@ -147,9 +146,6 @@ function midcast(spell)
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Regen") then
 			equip(sets.midcast.regen)
-			if player.tp < 1000 then
-				equip(sets.midcast.regen.weapon)
-			end
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		end

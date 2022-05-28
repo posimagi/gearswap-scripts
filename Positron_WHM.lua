@@ -37,13 +37,13 @@ function get_sets()
 	include("whm/midcast-auspice.lua") -- sets.midcast.auspice
 	include("whm/midcast-banish.lua") -- sets.midcast.banish
 	include("whm/midcast-barspell.lua") -- sets.midcast.barspell
+	include("whm/midcast-barstatus.lua") -- sets.midcast.barstatus
 	include("whm/midcast-curaga.lua") -- sets.midcast.curaga
 	include("whm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("whm/midcast-divine.lua") -- sets.midcast.divine
 	include("whm/midcast-healing.lua") -- sets.midcast.healing
 	include("whm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("whm/midcast-enhancing.lua") -- sets.midcast.enhancing
-	include("whm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
 	include("whm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("whm/midcast-holy.lua") -- sets.midcast.holy
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
@@ -76,6 +76,25 @@ function get_sets()
 		"Erase",
 		"Esuna",
 		"Sacrifice"
+	}
+
+	_BARSTATUS_SPELLS = T {
+		"Baramnesia",
+		"Baramnesra",
+		"Barvirus",
+		"Barvira",
+		"Barparalyze",
+		"Barparalyzra",
+		"Barsilence",
+		"Barsilencera",
+		"Barpetrify",
+		"Barpetra",
+		"Barpoison",
+		"Barpoisonra",
+		"Barblind",
+		"Barblindra",
+		"Barsleep",
+		"Barsleepra"
 	}
 
 	_WEAPON_SWAP_SPELLS = T {
@@ -196,9 +215,10 @@ function midcast(spell)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		elseif spell.english:contains("Bar") then
-			equip(sets.midcast.enhancingskill, sets.midcast.barspell)
-		elseif spell.english:contains("Boost") then
-			equip(sets.midcast.enhancingskill)
+			equip(sets.midcast.barspell)
+			if _BARSTATUS_SPELLS:contains(spell.english) then
+				equip(sets.midcast.barstatus)
+			end
 		elseif spell.english:contains("Auspice") then
 			equip(sets.midcast.auspice)
 		elseif spell.english:contains("Aquaveil") then

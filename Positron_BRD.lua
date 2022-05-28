@@ -14,14 +14,18 @@ function get_sets()
 	include("brd/tp.lua") -- sets.tp
 	include("brd/ws.lua") -- sets.ws
 
+	include("brd/precast-honormarch.lua") -- sets.precast.honormarch
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
+	include("brd/precast-songs.lua") -- sets.precast.songs
 	include("brd/precast-troubadour.lua") -- sets.precast.troubadour
 
 	include("brd/midcast-ballad.lua") -- sets.midcast.ballad
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
+	include("brd/midcast-lullaby.lua") -- sets.midcast.lullaby
 	include("brd/midcast-madrigal.lua") -- sets.midcast.madrigal
 	include("brd/midcast-march.lua") -- sets.midcast.march
+	include("brd/midcast-minne.lua") -- sets.midcast.minne
 	include("brd/midcast-minuet.lua") -- sets.midcast.minuet
 	include("brd/midcast-scherzo.lua") -- sets.midcast.scherzo
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
@@ -32,19 +36,43 @@ function get_sets()
 		"Troubadour",
 		"Marcato",
 		"Tenuto",
-		"Pianissimo"
+		"Pianissimo",
 	}
 
 	_OFFENSIVE_SONGS = T {
 		"Battlefield Elegy",
 		"Carnage Elegy",
+		"Magic Finale",
 		"Foe Lullaby",
 		"Foe Lullaby II",
 		"Horde Lullaby",
 		"Horde Lullaby II",
-		"Magic Finale",
-		"Pining Nocturne"
-	} -- TODO: improve this
+		"Pining Nocturne",
+		"Foe Requiem",
+		"Foe Requiem II",
+		"Foe Requiem III",
+		"Foe Requiem IV",
+		"Foe Requiem V",
+		"Foe Requiem VI",
+		"Foe Requiem VII",
+		"Fire Threnody",
+		"Fire Threnody II",
+		"Ice Threnody",
+		"Ice Threnody II",
+		"Wind Threnody",
+		"Wind Threnody II",
+		"Earth Threnody",
+		"Earth Threnody II",
+		"Ltng. Threnody",
+		"Ltng. Threnody II",
+		"Water Threnody",
+		"Water Threnody II",
+		"Light Threnody",
+		"Light Threnody II",
+		"Dark Threnody",
+		"Dark Threnody II",
+		"Maiden's Virelai",
+	}
 
 	send_command(
 		"input /macro book 10; \
@@ -82,8 +110,7 @@ function precast(spell, position)
 	end
 
 	if spell.type == "JobAbility" then
-		if spell.english:contains("Nightingale") or spell.english:contains("Troubadour")
-		then
+		if spell.english:contains("Nightingale") or spell.english:contains("Troubadour") then
 			equip(sets.precast.nightingale, sets.precast.troubadour)
 		end
 	elseif spell.type == "WeaponSkill" then
@@ -92,8 +119,8 @@ function precast(spell, position)
 		equip(sets.fastcast)
 		if spell.type == "BardSong" then
 			equip(sets.precast.songs)
-			if buffactive["Nightingale"] then
-				midcast(spell)
+			if spell.english:contains("Honor March") then
+				equip(sets.precast.honormarch)
 			end
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.precast.stoneskin)
@@ -106,12 +133,17 @@ function midcast(spell)
 		equip(sets.midcast.songs)
 		if _OFFENSIVE_SONGS:contains(spell.english) then
 			equip(sets.midcast.songs.offensive)
+			if spell.english:contains("Lullaby") then
+				equip(sets.midcast.lullaby)
+			end
 		elseif spell.english:contains("Ballad") then
 			equip(sets.midcast.ballad)
 		elseif spell.english:contains("Madrigal") then
 			equip(sets.midcast.madrigal)
 		elseif spell.english:contains("March") then
 			equip(sets.midcast.march)
+		elseif spell.english:contains("Minne") then
+			equip(sets.midcast.minne)
 		elseif spell.english:contains("Minuet") then
 			equip(sets.midcast.minuet)
 		elseif spell.english:contains("Scherzo") then
@@ -130,9 +162,6 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if spell.interrupted and spell.english:contains("Elegy") then
-		return
-	end
 	if _PRE_SONG_ABILITIES:contains(spell.english) then
 		-- do nothing
 	elseif player.status == "Idle" then

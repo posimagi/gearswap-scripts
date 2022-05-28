@@ -2,6 +2,7 @@ function get_sets()
 	sets = {}
 	sets.precast = {}
 	sets.midcast = {}
+	sets.petmidcast = {}
 	sets.aftercast = {}
 
 	include("all/obi.lua") -- sets.obi
@@ -14,6 +15,8 @@ function get_sets()
 
 	include("bst/precast-callbeast.lua") -- sets.precast.callbeast
 	include("bst/precast-sic.lua") -- sets.precast.sic
+
+	include("bst/petmidcast-sic.lua") -- sets.petmidcast.sic
 
 	include("func/obi_check.lua") -- obi_check()
 
@@ -70,6 +73,10 @@ end
 function midcast(spell)
 end
 
+function pet_midcast(spell)
+	equip(sets.petmidcast.sic)
+end
+
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
@@ -83,6 +90,14 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+	end
+end
+
+function pet_aftercast(spell)
+	if player.status == "Idle" then
+		equip(sets.idle)
+	elseif player.status == "Engaged" then
+		equip(sets.tp)
 	end
 end
 

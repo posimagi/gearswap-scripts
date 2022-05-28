@@ -7,7 +7,7 @@ sets.midcast.enhancingself={
 	feet="Leth. Houseaux +1",
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Embla Sash",
-	left_ear="Regal Earring",
+	left_ear="Mimir Earring",
 	left_ring="Lebeche Ring",
 	right_ring="Kishar Ring",
 	back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +1','Enha.mag. skill +2','Enh. Mag. eff. dur. +20',}},

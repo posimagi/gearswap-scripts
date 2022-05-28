@@ -88,13 +88,11 @@ function midcast(spell)
 	else
 		if spell.english:contains("Aquaveil") then
 			equip(sets.idle, sets.midcast.aquaveil)
-		elseif spell.english:contains("Refresh") or spell.english:contains("Battery Charge")
-		then
+		elseif spell.english:contains("Refresh") or spell.english:contains("Battery Charge") then
 			equip(sets.idle, sets.midcast.refresh)
 		elseif spell.english:contains("Phalanx") then
 			equip(sets.idle, sets.midcast.phalanx)
-		elseif spell.english:contains("Dream Flower") or spell.english:contains("Yawn")
-		then
+		elseif spell.english:contains("Dream Flower") or spell.english:contains("Yawn") or spell.english:contains("Dia") then
 			equip(sets.idle, sets.th)
 		elseif _ENFEEBLING_SPELLS:contains(spell.english) then
 			equip(sets.idle, sets.midcast.enfeebling)

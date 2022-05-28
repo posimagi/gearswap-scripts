@@ -36,6 +36,7 @@ function get_sets()
 
 	include("rdm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("rdm/midcast-barspell.lua") -- sets.midcast.barspell
+	include("rdm/midcast-barstatus.lua") -- sets.midcast.barstatus
 	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("rdm/midcast-enfeeblingaccuracy.lua") -- sets.midcast.enfeeblingaccuracy
@@ -47,6 +48,7 @@ function get_sets()
 	include("rdm/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("rdm/midcast-ra.lua") -- sets.midcast.ra
 	include("rdm/midcast-refresh.lua") -- sets.midcast.refresh
+	include("rdm/midcast-regen.lua") -- sets.midcast.regen
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
 	include("func/obi_check.lua") -- obi_check()
@@ -86,6 +88,25 @@ function get_sets()
 		"Death Blossom",
 		"Chant du Cygne",
 		"Requiescat"
+	}
+
+	_BARSTATUS_SPELLS = T {
+		"Baramnesia",
+		"Baramnesra",
+		"Barvirus",
+		"Barvira",
+		"Barparalyze",
+		"Barparalyzra",
+		"Barsilence",
+		"Barsilencera",
+		"Barpetrify",
+		"Barpetra",
+		"Barpoison",
+		"Barpoisonra",
+		"Barblind",
+		"Barblindra",
+		"Barsleep",
+		"Barsleepra"
 	}
 
 	_ODIN = false
@@ -159,13 +180,6 @@ function precast(spell, position)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
-			if spell.english:contains("Cyclone") then -- FIXME!!!
-				equip(sets.idle, {
-					head={ name="Nyame Helm", augments={'Path: B',}},
-					body={ name="Nyame Mail", augments={'Path: B',}},
-					hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-				})
-			end
 		elseif _MULTI_HIT_WS:contains(spell.name) then
 			equip(sets.ws.multihit)
 		end
@@ -218,15 +232,15 @@ function midcast(spell)
 		if spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Aquaveil") then
-			equip(sets.midcast.enhancingskill, sets.midcast.aquaveil)
+			equip(sets.midcast.aquaveil)
 		elseif spell.english:contains("Bar") then
-			equip(sets.midcast.enhancingskill, sets.midcast.barspell)
+			equip(sets.midcast.barspell)
+			if _BARSTATUS_SPELLS:contains(spell.english) then
+				equip(sets.midcast.barstatus)
+			end
 		elseif spell.english:contains("En") then
 			equip(sets.midcast.enhancingskill)
-		elseif spell.english:contains("Gain") then
-			equip(sets.midcast.enhancingskill)
 		elseif spell.english:contains("Phalanx") then
-			equip(sets.midcast.enhancingskill)
 			if spell.target.type == "SELF" then
 				equip(sets.midcast.phalanx)
 			end
@@ -234,6 +248,8 @@ function midcast(spell)
 			equip(sets.midcast.stoneskin)
 		elseif spell.english:contains("Temper") then
 			equip(sets.midcast.enhancingskill)
+		elseif spell.english:contains("Regen") then
+			equip(sets.midcast.regen)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.enfeebling)

@@ -1,4 +1,4 @@
 sets.lightarts={
-	main="Daybreak",
-	sub="Ammurapi Shield",
+	main="Musa",
+    sub="Khonsu",
 }
