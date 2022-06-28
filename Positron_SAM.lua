@@ -4,6 +4,10 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
+	include("all/obi.lua") -- sets.obi
+
 	include("sam/idle.lua") -- sets.idle
 	include("sam/tp.lua") -- sets.tp
 	include("sam/turtle.lua") -- sets.turtle
@@ -66,6 +70,7 @@ function precast(spell, position)
 			equip(sets.ws.multihit)
 		elseif _MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.magical)
+			obi_check(spell)
 		end
 		if buffactive["Meikyo Shisui"] then
 			equip(sets.ws.meikyoshisui)

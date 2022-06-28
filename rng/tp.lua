@@ -1,7 +1,7 @@
 sets.tp={
 	head="Malignance Chapeau",
 	body="Malignance Tabard",
-	hands="Malignance Gloves",
+	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
 	legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 	feet="Malignance Boots",
 	neck="Combatant's Torque",

@@ -1,10 +1,10 @@
 sets.idle={
 	ammo="Staunch Tathlum",
-	head="Malignance Chapeau",
+	head={ name="Nyame Helm", augments={'Path: B',}},
 	body="Shamash Robe",
-	hands="Malignance Gloves",
+	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
-	feet="Malignance Boots",
+	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	waist="Flume Belt",
 	left_ear="Etiolation Earring",

@@ -131,6 +131,8 @@ function precast(spell, position)
 			equip(sets.ws.multihit)
 		elseif _RANGED_WS:contains(spell.english) then
 			equip(sets.ws.ranged)
+		else
+			equip(sets.ws)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)

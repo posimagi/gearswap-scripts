@@ -216,13 +216,12 @@ end
 
 function midcast(spell)
 	if spell.skill == "Enfeebling Magic" then
-		if _VARIABLE_POTENCY:contains(spell.name) then
+		if spell.english:contains("Dia") or spell.english:contains("Inundation") then
+			equip(sets.th)
+		elseif _VARIABLE_POTENCY:contains(spell.name) then
 			equip(sets.midcast.enfeeblingpotency)
 		else
 			equip(sets.midcast.enfeeblingaccuracy)
-		end
-		if spell.english:contains("Dia") then
-			equip(sets.th)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)

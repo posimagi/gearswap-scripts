@@ -20,7 +20,9 @@ function get_sets()
 	include("geo/th.lua") -- sets.th
 	include("geo/tp.lua") -- sets.tp
 	include("geo/weapon.lua") -- sets.weapon
+	include("geo/weapon-staff.lua") -- sets.weapon.staff
 	include("geo/ws.lua") -- sets.ws
+	include("geo/ws-dark.lua") -- sets.ws.dark
 
 	include("geo/precast-bolster.lua") -- sets.precast.bolster
 	include("geo/precast-elemental.lua") -- sets.precast.elemental
@@ -35,6 +37,10 @@ function get_sets()
 	include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
 	include("geo/midcast-elemental.lua") -- sets.midcast.elemental
 	include("geo/midcast-refresh.lua") -- sets.midcast.refresh
+
+	_DARK_WS = T {
+		"Cataclysm",
+	}
 
 	_TIER_ONE_NUKES = T {
 		"Fire",
@@ -87,6 +93,10 @@ function precast(spell, position)
 	equip(sets.fastcast)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if _DARK_WS:contains(spell.english) then
+			equip(sets.ws.dark)
+			obi_check(spell)
+		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Bolster") then
 			equip(sets.precast.bolster)

@@ -1,6 +1,6 @@
 sets.midcast.songs.offensive={
 	range="Gjallarhorn",
-	head="Inyanga Tiara +2",
+	head="Brioso Roundlet +3",
 	body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
 	hands="Brioso Cuffs +3",
 	legs="Inyanga Shalwar +2",

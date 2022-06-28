@@ -5,6 +5,10 @@ function get_sets()
 	sets.petmidcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
+	include("all/obi.lua") -- sets.obi
+	
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
@@ -14,6 +18,7 @@ function get_sets()
 	include("smn/summoning.lua") -- sets.summoning
 	include("smn/tp.lua") -- sets.tp
 	include("smn/ws.lua") -- sets.ws
+	include("smn/ws-dark.lua") -- sets.ws.dark
 
 	include("smn/precast-bp.lua") -- sets.precast.bp
 
@@ -37,6 +42,10 @@ function get_sets()
 		"left_ring",
 		"right_ring",
 		"back"
+	}
+
+	_DARK_WS = T {
+		"Cataclysm"
 	}
 
 	send_command(
@@ -79,6 +88,10 @@ function precast(spell, position)
 		equip(sets.precast.stoneskin)
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if _DARK_WS:contains(spell.english) then
+			equip(sets.ws.dark)
+			obi_check(spell)
+		end
 	end
 end
 

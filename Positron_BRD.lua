@@ -4,6 +4,10 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/obi_check.lua") -- obi_check()
+
+	include("all/obi.lua") -- sets.obi
+
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
@@ -30,6 +34,10 @@ function get_sets()
 	include("brd/midcast-scherzo.lua") -- sets.midcast.scherzo
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
 	include("brd/midcast-songs-offensive.lua") -- sets.midcast.songs.offensive
+
+	_MAGICAL_WS = T {
+		"Aeolian Edge",
+	}
 
 	_PRE_SONG_ABILITIES = T {
 		"Nightingale",
@@ -115,6 +123,10 @@ function precast(spell, position)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		if _MAGICAL_WS:contains(spell.english) then
+			equip(sets.ws.magical)
+			obi_check(spell)
+		end
 	else
 		equip(sets.fastcast)
 		if spell.type == "BardSong" then

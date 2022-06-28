@@ -100,6 +100,7 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
+		obi_check(spell)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Tabula Rasa") then
 			equip(sets.precast.tabularasa)
@@ -189,13 +190,17 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	equip(sets.idle)
-	if player.tp < 1000 then
-		if buffactive["Light Arts"] and not spell.english:contains("Dark Arts") then
-			equip(sets.lightarts)
-		elseif buffactive["Dark Arts"] and not spell.english:contains("Light Arts") then
-			equip(sets.darkarts)
+	if player.status == "Idle" then
+		equip(sets.idle)
+		if player.tp < 1000 then
+			if buffactive["Light Arts"] and not spell.english:contains("Dark Arts") then
+				equip(sets.lightarts)
+			elseif buffactive["Dark Arts"] and not spell.english:contains("Light Arts") then
+				equip(sets.darkarts)
+			end
 		end
+	else
+		equip(sets.tp)
 	end
 	if spell.english == "Sublimation" or buffactive_sublimation() then
 		equip(sets.sublimation)

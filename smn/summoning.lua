@@ -1,5 +1,4 @@
 sets.summoning={
-	-- head="Baayami Hat",
 	-- body="Baayami Robe",
 	-- hands="Baayami Cuffs",
 	-- legs="Baayami Slops",
