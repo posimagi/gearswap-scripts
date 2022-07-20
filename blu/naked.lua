@@ -6,7 +6,7 @@ sets.naked={
 	legs="Shedir Seraweels",
 	feet="Waders",
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
-	waist="Flume Belt",
+	waist="Flume Belt +1",
 	left_ear="Etiolation Earring",
 	right_ear="Loquac. Earring",
 	left_ring="Kishar Ring",

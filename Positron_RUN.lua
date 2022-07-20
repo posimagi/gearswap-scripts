@@ -4,13 +4,14 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("all/th.lua") -- sets.th
+
 	include("run/engaged.lua") -- sets.engaged
 	include("run/enmity.lua") -- sets.enmity
 	include("run/fastcast.lua") -- sets.fastcast
 	include("run/idle.lua") -- sets.idle
 	include("run/interrupt.lua") -- sets.interrupt
 	include("run/naked.lua") -- sets.naked
-	include("run/th.lua") -- sets.th
 	include("run/ws.lua") -- sets.ws
 	include("run/ws-multihit.lua") -- sets.ws.multihit
 
@@ -40,11 +41,30 @@ function get_sets()
 		"Effusion"
 	}
 
-	_TAG_SPELLS = T {
+	_ENMITY_ABILITIES = T {
+		"Battuta",	
+		"Burst Affinity",
+		"Chain Affinity",
+		"Gambit",
+		"Liement",
+		"One for All",
+		"Pflug",
+		"Swordplay",
+		"Valiance",
+		"Vallation",
+	}
+
+	_ENMITY_SPELLS = T {
+		"Foil",
 		"Geist Wall",
 		"Jettatura",
+	}
+
+	_INTERRUPT_SPELLS = T {
+		"Aquaveil",
+		"Cocoon",
 		"Poisonga",
-		"Sheep Song"
+		"Sheep Song",
 	}
 
 	send_command(
@@ -96,20 +116,23 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	equip(sets.idle, sets.enmity)
-	if _TAG_SPELLS:contains(spell.english) then
-		equip(sets.idle, sets.interrupt)
-	elseif spell.skill == "Enhancing Magic" then
+	equip(sets.idle)
+	if spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Foil") then
-			equip(sets.idle, sets.interrupt, sets.enmity)
+			equip(sets.enmity)
 		elseif spell.english:contains("Refresh") then
-			equip(sets.idle, sets.midcast.refresh)
+			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Phalanx") then
 			equip(sets.midcast.phalanx)
 		end
 	elseif spell.type == "Item" then
 		equip(sets.idle, sets.cursna)
+	end
+	if _INTERRUPT_SPELLS:contains(spell.english) then
+		equip(sets.interrupt)
+	elseif _ENMITY_SPELLS:contains(spell.english) then
+		equip(sets.enmity)
 	end
 end
 

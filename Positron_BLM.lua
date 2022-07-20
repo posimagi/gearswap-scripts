@@ -24,6 +24,7 @@ function get_sets()
 
 	include("blm/precast-healing.lua") -- sets.precast.healing
 
+	include("blm/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blm/midcast-dark.lua") -- sets.midcast.dark
 	include("blm/midcast-drain.lua") -- sets.midcast.drain
 	include("blm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -118,7 +119,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
-		if spell.english:contains("Refresh") then
+		if spell.english:contains("Aquaveil") then
+			equip(sets.midcast.aquaveil)
+		elseif spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)

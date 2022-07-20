@@ -12,6 +12,7 @@ function get_sets()
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
+	include("all/th.lua") -- sets.th
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
@@ -25,7 +26,6 @@ function get_sets()
 	include("sch/naked.lua") -- sets.naked
 	include("sch/perpetuance.lua") -- sets.perpetuance
 	include("sch/sublimation.lua") -- sets.sublimation
-	include("sch/th.lua") -- sets.th
 	include("sch/tp.lua") -- sets.tp
 	include("sch/ws.lua") -- sets.ws
 

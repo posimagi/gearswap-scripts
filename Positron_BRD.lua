@@ -7,6 +7,7 @@ function get_sets()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
+	include("all/th.lua") -- sets.th
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
@@ -14,7 +15,6 @@ function get_sets()
 
 	include("brd/fastcast.lua") -- sets.fastcast
 	include("brd/idle.lua") -- sets.idle
-	include("brd/th.lua") -- sets.th
 	include("brd/tp.lua") -- sets.tp
 	include("brd/ws.lua") -- sets.ws
 

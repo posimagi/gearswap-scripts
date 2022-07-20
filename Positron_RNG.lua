@@ -30,6 +30,7 @@ function get_sets()
 	include("rng/precast-camouflage.lua") -- sets.precast.camouflage
 	include("rng/precast-eagleeyeshot.lua") -- sets.precast.eagleeyeshot
 	include("rng/precast-ra.lua") -- sets.precast.ra
+	include("rng/precast-ra-flurry.lua") -- sets.precast.ra.flurry
 	include("rng/precast-shadowbind.lua") -- sets.precast.shadowbind
 	include("rng/precast-waltzes.lua") -- sets.precast.waltzes
 
@@ -121,7 +122,11 @@ function precast(spell, position)
 		equip(sets.precast.waltzes)
 	elseif spell.action_type == "Ranged Attack" then
 		ammo_check(spell)
-		equip(sets.precast.ra)
+		if buffactive['Flurry'] or buffactive['Embrava'] then
+			equip(sets.precast.ra.flurry)
+		else
+			equip(sets.precast.ra)
+		end
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.idle, sets.fastcast)
 		if spell.english:contains("Utsusemi") then

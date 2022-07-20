@@ -10,6 +10,7 @@ function get_sets()
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
+	include("all/th.lua") -- sets.th
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -20,7 +21,6 @@ function get_sets()
 	include("whm/hpdown.lua") -- sets.hpdown
 	include("whm/idle.lua") -- sets.idle
 	include("whm/sublimation.lua") -- sets.sublimation
-	include("whm/th.lua") -- sets.th
 	include("whm/tp.lua") -- sets.tp
 	include("whm/weapon.lua") -- sets.weapon
 	include("whm/ws.lua") -- sets.ws

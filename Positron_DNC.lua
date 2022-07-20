@@ -11,8 +11,6 @@ function get_sets()
 	include("dnc/fastcast.lua") -- sets.fastcast
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/tp.lua") -- sets.tp
-	include("dnc/tp-hybrid.lua") -- sets.tp.hybrid
-	include("dnc/turtle.lua") -- sets.turtle
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 	include("dnc/ws-multihit.lua") -- sets.ws.multihit
@@ -43,9 +41,14 @@ function get_sets()
 		"Exenterator"
 	}
 
-	_HYBRID = false
+	_HYBRID = true
 	if _HYBRID then
-		sets.tp = sets.tp.hybrid
+		include("dnc/tp-hybrid.lua") -- sets.tp
+	end
+
+	_REGAL_GLOVES = false
+	if _REGAL_GLOVES then
+		include("dnc/tp-regal.lua") -- sets.tp
 	end
 
 	send_command(

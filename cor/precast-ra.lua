@@ -4,5 +4,6 @@ sets.precast.ra={
 	legs="Laksa. Trews +2",
 	feet="Meg. Jam. +2",
 	waist="Impulse Belt",
-	right_ring="Dingir Ring",
+	left_ring="Crepuscular Ring",
+	back="Navarch's Mantle",
 }

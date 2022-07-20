@@ -5,11 +5,11 @@ sets.tp={
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
-	neck={ name="Etoile Gorget", augments={'Path: A',}},
+	neck={ name="Etoile Gorget +2", augments={'Path: A',}},
 	waist="Reiki Yotai",
 	left_ear="Telos Earring",
 	right_ear="Sherida Earring",
 	left_ring="Ilabrat Ring",
 	right_ring="Gere Ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 }

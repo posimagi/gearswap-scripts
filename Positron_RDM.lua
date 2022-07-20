@@ -7,6 +7,7 @@ function get_sets()
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
+	include("all/th.lua") -- sets.th
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
@@ -20,7 +21,6 @@ function get_sets()
 	include("rdm/idle-hybrid.lua") -- sets.idle.hybrid
 	include("rdm/level60.lua") -- sets.level60
 	include("rdm/naked.lua") -- sets.naked
-	include("rdm/th.lua") -- sets.th
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/tp-hybrid.lua") -- sets.tp.hybrid
 	include("rdm/weapon.lua") -- sets.weapon

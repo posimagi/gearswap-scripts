@@ -5,10 +5,10 @@ sets.tp={
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet="Malignance Boots",
-	neck="Combatant's Torque",
+	neck="Anu Torque",
 	waist="Reiki Yotai",
 	left_ear="Suppanomimi",
 	right_ear="Sherida Earring",
 	left_ring="Ilabrat Ring",
-	right_ring="Petrov Ring",
+	right_ring="Chirich Ring +1",
 }

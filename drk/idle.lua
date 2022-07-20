@@ -6,7 +6,7 @@ sets.idle={
 	legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
-	waist="Flume Belt",
+	waist="Flume Belt +1",
 	left_ear="Etiolation Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},

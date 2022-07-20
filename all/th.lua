@@ -1,5 +1,5 @@
 sets.th={
 	ammo="Per. Lucky Egg",
-	head="Wh. Rarab Cap +1",
+	body="Volte Jupon",
 	waist="Chaac Belt",
 }

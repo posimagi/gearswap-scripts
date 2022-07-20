@@ -36,7 +36,6 @@ function get_sets()
 	_ACCURACY_WS = T {
 		"Full Break",
 		"Steel Cyclone",
-		"Ukko's Fury" -- hurts damage, but improves TP gain for multistep
 	}
 
 	_MAGICAL_WS = T {
@@ -54,6 +53,22 @@ function get_sets()
 		"Requiescat",
 		"Ruinator",
 		"Vorpal Blade"
+	}
+
+	_RED_PROC_WS = T {
+		"Blade: Ei",
+		"Cyclone",
+		"Earth Crusher",
+		"Energy Drain",
+		"Freezebite",
+		"Raiden Thrust",
+		"Red Lotus Blade",
+		"Seraph Blade",
+		"Seraph Strike",
+		"Shadow of Death",
+		"Sunburst",
+		"Tachi: Jinpu",
+		"Tachi: Koki",
 	}
 
 	_FENCER_WEAPONS = T {
@@ -107,6 +122,9 @@ function precast(spell, position)
 		end
 		if _AOE_WS:contains(spell.english) then
 			equip(sets.th)
+		end
+		if _RED_PROC_WS:contains(spell.english) then
+			equip(sets.idle)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Aggressor") then

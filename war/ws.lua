@@ -1,7 +1,7 @@
 sets.ws={
 	ammo="Knobkierrie",
 	head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
-	body="Pumm. Lorica +3",
+	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},

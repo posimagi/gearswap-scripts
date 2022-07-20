@@ -6,7 +6,7 @@ sets.idle.hybrid={
 	legs="Malignance Tights",
 	feet="Malignance Boots",
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
-	waist="Flume Belt",
+	waist="Flume Belt +1",
 	left_ear="Etiolation Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
