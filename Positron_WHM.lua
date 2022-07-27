@@ -10,6 +10,7 @@ function get_sets()
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
+	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
@@ -138,7 +139,7 @@ function precast(spell, position)
 		return
 	end
 
-	equip(sets.fastcast)
+	equip(sets.quickmagic, sets.fastcast)
 	if spell.skill == "Healing Magic" then
 		equip(sets.precast.healing)
 	elseif spell.skill == "Enhancing Magic" then

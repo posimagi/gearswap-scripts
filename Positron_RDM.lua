@@ -7,6 +7,7 @@ function get_sets()
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
+	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
 
 	include("all/precast-enhancing.lua") -- sets.precast.enhancing
@@ -190,7 +191,7 @@ function precast(spell, position)
 	elseif spell.action_type == "Ranged Attack" then
 		equip(sets.precast.ra)
 	else
-		equip(sets.fastcast)
+		equip(sets.quickmagic, sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
 			equip(sets.precast.enfeebling)
 			if spell.english:contains("Dispelga") then

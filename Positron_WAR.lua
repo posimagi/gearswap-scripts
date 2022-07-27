@@ -12,8 +12,8 @@ function get_sets()
 
 	include("war/enmity.lua") -- sets.enmity
 	include("war/fastcast.lua") -- sets.fastcast
-	include("war/fencer.lua") -- sets.fencer
 	include("war/idle.lua") -- sets.idle
+	include("war/nowsd.lua") -- sets.nowsd
 	include("war/tp.lua") -- sets.tp
 	include("war/ws.lua") -- sets.ws
 	include("war/ws-accuracy.lua") -- sets.ws.accuracy
@@ -41,9 +41,9 @@ function get_sets()
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cloudsplitter",
+		"Gust Slash",
 		"Red Lotus Blade",
 		"Sanguine Blade",
-		"Seraph Blade"
 	}
 
 	_MULTI_HIT_WS = T {
@@ -71,15 +71,11 @@ function get_sets()
 		"Tachi: Koki",
 	}
 
-	_FENCER_WEAPONS = T {
-		"Blurred Shield +1"
+	_OMEN_WS = T {
+		"Burning Blade",
+		"Flat Blade",
+		"Shining Blade",
 	}
-
-	_FENCER = false
-	if _FENCER then
-	end
-
-	_TH = false
 
 	send_command(
 		"input /macro book 1; \
@@ -112,20 +108,21 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _MAGICAL_WS:contains(spell.name) then
+		if _RED_PROC_WS:contains(spell.english) then
+			equip(sets.nowsd)
+		elseif _OMEN_WS:contains(spell.english) then
+			equip(sets.nowsd)
+		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)
 		elseif _ACCURACY_WS:contains(spell.english) then
 			equip(sets.ws.accuracy)
-		end
-		if _AOE_WS:contains(spell.english) then
+		elseif _AOE_WS:contains(spell.english) then
 			equip(sets.th)
 		end
-		if _RED_PROC_WS:contains(spell.english) then
-			equip(sets.idle)
-		end
+		
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Aggressor") then
 			equip(sets.precast.aggressor)
@@ -162,9 +159,6 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
-		if _TH then
-			equip(sets.th)
-		end
 	end
 end
 
@@ -179,9 +173,6 @@ function buff_change(name, gain, buff_details)
 				equip(sets.idle)
 			elseif player.status == "Engaged" then
 				equip(sets.tp)
-				if _TH then
-					equip(sets.th)
-				end
 			end
 		end
 	end
@@ -192,9 +183,6 @@ end
 function status_change(new, old)
 	if new == "Engaged" then
 		equip(sets.tp)
-		if _TH then
-			equip(sets.th)
-		end
 	elseif new == "Idle" then
 		equip(sets.idle)
 	end

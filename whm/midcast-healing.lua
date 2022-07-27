@@ -9,7 +9,7 @@ sets.midcast.healing={
 	waist="Luminary Sash",
 	left_ear="Mendi. Earring",
 	right_ear="Glorious Earring",
-	left_ring="Menelaus's Ring",
-	right_ring="Lebeche Ring",
+	left_ring="Lebeche Ring",
+	right_ring="Naji's Loop",
 	back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
 }

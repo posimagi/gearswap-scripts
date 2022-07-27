@@ -8,6 +8,7 @@ function get_sets()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
+	include("all/quickmagic.lua") -- sets.quickmagic
 	
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 

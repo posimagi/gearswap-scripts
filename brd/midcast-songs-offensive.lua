@@ -3,7 +3,7 @@ sets.midcast.songs.offensive={
 	head="Brioso Roundlet +3",
 	body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
 	hands="Brioso Cuffs +3",
-	legs="Brioso Cannions +2",
+	legs="Brioso Cannions +3",
 	feet="Brioso Slippers +3",
 	neck="Mnbw. Whistle +1",
 	waist="Luminary Sash",
