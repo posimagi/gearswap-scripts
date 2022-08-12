@@ -7,8 +7,8 @@ sets.idle={
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	waist="Flume Belt +1",
 	left_ear="Etiolation Earring",
-	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+	right_ear="Mimir Earring",
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-	right_ring="Defending Ring",
+	right_ring="Stikini Ring +1",
 	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

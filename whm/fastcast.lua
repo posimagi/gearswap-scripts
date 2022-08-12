@@ -3,7 +3,7 @@ sets.fastcast={
 	head={ name="Bunzi's Hat", augments={'Path: A',}}, -- 10%
 	body="Inyanga Jubbah +2", -- 14%
 	hands="Volte Gloves", -- 6%
-	legs="Volte Brais", -- 8%
+	legs="Pinga Pants", -- 11%
 	feet="Regal Pumps +1", -- 5~7%
 	neck={ name="Clr. Torque +2", augments={'Path: A',}}, -- 10%
 	-- waist="Embla Sash", -- 5%

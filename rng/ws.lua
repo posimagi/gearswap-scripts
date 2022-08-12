@@ -4,7 +4,7 @@ sets.ws={
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Arc. Braccae +3", augments={'Enhances "Eagle Eye Shot" effect',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
-	neck="Caro Necklace",
+	neck="Rep. Plat. Medal",
 	waist="Grunfeld Rope",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Sherida Earring",

@@ -1,7 +1,7 @@
 sets.tp={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Malignance Chapeau",
-	body="Malignance Tabard",
+	body={ name="Mpaca's Doublet", augments={'Path: A',}},
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet="Malignance Boots",
@@ -11,4 +11,5 @@ sets.tp={
 	right_ear="Sherida Earring",
 	left_ring="Niqmaddu Ring",
 	right_ring="Gere Ring",
+	back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
 }

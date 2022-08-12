@@ -3,7 +3,7 @@ sets.midcast.elemental={
 	body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
 	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 	legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
-	feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",

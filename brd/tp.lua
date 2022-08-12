@@ -5,11 +5,11 @@ sets.tp={
 	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
-	neck="Combatant's Torque",
+	neck={ name="Bard's Charm +2", augments={'Path: A',}},
 	waist="Reiki Yotai",
 	left_ear="Suppanomimi",
 	right_ear="Telos Earring",
 	left_ring="Ilabrat Ring",
-	right_ring="Petrov Ring",
+	right_ring="Chirich Ring +1",
 	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 }

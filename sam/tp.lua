@@ -1,7 +1,7 @@
 sets.tp={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Flam. Zucchetto +2",
-	body={ name="Nyame Mail", augments={'Path: B',}},
+	body={ name="Mpaca's Doublet", augments={'Path: A',}},
 	hands="Wakido Kote +3",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet="Wakido Sune. +3",

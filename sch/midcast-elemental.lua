@@ -1,11 +1,11 @@
 sets.midcast.elemental={
 	ammo="Pemphredo Tathlum",
 	head={ name="Peda. M.Board +3", augments={'Enh. "Altruism" and "Focalization"',}},
-	body="Acad. Gown +2",
+	body="Acad. Gown +3",
 	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 	legs={ name="Peda. Pants +3", augments={'Enhances "Tabula Rasa" effect',}},
+	-- feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	feet="Arbatel Loafers +1",
-	-- feet="Acad. Loafers +3",
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",

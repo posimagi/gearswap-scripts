@@ -42,7 +42,7 @@ function get_sets()
 	}
 
 	_ENMITY_ABILITIES = T {
-		"Battuta",	
+		"Battuta",
 		"Burst Affinity",
 		"Chain Affinity",
 		"Gambit",

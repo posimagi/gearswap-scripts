@@ -4,7 +4,7 @@ sets.ws={
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-	neck="Caro Necklace",
+	neck="Rep. Plat. Medal",
 	waist="Grunfeld Rope",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Ishvara Earring",
