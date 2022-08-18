@@ -3,7 +3,7 @@ sets.midcast.enfeeblingaccuracy={
 	ammo="Beryllium Arrow",
 	head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
 	body="Atrophy Tabard +3",
-	hands="Leth. Gantherots +1",
+	hands="Leth. Ganth. +2",
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
 	feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},

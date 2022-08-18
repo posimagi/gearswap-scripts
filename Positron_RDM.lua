@@ -110,22 +110,6 @@ function get_sets()
 		"Barsleepra"
 	}
 
-	_ODIN = false
-	if _ODIN then
-		include("rdm/odin/idle.lua") -- sets.idle
-		include("rdm/odin/enspell.lua") -- sets.enspell
-		include("rdm/odin/tp.lua") -- sets.tp
-		include("rdm/odin/midcast-enfeebling.lua") -- sets.midcast.enfeebling
-		include("rdm/odin/midcast-enhancing.lua") -- sets.midcast.enhancing
-		include("rdm/odin/midcast-healing.lua") -- sets.midcast.healing
-	end
-
-	_LILITH = false
-	if _LILITH then
-		include("rdm/lilith/tp.lua") -- sets.tp
-		sets.enspell = sets.tp
-	end
-
 	_SEALED_FATE = false
 	if _SEALED_FATE then
 		include("rdm/sealed-fate/tp.lua") -- sets.tp

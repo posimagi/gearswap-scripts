@@ -4,7 +4,7 @@ sets.tp={
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
 	-- hands={ name="Nyame Gauntlets", augments={'Path: B',}}, --
-	legs={ name="Nyame Flanchard", augments={'Path: B',}},
+	legs="Ebers Pant. +2",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Combatant's Torque",
 	-- neck="Bathy Choker +1", --
