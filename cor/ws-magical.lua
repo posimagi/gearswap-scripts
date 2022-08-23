@@ -4,7 +4,7 @@ sets.ws.magical={
 	hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-	neck="Sanctity Necklace",
+	neck="Sibyl Scarf",
 	waist="Eschan Stone",
 	right_ear="Friomisi Earring",
 	left_ring="Ilabrat Ring",

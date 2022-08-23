@@ -1,6 +1,7 @@
 sets.ws.magical={
 	ammo="Pemphredo Tathlum",
-	neck="Sanctity Necklace",
+	feet="Leth. Houseaux +2",
+	neck="Sibyl Scarf",
 	waist="Sacro Cord",
 	right_ear="Regal Earring",
 	left_ring="Freke Ring",
