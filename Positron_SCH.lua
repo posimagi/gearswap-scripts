@@ -175,7 +175,7 @@ function midcast(spell)
 		elseif spell.english:contains("Impact") then
 			equip(sets.impact)
 		end
-		if world.area == "Outer Ra'Kaznar [U]" then
+		if world.area:contains("Outer Ra'Kaznar [U") then
 			if _TIER_ONE_NUKES:contains(spell.english) then
 				equip(sets.naked)
 			elseif _TIER_TWO_NUKES:contains(spell.english) then

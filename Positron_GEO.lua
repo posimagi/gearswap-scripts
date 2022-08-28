@@ -10,7 +10,6 @@ function get_sets()
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 	include("all/quickmagic.lua") -- sets.quickmagic
-	include("all/th.lua") -- sets.th
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
@@ -19,6 +18,7 @@ function get_sets()
 	include("geo/idle.lua") -- sets.idle
 	include("geo/fastcast.lua") -- sets.fastcast
 	include("geo/naked.lua") -- sets.naked
+	include("geo/th.lua") -- sets.th
 	include("geo/tp.lua") -- sets.tp
 	include("geo/weapon.lua") -- sets.weapon
 	include("geo/weapon-staff.lua") -- sets.weapon.staff

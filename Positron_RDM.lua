@@ -19,11 +19,9 @@ function get_sets()
 	include("rdm/enspell.lua") -- sets.enspell
 	include("rdm/fastcast.lua") -- sets.fastcast
 	include("rdm/idle.lua") -- sets.idle
-	include("rdm/idle-hybrid.lua") -- sets.idle.hybrid
 	include("rdm/level60.lua") -- sets.level60
 	include("rdm/naked.lua") -- sets.naked
 	include("rdm/tp.lua") -- sets.tp
-	include("rdm/tp-hybrid.lua") -- sets.tp.hybrid
 	include("rdm/weapon.lua") -- sets.weapon
 	include("rdm/ws.lua") -- sets.ws
 	include("rdm/ws-dark.lua") -- sets.ws.dark
@@ -114,12 +112,6 @@ function get_sets()
 	if _SEALED_FATE then
 		include("rdm/sealed-fate/tp.lua") -- sets.tp
 		-- sets.enspell = sets.tp
-	end
-
-	_HYBRID = false
-	if _HYBRID then
-		sets.idle = sets.idle.hybrid
-		sets.tp = sets.tp.hybrid
 	end
 
 	send_command(

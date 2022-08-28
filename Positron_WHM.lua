@@ -246,9 +246,9 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
-		if spell.english == "Sublimation" or buffactive_sublimation() then
-			equip(sets.sublimation)
-		end
+		-- if spell.english == "Sublimation" or buffactive_sublimation() then
+			-- equip(sets.sublimation)
+		-- end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end
@@ -262,9 +262,9 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
-		if buffactive_sublimation() then
-			equip(sets.sublimation)
-		end
+		-- if buffactive_sublimation() then
+			-- equip(sets.sublimation)
+		-- end
 	end
 end
 
