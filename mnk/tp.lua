@@ -2,7 +2,7 @@ sets.tp={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Malignance Chapeau",
 	body={ name="Mpaca's Doublet", augments={'Path: A',}},
-	hands="Malignance Gloves",
+	hands={ name="Mpaca's Gloves", augments={'Path: A',}},
 	legs="Malignance Tights",
 	feet="Malignance Boots",
 	neck="Combatant's Torque",

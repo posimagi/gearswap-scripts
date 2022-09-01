@@ -7,9 +7,9 @@ sets.weakws={
 	feet={ name="Sak. Sune-Ate +1", augments={'Enhances "Meikyo Shisui" effect',}},
 	neck="Combatant's Torque",
 	waist="Ioskeha Belt +1",
-	left_ear="Telos Earring",
-	right_ear="Crep. Earring",
+	left_ear="Dedition Earring",
+    right_ear="Telos Earring",
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 	right_ring="Defending Ring",
-	back={ name="Takaha Mantle", augments={'STR+1','"Zanshin"+1','"Store TP"+3',}},
+	back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 }

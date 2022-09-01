@@ -8,7 +8,7 @@ sets.midcast.enfeebling={
 	neck="Erra Pendant",
 	waist="Luminary Sash",
 	left_ear="Regal Earring",
-	right_ear="Malignance Earring",
+	right_ear={ name="Ebers Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Kishar Ring",
 	back={ name="Alaunus's Cape", augments={'MND+20','Accuracy+20 Attack+20','MND+10','Weapon skill damage +10%',}},

@@ -1,4 +1,4 @@
 sets.th.medium={
-	hands={ name="Plun. Armlets +3", augments={'Enhances "Perfect Dodge" effect',}},
+	feet="Skulk. Poulaines +2",
 	waist="Chaac Belt",
 }

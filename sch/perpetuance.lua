@@ -1,3 +1,3 @@
 sets.perpetuance={
-	hands="Arbatel Bracers +1",
+	hands="Arbatel Bracers +2",
 }

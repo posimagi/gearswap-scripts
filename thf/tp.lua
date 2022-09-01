@@ -2,7 +2,7 @@ sets.tp={
 	ammo="Yamarang",
 	head="Malignance Chapeau",
 	body="Malignance Tabard",
-	hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
+	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet="Malignance Boots",
 	neck="Combatant's Torque",

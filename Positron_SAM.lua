@@ -10,9 +10,9 @@ function get_sets()
 
 	include("sam/idle.lua") -- sets.idle
 	include("sam/tp.lua") -- sets.tp
-	include("sam/turtle.lua") -- sets.turtle
 	include("sam/weakws.lua") -- sets.weakws
 	include("sam/ws.lua") -- sets.ws
+	include("sam/ws-pdl.lua") -- sets.ws.pdl
 	include("sam/ws-magical.lua") -- sets.ws.magical
 	include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
 	include("sam/ws-multihit.lua") -- sets.ws.multihit

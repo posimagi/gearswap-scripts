@@ -5,11 +5,11 @@ sets.ws={
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
-	neck="Rep. Plat. Medal",
+	neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
 	waist="Grunfeld Rope",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Thrud Earring",
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
-	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Damage taken-5%',}},
+	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

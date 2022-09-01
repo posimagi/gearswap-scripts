@@ -1,7 +1,7 @@
 sets.tp={
 	head="Malignance Chapeau",
-	body="Malignance Tabard",
-	hands="Malignance Gloves",
+	body={ name="Mpaca's Doublet", augments={'Path: A',}},
+	hands={ name="Mpaca's Gloves", augments={'Path: A',}},
 	legs="Malignance Tights",
 	feet="Malignance Boots",
 	neck="Combatant's Torque",
