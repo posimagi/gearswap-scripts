@@ -12,21 +12,27 @@ function get_sets()
 	include("sam/tp.lua") -- sets.tp
 	include("sam/weakws.lua") -- sets.weakws
 	include("sam/ws.lua") -- sets.ws
-	include("sam/ws-pdl.lua") -- sets.ws.pdl
+	include("sam/ws-hybrid.lua") -- sets.ws.hybrid
 	include("sam/ws-magical.lua") -- sets.ws.magical
 	include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
 	include("sam/ws-multihit.lua") -- sets.ws.multihit
+	include("sam/ws-pdl.lua") -- sets.ws.pdl
 	include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
 
 	include("sam/precast-meditate.lua") -- sets.precast.meditate
 	include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
 
-	_MAGICAL_WS = T {
-		"Aeolian Edge",
+	_HYBRID_WS = T {
 		"Tachi: Goten",
 		"Tachi: Kagero",
 		"Tachi: Jinpu",
 		"Tachi: Koki"
+	}
+
+	_MAGICAL_WS = T {
+		"Aeolian Edge",
+		"Raiden Thrust",
+		"Thunder Thrust",
 	}
 
 	_MULTI_HIT_WS = T {
@@ -70,6 +76,9 @@ function precast(spell, position)
 			equip(sets.ws.multihit)
 		elseif _MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.magical)
+			obi_check(spell)
+		elseif _HYBRID_WS:contains(spell.english) then
+			equip(sets.ws.hybrid)
 			obi_check(spell)
 		end
 		if buffactive["Meikyo Shisui"] then

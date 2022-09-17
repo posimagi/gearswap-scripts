@@ -8,7 +8,7 @@ sets.tp={
 	neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
 	waist="Ioskeha Belt +1",
 	left_ear="Dedition Earring",
-    right_ear={ name="Kasuga Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+9','Mag. Acc.+9',}},
+    right_ear={ name="Kasuga Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Weapon skill damage +2%',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Chirich Ring +1",
 	back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},

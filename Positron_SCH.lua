@@ -58,7 +58,15 @@ function get_sets()
 		"Aero",
 		"Stone",
 		"Thunder",
-		"Water"
+		"Water",
+		"Geohelix",
+		"Hydrohelix",
+		"Anemohelix",
+		"Pyrohelix",
+		"Cryohelix",
+		"Ionohelix",
+		"Noctohelix",
+		"Luminohelix",
 	}
 
 	_TIER_TWO_NUKES = T {
@@ -177,9 +185,9 @@ function midcast(spell)
 		end
 		if world.area:contains("Outer Ra'Kaznar [U") then
 			if _TIER_ONE_NUKES:contains(spell.english) then
-				-- equip(sets.naked)
+				equip(sets.naked)
 			elseif _TIER_TWO_NUKES:contains(spell.english) then
-				-- equip(sets.midcast.elemental.vagary)
+				equip(sets.midcast.elemental.vagary)
 			end
 		end
 	elseif spell.skill == "Dark Magic" then

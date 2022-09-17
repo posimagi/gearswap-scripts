@@ -1,5 +1,5 @@
 sets.midcast.elemental={
-	head={ name="Nyame Helm", augments={'Path: B',}},
+	head="Azimuth Hood +2",
 	body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
 	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 	legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},

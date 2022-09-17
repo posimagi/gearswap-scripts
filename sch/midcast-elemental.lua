@@ -3,7 +3,7 @@ sets.midcast.elemental={
 	head={ name="Peda. M.Board +3", augments={'Enh. "Altruism" and "Focalization"',}},
 	body="Acad. Gown +3",
 	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-	legs={ name="Peda. Pants +3", augments={'Enhances "Tabula Rasa" effect',}},
+	legs="Arbatel Pants +2",
 	-- feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	feet="Arbatel Loafers +2",
 	neck="Mizu. Kubikazari",

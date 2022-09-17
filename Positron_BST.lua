@@ -15,6 +15,7 @@ function get_sets()
 
 	include("bst/precast-callbeast.lua") -- sets.precast.callbeast
 	include("bst/precast-sic.lua") -- sets.precast.sic
+	include("bst/precast-spur.lua") -- sets.precast.spur
 
 	include("bst/petmidcast-sic.lua") -- sets.petmidcast.sic
 
@@ -22,6 +23,7 @@ function get_sets()
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
+		"Cloudsplitter",
 	}
 
 	send_command(

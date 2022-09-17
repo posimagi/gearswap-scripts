@@ -1,5 +1,5 @@
 sets.midcast.statusremoval={
-	head="Ebers Cap +1",
+	head="Ebers Cap +2",
 	hands="Ebers Mitts +2",
 	legs="Ebers Pant. +2",
 	neck={ name="Clr. Torque +2", augments={'Path: A',}},

@@ -12,6 +12,7 @@ function get_sets()
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
+	include("all/midcast-darkness.lua") -- sets.midcast.darkness
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("blu/fastcast.lua") -- sets.fastcast
@@ -80,6 +81,9 @@ function precast(spell, position)
 		end
 	else
 		equip(sets.fastcast)
+		if spell.english:contains("Stoneskin") then
+			equip(sets.precast.stoneskin)
+		end
 	end
 end
 
@@ -97,8 +101,13 @@ function midcast(spell)
 			equip(sets.idle, sets.th)
 		elseif _ENFEEBLING_SPELLS:contains(spell.english) then
 			equip(sets.idle, sets.midcast.enfeebling)
+		elseif spell.english:contains("Stoneskin") then
+			equip(sets.idle, sets.midcast.stoneskin)
 		else
 			equip(sets.idle, sets.midcast.elemental)
+			if spell.english:contains("Tenebral Crush") then
+				equip(sets.midcast.darkness)
+			end
 			obi_check(spell)
 		end
 		if buffactive["Diffusion"] then

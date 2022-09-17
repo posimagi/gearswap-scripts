@@ -83,21 +83,21 @@ function get_sets()
 		sets.idle = set_combine(sets.idle, sets.regen)
 	end
 
-	_TH = "minimal"
-	if _TH == "full" then
+	_TREASURE_HUNTER = "minimal"
+	if _TREASURE_HUNTER == "full" then
 		sets.tp = set_combine(sets.tp, sets.th)
 		sets.ws = set_combine(sets.ws, sets.th)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
 		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th)
-	elseif _TH == "medium" then
+	elseif _TREASURE_HUNTER == "medium" then
 		sets.tp = set_combine(sets.tp, sets.th.medium)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
 		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.medium)
-	elseif _TH == "minimal" then
+	elseif _TREASURE_HUNTER == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
 		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.medium)
-	elseif _TH == "none" then
+	elseif _TREASURE_HUNTER == "none" then
 		-- do nothing
 	end
 

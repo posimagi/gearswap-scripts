@@ -19,10 +19,12 @@ function get_sets()
 
 	include("run/precast-battuta.lua") -- sets.precast["Battuta"]
 	include("run/precast-elementalsforzo.lua") -- sets.precast["Elemental Sforzo"]
+	include("run/precast-enhancing.lua") -- sets.precast.enhancing
 	include("run/precast-liement.lua") -- sets.precast["Liement"]
+	include("run/precast-rayke.lua") -- sets.precast["Rayke"]
 	include("run/precast-vallation.lua") -- sets.precast["Vallation"], sets.precast["Valiance"]
 	include("run/precast-vivaciouspulse.lua") -- sets.precast["Vivacious Pulse"]
-	include("run/precast-enhancing.lua") -- sets.precast.enhancing
+	
 
 	include("run/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("run/midcast-phalanx.lua") -- sets.midcast.phalanx

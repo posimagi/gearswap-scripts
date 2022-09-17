@@ -1,9 +1,9 @@
 sets.tp={
-	head={ name="Nyame Helm", augments={'Path: B',}},
+	head="Azimuth Hood +2",
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
-	feet={ name="Nyame Sollerets", augments={'Path: B',}},
+	feet="Azimuth Gaiters +2",
 	neck="Combatant's Torque",
 	waist="Olseni Belt",
 	left_ear="Telos Earring",
