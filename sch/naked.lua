@@ -10,6 +10,6 @@ sets.naked={
 	waist="Embla Sash",
 	left_ear="Etiolation Earring",
 	right_ear="Loquac. Earring",
-	left_ring="Kishar Ring",
+	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 	right_ring="Defending Ring",
 }

@@ -11,5 +11,4 @@ sets.naked={
 	right_ear="Loquac. Earring",
 	left_ring="Kishar Ring",
 	right_ring="Defending Ring",
-	back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

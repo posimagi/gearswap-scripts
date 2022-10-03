@@ -36,9 +36,10 @@ function get_sets()
 	}
 
 	_MULTI_HIT_WS = T {
+		"Asuran Fists",
 		"Dancing Edge",
 		"Evisceration",
-		"Exenterator"
+		"Exenterator",
 	}
 
 	_HYBRID = true

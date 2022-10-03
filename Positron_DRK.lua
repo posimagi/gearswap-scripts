@@ -10,6 +10,7 @@ function get_sets()
 	include("drk/idle.lua") -- sets.idle
 	include("drk/tp.lua") -- sets.tp
 	include("drk/ws.lua") -- sets.ws
+	include("drk/ws-multihit.lua") -- sets.ws.multihit
 	include("drk/ws-magical.lua") -- sets.ws.magical
 
 	include("drk/precast-lastresort.lua") -- sets.precast.lastresort
@@ -18,6 +19,10 @@ function get_sets()
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
+	}
+
+	_MULTI_HIT_WS = T {
+		"Resolution",
 	}
 
 	send_command(
@@ -54,6 +59,8 @@ function precast(spell, position)
 		if _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
+		elseif _MULTI_HIT_WS:contains(spell.name) then
+			equip(sets.ws.multihit)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Last Resort") then

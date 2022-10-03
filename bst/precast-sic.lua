@@ -1,4 +1,4 @@
 sets.precast.sic={
-    hands="Nukumi Manoplas +1",
+    hands="Nukumi Manoplas +2",
     legs="Gleti's Breeches",
 }

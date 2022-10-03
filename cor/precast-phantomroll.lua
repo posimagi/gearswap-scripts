@@ -1,7 +1,7 @@
 sets.precast.phantomroll={
 	head={ name="Lanun Tricorne +2", augments={'Enhances "Winning Streak" effect',}},
-	body="Chasseur's Frac +1",
-	hands="Chasseur's Gants +1",
+	body="Chasseur's Frac +2",
+	hands="Chasseur's Gants +2",
 	legs={ name="Desultor Tassets", augments={'"Phantom Roll" ability delay -5','Movement speed +8%+2',}}, -- [sic]
 	neck="Regal Necklace",
 	right_ring="Luzaf's Ring",

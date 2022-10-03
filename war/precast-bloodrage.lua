@@ -1,3 +1,3 @@
 sets.precast.bloodrage={
-	body="Boii Lorica +1",
+	body="Boii Lorica +2",
 }

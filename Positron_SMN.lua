@@ -49,6 +49,11 @@ function get_sets()
 		"Cataclysm"
 	}
 
+	_HYBRID = true
+	if _HYBRID then
+		include("smn/idle-hybrid.lua") -- sets.idle
+	end
+
 	send_command(
 		"input /macro book 15; \
 	wait 1; \

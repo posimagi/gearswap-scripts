@@ -1,5 +1,5 @@
 sets.idle={
-	head="Beckoner's Horn +1",
+	head="Beckoner's Horn +2",
 	body="Shomonjijoe +1",
 	hands="Volte Gloves",
 	legs="Volte Brais",
