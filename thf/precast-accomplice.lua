@@ -1,3 +1,3 @@
 sets.precast.accomplice={
-	head="Skulker's Bonnet +1",
+	head="Skulker's Bonnet +2",
 }

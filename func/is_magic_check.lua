@@ -1,4 +1,4 @@
-_MAGIC_TYPES = T{
+_MAGIC_TYPES = T {
 	"Divine Magic",
 	"Healing Magic",
 	"Enhancing Magic",

@@ -7,9 +7,9 @@ sets.ws.multihit={
 	feet="Pumm. Calligae +3",
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
-	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Telos Earring",
+	left_ear="Telos Earring",
+	right_ear={ name="Boii Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
-	back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

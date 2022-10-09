@@ -49,7 +49,7 @@ function get_sets()
 		"Cataclysm"
 	}
 
-	_HYBRID = true
+	_HYBRID = false
 	if _HYBRID then
 		include("smn/idle-hybrid.lua") -- sets.idle
 	end

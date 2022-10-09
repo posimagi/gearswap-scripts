@@ -10,6 +10,7 @@ function get_sets()
 	include("dnc/enmity.lua") -- sets.enmity
 	include("dnc/fastcast.lua") -- sets.fastcast
 	include("dnc/idle.lua") -- sets.idle
+	include("dnc/movementspeed.lua") -- sets.movementspeed
 	include("dnc/tp.lua") -- sets.tp
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-magical.lua") -- sets.ws.magical
@@ -26,6 +27,7 @@ function get_sets()
 	include("dnc/precast-waltzes.lua") -- sets.precast.waltzes
 
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
+	include("func/buffactive_movementspeed.lua") -- buffactive_movementspeed()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/obi_check.lua") -- obi_check()
 
@@ -164,6 +166,18 @@ function buff_change(name, gain, buff_details)
 			if player.status == "Engaged" then
 				equip(sets.tp)
 			elseif player.status == "Idle" then
+				equip(sets.idle)
+			end
+		end
+	elseif _MOVEMENT_SPEED_BUFFS:contains(name) then
+		if gain then
+			sets.idle = set_combine(sets.idle, sets.movementspeed)
+			if player.status == "Idle" then
+				equip(sets.idle)
+			end
+		else
+			include("dnc/idle.lua") -- sets.idle
+			if player.status == "Idle" then
 				equip(sets.idle)
 			end
 		end

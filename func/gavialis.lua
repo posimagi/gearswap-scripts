@@ -1,4 +1,4 @@
-gavialis_properties = T{}
+gavialis_properties = T {}
 gavialis_properties["Firesday"] = {
 	"Liquefaction",
 	"Fusion",
@@ -42,9 +42,9 @@ gavialis_properties["Darksday"] = {
 
 function gavialis(spell)
 	if gavialis_properties[world.day]:contains(spell.wsA) or
-	 gavialis_properties[world.day]:contains(spell.wsB) or
-	 gavialis_properties[world.day]:contains(spell.wsC) then
-	return true
+		gavialis_properties[world.day]:contains(spell.wsB) or
+		gavialis_properties[world.day]:contains(spell.wsC) then
+		return true
 	end
 	return false
 end

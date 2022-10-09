@@ -29,6 +29,7 @@ function get_sets()
 	include("geo/precast-elemental.lua") -- sets.precast.elemental
 	include("geo/precast-fullcircle.lua") -- sets.precast.fullcircle
 	include("geo/precast-healing.lua") -- sets.precast.healing
+	include("geo/precast-lifecycle.lua") -- sets.precast.lifecycle
 
 	include("geo/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("geo/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -103,6 +104,8 @@ function precast(spell, position)
 			equip(sets.precast.bolster)
 		elseif spell.english:contains("Full Circle") then
 			equip(sets.precast.fullcircle)
+		elseif spell.english:contains("Life Cycle") then
+			equip(sets.precast.lifecycle)
 		end
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.precast.healing)

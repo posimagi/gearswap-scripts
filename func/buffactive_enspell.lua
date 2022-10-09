@@ -1,8 +1,7 @@
 function buffactive_enspell()
-	if 
-		buffactive['Enfire'] or
-		 buffactive['Enblizzard'] or
-		 buffactive['Enaero'] or
+	if buffactive['Enfire'] or
+		buffactive['Enblizzard'] or
+		buffactive['Enaero'] or
 		buffactive['Enstone'] or
 		buffactive['Enthunder'] or
 		buffactive['Enwater'] or
@@ -12,7 +11,7 @@ function buffactive_enspell()
 		buffactive['Enstone II'] or
 		buffactive['Enthunder II'] or
 		buffactive['Enwater II'] then
-	return true
+		return true
 	end
 	return false
 end

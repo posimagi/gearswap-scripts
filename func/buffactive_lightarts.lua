@@ -1,8 +1,7 @@
 function buffactive_lightarts()
-	if 
-		buffactive['Light Arts'] or
+	if buffactive['Light Arts'] or
 		buffactive['Addendum: White'] then
-	return true
+		return true
 	end
 	return false
 end

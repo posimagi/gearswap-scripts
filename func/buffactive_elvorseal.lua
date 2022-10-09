@@ -1,6 +1,6 @@
 function buffactive_elvorseal()
 	if buffactive['Elvorseal'] then
-	return true
+		return true
 	end
 	return false
 end

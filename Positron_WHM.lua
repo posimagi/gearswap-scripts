@@ -4,6 +4,7 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/buffactive_movementspeed.lua") -- buffactive_movementspeed()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
@@ -21,6 +22,7 @@ function get_sets()
 	include("whm/fastcast.lua") -- sets.fastcast
 	include("whm/hpdown.lua") -- sets.hpdown
 	include("whm/idle.lua") -- sets.idle
+	include("whm/movementspeed.lua") -- sets.movementspeed
 	include("whm/sublimation.lua") -- sets.sublimation
 	include("whm/tp.lua") -- sets.tp
 	include("whm/weapon.lua") -- sets.weapon
@@ -265,6 +267,22 @@ function status_change(new, old)
 		-- if buffactive_sublimation() then
 			-- equip(sets.sublimation)
 		-- end
+	end
+end
+
+function buff_change(name, gain, buff_details)
+	if _MOVEMENT_SPEED_BUFFS:contains(name) then
+		if gain then
+			sets.idle = set_combine(sets.idle, sets.movementspeed)
+			if player.status == "Idle" then
+				equip(sets.idle)
+			end
+		else
+			include("whm/idle.lua") -- sets.idle
+			if player.status == "Idle" then
+				equip(sets.idle)
+			end
+		end
 	end
 end
 
