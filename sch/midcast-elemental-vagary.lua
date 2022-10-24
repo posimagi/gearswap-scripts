@@ -1,6 +1,4 @@
 sets.midcast.elemental.vagary={
-	main={ name="Bunzi's Rod", augments={'Path: A',}},
-	sub="Ammurapi Shield",
 	ammo="Staunch Tathlum",
 	head=empty,
 	body="Acad. Gown +3",

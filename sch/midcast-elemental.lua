@@ -5,7 +5,7 @@ sets.midcast.elemental={
 	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 	legs="Arbatel Pants +2",
 	-- feet={ name="Agwu's Pigaches", augments={'Path: A',}},
-	feet="Arbatel Loafers +2",
+	feet="Arbatel Loafers +3",
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",

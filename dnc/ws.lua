@@ -1,6 +1,6 @@
 sets.ws={
 	ammo="C. Palug Stone",
-	head={ name="Nyame Helm", augments={'Path: B',}},
+	head="Maculele Tiara +3",
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands="Maxixi Bangles +3",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},

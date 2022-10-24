@@ -4,7 +4,7 @@ sets.midcast.enhancing={
 	body="Lethargy Sayon +2",
 	hands="Atrophy Gloves +3",
 	legs="Leth. Fuseau +2",
-	feet="Leth. Houseaux +2",
+	feet="Leth. Houseaux +3",
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Embla Sash",
 	left_ear="Mimir Earring",

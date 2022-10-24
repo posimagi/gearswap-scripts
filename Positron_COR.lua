@@ -79,6 +79,11 @@ function get_sets()
 		sets.midcast.ra = sets.storetp
 	end
 
+	_ZNM = false
+	if _ZNM then
+		include("cor/idle-znm.lua") -- sets.idle
+	end
+
 	send_command(
 		"input /macro book 11; \
 	wait 1; \

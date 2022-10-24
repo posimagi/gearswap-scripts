@@ -8,6 +8,7 @@ function get_sets()
 	include("func/buffactive_aftermath.lua") -- buffactive_aftermath()
 	include("func/obi_check.lua") -- obi_check()
 
+	include("all/doom.lua") -- sets.doom
 	include("all/obi.lua") -- sets.obi
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
@@ -169,4 +170,17 @@ function status_change(new, old)
 end
 
 function buff_change(name, gain, buff_details)
+	if name == "doom" then -- "doom" is explicitly lowercase
+		if gain then
+			equip(sets.doom)
+			disable("neck", "left_ring")
+		else
+			enable("neck", "left_ring")
+			if player.status == "Idle" then
+				equip(sets.idle)
+			elseif player.status == "Engaged" then
+				equip(sets.tp)
+			end
+		end
+	end
 end

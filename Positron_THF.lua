@@ -20,6 +20,7 @@ function get_sets()
 	include("thf/tp.lua") -- sets.tp
 	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
 	include("thf/weapon.lua") -- sets.weapon
+	include("thf/weapon-omen.lua") -- sets.weapon.omen
 	include("thf/ws.lua") -- sets.ws
 	include("thf/ws-critical.lua") -- sets.ws.critical
 	include("thf/ws-magical.lua") -- sets.ws.magical

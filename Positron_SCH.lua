@@ -6,6 +6,7 @@ function get_sets()
 
 	include("func/buffactive_darkarts.lua") -- buffactive_darkarts()
 	include("func/buffactive_lightarts.lua") -- buffactive_lightarts()
+	include("func/buffactive_movementspeed.lua") -- buffactive_movementspeed()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
 
@@ -24,6 +25,7 @@ function get_sets()
 	include("sch/fastcast.lua") -- sets.fastcast
 	include("sch/idle.lua") -- sets.idle
 	include("sch/lightarts.lua") -- sets.lightarts
+	include("sch/movementspeed.lua") -- sets.movementspeed
 	include("sch/naked.lua") -- sets.naked
 	include("sch/perpetuance.lua") -- sets.perpetuance
 	include("sch/sublimation.lua") -- sets.sublimation
@@ -201,6 +203,11 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
+		if world.area:contains("Outer Ra'Kaznar [U") then
+			if _TIER_ONE_NUKES:contains(spell.english) then
+				equip(sets.darkarts)
+			end
+		end
 		if player.tp < 1000 then
 			if buffactive["Light Arts"] and not spell.english:contains("Dark Arts") then
 				equip(sets.lightarts)
@@ -226,6 +233,22 @@ function status_change(new, old)
 		equip(sets.idle)
 		if buffactive_sublimation() then
 			equip(sets.sublimation)
+		end
+	end
+end
+
+function buff_change(name, gain, buff_details)
+	if _MOVEMENT_SPEED_BUFFS:contains(name) then
+		if gain then
+			sets.idle = set_combine(sets.idle, sets.movementspeed)
+			if player.status == "Idle" then
+				equip(sets.idle)
+			end
+		else
+			include("sch/idle.lua") -- sets.idle
+			if player.status == "Idle" then
+				equip(sets.idle)
+			end
 		end
 	end
 end
