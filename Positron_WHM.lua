@@ -19,6 +19,7 @@ function get_sets()
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("whm/dt.lua") -- sets.dt
 	include("whm/fastcast.lua") -- sets.fastcast
 	include("whm/hpdown.lua") -- sets.hpdown
 	include("whm/idle.lua") -- sets.idle
@@ -190,7 +191,7 @@ end
 
 function midcast(spell)
 	if spell.skill == "Healing Magic" then
-		equip(sets.midcast.healing)
+		equip(sets.idle, sets.dt, sets.midcast.healing)
 		if spell.english:contains("Curaga") or spell.english:contains("Cura") then
 			equip(sets.midcast.curaga)
 			obi_check(spell)
@@ -203,14 +204,14 @@ function midcast(spell)
 			obi_check(spell)
 		end
 	elseif spell.skill == "Enfeebling Magic" then
-		equip(sets.midcast.enfeebling)
+		equip(sets.idle, sets.dt, sets.midcast.enfeebling)
 		if spell.english:contains("Dia") then
 			equip(sets.th)
 		elseif spell.english:contains("Dispelga") then
 			equip(sets.dispelga)
 		end
 	elseif spell.skill == "Enhancing Magic" then
-		equip(sets.midcast.enhancing)
+		equip(sets.idle, sets.dt, sets.midcast.enhancing)
 		if spell.english:contains("Erase") then
 			equip(sets.midcast.healing)
 		elseif spell.english:contains("Regen") then
@@ -228,7 +229,7 @@ function midcast(spell)
 			equip(sets.midcast.aquaveil)
 		end
 	elseif spell.skill == "Divine Magic" then
-		equip(sets.midcast.enfeebling, sets.midcast.divine)
+		equip(sets.idle, sets.dt, sets.midcast.enfeebling, sets.midcast.divine)
 		if spell.english:contains("Holy") then
 			equip(sets.midcast.elemental, sets.midcast.holy)
 			obi_check(spell)
@@ -237,7 +238,7 @@ function midcast(spell)
 			obi_check(spell)
 		end
 	elseif spell.skill == "Dark Magic" then
-		equip(sets.midcast.enfeebling)
+		equip(sets.idle, sets.dt, sets.midcast.enfeebling)
 	elseif spell.skill == "Elemental Magic" then
 		if spell.english:contains("Impact") then
 			equip(sets.impact)

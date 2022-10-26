@@ -79,7 +79,7 @@ function get_sets()
 		sets.midcast.ra = sets.storetp
 	end
 
-	_ZNM = false
+	_ZNM = true
 	if _ZNM then
 		include("cor/idle-znm.lua") -- sets.idle
 	end

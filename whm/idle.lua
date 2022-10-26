@@ -1,9 +1,9 @@
 sets.idle={
 	ammo="Homiliary",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Shamash Robe",
+    body="Ebers Bliaut +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    legs="Ebers Pant. +2",
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",

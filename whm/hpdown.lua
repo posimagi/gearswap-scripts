@@ -9,7 +9,7 @@ sets.hpdown={
 	waist=empty,
 	left_ear=empty,
 	right_ear=empty,
-	left_ring=empty,
+	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Defending Ring",
 	back=empty,
 }
