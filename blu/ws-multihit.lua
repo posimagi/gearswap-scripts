@@ -1,7 +1,7 @@
 sets.ws.multihit={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Malignance Chapeau",
-	body="Ayanmo Corazza +2",
+	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},

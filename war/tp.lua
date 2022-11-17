@@ -8,7 +8,7 @@ sets.tp={
 	neck={ name="War. Beads +2", augments={'Path: A',}},
 	waist="Ioskeha Belt +1",
 	left_ear="Telos Earring",
-	right_ear={ name="Boii Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
+	right_ear={ name="Boii Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Chirich Ring +1",
 	back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},

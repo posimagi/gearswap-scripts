@@ -3,7 +3,7 @@ sets.midcast.healing={
 	head={ name="Ebers Cap +2", priority=13},
 	body={ name="Ebers Bliaut +3", priority=16},
 	hands={ name="Theophany Mitts +3", priority=12},
-	legs={ name="Ebers Pant. +2", priority=15},
+	legs={ name="Ebers Pant. +3", priority=15},
 	feet={ name="Piety Duckbills +3", augments={'Enhances "Afflatus Solace" effect', priority=14}},
 	neck={ name="Clr. Torque +2", augments={'Path: A',}},
 	waist="Luminary Sash",

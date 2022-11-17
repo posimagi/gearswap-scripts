@@ -1,7 +1,7 @@
 sets.midcast.enfeebling={
 	ammo="Pemphredo Tathlum",
 	head={ name="Amalric Coif +1", augments={'INT+12','Mag. Acc.+25','Enmity-6',}},
-	body="Spaekona's Coat +2",
+	body="Spaekona's Coat +3",
 	hands="Jhakri Cuffs +2",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet="Jhakri Pigaches +2",

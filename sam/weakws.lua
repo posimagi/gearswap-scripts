@@ -3,7 +3,7 @@ sets.weakws={
 	head="Flam. Zucchetto +2",
 	body="Emet Harness +1",
 	hands="Wakido Kote +3",
-	legs={ name="Sakonji Haidate +1", augments={'Enhances "Shikikoyo" effect',}},
+	legs={ name="Sakonji Haidate +2", augments={'Enhances "Shikikoyo" effect',}},
 	feet={ name="Sak. Sune-Ate +1", augments={'Enhances "Meikyo Shisui" effect',}},
 	neck="Combatant's Torque",
 	waist="Ioskeha Belt +1",

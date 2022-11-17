@@ -3,7 +3,7 @@ sets.idle={
     head={ name="Nyame Helm", augments={'Path: B',}},
     body="Ebers Bliaut +3",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Ebers Pant. +2",
+    legs="Ebers Pant. +3",
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",

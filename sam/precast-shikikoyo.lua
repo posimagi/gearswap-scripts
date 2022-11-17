@@ -1,3 +1,3 @@
 sets.precast.shikikoyo={
-	legs={ name="Sakonji Haidate +1", augments={'Enhances "Shikikoyo" effect',}},
+	legs={ name="Sakonji Haidate +2", augments={'Enhances "Shikikoyo" effect',}},
 }
