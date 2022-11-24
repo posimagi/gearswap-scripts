@@ -1,5 +1,5 @@
 sets.ws.magical={
-	ammo="Pemphredo Tathlum",
+	ammo="Oshasha's Treatise",
 	head={ name="Nyame Helm", augments={'Path: B',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
@@ -8,8 +8,8 @@ sets.ws.magical={
 	neck="Sanctity Necklace",
 	waist="Eschan Stone",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Ishvara Earring",
+	right_ear="Friomisi Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-	right_ring="Regal Ring",
+	right_ring="Dingir Ring",
 	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

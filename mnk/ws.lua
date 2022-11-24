@@ -1,5 +1,5 @@
 sets.ws={
-	ammo="Knobkierrie",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head={ name="Mpaca's Cap", augments={'Path: A',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},

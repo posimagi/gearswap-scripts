@@ -1,7 +1,7 @@
 sets.idle={
 	ammo="Homiliary",
 	head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-	body="Lethargy Sayon +2",
+	body="Lethargy Sayon +3",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs="Carmine Cuisses +1",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},

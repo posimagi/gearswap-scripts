@@ -6,7 +6,7 @@ sets.idle={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
-	waist="Flume Belt +1",
+	waist="Engraved Belt",
 	left_ear="Tuisto Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},

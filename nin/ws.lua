@@ -1,5 +1,5 @@
 sets.ws={
-	ammo="C. Palug Stone",
+	ammo="Oshasha's Treatise",
 	head={ name="Mpaca's Cap", augments={'Path: A',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},

@@ -1,7 +1,7 @@
 sets.midcast.elemental={
 	ammo="Pemphredo Tathlum",
 	head="Leth. Chappel +2",
-	body="Lethargy Sayon +2",
+	body="Lethargy Sayon +3",
 	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
 	legs="Leth. Fuseau +2",
 	feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},

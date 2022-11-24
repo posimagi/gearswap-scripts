@@ -6,7 +6,7 @@ sets.tp={
     legs="Malignance Tights",
     feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
     neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist="Flume Belt +1",
+    waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},

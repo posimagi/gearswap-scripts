@@ -24,6 +24,7 @@ function get_sets()
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cloudsplitter",
+		"Primal Rend",
 	}
 
 	send_command(

@@ -1,5 +1,5 @@
 sets.ws.multihit={
-	ammo="C. Palug Stone",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head={ name="Mpaca's Cap", augments={'Path: A',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Adhemar Wrist. +1", augments={'Accuracy+20','Attack+20','"Subtle Blow"+8',}},
