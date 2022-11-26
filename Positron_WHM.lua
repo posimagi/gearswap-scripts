@@ -29,6 +29,7 @@ function get_sets()
 	include("whm/weapon.lua") -- sets.weapon
 	include("whm/ws.lua") -- sets.ws
 	include("whm/ws-clubskill.lua") -- sets.ws.clubskill
+	include("whm/ws-dark.lua") -- sets.ws.dark
 	include("whm/ws-hp.lua") -- sets.ws.hp
 	include("whm/ws-multihit.lua") -- sets.ws.multihit
 
@@ -52,6 +53,10 @@ function get_sets()
 	include("whm/midcast-holy.lua") -- sets.midcast.holy
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
+
+	_DARK_WS = T {
+		"Cataclysm"
+	}
 
 	_MAGICAL_WS = T {
 		"Cataclysm",
@@ -160,7 +165,10 @@ function precast(spell, position)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _MAGICAL_WS:contains(spell.name) then
+		if _DARK_WS:contains(spell.name) then
+			equip(sets.ws.dark)
+			obi_check(spell)
+		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.name) then

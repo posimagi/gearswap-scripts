@@ -6,7 +6,7 @@ sets.midcast.enfeebling={
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
 	feet="Acad. Loafers +3",
 	neck="Incanter's Torque",
-	waist={ name="Obstin. Sash", augments={'Path: A',}},z
+	waist={ name="Obstin. Sash", augments={'Path: A',}},
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
