@@ -10,6 +10,7 @@ function get_sets()
 
 	include("all/doom.lua") -- sets.doom
 	include("all/obi.lua") -- sets.obi
+	include("all/orpheus.lua") -- sets.orpheus
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("rng/idle.lua") -- sets.idle
@@ -102,6 +103,7 @@ function precast(spell, position)
 		end
 		if _MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.magical)
+			equip(sets.orpheus) -- FIXME
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)

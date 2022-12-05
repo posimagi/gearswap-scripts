@@ -1,6 +1,6 @@
 sets.fastcast={
 	ammo="Sapience Orb", -- 2%
-	head={ name="Bunzi's Hat", augments={'Path: A',},  priority=14}, -- 10%
+	head="Ebers Cap +3", -- 13%
 	body={ name="Inyanga Jubbah +2", priority=16}, -- 14%
 	hands="Volte Gloves", -- 6%
 	legs={ name="Pinga Pants", priority=15}, -- 11%

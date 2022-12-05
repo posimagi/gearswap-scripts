@@ -4,7 +4,7 @@ sets.ws={
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
-	feet={ name="Nyame Sollerets", augments={'Path: B',}},
+	feet="Leth. Houseaux +3",
 	neck="Rep. Plat. Medal",
 	waist="Grunfeld Rope",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

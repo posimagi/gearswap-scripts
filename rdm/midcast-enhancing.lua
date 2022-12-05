@@ -3,7 +3,7 @@ sets.midcast.enhancing={
 	head="Leth. Chappel +2",
 	body="Lethargy Sayon +3",
 	hands="Atrophy Gloves +3",
-	legs="Leth. Fuseau +2",
+	legs="Leth. Fuseau +3",
 	feet="Leth. Houseaux +3",
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Embla Sash",

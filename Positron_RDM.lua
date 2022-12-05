@@ -7,6 +7,7 @@ function get_sets()
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
+	include("all/orpheus.lua") -- sets.orpheus
 	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
 
@@ -156,7 +157,8 @@ function precast(spell, position)
 			obi_check(spell)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
-			obi_check(spell)
+			equip(sets.orpheus)
+			-- obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.name) then
 			equip(sets.ws.multihit)
 		end

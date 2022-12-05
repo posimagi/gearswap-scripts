@@ -21,6 +21,7 @@ function get_sets()
 	include("blm/manawall.lua") -- sets.manawall
 	include("blm/tp.lua") -- sets.tp
 	include("blm/ws.lua") -- sets.ws
+	include("blm/ws-dark.lua") -- sets.ws.dark
 	include("blm/ws-myrkr.lua") -- sets.ws.myrkr
 
 	include("blm/precast-healing.lua") -- sets.precast.healing
@@ -33,6 +34,10 @@ function get_sets()
 	include("blm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("blm/midcast-elementaldebuff.lua") -- sets.midcast.elementaldebuff
 	include("blm/midcast-refresh.lua") -- sets.midcast.refresh
+
+	_DARK_WS = T {
+		"Cataclysm"
+	}
 
 	_DRAIN_SPELLS = T {
 		"Aspir",
@@ -91,6 +96,8 @@ function precast(spell, position)
 		equip(sets.ws)
 		if spell.english:contains("Myrkr") then
 			equip(sets.ws.myrkr)
+		elseif _DARK_WS:contains(spell.english) then
+			equip(sets.ws.dark)
 		end
 	elseif spell.type == "JobAbility" then
 	else

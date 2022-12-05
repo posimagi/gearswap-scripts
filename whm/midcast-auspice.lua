@@ -1,3 +1,3 @@
 sets.midcast.auspice={
-	feet="Ebers Duckbills +2",
+	feet="Ebers Duckbills +3",
 }
