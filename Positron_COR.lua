@@ -8,6 +8,7 @@ function get_sets()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
+	include("all/orpheus.lua") -- sets.orpheus
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("cor/chronobullet.lua") -- sets.chronobullet
@@ -21,6 +22,7 @@ function get_sets()
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
 	include("cor/ws-magical.lua") -- sets.ws.magical
+	include("cor/ws-magical-melee.lua") -- sets.ws.magical.melee
 	include("cor/ws-multihit.lua") -- sets.ws.multihit
 	include("cor/ws-ranged.lua") -- sets.ws.ranged
 
@@ -47,6 +49,13 @@ function get_sets()
 		"Sanguine Blade",
 		"Seraph Blade",
 		"Wildfire"
+	}
+
+	_MAGICAL_MELEE_WS = T {
+		"Aeolian Edge",
+		"Red Lotus Blade",
+		"Sanguine Blade",
+		"Seraph Blade"
 	}
 
 	_MULTI_HIT_WS = T {
@@ -129,7 +138,9 @@ function precast(spell, position)
 		elseif _MAGICAL_WS:contains(spell.english) then
 			equip(sets.ws.magical)
 			obi_check(spell)
-			if spell.english:contains("Wildfire") and _RA_STORE_TP then
+			if _MAGICAL_MELEE_WS:contains(spell.english) then
+				equip(sets.ws.magical.melee)
+			elseif spell.english:contains("Wildfire") and _RA_STORE_TP then
 				equip(sets.storetp)
 			end
 		elseif _MULTI_HIT_WS:contains(spell.english) then

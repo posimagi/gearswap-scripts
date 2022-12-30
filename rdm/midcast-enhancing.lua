@@ -1,6 +1,6 @@
 sets.midcast.enhancing={
 	ammo="Regal Gem",
-	head="Leth. Chappel +2",
+	head="Leth. Chappel +3",
 	body="Lethargy Sayon +3",
 	hands="Atrophy Gloves +3",
 	legs="Leth. Fuseau +3",

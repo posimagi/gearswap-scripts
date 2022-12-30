@@ -1,3 +1,3 @@
 sets.impetus={
-    body="Bhikku Cyclas +1",
+    body="Bhikku Cyclas +2",
 }

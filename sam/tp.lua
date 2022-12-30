@@ -7,7 +7,7 @@ sets.tp={
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
 	waist="Ioskeha Belt +1",
-	left_ear="Dedition Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear={ name="Kasuga Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','Weapon skill damage +3%',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Chirich Ring +1",

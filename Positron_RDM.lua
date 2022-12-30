@@ -64,6 +64,8 @@ function get_sets()
 		"Frazzle",
 		"Frazzle II",
 		"Frazzle III",
+		"Gravity",
+		"Gravity II",
 		"Paralyze",
 		"Paralyze II",
 		"Poison",

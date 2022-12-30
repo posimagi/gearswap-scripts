@@ -7,7 +7,7 @@ sets.tp={
 	feet="Pumm. Calligae +3",
 	neck={ name="War. Beads +2", augments={'Path: A',}},
 	waist="Ioskeha Belt +1",
-	left_ear="Telos Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear={ name="Boii Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Chirich Ring +1",

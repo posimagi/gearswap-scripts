@@ -2,7 +2,7 @@ sets.tp={
 	ammo="Crepuscular Pebble",
 	head="Arbatel Bonnet +2",
 	body="Arbatel Gown +2",
-	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+	hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
 	legs="Arbatel Pants +2",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Combatant's Torque",

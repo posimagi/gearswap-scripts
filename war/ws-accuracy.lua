@@ -7,7 +7,7 @@ sets.ws.accuracy={
 	feet="Pumm. Calligae +3",
 	neck={ name="War. Beads +2", augments={'Path: A',}},
 	waist="Grunfeld Rope",
-	left_ear="Telos Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Crep. Earring",
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",

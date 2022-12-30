@@ -7,7 +7,7 @@ sets.tp={
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Combatant's Torque",
 	waist="Ioskeha Belt +1",
-	left_ear="Telos Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Crep. Earring",
 	left_ring="Niqmaddu Ring",
 	right_ring="Petrov Ring",

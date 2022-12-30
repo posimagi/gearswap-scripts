@@ -7,7 +7,7 @@ sets.tp={
 	feet="Malignance Boots",
 	neck="Combatant's Torque",
 	waist="Black Belt",
-	left_ear="Telos Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Sherida Earring",
 	left_ring="Niqmaddu Ring",
 	right_ring="Gere Ring",

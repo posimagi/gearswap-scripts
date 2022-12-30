@@ -1,3 +1,3 @@
 sets.precast.footwork={
-    feet="Bhikku Gaiters +1",
+    feet="Bhikku Gaiters +2",
 }

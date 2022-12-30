@@ -6,8 +6,7 @@ sets.midcast.elemental={
 	legs="Hashishin Tayt +2",
 	feet="Hashi. Basmak +2",
 	neck="Sanctity Necklace",
-	waist="Sacro Cord", --
-	-- waist="Orpheus's Sash",
+	waist="Orpheus's Sash",
 	left_ear="Regal Earring",
 	right_ear="Friomisi Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},

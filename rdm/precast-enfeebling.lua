@@ -1,3 +1,3 @@
 sets.precast.enfeebling={
-	head="Leth. Chappel +2",
+	head="Leth. Chappel +3",
 }

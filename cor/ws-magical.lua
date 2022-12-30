@@ -5,7 +5,7 @@ sets.ws.magical={
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Sibyl Scarf",
-    waist="Eschan Stone",
+    waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
     left_ring="Ilabrat Ring",

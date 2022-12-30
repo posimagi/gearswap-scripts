@@ -2,7 +2,7 @@ sets.tp={
 	ammo="Staunch Tathlum",
 	head={ name="Bunzi's Hat", augments={'Path: A',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
-	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+	hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
 	-- hands={ name="Nyame Gauntlets", augments={'Path: B',}}, --
 	legs="Ebers Pant. +3",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},

@@ -1,4 +1,5 @@
 sets.ws.ranged={
+	body={ name="Ikenga's Vest", augments={'Path: A',}},
 	right_ear="Ishvara Earring",
 	left_ring="Ilabrat Ring",
 	right_ring="Dingir Ring",

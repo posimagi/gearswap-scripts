@@ -7,7 +7,7 @@ sets.tp={
 	feet="Pumm. Calligae +3",
 	neck={ name="War. Beads +2", augments={'Path: A',}},
 	waist="Ioskeha Belt +1",
-	left_ear="Telos Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Suppanomimi",
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",

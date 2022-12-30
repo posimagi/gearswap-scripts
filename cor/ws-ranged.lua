@@ -1,7 +1,7 @@
 sets.ws.ranged={
 	head={ name="Nyame Helm", augments={'Path: B',}},
-	body="Laksa. Frac +3",
-	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+	body={ name="Ikenga's Vest", augments={'Path: A',}},
+	hands="Chasseur's Gants +3",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Fotia Gorget",

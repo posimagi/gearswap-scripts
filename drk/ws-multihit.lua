@@ -6,4 +6,5 @@ sets.ws.multihit={
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
+    left_ear={ name="Schere Earring", augments={'Path: A',}},
 }

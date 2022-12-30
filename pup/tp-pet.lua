@@ -6,7 +6,7 @@ sets.tp.pet={
 	feet="Malignance Boots",
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	waist="Ukko Sash",
-	left_ear="Telos Earring",
+	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Crep. Earring",
 	left_ring="Varar Ring +1",
 	right_ring="C. Palug Ring",
