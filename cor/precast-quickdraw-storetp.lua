@@ -7,7 +7,7 @@ sets.precast.quickdraw={
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
     neck="Iskur Gorget",
     waist="Reiki Yotai",
-    left_ear="Cessance Earring",
+    left_ear="Dedition Earring",
     right_ear="Telos Earring",
     left_ring="Ilabrat Ring",
     right_ring="Dingir Ring",

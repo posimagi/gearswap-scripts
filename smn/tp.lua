@@ -9,5 +9,5 @@ sets.tp={
 	left_ear="Dedition Earring",
 	right_ear="Telos Earring",
 	left_ring="Varar Ring +1",
-	right_ring="Petrov Ring",
+	right_ring="Chirich Ring +1",
 }

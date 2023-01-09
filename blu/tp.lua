@@ -8,7 +8,7 @@ sets.tp={
 	neck="Combatant's Torque",
 	waist="Reiki Yotai",
 	left_ear="Suppanomimi",
-	right_ear="Crep. Earring",
+	right_ear={ name="Hashi. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','"Dbl.Atk."+5',}},
 	left_ring="Ilabrat Ring",
 	right_ring="Epona's Ring",
 	back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},

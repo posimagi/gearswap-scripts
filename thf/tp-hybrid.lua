@@ -5,7 +5,7 @@ sets.tp.hybrid={
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet="Malignance Boots",
-	neck="Combatant's Torque",
+	neck={ name="Asn. Gorget +2", augments={'Path: A',}},
 	waist="Reiki Yotai",
 	left_ear="Telos Earring",
 	right_ear="Sherida Earring",

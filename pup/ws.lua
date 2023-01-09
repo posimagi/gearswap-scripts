@@ -7,7 +7,7 @@ sets.ws={
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
-	right_ear="Cessance Earring",
+	right_ear={ name="Kara. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Store TP"+3',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
 	back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},

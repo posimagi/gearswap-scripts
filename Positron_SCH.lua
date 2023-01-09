@@ -24,6 +24,7 @@ function get_sets()
 	include("sch/darkarts.lua") -- sets.darkarts
 	include("sch/fastcast.lua") -- sets.fastcast
 	include("sch/idle.lua") -- sets.idle
+	include("sch/klimaform.lua") -- sets.klimaform
 	include("sch/lightarts.lua") -- sets.lightarts
 	include("sch/movementspeed.lua") -- sets.movementspeed
 	include("sch/naked.lua") -- sets.naked
@@ -184,6 +185,9 @@ function midcast(spell)
 			equip(sets.midcast.darkness)
 		elseif spell.english:contains("Impact") then
 			equip(sets.impact)
+		end
+		if buffactive["Klimaform"] and world.weather_element == spell.element then
+			equip(sets.klimaform)
 		end
 		if world.area:contains("Outer Ra'Kaznar [U") then
 			if _TIER_ONE_NUKES:contains(spell.english) then

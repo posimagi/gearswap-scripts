@@ -25,6 +25,7 @@ function get_sets()
 	include("brd/precast-troubadour.lua") -- sets.precast.troubadour
 
 	include("brd/midcast-ballad.lua") -- sets.midcast.ballad
+	include("brd/midcast-carol.lua") -- sets.midcast.carol
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-lullaby.lua") -- sets.midcast.lullaby
@@ -151,6 +152,8 @@ function midcast(spell)
 			end
 		elseif spell.english:contains("Ballad") then
 			equip(sets.midcast.ballad)
+		elseif spell.english:contains("Carol") then
+			equip(sets.midcast.carol)
 		elseif spell.english:contains("Madrigal") then
 			equip(sets.midcast.madrigal)
 		elseif spell.english:contains("March") then

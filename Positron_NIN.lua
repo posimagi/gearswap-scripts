@@ -4,6 +4,7 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("func/dusk_to_dawn.lua") -- dusk_to_dawn()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/doom.lua") -- sets.doom
@@ -13,6 +14,7 @@ function get_sets()
 	include("nin/futae.lua") -- sets.futae
 	include("nin/idle.lua") -- sets.idle
 	include("nin/fastcast.lua") -- sets.fastcast
+	include("nin/movementspeed.lua") -- sets.movementspeed
 	include("nin/ninjutsu.lua") -- sets.ninjutsu
 	include("nin/tools.lua") -- sets.tools (for validate only)
 	include("nin/tp.lua") -- sets.tp
@@ -128,6 +130,9 @@ function aftercast(spell)
 		return
 	elseif player.status == "Idle" then
 		equip(sets.idle)
+		if dusk_to_dawn() then
+			equip(sets.movementspeed)
+		end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end
@@ -149,6 +154,9 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+		if dusk_to_dawn() then
+			equip(sets.movementspeed)
+		end
 	end
 end
 

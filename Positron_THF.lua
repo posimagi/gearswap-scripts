@@ -195,6 +195,8 @@ function midcast(spell)
 		equip(sets.midcast.elemental)
 	elseif spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
+	elseif spell.english:contains("Poisonga") then
+		equip(sets.th.medium)
 	end
 end
 

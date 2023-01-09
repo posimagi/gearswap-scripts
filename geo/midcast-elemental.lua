@@ -7,7 +7,7 @@ sets.midcast.elemental={
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",
-	right_ear="Barkaro. Earring",
+	right_ear="Malignance Earring",
 	left_ring="Freke Ring",
 	right_ring="Mujin Band",
 }

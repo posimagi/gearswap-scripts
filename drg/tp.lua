@@ -10,6 +10,6 @@ sets.tp={
 	left_ear="Telos Earring",
 	right_ear="Sherida Earring",
 	left_ring="Niqmaddu Ring",
-	right_ring="Petrov Ring",
+	right_ring="Chirich Ring +1",
 	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
