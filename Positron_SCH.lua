@@ -38,6 +38,7 @@ function get_sets()
 	include("sch/precast-tabularasa.lua") -- sets.precast.tabularasa
 
 	include("sch/midcast-aquaveil.lua") -- sets.midcast.aquaveil
+	include("sch/midcast-barspell.lua") -- sets.midcast.barspell
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-darkness.lua") -- sets.midcast.darkness
 	include("sch/midcast-elemental.lua") -- sets.midcast.elemental
@@ -155,6 +156,8 @@ function midcast(spell)
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Aquaveil") then
 			equip(sets.midcast.aquaveil)
+		elseif spell.english:contains("Bar") then
+			equip(sets.midcast.barspell)
 		elseif spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Regen") then

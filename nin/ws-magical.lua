@@ -6,7 +6,7 @@ sets.ws.magical={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Sanctity Necklace",
-	waist="Eschan Stone",
+	waist="Orpheus's Sash",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Friomisi Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},

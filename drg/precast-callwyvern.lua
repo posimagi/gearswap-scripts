@@ -1,3 +1,3 @@
 sets.precast.callwyvern={
-	body={ name="Ptero. Mail +2", augments={'Enhances "Spirit Surge" effect',}},
+	body={ name="Ptero. Mail +3", augments={'Enhances "Spirit Surge" effect',}},
 }

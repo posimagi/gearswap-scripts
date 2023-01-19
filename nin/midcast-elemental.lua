@@ -6,7 +6,7 @@ sets.midcast.elemental={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Mochi. Kyahan +3", augments={'Enh. Ninj. Mag. Acc/Cast Time Red.',}},
 	neck="Sanctity Necklace",
-	waist="Eschan Stone",
+	waist="Orpheus's Sash",
 	right_ear="Friomisi Earring",
 	left_ring="Dingir Ring",
 	right_ring="Mujin Band",

@@ -1,3 +1,3 @@
 sets.movementspeed={
-    feet="Hachi. Kyahan +1",
+    feet="Hachi. Kyahan +2",
 }

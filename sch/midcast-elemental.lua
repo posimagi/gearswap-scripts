@@ -3,7 +3,7 @@ sets.midcast.elemental={
 	head="Arbatel Bonnet +3",
 	body="Acad. Gown +3",
 	hands="Arbatel Bracers +3",
-	legs="Arbatel Pants +2",
+	legs="Arbatel Pants +3",
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",

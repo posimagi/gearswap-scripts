@@ -19,6 +19,7 @@ function get_sets()
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("whm/divinecaress.lua") -- sets.divinecaress
 	include("whm/dt.lua") -- sets.dt
 	include("whm/fastcast.lua") -- sets.fastcast
 	include("whm/hpdown.lua") -- sets.hpdown
@@ -207,6 +208,9 @@ function midcast(spell)
 			equip(sets.midcast.statusremoval)
 			if spell.name:contains("Cursna") then
 				equip(sets.midcast.cursna)
+			end
+			if buffactive['Divine Caress'] then
+				equip(sets.divinecaress)
 			end
 		else
 			obi_check(spell)

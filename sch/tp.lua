@@ -3,7 +3,7 @@ sets.tp={
 	head="Arbatel Bonnet +3",
 	body="Arbatel Gown +3",
 	hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
-	legs="Arbatel Pants +2",
+	legs="Arbatel Pants +3",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Combatant's Torque",
 	waist="Olseni Belt",
