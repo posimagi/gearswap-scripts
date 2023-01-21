@@ -4,20 +4,14 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("pup/idle.lua") -- sets.idle
 	include("pup/tp.lua") -- sets.tp
 	include("pup/tp-pet.lua") -- sets.tp.pet
 	include("pup/ws.lua") -- sets.ws
 
-	send_command(
-		"input /macro book 2; \
-	wait 1; \
-	input /macro set 10; \
-	wait 5; \
-	input /lockstyleset 38; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function precast(spell, position)

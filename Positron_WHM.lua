@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("func/buffactive_movementspeed.lua") -- buffactive_movementspeed()
 	include("func/buffactive_sublimation.lua") -- buffactive_sublimation()
 	include("func/obi_check.lua") -- obi_check()
@@ -113,15 +115,7 @@ function get_sets()
 		"Holy II"
 	}
 
-	send_command(
-		"input /macro book 3; \
-	wait 1; \
-	input /macro set 1; \
-	wait 5; \
-	input /lockstyleset 23; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)

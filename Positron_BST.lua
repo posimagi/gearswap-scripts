@@ -5,6 +5,8 @@ function get_sets()
 	sets.petmidcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("all/obi.lua") -- sets.obi
 
 	include("bst/fastcast.lua") -- sets.fastcast
@@ -27,15 +29,7 @@ function get_sets()
 		"Primal Rend",
 	}
 
-	send_command(
-		"input /macro book 9; \
-	wait 1; \
-	input /macro set 1; \
-	wait 5; \
-	input /lockstyleset 29; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function precast(spell, position)

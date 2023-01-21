@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/dispelga.lua") -- sets.dispelga
@@ -53,16 +55,7 @@ function get_sets()
 		"Water"
 	}
 
-	send_command(
-		"input /macro book 10; \
-	wait 1; \
-	input /macro set 10; \
-	wait 5; \
-	input /lockstyleset 59; \
-	gs equip sets.idle; \
-	wait 1; \
-	gs equip sets.weapon"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)

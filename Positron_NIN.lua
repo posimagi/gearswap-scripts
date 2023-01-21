@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("func/dusk_to_dawn.lua") -- dusk_to_dawn()
 	include("func/obi_check.lua") -- obi_check()
 
@@ -50,15 +52,7 @@ function get_sets()
 		include("nin/tp-stp.lua") -- sets.tp
 	end
 
-	send_command(
-		"input /macro book 13; \
-	wait 1; \
-	input /macro set 1; \
-	wait 5; \
-	input /lockstyleset 33; \
-	gs equip sets.idle; \
-	du blinking self combat on;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)

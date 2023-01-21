@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/impact.lua") -- sets.impact
@@ -57,15 +59,7 @@ function get_sets()
 		"Drown"
 	}
 
-	send_command(
-		"input /macro book 4; \
-	wait 1; \
-	input /macro set 1; \
-	wait 5; \
-	input /lockstyleset 24; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)

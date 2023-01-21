@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("mnk/idle.lua") -- sets.idle
 	include("mnk/impetus.lua") -- sets.impetus
 	include("mnk/tp.lua") -- sets.tp
@@ -16,15 +18,7 @@ function get_sets()
 	include("mnk/precast-hundredfists.lua") -- sets.precast.hundredfists
 	include("mnk/precast-mantra.lua") -- sets.precast.mantra
 
-	send_command(
-		"input /macro book 2; \
-	wait 1; \
-	input /macro set 2; \
-	wait 5; \
-	input /lockstyleset 22; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function precast(spell, position)

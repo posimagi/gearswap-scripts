@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("func/ammo_check.lua") -- ammo_check()
 	include("func/obi_check.lua") -- obi_check()
 
@@ -93,15 +95,7 @@ function get_sets()
 		include("cor/idle-znm.lua") -- sets.idle
 	end
 
-	send_command(
-		"input /macro book 11; \
-	wait 1; \
-	input /macro set 10; \
-	wait 5; \
-	input /lockstyleset 37; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)

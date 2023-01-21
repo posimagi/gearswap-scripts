@@ -3,7 +3,7 @@ sets.ws={
 	head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-	legs={ name="Nyame Flanchard", augments={'Path: B',}},
+	legs="Boii Cuisses +3",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="War. Beads +2", augments={'Path: A',}},
 	waist="Grunfeld Rope",

@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/th.lua") -- sets.th
 
@@ -12,6 +14,8 @@ function get_sets()
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/movementspeed.lua") -- sets.movementspeed
 	include("dnc/tp.lua") -- sets.tp
+	include("dnc/weapon.lua") -- sets.weapon
+	include("dnc/weapon-critical.lua") -- sets.weapon.critical
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 	include("dnc/ws-multihit.lua") -- sets.ws.multihit
@@ -54,15 +58,7 @@ function get_sets()
 		include("dnc/tp-regal.lua") -- sets.tp
 	end
 
-	send_command(
-		"input /macro book 6; \
-	wait 1; \
-	input /macro set 10; \
-	wait 5; \
-	input /lockstyleset 39; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)
@@ -120,11 +116,11 @@ function precast(spell, position)
 	elseif spell.type == "Step" then
 		equip(sets.precast.steps)
 	elseif spell.type == "Waltz" then
-		equip(sets.precast.waltzes)
+		equip(sets.idle, sets.precast.waltzes)
 	elseif spell.type == "Samba" then
-		equip(sets.precast.sambas)
+		equip(sets.idle, sets.precast.sambas)
 	elseif spell.type == "Jig" then
-		equip(sets.precast.jigs)
+		equip(sets.idle, sets.precast.jigs)
 	elseif spell.type == "Ninjutsu" then
 		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then

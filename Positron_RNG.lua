@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("func/ammo_check.lua") -- ammo_check()
 	include("func/buffactive_aftermath.lua") -- buffactive_aftermath()
 	include("func/obi_check.lua") -- obi_check()
@@ -65,15 +67,7 @@ function get_sets()
 		"Shadowbind"
 	}
 
-	send_command(
-		"input /macro book 11; \
-	wait 1; \
-	input /macro set 2; \
-	wait 5; \
-	input /lockstyleset 31; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function precast(spell, position)

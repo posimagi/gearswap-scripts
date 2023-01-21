@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
@@ -41,15 +43,7 @@ function get_sets()
 		"Tachi: Rana"
 	}
 
-	send_command(
-		"input /macro book 12; \
-	wait 1; \
-	input /macro set 1; \
-	wait 5; \
-	input /lockstyleset 32; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function precast(spell, position)

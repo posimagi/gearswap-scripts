@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("drg/fastcast.lua") -- sets.fastcast
@@ -24,14 +26,7 @@ function get_sets()
 		"Savage Blade"
 	}
 
-	send_command(
-		"input /macro book 12; \
-	wait 1; \
-	input /macro set 9; \
-	wait 5; \
-	input /lockstyleset 34; \
-	gs equip sets.idle"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 end
 
 function sub_job_change(new, old)

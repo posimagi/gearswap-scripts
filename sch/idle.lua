@@ -2,7 +2,7 @@ sets.idle={
 	ammo="Homiliary",
 	head="Arbatel Bonnet +3",
 	body="Arbatel Gown +3",
-	hands="Volte Gloves",
+	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs="Arbatel Pants +3",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},

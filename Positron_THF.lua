@@ -4,6 +4,8 @@ function get_sets()
 	sets.midcast = {}
 	sets.aftercast = {}
 
+	include("common/job_change.lua")
+	
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/obi.lua") -- sets.obi
 
@@ -102,14 +104,7 @@ function get_sets()
 		-- do nothing
 	end
 
-	send_command(
-		"input /macro book 6; \
-	input /macro set 2; \
-	wait 5; \
-	input /lockstyleset 26; \
-	gs equip sets.idle; \
-	du blinking self all off;"
-	)
+	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
 	if player.sub_job == "NIN" then
 		send_command("wait 1; \
 		input /macro set 1;")
