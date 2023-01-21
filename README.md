@@ -13,4 +13,5 @@ Aside from GearSwap itself, these scripts have soft dependencies on the followin
 * DressUp: used for setting blinking modes.
 * PorterPacker: used for packing and unpacking gear on load and on job change. [gimlic1's forked version](https://github.com/gimlic1/Windower-addons/tree/master/PorterPacker) is recommended as it works in Sheol: Gaol.
 * Enternity: used to prevent the race condition in PorterPacker that can otherwise fail to unpack the correct gear.
+
 None of these addons are strictly required to get the basic GearSwap functionality. However, if you choose not to use them, I highly recommend setting `console_displayactivity 0` in your Windower init script to avoid a flood of console errors.
