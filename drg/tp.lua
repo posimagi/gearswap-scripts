@@ -1,8 +1,8 @@
 sets.tp={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Hjarrandi Helm",
-	body="Hjarrandi Breast.",
-	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+	body="Pelt. Plackart +2",
+	hands="Pel. Vambraces +2",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Combatant's Torque",

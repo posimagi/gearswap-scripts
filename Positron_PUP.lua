@@ -11,7 +11,7 @@ function get_sets()
 	include("pup/tp-pet.lua") -- sets.tp.pet
 	include("pup/ws.lua") -- sets.ws
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function precast(spell, position)

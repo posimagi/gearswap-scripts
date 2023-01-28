@@ -52,7 +52,7 @@ function get_sets()
 		include("nin/tp-stp.lua") -- sets.tp
 	end
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function sub_job_change(new, old)

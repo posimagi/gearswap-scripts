@@ -18,7 +18,7 @@ function get_sets()
 	include("mnk/precast-hundredfists.lua") -- sets.precast.hundredfists
 	include("mnk/precast-mantra.lua") -- sets.precast.mantra
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function precast(spell, position)

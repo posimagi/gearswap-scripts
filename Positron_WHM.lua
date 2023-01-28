@@ -31,6 +31,7 @@ function get_sets()
 	include("whm/tp.lua") -- sets.tp
 	include("whm/weapon.lua") -- sets.weapon
 	include("whm/ws.lua") -- sets.ws
+	include("whm/ws-accuracy.lua") -- sets.ws.accuracy
 	include("whm/ws-clubskill.lua") -- sets.ws.clubskill
 	include("whm/ws-dark.lua") -- sets.ws.dark
 	include("whm/ws-hp.lua") -- sets.ws.hp
@@ -56,6 +57,11 @@ function get_sets()
 	include("whm/midcast-holy.lua") -- sets.midcast.holy
 	include("whm/midcast-regen.lua") -- sets.midcast.regen
 	include("whm/midcast-statusremoval.lua") -- sets.midcast.statusremoval
+
+	_ACCURACY_WS = T {
+		"Brainshaker",
+		"Shell Crusher",
+	}
 
 	_DARK_WS = T {
 		"Cataclysm"
@@ -115,7 +121,7 @@ function get_sets()
 		"Holy II"
 	}
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function sub_job_change(new, old)
@@ -163,6 +169,8 @@ function precast(spell, position)
 		if _DARK_WS:contains(spell.name) then
 			equip(sets.ws.dark)
 			obi_check(spell)
+		elseif _ACCURACY_WS:contains(spell.name) then
+			equip(sets.ws.accuracy)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)

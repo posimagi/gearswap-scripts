@@ -104,7 +104,7 @@ function get_sets()
 		-- do nothing
 	end
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 	if player.sub_job == "NIN" then
 		send_command("wait 1; \
 		input /macro set 1;")

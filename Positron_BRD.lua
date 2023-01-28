@@ -24,6 +24,7 @@ function get_sets()
 	include("brd/precast-honormarch.lua") -- sets.precast.honormarch
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
 	include("brd/precast-songs.lua") -- sets.precast.songs
+	include("brd/precast-soulvoice.lua") -- sets.precast.soulvoice
 	include("brd/precast-troubadour.lua") -- sets.precast.troubadour
 
 	include("brd/midcast-ballad.lua") -- sets.midcast.ballad
@@ -86,7 +87,7 @@ function get_sets()
 		"Maiden's Virelai",
 	}
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function sub_job_change(new, old)
@@ -116,6 +117,8 @@ function precast(spell, position)
 	if spell.type == "JobAbility" then
 		if spell.english:contains("Nightingale") or spell.english:contains("Troubadour") then
 			equip(sets.precast.nightingale, sets.precast.troubadour)
+		elseif spell.english:contains("Soul Voice") then
+			equip(sets.precast.soulvoice)
 		end
 	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)

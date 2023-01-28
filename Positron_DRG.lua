@@ -26,7 +26,7 @@ function get_sets()
 		"Savage Blade"
 	}
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function sub_job_change(new, old)
@@ -64,14 +64,9 @@ function precast(spell, position)
 			equip(sets.ws.singlehit)
 		end
 	elseif spell.type == "JobAbility" then
+		equip(sets.precast[spell.name])
 		if spell.english:contains("Jump") then
 			equip(sets.tp, sets.precast.jump)
-		elseif spell.english:contains("Call Wyvern") then
-			equip(sets.precast.callwyvern)
-		elseif spell.english:contains("Spirit Link") then
-			equip(sets.precast.spiritlink)
-		elseif spell.english:contains("Angon") then
-			equip(sets.precast.angon)
 		end
 	else
 		equip(sets.fastcast)

@@ -79,7 +79,7 @@ function get_sets()
 		"Shining Blade",
 	}
 
-	send_command(macrobook_cmd..lockstyle_cmd..porter_cmd)
+	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
 function precast(spell, position)

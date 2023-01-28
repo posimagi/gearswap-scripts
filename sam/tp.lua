@@ -3,7 +3,7 @@ sets.tp={
 	head="Kasuga Kabuto +2",
 	body="Kasuga Domaru +3",
 	hands={ name="Mpaca's Gloves", augments={'Path: A',}},
-	legs="Kasuga Haidate +2",
+	legs="Kasuga Haidate +3",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
 	waist="Ioskeha Belt +1",
