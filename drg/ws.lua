@@ -1,10 +1,10 @@
 sets.ws={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-	head="Flam. Zucchetto +2",
+	head={ name="Nyame Helm", augments={'Path: B',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
-	hands="Sulev. Gauntlets +2",
+	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
-	feet="Flam. Gambieras +2",
+	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

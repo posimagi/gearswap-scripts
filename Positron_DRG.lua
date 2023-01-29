@@ -16,7 +16,7 @@ function get_sets()
 
 	include("drg/precast-angon.lua") -- sets.precast.angon
 	include("drg/precast-callwyvern.lua") -- sets.precast.callwyvern
-	include("drg/precast-jump.lua") -- sets.precast.jump
+	include("drg/precast-jump.lua") -- sets.precast['Jump'], sets.precast['High Jump'], sets.precast['Spirit Jump'], sets.precast['Soul Jump']
 	include("drg/precast-spiritlink.lua") -- sets.precast.spiritlink
 
 	_SINGLE_HIT_WS = T {
@@ -37,8 +37,6 @@ function sub_job_change(new, old)
 	du blinking self all off;"
 	)
 end
-
-_TH = true
 
 function precast(spell, position)
 	-- WS Engaged Check
@@ -65,9 +63,6 @@ function precast(spell, position)
 		end
 	elseif spell.type == "JobAbility" then
 		equip(sets.precast[spell.name])
-		if spell.english:contains("Jump") then
-			equip(sets.tp, sets.precast.jump)
-		end
 	else
 		equip(sets.fastcast)
 		if spell.english:contains("Utsusemi") then
@@ -90,9 +85,6 @@ end
 function status_change(new, old)
 	if new == "Engaged" then
 		equip(sets.tp)
-		if _TH then
-			equip(sets.th)
-		end
 	elseif new == "Idle" then
 		equip(sets.idle)
 	end

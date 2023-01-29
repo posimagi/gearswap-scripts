@@ -1,5 +1,5 @@
 sets.petmidcast.bp={
-	head={ name="Apogee Crown", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7',}},
+	head="C. Palug Crown",
 	body="Con. Doublet +3",
 	hands={ name="Merlinic Dastanas", augments={'Pet: "Mag.Atk.Bns."+14','Blood Pact Dmg.+10','Pet: INT+8','Pet: Mag. Acc.+13',}},
 	legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},

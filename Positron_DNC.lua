@@ -28,7 +28,9 @@ function get_sets()
 	include("dnc/precast-reverseflourish.lua") -- sets.precast.reverseflourish
 	include("dnc/precast-sambas.lua") -- sets.precast.sambas
 	include("dnc/precast-steps.lua") -- sets.precast.steps
+	include("dnc/precast-trance.lua") -- sets.precast.trance
 	include("dnc/precast-waltzes.lua") -- sets.precast.waltzes
+	include("dnc/precast-waltzesself.lua") -- sets.precast.waltzesself
 
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 	include("func/buffactive_movementspeed.lua") -- buffactive_movementspeed()
@@ -102,6 +104,8 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("No Foot Rise") then
 			equip(sets.precast.nofootrise)
+		elseif spell.english:contains("Trance") then
+			equip(sets.precast.trance)
 		end
 	elseif spell.type:contains("Flourish") then
 		if spell.english:contains("Animated") then
@@ -117,6 +121,9 @@ function precast(spell, position)
 		equip(sets.precast.steps)
 	elseif spell.type == "Waltz" then
 		equip(sets.idle, sets.precast.waltzes)
+		if spell.target.type == "SELF" then
+			equip(sets.precast.waltzesself)
+		end
 	elseif spell.type == "Samba" then
 		equip(sets.idle, sets.precast.sambas)
 	elseif spell.type == "Jig" then
