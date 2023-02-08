@@ -11,6 +11,13 @@ function get_sets()
 	include("pup/tp-pet.lua") -- sets.tp.pet
 	include("pup/ws.lua") -- sets.ws
 
+	include("pup/precast-maneuvers.lua") -- sets.precast.maneuvers
+	include("pup/precast-overdrive.lua") -- sets.precast["Overdrive"]
+	include("pup/precast-repair.lua") -- sets.precast["Repair"]
+	include("pup/precast-rolereversal.lua") -- sets.precast["Role Reversal"]
+	include("pup/precast-tacticalswitch.lua") -- sets.precast["Tactical Switch"]
+	include("pup/precast-ventriloquy.lua") -- sets.precast["Ventriloquy"]
+
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
@@ -32,9 +39,15 @@ function precast(spell, position)
 		return
 	end
 
+	
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
 	elseif spell.type == "JobAbility" then
+		equip(sets.precast[spell.name])
+	elseif spell.type == "PetCommand" then
+		if spell.english:contains("Maneuver") then
+			equip(sets.precast.maneuvers)
+		end
 	end
 end
 

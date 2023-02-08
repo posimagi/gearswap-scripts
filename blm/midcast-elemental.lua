@@ -2,7 +2,7 @@ sets.midcast.elemental={
 	ammo="Pemphredo Tathlum",
 	head={ name="Nyame Helm", augments={'Path: B',}},
 	body="Spaekona's Coat +3",
-	hands={ name="Amalric Gages +1", augments={'INT+12','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
+	hands={ name="Agwu's Gages", augments={'Path: A',}},
 	legs={ name="Arch. Tonban +3", augments={'Increases Elemental Magic debuff time and potency',}},
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck="Mizu. Kubikazari",

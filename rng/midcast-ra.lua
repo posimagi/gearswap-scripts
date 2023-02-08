@@ -1,6 +1,6 @@
 sets.midcast.ra={
 	head={ name="Arcadian Beret +3", augments={'Enhances "Recycle" effect',}},
-	body="Meg. Cuirie +2",
+	body="Amini Caban +3",
 	hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
 	legs="Malignance Tights",
 	feet="Malignance Boots",

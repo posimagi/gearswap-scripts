@@ -1,6 +1,6 @@
 sets.precast.ra.flurry={
     head={ name="Arcadian Beret +3", augments={'Enhances "Recycle" effect',}},
-    body="Amini Caban +2",
+    body="Amini Caban +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs="Orion Braccae +3",
     feet="Meg. Jam. +2",

@@ -1,8 +1,8 @@
 sets.idle={
 	ammo="Staunch Tathlum",
 	head={ name="Nyame Helm", augments={'Path: B',}},
-	body="Hashishin Mintan +2",
-	hands="Hashi. Bazu. +2",
+	body="Hashishin Mintan +3",
+	hands="Hashi. Bazu. +3",
 	legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},

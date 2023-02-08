@@ -1,9 +1,9 @@
 sets.midcast.enfeebling={
 	ammo="Pemphredo Tathlum",
-	head="Malignance Chapeau",
-	body="Hashishin Mintan +2",
-	hands="Hashi. Bazu. +2",
-	legs="Hashishin Tayt +2",
+	head="Hashishin Kavuk +2",
+	body="Hashishin Mintan +3",
+	hands="Hashi. Bazu. +3",
+	legs="Hashishin Tayt +3",
 	feet="Malignance Boots",
 	neck="Erra Pendant",
 	waist="Sacro Cord",

@@ -1,0 +1,15 @@
+sets.tp.empyreanam={
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Skulker's Bonnet +2",
+    body="Skulker's Vest +2",
+    hands="Skulk. Armlets +2",
+    legs="Skulk. Culottes +2",
+    feet="Skulk. Poulaines +2",
+    neck={ name="Asn. Gorget +2", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Suppanomimi",
+    right_ear="Sherida Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Mag. Evasion+15',}},
+}

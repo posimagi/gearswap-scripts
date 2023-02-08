@@ -2,7 +2,7 @@ sets.midcast.elemental={
 	ammo="Pemphredo Tathlum",
 	head="Arbatel Bonnet +3",
 	body="Acad. Gown +3",
-	hands="Arbatel Bracers +3",
+	hands={ name="Agwu's Gages", augments={'Path: A',}},
 	legs="Arbatel Pants +3",
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck="Mizu. Kubikazari",
@@ -11,5 +11,5 @@ sets.midcast.elemental={
 	right_ear="Malignance Earring",
 	left_ring="Freke Ring",
 	right_ring="Mujin Band",
-	back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+	back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 }

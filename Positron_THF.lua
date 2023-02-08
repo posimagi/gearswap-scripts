@@ -20,6 +20,7 @@ function get_sets()
 	include("thf/th-medium.lua") -- sets.th.medium
 	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
+	include("thf/tp-empyreanam.lua") -- sets.tp.empyreanam
 	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
 	include("thf/weapon.lua") -- sets.weapon
 	include("thf/weapon-omen.lua") -- sets.weapon.omen
@@ -84,6 +85,11 @@ function get_sets()
 	_IDLE_REGEN = false
 	if _IDLE_REGEN then
 		sets.idle = set_combine(sets.idle, sets.regen)
+	end
+
+	_EMPYREAN_AM = false
+	if _EMPYREAN_AM then
+		sets.tp = sets.tp.empyreanam
 	end
 
 	_TREASURE_HUNTER = "minimal"

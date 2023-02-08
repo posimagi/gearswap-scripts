@@ -11,5 +11,5 @@ sets.midcast.elemental.vagary={
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 	right_ring="Defending Ring",
-	back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+	back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 }
