@@ -17,6 +17,7 @@ function get_sets()
 	include("all/midcast-darkness.lua") -- sets.midcast.darkness
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("blu/bluemagic.lua") -- sets.bluemagic
 	include("blu/fastcast.lua") -- sets.fastcast
 	include("blu/idle.lua") -- sets.idle
 	include("blu/naked.lua") -- sets.naked
@@ -43,6 +44,20 @@ function get_sets()
 		"Soporific",
 		"Tourbillion",
 		"Yawn"
+	}
+
+	_SKILL_SPELLS = T {
+		"Atra. Libations",
+		"Blood Drain",
+		"Blood Saber",
+		"Diamondhide",
+		"Digest",
+		"Magic Barrier",
+		"Metallic Body",
+		"MP Drainkiss",
+		"Occultation",
+		"Osmosis",
+		"Restoral",
 	}
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
@@ -85,7 +100,9 @@ function midcast(spell)
 	if spell.type == "JobAbility" then
 	elseif spell.type == "WeaponSkill" then
 	else
-		if spell.english:contains("Aquaveil") then
+		if _SKILL_SPELLS:contains(spell.english) then
+			equip(sets.idle, sets.bluemagic)
+		elseif spell.english:contains("Aquaveil") then
 			equip(sets.idle, sets.midcast.aquaveil)
 		elseif spell.english:contains("Refresh") or spell.english:contains("Battery Charge") then
 			equip(sets.idle, sets.midcast.refresh)

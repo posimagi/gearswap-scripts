@@ -2,7 +2,7 @@ sets.ws={
 	ammo="Knobkierrie",
 	head={ name="Mpaca's Cap", augments={'Path: A',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
-	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+	hands="Kasuga Kote +3",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
