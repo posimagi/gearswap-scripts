@@ -43,5 +43,5 @@ DRESSUP = {
 }
 
 macrobook_cmd = string.format("wait 2; input /macro book %s; wait 1; input /macro set %s;", tonumber(MACROBOOK[player.main_job] or player.main_job_id), tonumber(MACROSET[player.main_job] or 1))
-porter_cmd = string.format("wait 6; lua l enternity; po repack; wait 12; lua u enternity;")
-lockstyle_cmd = string.format("input /lockstyleset %s; gs equip sets.idle; du blinking %s;", tonumber(LOCKSTYLE or 200), tostring(DRESSUP[player.main_job] or "self all off"))
+porter_cmd = string.format("wait 6; lua l porterpacker; lua l enternity; po repack; wait 12;")
+lockstyle_cmd = string.format("lua l dressup; input /lockstyleset %s; gs equip sets.idle; du blinking %s;", tonumber(LOCKSTYLE or 200), tostring(DRESSUP[player.main_job] or "self all off"))

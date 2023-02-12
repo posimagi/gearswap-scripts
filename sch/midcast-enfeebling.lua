@@ -5,7 +5,7 @@ sets.midcast.enfeebling={
 	hands="Volte Gloves",
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
 	feet="Acad. Loafers +3",
-	neck="Incanter's Torque",
+	neck={ name="Argute Stole +2", augments={'Path: A',}},
 	waist={ name="Obstin. Sash", augments={'Path: A',}},
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",

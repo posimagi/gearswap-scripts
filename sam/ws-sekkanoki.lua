@@ -1,3 +1,3 @@
 sets.ws.sekkanoki={
-	hands="Kasuga Kote +2",
+	hands="Kasuga Kote +3",
 }
