@@ -50,11 +50,6 @@ function get_sets()
 		"Exenterator",
 	}
 
-	_HYBRID = true
-	if _HYBRID then
-		include("dnc/tp-hybrid.lua") -- sets.tp
-	end
-
 	_REGAL_GLOVES = false
 	if _REGAL_GLOVES then
 		include("dnc/tp-regal.lua") -- sets.tp

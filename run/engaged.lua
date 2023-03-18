@@ -1,7 +1,7 @@
 sets.engaged={
 	ammo="Yamarang",
 	head={ name="Nyame Helm", augments={'Path: B',}},
-	body="Runeist's Coat +3",
+	body="Runeist Coat +3",
 	-- body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
 	hands="Turms Mittens",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},

@@ -4,7 +4,7 @@ sets.tp={
     hands="Malignance Gloves",
     legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
     feet="Malignance Boots",
-    neck="Combatant's Torque",
+    neck="Anu Torque",
     waist="Olseni Belt",
     left_ear="Suppanomimi",
     right_ear="Sherida Earring",

@@ -1,8 +1,8 @@
 sets.midcast.elemental={
-	head="Azimuth Hood +2",
-	body={ name="Bagua Tunic +3", augments={'Enhances "Bolster" effect',}},
+	head="Azimuth Hood +3",
+	body="Azimuth Coat +3",
 	hands={ name="Agwu's Gages", augments={'Path: A',}},
-	legs={ name="Bagua Pants +3", augments={'Enhances "Mending Halation" effect',}},
+	legs="Azimuth Tights +2",
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",

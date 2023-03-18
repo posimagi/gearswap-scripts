@@ -147,7 +147,7 @@ function midcast(spell)
 			equip(sets.th)
 		end
 	elseif spell.skill == "Enhancing Magic" then
-		equip(sets.midcast.enhancing)
+		equip(sets.idle, sets.midcast.enhancing)
 		if spell.english:contains("Aquaveil") then
 			equip(sets.midcast.aquaveil)
 		elseif spell.english:contains("Bar") then
@@ -163,7 +163,7 @@ function midcast(spell)
 			equip(sets.perpetuance)
 		end
 	elseif spell.skill == "Healing Magic" then
-		equip(sets.midcast.healing)
+		equip(sets.idle, sets.midcast.healing)
 		if spell.name:contains("Cursna") then
 			equip(sets.midcast.cursna)
 		end

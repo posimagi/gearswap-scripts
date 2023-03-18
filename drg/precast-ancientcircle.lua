@@ -1,3 +1,3 @@
 sets.precast['Ancient Circle']={
-    legs="Vishap Brais +1",
+    legs="Vishap Brais +2",
 }

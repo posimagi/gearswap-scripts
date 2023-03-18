@@ -14,6 +14,7 @@ function get_sets()
 	include("sam/tp.lua") -- sets.tp
 	include("sam/weakws.lua") -- sets.weakws
 	include("sam/ws.lua") -- sets.ws
+	include("sam/ws-accuracy.lua") -- sets.ws.accuracy
 	include("sam/ws-hybrid.lua") -- sets.ws.hybrid
 	include("sam/ws-magical.lua") -- sets.ws.magical
 	include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
@@ -23,6 +24,12 @@ function get_sets()
 
 	include("sam/precast-meditate.lua") -- sets.precast.meditate
 	include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
+
+	_ACCURACY_WS = T {
+		"Leg Sweep",
+		"Tachi: Ageha",
+		"Tachi: Hobaku",
+	}
 
 	_HYBRID_WS = T {
 		"Tachi: Goten",
@@ -74,6 +81,8 @@ function precast(spell, position)
 		elseif _HYBRID_WS:contains(spell.english) then
 			equip(sets.ws.hybrid)
 			obi_check(spell)
+		elseif _ACCURACY_WS:contains(spell.english) then
+			equip(sets.ws.accuracy)
 		end
 		if buffactive["Meikyo Shisui"] then
 			equip(sets.ws.meikyoshisui)

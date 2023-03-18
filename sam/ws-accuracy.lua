@@ -1,0 +1,15 @@
+sets.ws.accuracy={
+    ammo="Knobkierrie",
+    head="Kasuga Kabuto +3",
+    body="Kasuga Domaru +3",
+    hands="Kasuga Kote +3",
+    legs="Kasuga Haidate +3",
+    feet="Kas. Sune-Ate +2",
+    neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
+    waist="Eschan Stone",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="Thrud Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Regal Ring",
+    back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+}

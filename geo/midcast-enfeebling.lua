@@ -1,9 +1,9 @@
 sets.midcast.enfeebling={
 	head={ name="Amalric Coif +1", augments={'INT+12','Mag. Acc.+25','Enmity-6',}},
-	body="Shamash Robe",
+	body="Azimuth Coat +3",
 	hands="Azimuth Gloves +2",
-	legs="Volte Brais",
-	feet="Geo. Sandals +3",
+	legs="Azimuth Tights +2",
+	feet="Azimuth Gaiters +3",
 	neck="Incanter's Torque",
 	waist="Luminary Sash",
 	left_ear="Regal Earring",

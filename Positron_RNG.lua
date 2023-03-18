@@ -137,7 +137,7 @@ end
 function midcast(spell)
 	if spell.action_type == "Ranged Attack" then
 		if player.equipment.range == "Gandiva" and buffactive_aftermath() then
-			equip(sets.midcast.ra.empyreanam)
+			equip(sets.midcast.ra, sets.midcast.ra.empyreanam)
 		else
 			equip(sets.midcast.ra)
 		end

@@ -1,7 +1,7 @@
 sets.idle={
 	ammo="Staunch Tathlum",
 	head={ name="Nyame Helm", augments={'Path: B',}},
-	body="Runeist's Coat +3",
+	body="Runeist Coat +3",
 	-- body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},

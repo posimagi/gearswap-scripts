@@ -12,7 +12,6 @@ function get_sets()
 	include("thf/domain.lua") -- sets.domain
 	include("thf/fastcast.lua") -- sets.fastcast
 	include("thf/idle.lua") -- sets.idle
-	include("thf/idle-hybrid.lua") -- sets.idle.hybrid
 	include("thf/magian.lua") -- sets.magian
 	include("thf/ra.lua") -- sets.ra
 	include("thf/regen.lua") -- sets.regen
@@ -21,7 +20,6 @@ function get_sets()
 	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
 	include("thf/tp-empyreanam.lua") -- sets.tp.empyreanam
-	include("thf/tp-hybrid.lua") -- sets.tp.hybrid
 	include("thf/weapon.lua") -- sets.weapon
 	include("thf/weapon-omen.lua") -- sets.weapon.omen
 	include("thf/ws.lua") -- sets.ws
@@ -75,12 +73,6 @@ function get_sets()
 		"right_ring",
 		"back"
 	}
-
-	_HYBRID = false
-	if _HYBRID then
-		sets.idle = sets.idle.hybrid
-		sets.tp = sets.tp.hybrid
-	end
 
 	_IDLE_REGEN = false
 	if _IDLE_REGEN then

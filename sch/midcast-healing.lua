@@ -1,7 +1,8 @@
 sets.midcast.healing={
 	ammo="Staunch Tathlum",
 	body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
-	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
+	hands={ name="Peda. Bracers +2", augments={'Enh. "Tranquility" and "Equanimity"',}},
+	legs="Acad. Pants +2",
 	feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
 	neck="Incanter's Torque",
 	waist="Luminary Sash",
