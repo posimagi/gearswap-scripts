@@ -1,5 +1,5 @@
 sets.ws={
-	ammo="Oshasha's Treatise",
+	ammo="Crepuscular Pebble",
 	head={ name="Nyame Helm", augments={'Path: B',}},
 	body={ name="Bunzi's Robe", augments={'Path: A',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},

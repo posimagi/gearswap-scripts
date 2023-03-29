@@ -1,3 +1,3 @@
 sets.precast.bountyshot={
-	hands="Amini Glove. +2",
+	hands="Amini Glove. +3",
 }

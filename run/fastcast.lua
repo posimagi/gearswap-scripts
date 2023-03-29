@@ -1,6 +1,6 @@
 sets.fastcast={
 	ammo="Sapience Orb", -- 2%
-	head="Rune. Bandeau +2", -- 12%
+	head="Rune. Bandeau +3", -- 14%
 	body="Erilaz Surcoat +2", -- 10%
 	hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, -- 8%
 	legs="Aya. Cosciales +2", -- 6%

@@ -26,6 +26,7 @@ function get_sets()
 	include("rng/weapon-omen.lua") -- sets.weapon.omen
 	include("rng/weapon-sword.lua") -- sets.weapon.sword
 	include("rng/ws.lua") -- sets.ws
+	include("rng/ws-hybrid.lua") -- sets.ws.hybrid
 	include("rng/ws-magical.lua") -- sets.ws.magical
 	include("rng/ws-multihit.lua") -- sets.ws.multihit
 	include("rng/ws-ranged.lua") -- sets.ws.ranged
@@ -43,10 +44,13 @@ function get_sets()
 	include("rng/midcast-ra-empyreanam.lua") -- sets.midcast.ra.empyreanam
 	include("rng/midcast-phalanx.lua") -- sets.midcast.phalanx
 
-	_MAGICAL_WS = T {
-		"Aeolian Edge",
+	_HYBRID_WS = T {
 		"Flaming Arrow",
 		"Hot Shot",
+	}
+
+	_MAGICAL_WS = T {
+		"Aeolian Edge",
 		"Trueflight",
 		"Wildfire"
 	}
@@ -91,13 +95,15 @@ function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		if _RANGED_SKILLS:contains(spell.skill) then
 			ammo_check(spell)
-			equip(sets.ws, sets.ws.ranged)
+			equip(sets.ws.ranged)
 		else
 			equip(sets.ws)
 		end
-		if _MAGICAL_WS:contains(spell.english) then
-			equip(sets.ws.magical)
-			equip(sets.orpheus) -- FIXME
+		if _HYBRID_WS:contains(spell.english) then
+			equip(sets.ws.magical, sets.ws.hybrid, sets.orpheus)
+			obi_check(spell)
+		elseif _MAGICAL_WS:contains(spell.english) then
+			equip(sets.ws.magical, sets.orpheus)
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)
@@ -111,7 +117,7 @@ function precast(spell, position)
 		elseif spell.english:contains("Camouflage") then
 			equip(sets.precast.camouflage)
 		elseif spell.english:contains("Eagle Eye Shot") then
-			equip(sets.precast.eagleeyeshot)
+			equip(sets.midcast.ra, sets.precast.eagleeyeshot)
 		elseif spell.english:contains("Shadowbind") then
 			equip(sets.precast.shadowbind)
 		end

@@ -1,4 +1,4 @@
 sets.midcast.regen={
-	head="Rune. Bandeau +2",
+	head="Rune. Bandeau +3",
 	neck="Sacro Gorget",
 }

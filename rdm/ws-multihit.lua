@@ -1,4 +1,5 @@
 sets.ws.multihit={
+	head={ name="Blistering Sallet +1", augments={'Path: A',}},
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
 	right_ear="Sherida Earring",

@@ -1,8 +1,8 @@
 sets.midcast.ra={
 	head={ name="Arcadian Beret +3", augments={'Enhances "Recycle" effect',}},
     body="Amini Caban +3",
-    hands="Amini Glove. +2",
-    legs="Amini Bragues +2",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
     feet={ name="Ikenga's Clogs", augments={'Path: A',}},
     neck="Iskur Gorget",
     waist="K. Kachina Belt +1",

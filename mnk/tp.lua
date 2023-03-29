@@ -8,7 +8,7 @@ sets.tp={
 	neck="Combatant's Torque",
 	waist="Black Belt",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
-	right_ear="Sherida Earring",
+	right_ear={ name="Bhikku Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','"Store TP"+6','STR+9 DEX+9',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Gere Ring",
 	back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},

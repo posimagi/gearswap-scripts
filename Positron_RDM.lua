@@ -88,10 +88,11 @@ function get_sets()
 	}
 
 	_MULTI_HIT_WS = T {
-		"Vorpal Blade",
-		"Death Blossom",
 		"Chant du Cygne",
-		"Requiescat"
+		"Death Blossom",
+		"Evisceration",
+		"Requiescat",
+		"Vorpal Blade",
 	}
 
 	_BARSTATUS_SPELLS = T {
