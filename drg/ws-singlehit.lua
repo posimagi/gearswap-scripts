@@ -6,7 +6,7 @@ sets.ws.singlehit={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Rep. Plat. Medal",
-	waist="Grunfeld Rope",
+	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Sherida Earring",
 	left_ring="Niqmaddu Ring",

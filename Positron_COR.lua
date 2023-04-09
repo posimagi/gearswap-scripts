@@ -124,6 +124,7 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		if _RANGED_SKILLS:contains(spell.skill) then
+			equip(sets.chronobullet)
 			ammo_check(spell)
 		end
 		if _DARK_WS:contains(spell.english) then
@@ -170,6 +171,7 @@ function precast(spell, position)
 			equip(sets.precast.utsusemi)
 		end
 	elseif spell.action_type == "Ranged Attack" then
+		equip(sets.chronobullet)
 		ammo_check(spell)
 		equip(sets.precast.ra)
 	else

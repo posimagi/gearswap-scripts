@@ -5,7 +5,7 @@ sets.ws={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
 	neck="Rep. Plat. Medal",
-	waist="Grunfeld Rope",
+	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear={ name="Chas. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 AGI+9',}},
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},

@@ -6,7 +6,7 @@ sets.ws={
 	legs="Boii Cuisses +3",
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="War. Beads +2", augments={'Path: A',}},
-	waist="Grunfeld Rope",
+	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Thrud Earring",
 	left_ring="Sroda Ring",

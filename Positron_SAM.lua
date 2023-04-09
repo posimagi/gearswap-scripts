@@ -19,7 +19,6 @@ function get_sets()
 	include("sam/ws-magical.lua") -- sets.ws.magical
 	include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
 	include("sam/ws-multihit.lua") -- sets.ws.multihit
-	include("sam/ws-pdl.lua") -- sets.ws.pdl
 	include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
 
 	include("sam/precast-meditate.lua") -- sets.precast.meditate

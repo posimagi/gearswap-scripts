@@ -4,7 +4,7 @@ sets.ws.accuracy={
     body="Kasuga Domaru +3",
     hands="Kasuga Kote +3",
     legs="Kasuga Haidate +3",
-    feet="Kas. Sune-Ate +2",
+    feet="Kas. Sune-Ate +3",
     neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

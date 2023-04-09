@@ -3,7 +3,7 @@ sets.ws.ranged={
     body={ name="Ikenga's Vest", augments={'Path: A',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Arc. Braccae +3", augments={'Enhances "Eagle Eye Shot" effect',}},
-    feet="Amini Bottillons +2",
+    feet="Amini Bottillons +3",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="K. Kachina Belt +1",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

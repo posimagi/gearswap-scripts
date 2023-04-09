@@ -1,5 +1,5 @@
 sets.bluemagic={
-    head={ name="Luh. Keffiyeh +1", augments={'Enhances "Convergence" effect',}},
+    head={ name="Luh. Keffiyeh +3", augments={'Enhances "Convergence" effect',}},
     body="Assim. Jubbah +2",
     legs="Hashishin Tayt +3",
     feet={ name="Luhlaza Charuqs +2", augments={'Enhances "Diffusion" effect',}},
