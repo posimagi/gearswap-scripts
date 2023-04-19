@@ -1,5 +1,5 @@
 sets.dt={
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Carrier's Sash",
     left_ear="Tuisto Earring",

@@ -24,6 +24,7 @@ function get_sets()
 	include("run/precast-enhancing.lua") -- sets.precast.enhancing
 	include("run/precast-gambit.lua") -- sets.precast["Gambit"]
 	include("run/precast-liement.lua") -- sets.precast["Liement"]
+	include("run/precast-lunge.lua") -- sets.precast["Lunge"]
 	include("run/precast-rayke.lua") -- sets.precast["Rayke"]
 	include("run/precast-swordplay.lua") -- sets.precast["Swordplay"]
 	include("run/precast-vallation.lua") -- sets.precast["Vallation"], sets.precast["Valiance"]

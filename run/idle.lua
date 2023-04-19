@@ -1,5 +1,5 @@
 sets.idle={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head={ name="Nyame Helm", augments={'Path: B',}},
 	body="Runeist Coat +3",
 	-- body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},

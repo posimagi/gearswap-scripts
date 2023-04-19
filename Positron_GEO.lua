@@ -28,6 +28,7 @@ function get_sets()
 	include("geo/ws-dark.lua") -- sets.ws.dark
 
 	include("geo/precast-bolster.lua") -- sets.precast.bolster
+	include("geo/precast-concentricpulse.lua") -- sets.precast.concentricpulse
 	include("geo/precast-elemental.lua") -- sets.precast.elemental
 	include("geo/precast-fullcircle.lua") -- sets.precast.fullcircle
 	include("geo/precast-healing.lua") -- sets.precast.healing
@@ -95,6 +96,8 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Bolster") then
 			equip(sets.precast.bolster)
+		elseif spell.english:contains("Concentric Pulse") then
+			equip(sets.precast.concentricpulse)
 		elseif spell.english:contains("Full Circle") then
 			equip(sets.precast.fullcircle)
 		elseif spell.english:contains("Life Cycle") then

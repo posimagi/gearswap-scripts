@@ -8,7 +8,7 @@ sets.ws.multihit={
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
-	right_ear={ name="Boii Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
+	right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+19','Mag. Acc.+19','Crit.hit rate+7','STR+13 VIT+13',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
 	back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},

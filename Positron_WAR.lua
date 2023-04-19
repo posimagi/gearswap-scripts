@@ -129,9 +129,9 @@ function precast(spell, position)
 		elseif spell.english:contains("Mighty Strikes") then
 			equip(sets.precast.mightystrikes)
 		elseif spell.english:contains("Provoke") then
-			equip(sets.enmity, sets.th)
+			equip(sets.th, sets.enmity)
 		elseif spell.english:contains("Tomahawk") then
-			equip(sets.precast.tomahawk, sets.th)
+			equip(sets.th, sets.precast.tomahawk)
 		elseif spell.english:contains("Warcry") then
 			equip(sets.precast.warcry)
 		end

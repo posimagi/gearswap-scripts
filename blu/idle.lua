@@ -1,5 +1,5 @@
 sets.idle={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head={ name="Nyame Helm", augments={'Path: B',}},
 	body="Hashishin Mintan +3",
 	hands="Hashi. Bazu. +3",

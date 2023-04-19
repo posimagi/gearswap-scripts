@@ -1,5 +1,5 @@
 sets.midcast.healing={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head={ name="Ebers Cap +3", priority=13},
 	body={ name="Ebers Bliaut +3", priority=16},
 	hands={ name="Theophany Mitts +3", priority=12},

@@ -1,5 +1,5 @@
 sets.hpdown={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head=empty,
 	body=empty,
 	hands=empty,

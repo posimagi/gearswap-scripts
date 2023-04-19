@@ -1,5 +1,5 @@
 sets.nowsd={
-    ammo="Staunch Tathlum",
+    ammo="Staunch Tathlum +1",
     head={ name="Sakpata's Helm", augments={'Path: A',}},
     body={ name="Sakpata's Plate", augments={'Path: A',}},
     hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},

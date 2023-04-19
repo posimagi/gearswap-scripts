@@ -1,5 +1,5 @@
 sets.midcast.healing={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
 	hands={ name="Peda. Bracers +2", augments={'Enh. "Tranquility" and "Equanimity"',}},
 	legs="Acad. Pants +2",

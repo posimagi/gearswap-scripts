@@ -1,5 +1,5 @@
 sets.naked={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head="Wh. Rarab Cap +1",
 	body="Carpenter's Smock",
 	hands="Carpenter's Gloves",

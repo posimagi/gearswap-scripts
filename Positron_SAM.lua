@@ -22,6 +22,7 @@ function get_sets()
 	include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
 
 	include("sam/precast-meditate.lua") -- sets.precast.meditate
+	include("sam/precast-sengikori.lua") -- sets.precast.sengikori
 	include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
 
 	_ACCURACY_WS = T {
@@ -91,6 +92,8 @@ function precast(spell, position)
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Meditate") then
 			equip(sets.precast.meditate)
+		elseif spell.english:contains("Sengikori") then
+			equip(sets.precast.sengikori)
 		elseif spell.english:contains("Shikikoyo") then
 			equip(sets.precast.shikikoyo)
 		end

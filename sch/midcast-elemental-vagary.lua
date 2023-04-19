@@ -1,5 +1,5 @@
 sets.midcast.elemental.vagary={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head=empty,
 	body="Acad. Gown +3",
 	hands=empty,

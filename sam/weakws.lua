@@ -1,9 +1,9 @@
 sets.weakws={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	head="Flam. Zucchetto +2",
 	body="Emet Harness +1",
 	hands="Wakido Kote +3",
-	legs={ name="Sakonji Haidate +2", augments={'Enhances "Shikikoyo" effect',}},
+	legs={ name="Sakonji Haidate +3", augments={'Enhances "Shikikoyo" effect',}},
 	feet={ name="Sak. Sune-Ate +2", augments={'Enhances "Meikyo Shisui" effect',}},
 	neck="Combatant's Torque",
 	waist="Ioskeha Belt +1",

@@ -1,5 +1,5 @@
 sets.interrupt={
-	ammo="Staunch Tathlum",
+	ammo="Staunch Tathlum +1",
 	hands="Regal Gauntlets",
 	legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
