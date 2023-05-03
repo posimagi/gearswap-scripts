@@ -1,0 +1,15 @@
+sets.ws.critical={
+    ammo="Charis Feather",
+    head={ name="Blistering Sallet +1", augments={'Path: A',}},
+    body="Meg. Cuirie +2",
+    hands={ name="Gleti's Gauntlets", augments={'Path: A',}},
+    legs="Gleti's Breeches",
+    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Odr Earring",
+    right_ear="Sherida Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}

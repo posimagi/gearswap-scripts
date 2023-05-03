@@ -1,6 +1,6 @@
 sets.midcast.enfeebling={
 	ammo="Pemphredo Tathlum",
-	head="Hashishin Kavuk +2",
+	head="Hashishin Kavuk +3",
 	body="Hashishin Mintan +3",
 	hands="Hashi. Bazu. +3",
 	legs="Hashishin Tayt +3",

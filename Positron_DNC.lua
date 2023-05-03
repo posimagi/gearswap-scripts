@@ -17,12 +17,14 @@ function get_sets()
 	include("dnc/weapon.lua") -- sets.weapon
 	include("dnc/weapon-critical.lua") -- sets.weapon.critical
 	include("dnc/ws.lua") -- sets.ws
+	include("dnc/ws-critical.lua") -- sets.ws.critical
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 	include("dnc/ws-multihit.lua") -- sets.ws.multihit
 
 	include("dnc/climacticflourish.lua") -- sets.climacticflourish
 	include("dnc/strikingflourish.lua") -- sets.strikingflourish
 
+	include("dnc/precast-featherstep.lua") -- sets.precast.featherstep
 	include("dnc/precast-jigs.lua") -- sets.precast.jigs
 	include("dnc/precast-nofootrise.lua") -- sets.precast.nofootrise
 	include("dnc/precast-reverseflourish.lua") -- sets.precast.reverseflourish
@@ -37,6 +39,10 @@ function get_sets()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/obi_check.lua") -- obi_check()
 
+	_CRITICAL_WS = T {
+		"Evisceration",
+	}
+
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cyclone",
@@ -46,7 +52,6 @@ function get_sets()
 	_MULTI_HIT_WS = T {
 		"Asuran Fists",
 		"Dancing Edge",
-		"Evisceration",
 		"Exenterator",
 	}
 
@@ -84,7 +89,9 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _MAGICAL_WS:contains(spell.name) then
+		if _CRITICAL_WS:contains(spell.name) then
+			equip(sets.ws.critical)
+		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.name) then
@@ -114,6 +121,9 @@ function precast(spell, position)
 		end
 	elseif spell.type == "Step" then
 		equip(sets.precast.steps)
+		if spell.english:contains("Feather Step") then
+			equip(sets.precast.featherstep)
+		end
 	elseif spell.type == "Waltz" then
 		equip(sets.idle, sets.precast.waltzes)
 		if spell.target.type == "SELF" then

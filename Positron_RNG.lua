@@ -30,6 +30,7 @@ function get_sets()
 	include("rng/ws-magical.lua") -- sets.ws.magical
 	include("rng/ws-multihit.lua") -- sets.ws.multihit
 	include("rng/ws-ranged.lua") -- sets.ws.ranged
+	include("rng/ws-ranged-replicating.lua") -- sets.ws.ranged.replicating
 
 	include("rng/precast-bountyshot.lua") -- sets.precast.bountyshot
 	include("rng/precast-camouflage.lua") -- sets.precast.camouflage
@@ -52,23 +53,27 @@ function get_sets()
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Trueflight",
-		"Wildfire"
+		"Wildfire",
 	}
 
 	_MULTI_HIT_WS = T {
 		"Evisceration",
-		"Jishnu's Radiance"
+		"Jishnu's Radiance",
+	}
+
+	_RANGED_REPLICATING_WS = T {
+		"Last Stand",
 	}
 
 	_RANGED_SKILLS = T {
 		"Archery",
-		"Marksmanship"
+		"Marksmanship",
 	}
 
 	_AMMO_CONSUMING_ABILITIES = T {
 		"Bounty Shot",
 		"Eagle Eye Shot",
-		"Shadowbind"
+		"Shadowbind",
 	}
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
@@ -107,6 +112,8 @@ function precast(spell, position)
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.english) then
 			equip(sets.ws.multihit)
+		elseif _RANGED_REPLICATING_WS:contains(spell.english) then
+			equip(sets.ws.ranged.replicating)
 		end
 	elseif spell.type == "JobAbility" then
 		if _AMMO_CONSUMING_ABILITIES:contains(spell.english) then
