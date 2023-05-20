@@ -6,7 +6,7 @@ sets.ws={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Bard's Charm +2", augments={'Path: A',}},
-	waist="Grunfeld Rope",
+	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Ishvara Earring",
 	left_ring="Ilabrat Ring",

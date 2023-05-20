@@ -1,4 +1,5 @@
 sets.ws.ranged={
+	ammo="Chrono Bullet",
 	head={ name="Nyame Helm", augments={'Path: B',}},
 	body={ name="Ikenga's Vest", augments={'Path: A',}},
 	hands="Chasseur's Gants +3",

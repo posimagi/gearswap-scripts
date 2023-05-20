@@ -9,6 +9,7 @@ function get_sets()
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/obi.lua") -- sets.obi
 
+	include("thf/conspirator.lua") -- sets.conspirator
 	include("thf/domain.lua") -- sets.domain
 	include("thf/fastcast.lua") -- sets.fastcast
 	include("thf/idle.lua") -- sets.idle
@@ -38,6 +39,7 @@ function get_sets()
 	include("thf/midcast-elemental.lua") -- sets.midcast.elemental
 	include("thf/midcast-phalanx.lua") -- sets.midcast.phalanx
 
+	include("func/buffactive_conspirator.lua") -- buffactive_conspirator()
 	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 	include("func/obi_check.lua") -- obi_check()
@@ -188,7 +190,7 @@ function midcast(spell)
 		equip(sets.midcast.elemental)
 	elseif spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
-	elseif spell.english:contains("Poisonga") then
+	elseif spell.english:contains("Poisonga") or spell.english:contains("Sleepga") then
 		equip(sets.th.medium)
 	end
 end
@@ -198,6 +200,11 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+		if spell.english:contains("Conspirator") then
+			equip(sets.conspirator)
+		elseif buffactive_conspirator() then
+			equip(sets.conspirator)
+		end
 		if buffactive_elvorseal() then
 			equip(sets.domain)
 		end
@@ -214,6 +221,9 @@ end
 function status_change(new, old)
 	if new == "Engaged" then
 		equip(sets.tp)
+		if buffactive_conspirator() then
+			equip(sets.conspirator)
+		end
 		if buffactive_elvorseal() then
 			equip(sets.domain)
 		end

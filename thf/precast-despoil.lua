@@ -1,3 +1,3 @@
 sets.precast.despoil={
-	feet="Skulk. Poulaines +2",
+	feet="Skulk. Poulaines +3",
 }

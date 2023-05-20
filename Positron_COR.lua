@@ -25,6 +25,7 @@ function get_sets()
 	include("cor/ws-dark.lua") -- sets.ws.dark
 	include("cor/ws-magical.lua") -- sets.ws.magical
 	include("cor/ws-magical-melee.lua") -- sets.ws.magical.melee
+	include("cor/ws-magical-ranged.lua") -- sets.ws.magical.ranged
 	include("cor/ws-multihit.lua") -- sets.ws.multihit
 	include("cor/ws-ranged.lua") -- sets.ws.ranged
 
@@ -41,41 +42,38 @@ function get_sets()
 	include("cor/midcast-ra.lua") -- sets.midcast.ra
 
 	_DARK_WS = T {
-		"Leaden Salute"
-	}
-
-	_MAGICAL_WS = T {
-		"Aeolian Edge",
-		"Hot Shot",
-		"Red Lotus Blade",
-		"Sanguine Blade",
-		"Seraph Blade",
-		"Wildfire"
+		"Leaden Salute",
 	}
 
 	_MAGICAL_MELEE_WS = T {
 		"Aeolian Edge",
 		"Red Lotus Blade",
 		"Sanguine Blade",
-		"Seraph Blade"
+		"Seraph Blade",
+	}
+
+	_MAGICAL_RANGED_WS = T {
+		"Hot Shot",
+		"Leaden Salute",
+		"Wildfire",
 	}
 
 	_MULTI_HIT_WS = T {
 		"Evisceration",
-		"Requiescat"
+		"Requiescat",
 	}
 
-	_RANGED_WS = T {
+	_PHYSICAL_RANGED_WS = T {
 		"Detonator",
 		"Last Stand",
 		"Numbing Shot",
 		"Sniper Shot",
 		"Slug Shot",
-		"Split Shot"
+		"Split Shot",
 	}
 
 	_RANGED_SKILLS = T {
-		"Marksmanship"
+		"Marksmanship",
 	}
 
 	_AMMO_CONSUMING_ABILITIES = T {}
@@ -126,24 +124,21 @@ function precast(spell, position)
 		if _RANGED_SKILLS:contains(spell.skill) then
 			equip(sets.chronobullet)
 			ammo_check(spell)
-		end
-		if _DARK_WS:contains(spell.english) then
-			equip(sets.ws.magical, sets.ws.dark)
-			obi_check(spell)
-		elseif _MAGICAL_WS:contains(spell.english) then
-			equip(sets.ws.magical)
-			obi_check(spell)
-			if _MAGICAL_MELEE_WS:contains(spell.english) then
-				equip(sets.ws.magical.melee)
-			elseif spell.english:contains("Wildfire") and _RA_STORE_TP then
-				equip(sets.storetp)
+			if _MAGICAL_RANGED_WS:contains(spell.english) then
+				equip(sets.ws.magical.ranged)
+				obi_check(spell)
+			elseif _PHYSICAL_RANGED_WS:contains(spell.english) then
+				equip(sets.ws.ranged)
 			end
-		elseif _MULTI_HIT_WS:contains(spell.english) then
-			equip(sets.ws.multihit)
-		elseif _RANGED_WS:contains(spell.english) then
-			equip(sets.ws.ranged)
+		end
+		if _MAGICAL_MELEE_WS:contains(spell.english) then
+			equip(sets.ws, sets.ws.magical.melee)
+			obi_check(spell)
 		else
 			equip(sets.ws)
+		end
+		if _DARK_WS:contains(spell.english) then
+			equip(sets.ws.dark)
 		end
 	elseif spell.type == "CorsairRoll" then
 		equip(sets.precast.phantomroll)

@@ -4,9 +4,11 @@ sets.tp={
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
-	feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
+	-- feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
+	feet="Macu. Toe Sh. +3",
 	neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-	waist="Reiki Yotai",
+	-- waist="Reiki Yotai", -- overcaps Dual Wield with capped magic Haste
+	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear="Telos Earring",
 	right_ear="Sherida Earring",
 	left_ring="Ilabrat Ring",

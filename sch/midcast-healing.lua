@@ -1,7 +1,7 @@
 sets.midcast.healing={
 	ammo="Staunch Tathlum +1",
 	body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
-	hands={ name="Peda. Bracers +2", augments={'Enh. "Tranquility" and "Equanimity"',}},
+	hands={ name="Peda. Bracers +3", augments={'Enh. "Tranquility" and "Equanimity"',}},
 	legs="Acad. Pants +2",
 	feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
 	neck="Incanter's Torque",

@@ -8,6 +8,7 @@ function get_sets()
 
 	include("func/obi_check.lua") -- obi_check()
 
+	include("all/dispelga.lua") -- sets.dispelga
 	include("all/obi.lua") -- sets.obi
 	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
@@ -19,6 +20,7 @@ function get_sets()
 	include("brd/fastcast.lua") -- sets.fastcast
 	include("brd/idle.lua") -- sets.idle
 	include("brd/tp.lua") -- sets.tp
+	include("brd/weapon.lua") -- sets.weapon
 	include("brd/ws.lua") -- sets.ws
 
 	include("brd/precast-honormarch.lua") -- sets.precast.honormarch
@@ -87,6 +89,10 @@ function get_sets()
 		"Maiden's Virelai",
 	}
 
+	_WEAPON_SWAP_SPELLS = T {
+		"Dispelga",
+	}
+
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 
@@ -126,6 +132,15 @@ function precast(spell, position)
 			equip(sets.ws.magical)
 			obi_check(spell)
 		end
+	elseif spell.english:contains("Dispelga") then	
+		_PREVIOUS_WEAPONS = sets.weapon
+		if sets.dispelga.main ~= player.equipment.main then
+			_PREVIOUS_WEAPONS = T {
+				main = player.equipment.main,
+				sub = player.equipment.sub
+			}
+		end
+		equip(sets.dispelga)
 	else
 		equip(sets.fastcast)
 		if spell.type == "BardSong" then
@@ -171,6 +186,8 @@ function midcast(spell)
 		end
 	elseif spell.english:contains("Dia") then
 		equip(sets.th)
+	elseif spell.english:contains("Dispelga") then
+		equip(sets.dispelga)
 	end
 end
 
@@ -181,6 +198,9 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+	end
+	if _WEAPON_SWAP_SPELLS:contains(spell.english) then
+		equip(_PREVIOUS_WEAPONS)
 	end
 end
 

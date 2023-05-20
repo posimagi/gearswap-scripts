@@ -1,7 +1,7 @@
 sets.midcast.elemental={
 	ammo="Pemphredo Tathlum",
 	head="Arbatel Bonnet +3",
-	body="Acad. Gown +3",
+	body={ name="Agwu's Robe", augments={'Path: A',}},
 	hands={ name="Agwu's Gages", augments={'Path: A',}},
 	legs="Arbatel Pants +3",
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},

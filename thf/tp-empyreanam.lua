@@ -4,7 +4,7 @@ sets.tp.empyreanam={
     body="Skulker's Vest +2",
     hands="Skulk. Armlets +2",
     legs="Skulk. Culottes +2",
-    feet="Skulk. Poulaines +2",
+    feet="Skulk. Poulaines +3",
     neck={ name="Asn. Gorget +2", augments={'Path: A',}},
     waist="Reiki Yotai",
     left_ear="Suppanomimi",

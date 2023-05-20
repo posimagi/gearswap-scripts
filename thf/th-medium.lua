@@ -1,4 +1,4 @@
 sets.th.medium={
-	feet="Skulk. Poulaines +2",
+	feet="Skulk. Poulaines +3",
 	waist="Chaac Belt",
 }

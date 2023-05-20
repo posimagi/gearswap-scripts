@@ -6,7 +6,7 @@ sets.ws={
 	legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Asn. Gorget +2", augments={'Path: A',}},
-	waist="Grunfeld Rope",
+	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Odr Earring",
 	left_ring="Ilabrat Ring",
