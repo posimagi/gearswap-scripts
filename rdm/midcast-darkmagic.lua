@@ -1,0 +1,15 @@
+sets.midcast.darkmagic={
+    range="Ullr",
+    head="Leth. Chappel +3",
+    body="Atrophy Tabard +3",
+    hands="Leth. Ganth. +3",
+    legs="Leth. Fuseau +3",
+    feet="Leth. Houseaux +3",
+    neck="Erra Pendant",
+    waist={ name="Obstin. Sash", augments={'Path: A',}},
+    left_ear="Regal Earring",
+    right_ear="Snotra Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Stikini Ring +1",
+    back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Haste+10','Occ. inc. resist. to stat. ailments+10',}},
+}

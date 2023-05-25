@@ -1,0 +1,15 @@
+sets.midcast.darkmagic={
+    ammo="Pemphredo Tathlum",
+    head="Acad. Mortar. +3",
+    body="Acad. Gown +3",
+    hands="Arbatel Bracers +3",
+    legs={ name="Peda. Pants +3", augments={'Enhances "Tabula Rasa" effect',}},
+    feet="Acad. Loafers +3",
+    neck="Erra Pendant",
+    waist={ name="Obstin. Sash", augments={'Path: A',}},
+    left_ear="Regal Earring",
+    right_ear="Malignance Earring",
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Stikini Ring +1",
+    back={ name="Bookworm's Cape", augments={'INT+1','MND+3','Helix eff. dur. +15','"Regen" potency+10',}},
+}

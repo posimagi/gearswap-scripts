@@ -42,7 +42,9 @@ function get_sets()
 	include("sch/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("sch/midcast-barspell.lua") -- sets.midcast.barspell
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
-	include("sch/midcast-darkness.lua") -- sets.midcast.darkness
+	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
+	include("sch/midcast-darkmagic.lua") -- sets.midcast.darkmagic
+	include("sch/midcast-drain.lua") -- sets.midcast.drain
 	include("sch/midcast-elemental.lua") -- sets.midcast.elemental
 	include("sch/midcast-elemental-vagary.lua") -- sets.midcast.elemental.vagary
 	include("sch/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -178,8 +180,6 @@ function midcast(spell)
 			if spell.english:contains("Noctohelix") then
 				equip(sets.midcast.darkness)
 			end
-		elseif spell.english:contains("Kaustra") then
-			equip(sets.midcast.darkness)
 		elseif spell.english:contains("Impact") then
 			equip(sets.impact)
 		end
@@ -194,8 +194,11 @@ function midcast(spell)
 			end
 		end
 	elseif spell.skill == "Dark Magic" then
+		equip(sets.midcast.darkmagic)
 		if spell.english:contains("Bio") then
 			equip(sets.th)
+		elseif spell.english:contains("Kaustra") then
+			equip(sets.midcast.darkness)
 		end
 		obi_check(spell)
 	end

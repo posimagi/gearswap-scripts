@@ -26,6 +26,14 @@ function get_sets()
 	include("rdm/naked.lua") -- sets.naked
 	include("rdm/tp.lua") -- sets.tp
 	include("rdm/weapon.lua") -- sets.weapon
+	include("rdm/weapon-aeolianedge.lua") -- sets.weapon.aeolianedge
+	include("rdm/weapon-blackhalo.lua") -- sets.weapon.blackhalo
+	include("rdm/weapon-caliburnus.lua") -- sets.weapon.caliburnus
+	include("rdm/weapon-enspell.lua") -- sets.weapon.enspell
+	include("rdm/weapon-evisceration.lua") -- sets.weapon.evisceration
+	include("rdm/weapon-sanguineblade.lua") -- sets.weapon.sanguineblade
+	include("rdm/weapon-savageblade.lua") -- sets.weapon.savageblade
+	include("rdm/weapon-seraphblade.lua") -- sets.weapon.seraphblade
 	include("rdm/ws.lua") -- sets.ws
 	include("rdm/ws-dark.lua") -- sets.ws.dark
 	include("rdm/ws-magical.lua") -- sets.ws.magical
@@ -40,12 +48,14 @@ function get_sets()
 	include("rdm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("rdm/midcast-barstatus.lua") -- sets.midcast.barstatus
 	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
+	include("rdm/midcast-darkmagic.lua") -- sets.midcast.darkmagic
 	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("rdm/midcast-enfeeblingaccuracy.lua") -- sets.midcast.enfeeblingaccuracy
 	include("rdm/midcast-enfeeblingpotency.lua") -- sets.midcast.enfeeblingpotency
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("rdm/midcast-enhancingself.lua") -- sets.midcast.enhancingself
 	include("rdm/midcast-enhancingskill.lua") -- sets.midcast.enhancingskill
+	include("rdm/midcast-gain.lua") -- sets.midcast.gain
 	include("rdm/midcast-healing.lua") -- sets.midcast.healing
 	include("rdm/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("rdm/midcast-ra.lua") -- sets.midcast.ra
@@ -204,9 +214,7 @@ function midcast(spell)
 		if spell.target.type == "SELF" then
 			equip(sets.midcast.enhancingself)
 		end
-		if spell.english:contains("Refresh") then
-			equip(sets.midcast.refresh)
-		elseif spell.english:contains("Aquaveil") then
+		if spell.english:contains("Aquaveil") then
 			equip(sets.midcast.aquaveil)
 		elseif spell.english:contains("Bar") then
 			equip(sets.midcast.barspell)
@@ -215,22 +223,27 @@ function midcast(spell)
 			end
 		elseif spell.english:contains("En") then
 			equip(sets.midcast.enhancingskill)
+		elseif spell.english:contains("Gain") then
+			equip(sets.midcast.gain)
 		elseif spell.english:contains("Phalanx") then
 			if spell.target.type == "SELF" then
 				equip(sets.midcast.phalanx)
 			end
+		elseif spell.english:contains("Refresh") then
+				equip(sets.midcast.refresh)
+		elseif spell.english:contains("Regen") then
+				equip(sets.midcast.regen)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		elseif spell.english:contains("Temper") then
 			equip(sets.midcast.enhancingskill)
-		elseif spell.english:contains("Regen") then
-			equip(sets.midcast.regen)
 		end
 	elseif spell.skill == "Dark Magic" then
-		equip(sets.midcast.enfeebling)
+		equip(sets.midcast.darkmagic)
 		if spell.english:contains("Bio") then
 			equip(sets.th)
 		end
+		obi_check(spell)
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
 		obi_check(spell)

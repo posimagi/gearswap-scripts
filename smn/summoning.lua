@@ -1,7 +1,7 @@
 sets.summoning={
     head="Beckoner's Horn +2",
     body="Beck. Doublet +2",
-    hands={ name="Glyphic Bracers +2", augments={'Inc. Sp. "Blood Pact" magic burst dmg.',}},
+    hands={ name="Glyphic Bracers +3", augments={'Inc. Sp. "Blood Pact" magic burst dmg.',}},
     legs="Beck. Spats +2",
     feet="Baayami Sabots",
     neck="Incanter's Torque",

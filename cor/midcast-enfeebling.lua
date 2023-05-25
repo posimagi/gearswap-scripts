@@ -1,5 +1,5 @@
 sets.midcast.enfeebling={
-	head="Laksa. Tricorne +2",
+	head="Laksa. Tricorne +3",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
 	legs="Malignance Tights",

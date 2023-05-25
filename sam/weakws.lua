@@ -4,7 +4,7 @@ sets.weakws={
 	body="Emet Harness +1",
 	hands="Wakido Kote +3",
 	legs={ name="Sakonji Haidate +3", augments={'Enhances "Shikikoyo" effect',}},
-	feet={ name="Sak. Sune-Ate +2", augments={'Enhances "Meikyo Shisui" effect',}},
+	feet={ name="Sak. Sune-Ate +3", augments={'Enhances "Meikyo Shisui" effect',}},
 	neck="Combatant's Torque",
 	waist="Ioskeha Belt +1",
 	left_ear="Dedition Earring",
