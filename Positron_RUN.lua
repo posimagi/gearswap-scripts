@@ -17,8 +17,6 @@ function get_sets()
 	include("run/ws.lua") -- sets.ws
 	include("run/ws-multihit.lua") -- sets.ws.multihit
 
-	-- sets.embolden
-
 	include("run/precast-battuta.lua") -- sets.precast["Battuta"]
 	include("run/precast-elementalsforzo.lua") -- sets.precast["Elemental Sforzo"]
 	include("run/precast-enhancing.lua") -- sets.precast.enhancing
@@ -108,8 +106,6 @@ function precast(spell, position)
 		end
 	elseif _ABILITY:contains(spell.type) then
 		equip(sets.enmity, sets.precast[spell.name])
-	elseif spell.type == "Item" then
-		equip(sets.cursna)
 	end
 end
 
@@ -124,8 +120,6 @@ function midcast(spell)
 		elseif spell.english:contains("Phalanx") then
 			equip(sets.midcast.phalanx)
 		end
-	elseif spell.type == "Item" then
-		equip(sets.idle, sets.cursna)
 	end
 	if _INTERRUPT_SPELLS:contains(spell.english) then
 		equip(sets.interrupt)

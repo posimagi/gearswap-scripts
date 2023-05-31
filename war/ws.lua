@@ -10,6 +10,6 @@ sets.ws={
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Thrud Earring",
 	left_ring="Sroda Ring",
-	right_ring="Regal Ring",
+	right_ring="Ephramad's Ring",
 	back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }

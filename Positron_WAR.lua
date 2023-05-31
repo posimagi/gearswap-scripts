@@ -36,8 +36,11 @@ function get_sets()
 	}
 
 	_ACCURACY_WS = T {
+		"Armor Break",
 		"Full Break",
+		"Shield Break",
 		"Steel Cyclone",
+		"Weapon Break",
 	}
 
 	_MAGICAL_WS = T {

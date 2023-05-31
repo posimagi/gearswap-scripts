@@ -279,9 +279,6 @@ function aftercast(spell)
 	if spell.english:contains("Dispelga") then
 		equip(_PREVIOUS_WEAPONS)
 	end
-	if spell.english:contains("Flat Blade") then
-		send_command('wait 8; input /ws "Flat Blade" <t>') -- FIXME: REMOVE!
-	end
 end
 
 function status_change(new, old)

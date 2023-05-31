@@ -26,6 +26,7 @@ function get_sets()
 	include("geo/weapon-staff.lua") -- sets.weapon.staff
 	include("geo/ws.lua") -- sets.ws
 	include("geo/ws-dark.lua") -- sets.ws.dark
+	include("geo/ws-magical.lua") -- sets.ws.magical
 
 	include("geo/precast-bolster.lua") -- sets.precast.bolster
 	include("geo/precast-concentricpulse.lua") -- sets.precast.concentricpulse
@@ -42,6 +43,12 @@ function get_sets()
 	include("geo/midcast-indicolure.lua") -- sets.midcast.indicolure
 	include("geo/midcast-elemental.lua") -- sets.midcast.elemental
 	include("geo/midcast-refresh.lua") -- sets.midcast.refresh
+
+	_MAGICAL_WS = T {
+		"Flash Nova",
+		"Seraph Strike",
+		"Shining Strike",
+	}
 
 	_DARK_WS = T {
 		"Cataclysm",
@@ -90,7 +97,7 @@ function precast(spell, position)
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		if _DARK_WS:contains(spell.english) then
-			equip(sets.ws.dark)
+			equip(sets.ws.magical, sets.ws.dark)
 			obi_check(spell)
 		end
 	elseif spell.type == "JobAbility" then

@@ -1,15 +1,14 @@
-sets.ws={
-	ammo="Oshasha's Treatise",
-	head="Hashishin Kavuk +3",
+sets.ws.magical={
+	head={ name="Nyame Helm", augments={'Path: B',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
-	neck="Rep. Plat. Medal",
-	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+	neck="Sibyl Scarf",
+	waist="Eschan Stone",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Ishvara Earring",
+	right_ear="Regal Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-	right_ring="Ephramad's Ring",
-	back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	right_ring="Freke Ring",
+	back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
 }
