@@ -14,6 +14,7 @@ function get_sets()
 
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
+	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("all/obi.lua") -- sets.obi
 	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
@@ -39,7 +40,6 @@ function get_sets()
 	include("sch/precast-healing.lua") -- sets.precast.healing
 	include("sch/precast-tabularasa.lua") -- sets.precast.tabularasa
 
-	include("sch/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("sch/midcast-barspell.lua") -- sets.midcast.barspell
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna
 	include("sch/midcast-cursna.lua") -- sets.midcast.cursna

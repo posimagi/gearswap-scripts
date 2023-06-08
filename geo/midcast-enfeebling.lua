@@ -4,7 +4,7 @@ sets.midcast.enfeebling={
 	hands="Azimuth Gloves +2",
 	legs="Azimuth Tights +2",
 	feet="Azimuth Gaiters +3",
-	neck="Incanter's Torque",
+	neck={ name="Bagua Charm +2", augments={'Path: A',}},
 	waist="Luminary Sash",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",

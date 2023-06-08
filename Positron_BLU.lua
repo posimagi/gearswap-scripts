@@ -8,6 +8,7 @@ function get_sets()
 
 	include("func/obi_check.lua") -- obi_check()
 
+	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("all/obi.lua") -- sets.obi
 	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
@@ -27,7 +28,6 @@ function get_sets()
 
 	include("blu/precast-diffusion.lua") -- sets.precast.diffusion
 
-	include("blu/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("blu/midcast-elemental.lua") -- sets.midcast.elemental
 	include("blu/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("blu/midcast-phalanx.lua") -- sets.midcast.phalanx

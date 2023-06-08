@@ -15,6 +15,7 @@ function get_sets()
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
+	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("geo/idle.lua") -- sets.idle
@@ -140,7 +141,9 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
-		if spell.english:contains("Stoneskin") then
+		if spell.english:contains("Aquaveil") then
+			equip(sets.midcast.aquaveil)
+		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
 		elseif spell.english:contains("Refresh") then
 			equip(sets.midcast.refresh)
