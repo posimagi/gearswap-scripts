@@ -5,11 +5,11 @@ sets.midcast.elemental={
 	hands="Hashi. Bazu. +3",
 	legs="Hashishin Tayt +3",
 	feet="Hashi. Basmak +3",
-	neck="Sanctity Necklace",
+	neck={ name="Mirage Stole +2", augments={'Path: A',}},
 	waist="Orpheus's Sash",
 	left_ear="Regal Earring",
 	right_ear="Friomisi Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Stikini Ring +1",
-	back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+	back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 }

@@ -11,5 +11,5 @@ sets.idle={
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 	right_ring="Defending Ring",
-	back={ name="Rosmerta's Cape", augments={'Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}},
+	back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
 }

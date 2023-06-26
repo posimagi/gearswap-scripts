@@ -5,11 +5,11 @@ sets.midcast.enfeebling={
 	hands="Hashi. Bazu. +3",
 	legs="Hashishin Tayt +3",
 	feet="Malignance Boots",
-	neck="Erra Pendant",
+	neck={ name="Mirage Stole +2", augments={'Path: A',}},
 	waist="Sacro Cord",
 	left_ear="Regal Earring",
 	right_ear="Crep. Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Kishar Ring",
-	back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 }

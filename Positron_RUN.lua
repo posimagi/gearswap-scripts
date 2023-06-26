@@ -8,6 +8,8 @@ function get_sets()
 	
 	include("all/th.lua") -- sets.th
 
+	include("func/notify_remaining_duration.lua") -- notify_remaining_duration()
+
 	include("run/engaged.lua") -- sets.engaged
 	include("run/enmity.lua") -- sets.enmity
 	include("run/fastcast.lua") -- sets.fastcast
@@ -31,7 +33,7 @@ function get_sets()
 	include("run/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("run/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("run/midcast-refresh.lua") -- sets.midcast.refresh
-	-- include("run/midcast-regen.lua") -- sets.midcast.regen
+	include("run/midcast-regen.lua") -- sets.midcast.regen
 
 	_MAGIC = T {
 		"WhiteMagic",
@@ -106,6 +108,7 @@ function precast(spell, position)
 		end
 	elseif _ABILITY:contains(spell.type) then
 		equip(sets.enmity, sets.precast[spell.name])
+		notify_remaining_duration(spell)
 	end
 end
 
@@ -115,10 +118,12 @@ function midcast(spell)
 		equip(sets.midcast.enhancing)
 		if spell.english:contains("Foil") then
 			equip(sets.enmity)
-		elseif spell.english:contains("Refresh") then
-			equip(sets.midcast.refresh)
 		elseif spell.english:contains("Phalanx") then
 			equip(sets.midcast.phalanx)
+		elseif spell.english:contains("Refresh") then
+			equip(sets.midcast.refresh)
+		elseif spell.english:contains("Regen") then
+			equip(sets.midcast.regen)
 		end
 	end
 	if _INTERRUPT_SPELLS:contains(spell.english) then

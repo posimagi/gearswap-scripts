@@ -22,6 +22,7 @@ function get_sets()
 	include("brd/tp.lua") -- sets.tp
 	include("brd/weapon.lua") -- sets.weapon
 	include("brd/ws.lua") -- sets.ws
+	include("brd/ws-accuracy.lua") -- sets.ws.accuracy
 
 	include("brd/precast-honormarch.lua") -- sets.precast.honormarch
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
@@ -132,6 +133,8 @@ function precast(spell, position)
 			equip(sets.ws.magical)
 			obi_check(spell)
 		end
+	elseif spell.type == "Step" then
+		equip(sets.ws.accuracy)
 	elseif spell.english:contains("Dispelga") then	
 		_PREVIOUS_WEAPONS = sets.weapon
 		if sets.dispelga.main ~= player.equipment.main then

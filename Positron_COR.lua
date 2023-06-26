@@ -130,8 +130,7 @@ function precast(spell, position)
 			elseif _PHYSICAL_RANGED_WS:contains(spell.english) then
 				equip(sets.ws.ranged)
 			end
-		end
-		if _MAGICAL_MELEE_WS:contains(spell.english) then
+		elseif _MAGICAL_MELEE_WS:contains(spell.english) then
 			equip(sets.ws, sets.ws.magical.melee)
 			obi_check(spell)
 		else

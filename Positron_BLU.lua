@@ -8,14 +8,16 @@ function get_sets()
 
 	include("func/obi_check.lua") -- obi_check()
 
-	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
+	
 	include("all/obi.lua") -- sets.obi
 	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
+	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("all/midcast-darkness.lua") -- sets.midcast.darkness
+	include("all/midcast-earth.lua") -- sets.midcast.earth
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
 	include("blu/bluemagic.lua") -- sets.bluemagic
@@ -118,6 +120,8 @@ function midcast(spell)
 			equip(sets.idle, sets.midcast.elemental)
 			if spell.english:contains("Tenebral Crush") then
 				equip(sets.midcast.darkness)
+			elseif spell.english:contains("Entomb") then
+				equip(sets.midcast.earth)
 			end
 			obi_check(spell)
 		end
