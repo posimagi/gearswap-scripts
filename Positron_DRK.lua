@@ -17,7 +17,33 @@ function get_sets()
 
 	include("drk/precast-lastresort.lua") -- sets.precast.lastresort
 
+	include("drk/midcast-absorb.lua") -- sets.midcast.absorb
+	include("drk/midcast-drain.lua") -- sets.midcast.drain
+	include("drk/midcast-dreadspikes.lua") -- sets.midcast.dreadspikes
+	include("drk/midcast-endark.lua") -- sets.midcast.endark
+
 	include("func/obi_check.lua") -- obi_check()
+
+	_ABSORB_SPELLS = T {
+		"Absorb-ACC",
+		"Absorb-AGI",
+		"Absorb-Attri",
+		"Absorb-CHR",
+		"Absorb-DEX",
+		"Absorb-INT",
+		"Absorb-MND",
+		"Absorb-STR",
+		"Absorb-TP",
+		"Absorb-VIT",
+	}
+
+	_DRAIN_SPELLS = T {
+		"Aspir",
+		"Aspir II",
+		"Drain",
+		"Drain II",
+		"Drain III",
+	}
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
@@ -66,6 +92,17 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+	if spell.skill == "Dark Magic" then
+		if _ABSORB_SPELLS:contains(spell.english) then
+			equip(sets.midcast.absorb)
+		elseif _DRAIN_SPELLS:contains(spell.english) then
+			equip(sets.midcast.drain)
+		elseif spell.english:contains("Dread Spikes") then
+			equip(sets.midcast.dreadspikes)
+		elseif spell.english:contains("Endark") then
+			equip(sets.midcast.endark)
+		end
+	end
 end
 
 function aftercast(spell)
@@ -85,4 +122,5 @@ function status_change(new, old)
 end
 
 function buff_change(name, gain, buff_details)
+
 end

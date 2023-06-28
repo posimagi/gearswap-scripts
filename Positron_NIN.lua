@@ -47,9 +47,14 @@ function get_sets()
 		"Evisceration"
 	}
 
-	CAPPED_HASTE = false
-	if CAPPED_HASTE then
+	_CAPPED_HASTE = false
+	if _CAPPED_HASTE then
 		include("nin/tp-stp.lua") -- sets.tp
+	end
+
+	_GOKOTAI_REGAIN = true
+	if _GOKOTAI_REGAIN then
+		include("nin/tp-dualwield.lua") -- sets.tp
 	end
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
