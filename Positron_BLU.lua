@@ -25,6 +25,8 @@ function get_sets()
 	include("blu/idle.lua") -- sets.idle
 	include("blu/naked.lua") -- sets.naked
 	include("blu/tp.lua") -- sets.tp
+	include("blu/weapon.lua") -- sets.weapon
+	include("blu/weapon-melee.lua") -- sets.weapon.melee
 	include("blu/ws.lua") -- sets.ws
 	include("blu/ws-multihit.lua") -- sets.ws.multihit
 
@@ -144,5 +146,19 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+	end
+end
+
+function self_command(command)
+	if command == "weapon" then
+		if player.equipment.main == "Tizona" then
+			equip(sets.weapon)
+			send_command("input /lockstyleset 36")
+			add_to_chat("Sakpata's Sword equipped")
+		else
+			equip(sets.weapon.melee)
+			send_command("input /lockstyleset 56")
+			add_to_chat("Tizona equipped")
+		end
 	end
 end

@@ -16,6 +16,8 @@ function get_sets()
 	include("bst/ws-magical.lua") -- sets.ws.magical
 
 	include("bst/precast-callbeast.lua") -- sets.precast.callbeast
+	include("bst/precast-killerinstinct.lua") -- sets.precast.killerinstinct
+	include("bst/precast-reward.lua") -- sets.precast.reward
 	include("bst/precast-sic.lua") -- sets.precast.sic
 	include("bst/precast-spur.lua") -- sets.precast.spur
 
@@ -58,7 +60,11 @@ function precast(spell, position)
 		end
 	elseif spell.type == "JobAbility" then
 		if spell.english:contains("Call Beast") then
-			equip(sets.callbeast)
+			equip(sets.precast.callbeast)
+		elseif spell.english:contains("Killer Instinct") then
+			equip(sets.precast.killerinstinct)
+		elseif spell.english:contains("Reward") then
+			equip(sets.precast.reward)
 		end	
 	elseif spell.type == "Monster" then
 		equip(sets.precast.sic)

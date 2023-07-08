@@ -33,6 +33,7 @@ function get_sets()
 	include("brd/midcast-ballad.lua") -- sets.midcast.ballad
 	include("brd/midcast-carol.lua") -- sets.midcast.carol
 	include("brd/midcast-cursna.lua") -- sets.midcast.cursna
+	include("brd/midcast-etude.lua") -- sets.midcast.etude
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-lullaby.lua") -- sets.midcast.lullaby
 	include("brd/midcast-madrigal.lua") -- sets.midcast.madrigal
@@ -42,6 +43,7 @@ function get_sets()
 	include("brd/midcast-scherzo.lua") -- sets.midcast.scherzo
 	include("brd/midcast-songs.lua") -- sets.midcast.songs
 	include("brd/midcast-songs-offensive.lua") -- sets.midcast.songs.offensive
+	include("brd/midcast-threnody.lua") -- sets.midcast.threnody
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
@@ -164,11 +166,15 @@ function midcast(spell)
 			equip(sets.midcast.songs.offensive)
 			if spell.english:contains("Lullaby") then
 				equip(sets.midcast.lullaby)
+			elseif spell.english:contains("Threnody") then
+				equip(sets.midcast.threnody)
 			end
 		elseif spell.english:contains("Ballad") then
 			equip(sets.midcast.ballad)
 		elseif spell.english:contains("Carol") then
 			equip(sets.midcast.carol)
+		elseif spell.english:contains("Etude") then
+			equip(sets.midcast.etude)
 		elseif spell.english:contains("Madrigal") then
 			equip(sets.midcast.madrigal)
 		elseif spell.english:contains("March") then

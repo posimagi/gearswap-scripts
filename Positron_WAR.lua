@@ -15,6 +15,7 @@ function get_sets()
 	include("war/enmity.lua") -- sets.enmity
 	include("war/fastcast.lua") -- sets.fastcast
 	include("war/idle.lua") -- sets.idle
+	include("war/movementspeed.lua") -- sets.movementspeed
 	include("war/nowsd.lua") -- sets.nowsd
 	include("war/tp.lua") -- sets.tp
 	include("war/ws.lua") -- sets.ws
@@ -134,7 +135,7 @@ function precast(spell, position)
 		elseif spell.english:contains("Provoke") then
 			equip(sets.th, sets.enmity)
 		elseif spell.english:contains("Tomahawk") then
-			equip(sets.th, sets.precast.tomahawk)
+			equip(sets.precast.tomahawk)
 		elseif spell.english:contains("Warcry") then
 			equip(sets.precast.warcry)
 		end
@@ -154,6 +155,9 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
+		if world.area:contains("Abyssea - ") then
+			equip(sets.movementspeed)
+		end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end
@@ -168,6 +172,9 @@ function buff_change(name, gain, buff_details)
 			enable("neck", "left_ring")
 			if player.status == "Idle" then
 				equip(sets.idle)
+				if world.area:contains("Abyssea - ") then
+					equip(sets.movementspeed)
+				end
 			elseif player.status == "Engaged" then
 				equip(sets.tp)
 			end
@@ -182,6 +189,9 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+		if world.area:contains("Abyssea - ") then
+			equip(sets.movementspeed)
+		end
 	end
 end
 

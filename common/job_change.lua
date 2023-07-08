@@ -19,7 +19,7 @@ MACROBOOK = {
     PUP = 2,
     DNC = 6,
     SCH = 20,
-    GEO = 10,
+    GEO = 30,
     RUN = 7,
 }
 
@@ -29,7 +29,7 @@ MACROSET = {
     RNG = 2,
     DRG = 9,
     COR = 10,
-    PUP  = 10,
+    PUP = 10,
     DNC = 10,
     GEO = 10,
     RUN = 10,
