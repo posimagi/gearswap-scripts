@@ -15,7 +15,12 @@ function get_sets()
 	include("drk/ws-multihit.lua") -- sets.ws.multihit
 	include("drk/ws-magical.lua") -- sets.ws.magical
 
+	include("drk/precast-arcanecircle.lua") -- sets.precast.arcanecircle
+	include("drk/precast-bloodweapon.lua") -- sets.precast.bloodweapon
+	include("drk/precast-darkseal.lua") -- sets.precast.darkseal
+	include("drk/precast-diaboliceye.lua") -- sets.precast.diaboliceye
 	include("drk/precast-lastresort.lua") -- sets.precast.lastresort
+	include("drk/precast-nethervoid.lua") -- sets.precast.nethervoid
 
 	include("drk/midcast-absorb.lua") -- sets.midcast.absorb
 	include("drk/midcast-drain.lua") -- sets.midcast.drain
@@ -83,8 +88,18 @@ function precast(spell, position)
 			equip(sets.ws.multihit)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Last Resort") then
+		if spell.english:contains("Arcane Circle") then
+			equip(sets.precast.arcanecircle)
+		elseif spell.english:contains("Blood Weapon") then
+			equip(sets.precast.bloodweapon)
+		elseif spell.english:contains("Dark Seal") then
+			equip(sets.precast.darkseal)
+		elseif spell.english:contains("Diabolic Eye") then
+			equip(sets.precast.diaboliceye)
+		elseif spell.english:contains("Last Resort") then
 			equip(sets.precast.lastresort)
+		elseif spell.english:contains("Nether Void") then
+			equip(sets.precast.nethervoid)
 		end
 	else
 		equip(sets.fastcast)
