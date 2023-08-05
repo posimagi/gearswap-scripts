@@ -14,13 +14,13 @@ function get_sets()
 
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
-	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("all/obi.lua") -- sets.obi
 	include("all/quickmagic.lua") -- sets.quickmagic
 	include("all/th.lua") -- sets.th
 
 	include("all/precast-stoneskin.lua") -- sets.precast.stoneskin
 
+	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
 	include("all/midcast-darkness.lua") -- sets.midcast.darkness
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
@@ -51,6 +51,7 @@ function get_sets()
 	include("sch/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("sch/midcast-healing.lua") -- sets.midcast.healing
 	include("sch/midcast-helix.lua") -- sets.midcast.helix
+	include("sch/midcast-kaustra.lua") -- sets.midcast.kaustra
 	include("sch/midcast-light.lua") -- sets.midcast.light
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
@@ -175,9 +176,9 @@ function midcast(spell)
 		obi_check(spell)
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
-			-- if spell.english:contains("Luminohelix") then
-			--	 equip(sets.midcast.light)
-			if spell.english:contains("Noctohelix") then
+			if spell.english:contains("Luminohelix") then
+				equip(sets.midcast.light)
+			elseif spell.english:contains("Noctohelix") then
 				equip(sets.midcast.darkness)
 			end
 		elseif spell.english:contains("Impact") then
@@ -186,19 +187,21 @@ function midcast(spell)
 		if buffactive["Klimaform"] and world.weather_element == spell.element then
 			equip(sets.klimaform)
 		end
-		if world.area:contains("Outer Ra'Kaznar [U") then
-			if _TIER_ONE_NUKES:contains(spell.english) then
-				equip(sets.naked)
-			elseif _TIER_TWO_NUKES:contains(spell.english) then
-				equip(sets.midcast.elemental.vagary)
-			end
+		if _TIER_ONE_NUKES:contains(spell.english) and (world.area:contains("Outer Ra'Kaznar [U") or world.area:contains("Walk of Echoes [P")) then
+			equip(sets.naked)
+		end
+		if _TIER_TWO_NUKES:contains(spell.english) and world.area:contains("Outer Ra'Kaznar [U") then
+			equip(sets.midcast.elemental.vagary)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.darkmagic)
 		if spell.english:contains("Bio") then
 			equip(sets.th)
 		elseif spell.english:contains("Kaustra") then
-			equip(sets.midcast.darkness)
+			equip(sets.darkarts, sets.midcast.elemental, sets.midcast.kaustra)
+			if buffactive["Klimaform"] and world.weather_element == spell.element then
+				equip(sets.klimaform)
+			end
 		end
 		obi_check(spell)
 	end
@@ -207,10 +210,8 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
-		if world.area:contains("Outer Ra'Kaznar [U") then
-			if _TIER_ONE_NUKES:contains(spell.english) then
-				equip(sets.darkarts)
-			end
+		if _TIER_ONE_NUKES:contains(spell.english) then
+			equip(sets.darkarts)
 		end
 		if player.tp < 1000 then
 			if buffactive["Light Arts"] and not spell.english:contains("Dark Arts") then

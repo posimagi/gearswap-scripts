@@ -1,5 +1,5 @@
 sets.midcast.elemental={
-	ammo="Pemphredo Tathlum",
+	ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 	head="Arbatel Bonnet +3",
 	body={ name="Agwu's Robe", augments={'Path: A',}},
 	hands={ name="Agwu's Gages", augments={'Path: A',}},

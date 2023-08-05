@@ -21,6 +21,7 @@ function get_sets()
 	include("drk/precast-diaboliceye.lua") -- sets.precast.diaboliceye
 	include("drk/precast-lastresort.lua") -- sets.precast.lastresort
 	include("drk/precast-nethervoid.lua") -- sets.precast.nethervoid
+	include("drk/precast-weaponbash.lua") -- sets.precast.weaponbash
 
 	include("drk/midcast-absorb.lua") -- sets.midcast.absorb
 	include("drk/midcast-drain.lua") -- sets.midcast.drain
