@@ -36,6 +36,7 @@ function get_sets()
 	include("sch/tp.lua") -- sets.tp
 	include("sch/ws.lua") -- sets.ws
 
+	include("sch/precast-enlightenment.lua") -- sets.precast.enlightenment
 	include("sch/precast-grimoire.lua") -- sets.precast.grimoire
 	include("sch/precast-healing.lua") -- sets.precast.healing
 	include("sch/precast-tabularasa.lua") -- sets.precast.tabularasa
@@ -55,6 +56,7 @@ function get_sets()
 	include("sch/midcast-light.lua") -- sets.midcast.light
 	include("sch/midcast-refresh.lua") -- sets.midcast.refresh
 	include("sch/midcast-regen.lua") -- sets.midcast.regen
+	include("sch/midcast-storm.lua") -- sets.midcast.storm
 
 	_REGEN_DURATION = false
 	if _REGEN_DURATION then
@@ -112,12 +114,14 @@ function precast(spell, position)
 		equip(sets.ws)
 		obi_check(spell)
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Tabula Rasa") then
-			equip(sets.precast.tabularasa)
+		if spell.english:contains("Dark Arts") then
+			equip(sets.darkarts)
+		elseif spell.english:contains("Enlightenment") then
+			equip(sets.precast.enlightenment)
 		elseif spell.english:contains("Light Arts") then
 			equip(sets.lightarts)
-		elseif spell.english:contains("Dark Arts") then
-			equip(sets.darkarts)
+		elseif spell.english:contains("Tabula Rasa") then
+			equip(sets.precast.tabularasa)
 		end
 	else
 		equip(sets.fastcast)
@@ -161,6 +165,8 @@ function midcast(spell)
 			equip(sets.midcast.regen)
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.midcast.stoneskin)
+		elseif spell.english:contains("storm") then
+			equip(sets.midcast.storm)
 		end
 		if buffactive["Perpetuance"] then
 			equip(sets.perpetuance)
@@ -189,8 +195,7 @@ function midcast(spell)
 		end
 		if _TIER_ONE_NUKES:contains(spell.english) and (world.area:contains("Outer Ra'Kaznar [U") or world.area:contains("Walk of Echoes [P")) then
 			equip(sets.naked)
-		end
-		if _TIER_TWO_NUKES:contains(spell.english) and world.area:contains("Outer Ra'Kaznar [U") then
+		elseif _TIER_TWO_NUKES:contains(spell.english) and world.area:contains("Outer Ra'Kaznar [U") then
 			equip(sets.midcast.elemental.vagary)
 		end
 	elseif spell.skill == "Dark Magic" then

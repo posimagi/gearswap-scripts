@@ -6,6 +6,7 @@ function get_sets()
 
 	include("common/job_change.lua")
 	
+	include("func/ammo_check.lua") -- ammo_check()
 	include("func/obi_check.lua") -- obi_check()
 
 	include("all/obi.lua") -- sets.obi
@@ -19,11 +20,15 @@ function get_sets()
 	include("sam/ws-magical.lua") -- sets.ws.magical
 	include("sam/ws-meikyoshisui.lua") -- sets.ws.meikyoshisui
 	include("sam/ws-multihit.lua") -- sets.ws.multihit
+	include("sam/ws-ranged.lua") -- sets.ws.ranged
 	include("sam/ws-sekkanoki.lua") -- sets.ws.sekkanoki
 
 	include("sam/precast-meditate.lua") -- sets.precast.meditate
+	include("sam/precast-ra.lua") -- sets.precast.ra
 	include("sam/precast-sengikori.lua") -- sets.precast.sengikori
 	include("sam/precast-shikikoyo.lua") -- sets.precast.skikikoyo
+
+	include("sam/midcast-ra.lua") -- sets.midcast.ra
 
 	_ACCURACY_WS = T {
 		"Leg Sweep",
@@ -48,6 +53,12 @@ function get_sets()
 		"Penta Thrust",
 		"Stardiver",
 		"Tachi: Rana"
+	}
+
+	_RANGED_WS = T {
+		"Apex Arrow",
+		"Empyreal Arrow",
+		"Namas Arrow",
 	}
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
@@ -83,6 +94,9 @@ function precast(spell, position)
 			obi_check(spell)
 		elseif _ACCURACY_WS:contains(spell.english) then
 			equip(sets.ws.accuracy)
+		elseif _RANGED_WS:contains(spell.english) then
+			ammo_check(spell)
+			equip(sets.ws.ra)
 		end
 		if buffactive["Meikyo Shisui"] then
 			equip(sets.ws.meikyoshisui)
@@ -97,10 +111,16 @@ function precast(spell, position)
 		elseif spell.english:contains("Shikikoyo") then
 			equip(sets.precast.shikikoyo)
 		end
+	elseif spell.action_type == "Ranged Attack" then
+		ammo_check(spell)
+		equip(sets.precast.ra)
 	end
 end
 
 function midcast(spell)
+	if spell.action_type == "Ranged Attack" then
+		equip(sets.midcast.ra)
+	end
 end
 
 function aftercast(spell)

@@ -1,6 +1,6 @@
 sets.naked={
-    main="Malignance Pole",
-    sub="Khonsu",
+    main="Chocobo Wand",
+    sub="Genmei Shield",
     ammo="Staunch Tathlum +1",
     head="Wh. Rarab Cap +1",
     body="Carpenter's Smock",
