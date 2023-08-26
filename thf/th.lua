@@ -1,7 +1,7 @@
 sets.th={
-	ammo="Per. Lucky Egg",
-	body="Volte Jupon",
-	hands={ name="Plun. Armlets +3", augments={'Enhances "Perfect Dodge" effect',}},
-	feet="Skulk. Poulaines +3",
-	waist="Chaac Belt",
+	head="Volte Cap", -- 1
+	body="Volte Jupon", -- 2
+	hands={ name="Plun. Armlets +3", augments={'Enhances "Perfect Dodge" effect',}}, -- 4
+	legs="Volte Hose", -- 1
+	feet="Skulk. Poulaines +3", -- 5
 }

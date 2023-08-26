@@ -1,5 +1,6 @@
 sets.th={
-	ammo="Per. Lucky Egg",
-	body="Volte Jupon",
-	waist="Chaac Belt",
+    head="Volte Cap",
+    body="Volte Jupon",
+    legs="Volte Hose",
+    feet="Volte Boots",
 }

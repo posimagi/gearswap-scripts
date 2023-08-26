@@ -1,10 +1,10 @@
 sets.fastcast={
 	ammo="Sapience Orb", -- 2%
 	head={ name="Amalric Coif +1", augments={'INT+12','Mag. Acc.+25','Enmity-6',}}, -- 11%
-	body={ name="Merlinic Jubbah", augments={'Weapon skill damage +3%','"Store TP"+2','"Treasure Hunter"+2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}, -- 6%
+	body={ name="Agwu's Robe", augments={'Path: A',}}, -- 8%
 	hands="Acad. Bracers +3", -- 9%
 	legs="Pinga Pants", -- 11%
-	feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}}, -- 5%
+	feet="Regal Pumps +1", -- 5~7%
 	neck="Voltsurge Torque", -- 4%
 	waist="Embla Sash", -- 5%
 	left_ear="Loquac. Earring", -- 2%

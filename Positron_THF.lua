@@ -17,7 +17,6 @@ function get_sets()
 	include("thf/ra.lua") -- sets.ra
 	include("thf/regen.lua") -- sets.regen
 	include("thf/th.lua") -- sets.th
-	include("thf/th-medium.lua") -- sets.th.medium
 	include("thf/th-minimal.lua") -- sets.th.minimal
 	include("thf/tp.lua") -- sets.tp
 	include("thf/tp-empyreanam.lua") -- sets.tp.empyreanam
@@ -92,14 +91,10 @@ function get_sets()
 		sets.ws = set_combine(sets.ws, sets.th)
 		sets.ws.magical = set_combine(sets.ws.magical, sets.th)
 		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th)
-	elseif _TREASURE_HUNTER == "medium" then
-		sets.tp = set_combine(sets.tp, sets.th.medium)
-		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
-		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.medium)
 	elseif _TREASURE_HUNTER == "minimal" then
 		sets.tp = set_combine(sets.tp, sets.th.minimal)
-		sets.ws.magical = set_combine(sets.ws.magical, sets.th.medium)
-		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.medium)
+		sets.ws.magical = set_combine(sets.ws.magical, sets.th.minimal)
+		sets.midcast.elemental = set_combine(sets.midcast.elemental, sets.th.minimal)
 	elseif _TREASURE_HUNTER == "none" then
 		-- do nothing
 	end

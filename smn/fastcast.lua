@@ -3,7 +3,7 @@ sets.fastcast={
 	body="Inyanga Jubbah +2",
 	hands="Volte Gloves",
 	legs="Volte Brais",
-	feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+	feet="Regal Pumps +1", -- 5~7%
 	neck="Voltsurge Torque",
 	waist="Embla Sash",
 	left_ear="Etiolation Earring",
