@@ -156,12 +156,11 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
-		if haste_amount(_HASTE_0) then
+		equip(sets.tp)
+		if haste_amount() == _HASTE_0 then
 			equip(sets.tp.haste0)
-		elseif haste_amount(_HASTE_30) then
+		elseif haste_amount() == _HASTE_30 then
 			equip(sets.tp.haste30)
-		else
-			equip(sets.tp)
 		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
@@ -171,12 +170,11 @@ end
 
 function status_change(new, old)
 	if new == "Engaged" then
-		if haste_amount(_HASTE_0) then
+		equip(sets.tp)
+		if haste_amount() == _HASTE_0 then
 			equip(sets.tp.haste0)
-		elseif haste_amount(_HASTE_30) then
+		elseif haste_amount() == _HASTE_30 then
 			equip(sets.tp.haste30)
-		else
-			equip(sets.tp)
 		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
@@ -192,12 +190,11 @@ function buff_change(name, gain, buff_details)
 			equip(sets.climacticflourish)
 		else
 			if player.status == "Engaged" then
-				if haste_amount(_HASTE_0) then
+				equip(sets.tp)
+				if haste_amount() == _HASTE_0 then
 					equip(sets.tp.haste0)
-				elseif haste_amount(_HASTE_30) then
+				elseif haste_amount() == _HASTE_30 then
 					equip(sets.tp.haste30)
-				else
-					equip(sets.tp)
 				end
 			elseif player.status == "Idle" then
 				equip(sets.idle)

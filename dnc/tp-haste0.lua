@@ -1,7 +1,7 @@
 sets.tp.haste0={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
     head="Maxixi Tiara +2",
-    body="Macu. Casaque +2",
+    body="Macu. Casaque +3",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Macu. Toe Sh. +3",
