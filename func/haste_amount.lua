@@ -4,7 +4,6 @@ _HASTE_CAP = 2
 
 function haste_amount()
     haste_buffs = (buffactive['Haste'] or 0) + (buffactive['March'] or 0)
-    add_to_chat(tostring(haste_buffs))
 
     if haste_buffs >= 2 then
         return _HASTE_CAP
