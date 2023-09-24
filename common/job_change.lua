@@ -18,7 +18,7 @@ MACROBOOK = {
     COR = 11,
     PUP = 2,
     DNC = 6,
-    SCH = 20,
+    SCH = 19,
     GEO = 30,
     RUN = 7,
 }

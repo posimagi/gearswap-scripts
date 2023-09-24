@@ -4,7 +4,7 @@ sets.midcast.elemental={
 	body="Spaekona's Coat +3",
     -- body="Wicce Coat +2",
     hands={ name="Agwu's Gages", augments={'Path: A',}},
-    legs="Wicce Chausses +2",
+    legs={ name="Agwu's Slops", augments={'Path: A',}},
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
     neck="Mizu. Kubikazari",
     waist="Sacro Cord",

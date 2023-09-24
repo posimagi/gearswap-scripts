@@ -1,7 +1,7 @@
 sets.naked={
 	main="Chocobo Wand",
 	sub="Genmei Shield",
-	head="Wh. Rarab Cap +1",
+	head="Protective Specs.",
 	body="Carpenter's Smock",
 	hands="Carpenter's Gloves",
 	legs="Shedir Seraweels",

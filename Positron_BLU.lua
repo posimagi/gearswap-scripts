@@ -34,6 +34,7 @@ function get_sets()
 
 	include("blu/midcast-elemental.lua") -- sets.midcast.elemental
 	include("blu/midcast-enfeebling.lua") -- sets.midcast.enfeebling
+	include("blu/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("blu/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("blu/midcast-refresh.lua") -- sets.midcast.refresh
 
@@ -106,18 +107,23 @@ function midcast(spell)
 	else
 		if _SKILL_SPELLS:contains(spell.english) then
 			equip(sets.idle, sets.bluemagic)
-		elseif spell.english:contains("Aquaveil") then
-			equip(sets.idle, sets.midcast.aquaveil)
-		elseif spell.english:contains("Refresh") or spell.english:contains("Battery Charge") then
-			equip(sets.idle, sets.midcast.refresh)
-		elseif spell.english:contains("Phalanx") then
-			equip(sets.idle, sets.midcast.phalanx)
-		elseif spell.english:contains("Sound Blast") or spell.english:contains("Dia") then
-			equip(sets.idle, sets.th)
+		elseif spell.skill == "Enhancing Magic" then
+			equip(sets.midcast.enhancing)
+			if spell.english:contains("Aquaveil") then
+				equip(sets.idle, sets.midcast.aquaveil)
+			elseif spell.english:contains("Refresh") then
+				equip(sets.idle, sets.midcast.refresh)
+			elseif spell.english:contains("Phalanx") then
+				equip(sets.idle, sets.midcast.phalanx)
+			elseif spell.english:contains("Stoneskin") then
+				equip(sets.idle, sets.midcast.stoneskin)
+			end
 		elseif _ENFEEBLING_SPELLS:contains(spell.english) then
 			equip(sets.idle, sets.midcast.enfeebling)
-		elseif spell.english:contains("Stoneskin") then
-			equip(sets.idle, sets.midcast.stoneskin)
+		elseif spell.english:contains("Sound Blast") or spell.english:contains("Dia") then
+			equip(sets.idle, sets.th)
+		elseif spell.english:contains("Battery Charge") then
+			equip(sets.idle, sets.midcast.refresh)
 		else
 			equip(sets.idle, sets.midcast.elemental)
 			if spell.english:contains("Tenebral Crush") then

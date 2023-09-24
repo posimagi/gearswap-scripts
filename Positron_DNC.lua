@@ -14,6 +14,8 @@ function get_sets()
 	include("dnc/idle.lua") -- sets.idle
 	include("dnc/movementspeed.lua") -- sets.movementspeed
 	include("dnc/tp.lua") -- sets.tp
+	include("dnc/tp-haste0.lua") -- sets.tp.haste0
+	include("dnc/tp-haste30.lua") -- sets.tp.haste30
 	include("dnc/weapon.lua") -- sets.weapon
 	include("dnc/weapon-critical.lua") -- sets.weapon.critical
 	include("dnc/ws.lua") -- sets.ws
@@ -21,6 +23,7 @@ function get_sets()
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 	include("dnc/ws-multihit.lua") -- sets.ws.multihit
 
+	include("dnc/buildingflourish.lua") -- sets.buildingflourish
 	include("dnc/climacticflourish.lua") -- sets.climacticflourish
 	include("dnc/strikingflourish.lua") -- sets.strikingflourish
 
@@ -34,9 +37,11 @@ function get_sets()
 	include("dnc/precast-waltzes.lua") -- sets.precast.waltzes
 	include("dnc/precast-waltzesself.lua") -- sets.precast.waltzesself
 
+	include("func/buffactive_buildingflourish.lua") -- buffactive_buildingflourish()
 	include("func/buffactive_climacticflourish.lua") -- buffactive_climacticflourish()
 	include("func/buffactive_movementspeed.lua") -- buffactive_movementspeed()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
+	include("func/haste_amount.lua") -- haste_amount()
 	include("func/obi_check.lua") -- obi_check()
 
 	_CRITICAL_WS = T {
@@ -100,6 +105,9 @@ function precast(spell, position)
 		if buffactive_strikingflourish() then
 			equip(sets.strikingflourish)
 		end
+		if buffactive_buildingflourish() then
+			equip(sets.buildingflourish)
+		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
 		end
@@ -148,7 +156,13 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
-		equip(sets.tp)
+		if haste_amount(_HASTE_0) then
+			equip(sets.tp.haste0)
+		elseif haste_amount(_HASTE_30) then
+			equip(sets.tp.haste30)
+		else
+			equip(sets.tp)
+		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
 		end
@@ -157,7 +171,13 @@ end
 
 function status_change(new, old)
 	if new == "Engaged" then
-		equip(sets.tp)
+		if haste_amount(_HASTE_0) then
+			equip(sets.tp.haste0)
+		elseif haste_amount(_HASTE_30) then
+			equip(sets.tp.haste30)
+		else
+			equip(sets.tp)
+		end
 		if buffactive_climacticflourish() then
 			equip(sets.climacticflourish)
 		end
@@ -172,7 +192,13 @@ function buff_change(name, gain, buff_details)
 			equip(sets.climacticflourish)
 		else
 			if player.status == "Engaged" then
-				equip(sets.tp)
+				if haste_amount(_HASTE_0) then
+					equip(sets.tp.haste0)
+				elseif haste_amount(_HASTE_30) then
+					equip(sets.tp.haste30)
+				else
+					equip(sets.tp)
+				end
 			elseif player.status == "Idle" then
 				equip(sets.idle)
 			end

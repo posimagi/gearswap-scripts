@@ -30,8 +30,10 @@ function get_sets()
 	include("rdm/weapon-aeolianedge.lua") -- sets.weapon.aeolianedge
 	include("rdm/weapon-blackhalo.lua") -- sets.weapon.blackhalo
 	include("rdm/weapon-caliburnus.lua") -- sets.weapon.caliburnus
+	include("rdm/weapon-cure.lua") -- sets.weapon.cure
 	include("rdm/weapon-enspell.lua") -- sets.weapon.enspell
 	include("rdm/weapon-evisceration.lua") -- sets.weapon.evisceration
+	include("rdm/weapon-mpugandring.lua") -- sets.weapon.mpugandring
 	include("rdm/weapon-sanguineblade.lua") -- sets.weapon.sanguineblade
 	include("rdm/weapon-savageblade.lua") -- sets.weapon.savageblade
 	include("rdm/weapon-seraphblade.lua") -- sets.weapon.seraphblade
@@ -63,6 +65,7 @@ function get_sets()
 	include("rdm/midcast-regen.lua") -- sets.midcast.regen
 
 	include("func/buffactive_enspell.lua") -- buffactive_enspell()
+	include("func/haste_amount.lua") -- haste_amount()
 	include("func/obi_check.lua") -- obi_check()
 
 	_VARIABLE_POTENCY = T {
@@ -123,6 +126,11 @@ function get_sets()
 		"Barsleep",
 		"Barsleepra"
 	}
+
+	_AMINON = false
+	if _AMINON then
+		include("rdm/aminon/ws.lua") -- sets.ws
+	end
 
 	_SEALED_FATE = false
 	if _SEALED_FATE then

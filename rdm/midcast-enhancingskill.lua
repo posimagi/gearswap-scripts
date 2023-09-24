@@ -6,5 +6,6 @@ sets.midcast.enhancingskill={
 	neck="Incanter's Torque",
 	left_ear="Mimir Earring",
 	right_ear="Andoaa Earring",
+	right_ring="Stikini Ring +1",
 	back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +7','Enha.mag. skill +9','Mag. Acc.+2','Enh. Mag. eff. dur. +18',}},
 }

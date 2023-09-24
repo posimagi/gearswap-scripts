@@ -1,5 +1,5 @@
 sets.tp={
-	ammo="Yamarang",
+	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Malignance Chapeau",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",

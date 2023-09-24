@@ -1,0 +1,15 @@
+sets.tp.haste0={
+    ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+    head="Maxixi Tiara +2",
+    body="Macu. Casaque +2",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Macu. Toe Sh. +3",
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist="Reiki Yotai",
+    left_ear="Suppanomimi",
+    right_ear="Eabani Earring",
+    left_ring="Epona's Ring",
+    right_ring="Gere Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}

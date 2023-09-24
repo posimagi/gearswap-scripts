@@ -36,6 +36,7 @@ function get_sets()
 	include("thf/precast-waltzes.lua") -- sets.precast.waltzes
 
 	include("thf/midcast-elemental.lua") -- sets.midcast.elemental
+	include("thf/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("thf/midcast-phalanx.lua") -- sets.midcast.phalanx
 
 	include("func/buffactive_conspirator.lua") -- buffactive_conspirator()
@@ -182,11 +183,13 @@ end
 
 function midcast(spell)
 	if spell.skill == "Elemental Magic" then
-		equip(sets.midcast.elemental)
+		equip(sets.idle, sets.midcast.elemental)
 	elseif spell.english:contains("Phalanx") then
-		equip(sets.midcast.phalanx)
-	elseif spell.english:contains("Poisonga") or spell.english:contains("Sleepga") then
-		equip(sets.th.medium)
+		equip(sets.idle, sets.midcast.phalanx)
+	elseif spell.english:contains("Poisonga") then
+		equip(sets.idle, sets.th.medium)
+	elseif spell.english:contains("Sleepga") then
+		equip(sets.idle, sets.midcast.enfeebling, sets.th.medium)
 	end
 end
 

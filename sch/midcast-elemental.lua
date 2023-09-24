@@ -3,7 +3,7 @@ sets.midcast.elemental={
 	head="Arbatel Bonnet +3",
 	body={ name="Agwu's Robe", augments={'Path: A',}},
 	hands={ name="Agwu's Gages", augments={'Path: A',}},
-	legs="Arbatel Pants +3",
+	legs={ name="Agwu's Slops", augments={'Path: A',}},
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck={ name="Argute Stole +2", augments={'Path: A',}},
 	waist="Sacro Cord",

@@ -1,5 +1,5 @@
 sets.midcast.darkmagic={
-    range="Ullr",
+    -- range="Ullr",
     head="Leth. Chappel +3",
     body="Atrophy Tabard +3",
     hands="Leth. Ganth. +3",
