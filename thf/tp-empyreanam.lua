@@ -11,5 +11,5 @@ sets.tp.empyreanam={
     right_ear="Sherida Earring",
     left_ring="Epona's Ring",
     right_ring="Gere Ring",
-    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Mag. Evasion+15',}},
+    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }

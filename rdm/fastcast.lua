@@ -10,4 +10,5 @@ sets.fastcast={
 	right_ear="Malignance Earring", -- 4%
 	-- left_ring="Rahab Ring", -- 2%
 	right_ring="Kishar Ring", -- 4%
+	back={ name="Fi Follet Cape +1", augments={'Path: A',}}, -- 10%
 }

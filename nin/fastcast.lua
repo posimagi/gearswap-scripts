@@ -1,10 +1,11 @@
 sets.fastcast={
-	body="Dread Jupon",
-	hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-	neck="Voltsurge Torque",
-	left_ear="Etiolation Earring",
-	right_ear="Loquac. Earring",
-	left_ring="Rahab Ring",
-	right_ring="Kishar Ring",
-	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+5','"Fast Cast"+6','INT+2',}}, -- 13%
+	body="Dread Jupon", -- 7%
+	hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, -- 8%
+	neck="Voltsurge Torque", -- 4%
+	left_ear="Etiolation Earring", -- 1%
+	right_ear="Loquac. Earring", -- 2%
+	left_ring="Rahab Ring", -- 2%
+	right_ring="Kishar Ring", -- 4%
+	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}}, -- 10%
 }

@@ -28,6 +28,7 @@ function get_sets()
 	include("nin/precast-waltzes.lua") -- sets.precast.waltzes
 
 	include("nin/midcast-elemental.lua") -- sets.midcast.elemental
+	include("nin/midcast-ra.lua") -- sets.midcast.ra
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
 
 	_MAGICAL_WS = T {
@@ -52,7 +53,7 @@ function get_sets()
 		include("nin/tp-stp.lua") -- sets.tp
 	end
 
-	_GOKOTAI_REGAIN = true
+	_GOKOTAI_REGAIN = false
 	if _GOKOTAI_REGAIN then
 		include("nin/tp-dualwield.lua") -- sets.tp
 	end
@@ -121,6 +122,8 @@ function midcast(spell)
 				equip(sets.futae)
 			end
 		end
+	elseif spell.action_type == "Ranged Attack" then
+		equip(sets.midcast.ra)
 	end
 end
 

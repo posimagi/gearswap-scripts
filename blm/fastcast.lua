@@ -11,5 +11,5 @@ sets.fastcast={
 	right_ear="Malignance Earring",
 	left_ring="Rahab Ring",
 	right_ring="Kishar Ring",
-	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
+	back={ name="Fi Follet Cape +1", augments={'Path: A',}}, -- 10%
 }

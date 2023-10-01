@@ -10,5 +10,5 @@ sets.fastcast={
 	right_ear="Malignance Earring",
 	left_ring="Rahab Ring",
 	right_ring="Kishar Ring",
-	back={ name="Lifestream Cape", augments={'Geomancy Skill +9','Indi. eff. dur. +20','Pet: Damage taken -1%',}},
+	back={ name="Fi Follet Cape +1", augments={'Path: A',}}, -- 10%
 }
