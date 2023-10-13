@@ -18,6 +18,9 @@ function get_sets()
 	include("dnc/tp-haste30.lua") -- sets.tp.haste30
 	include("dnc/weapon.lua") -- sets.weapon
 	include("dnc/weapon-critical.lua") -- sets.weapon.critical
+	include("dnc/weapon-karambit.lua") -- sets.weapon.karambit
+	include("dnc/weapon-mpugandring.lua") -- sets.weapon.mpugandring
+	include("dnc/weapon-twashtar.lua") -- sets.weapon.twashtar
 	include("dnc/ws.lua") -- sets.ws
 	include("dnc/ws-critical.lua") -- sets.ws.critical
 	include("dnc/ws-magical.lua") -- sets.ws.magical

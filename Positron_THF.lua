@@ -21,7 +21,11 @@ function get_sets()
 	include("thf/tp.lua") -- sets.tp
 	include("thf/tp-empyreanam.lua") -- sets.tp.empyreanam
 	include("thf/weapon.lua") -- sets.weapon
+	include("thf/weapon-gandring.lua") -- sets.weapon.gandring
+	include("thf/weapon-mpugandring.lua") -- sets.weapon.mpugandring
 	include("thf/weapon-omen.lua") -- sets.weapon.omen
+	include("thf/weapon-twashtar.lua") -- sets.weapon.twashtar
+	include("thf/weapon-vajra.lua") -- sets.weapon.vajra
 	include("thf/ws.lua") -- sets.ws
 	include("thf/ws-critical.lua") -- sets.ws.critical
 	include("thf/ws-magical.lua") -- sets.ws.magical

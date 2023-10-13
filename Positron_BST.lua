@@ -59,7 +59,7 @@ function precast(spell, position)
 			obi_check(spell)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("Call Beast") then
+		if spell.english:contains("Call Beast") or spell.english:contains("Bestial Loyalty") then
 			equip(sets.precast.callbeast)
 		elseif spell.english:contains("Killer Instinct") then
 			equip(sets.precast.killerinstinct)

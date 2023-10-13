@@ -1,11 +1,11 @@
 sets.midcast.elemental={
-	ammo="Pemphredo Tathlum",
+	ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 	head="Hashishin Kavuk +3",
 	body="Hashishin Mintan +3",
 	hands="Hashi. Bazu. +3",
 	legs="Hashishin Tayt +3",
 	feet="Hashi. Basmak +3",
-	neck={ name="Mirage Stole +2", augments={'Path: A',}},
+	neck="Sibyl Scarf",
 	waist="Orpheus's Sash",
 	left_ear="Regal Earring",
 	right_ear="Friomisi Earring",

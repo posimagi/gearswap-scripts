@@ -129,6 +129,7 @@ function get_sets()
 
 	_AMINON = false
 	if _AMINON then
+		include("rdm/aminon/impact.lua") -- sets.impact
 		include("rdm/aminon/ws.lua") -- sets.ws
 	end
 
