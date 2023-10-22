@@ -10,5 +10,4 @@ sets.ws={
 	right_ear={ name="Kara. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','"Store TP"+5',}},
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
-	back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

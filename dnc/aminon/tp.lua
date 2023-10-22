@@ -1,13 +1,11 @@
 sets.tp={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-	head="Malignance Chapeau",
-	body="Malignance Tabard",
-	hands="Malignance Gloves",
+	head="Turms Cap +1",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    hands="Regal Gloves",
 	legs="Malignance Tights",
-	-- feet={ name="Horos T. Shoes +3", augments={'Enhances "Closed Position" effect',}},
 	feet="Macu. Toe Sh. +3",
 	neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-	-- waist="Reiki Yotai", -- overcaps Dual Wield with capped magic Haste
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear="Telos Earring",
 	right_ear="Sherida Earring",

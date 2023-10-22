@@ -32,6 +32,7 @@ function get_sets()
 
 	include("dnc/precast-featherstep.lua") -- sets.precast.featherstep
 	include("dnc/precast-jigs.lua") -- sets.precast.jigs
+	include("dnc/precast-jump.lua") -- sets.precast.jump
 	include("dnc/precast-nofootrise.lua") -- sets.precast.nofootrise
 	include("dnc/precast-reverseflourish.lua") -- sets.precast.reverseflourish
 	include("dnc/precast-sambas.lua") -- sets.precast.sambas
@@ -62,6 +63,12 @@ function get_sets()
 		"Dancing Edge",
 		"Exenterator",
 	}
+
+	_AMINON = false
+	if _AMINON then
+		include("dnc/aminon/idle.lua") -- sets.idle
+		include("dnc/aminon/tp.lua") -- sets.tp
+	end
 
 	_REGAL_GLOVES = false
 	if _REGAL_GLOVES then
@@ -115,7 +122,9 @@ function precast(spell, position)
 			equip(sets.climacticflourish)
 		end
 	elseif spell.type == "JobAbility" then
-		if spell.english:contains("No Foot Rise") then
+		if spell.english:contains("Jump") then
+			equip(sets.precast.jump)
+		elseif spell.english:contains("No Foot Rise") then
 			equip(sets.precast.nofootrise)
 		elseif spell.english:contains("Trance") then
 			equip(sets.precast.trance)
@@ -210,7 +219,11 @@ function buff_change(name, gain, buff_details)
 				equip(sets.idle)
 			end
 		else
-			include("dnc/idle.lua") -- sets.idle
+			if _AMINON then
+				include("dnc/aminon/idle.lua") -- sets.idle
+			else
+				include("dnc/idle.lua") -- sets.idle
+			end
 			if player.status == "Idle" then
 				equip(sets.idle)
 			end

@@ -1,15 +1,15 @@
-sets.tp.haste30={
+sets.precast.jump={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Malignance Chapeau",
-    body="Macu. Casaque +3",
+    head="Maculele Tiara +3",
+    body="Malignance Tabard",
     hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Macu. Toe Sh. +3",
     neck={ name="Etoile Gorget +2", augments={'Path: A',}},
-    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    left_ring="Epona's Ring",
-    right_ring="Gere Ring",
+    left_ring="Ilabrat Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }
