@@ -7,7 +7,7 @@ sets.tp={
 	neck="Combatant's Torque",
 	waist="Olseni Belt",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
-	right_ear={ name="Kara. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','"Store TP"+5',}},
+	right_ear="Kara. Earring +1",
 	left_ring="Niqmaddu Ring",
 	right_ring="Gere Ring",
 }

@@ -8,7 +8,7 @@ sets.midcast.enhancingself={
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},
 	waist="Embla Sash",
 	left_ear="Mimir Earring",
-	right_ear={ name="Leth. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','"Dbl.Atk."+4',}},
+	right_ear="Leth. Earring +1",
 	left_ring="Lebeche Ring",
 	right_ring="Kishar Ring",
 	back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +1','Enha.mag. skill +2','Enh. Mag. eff. dur. +20',}},

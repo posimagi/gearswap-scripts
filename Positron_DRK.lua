@@ -26,6 +26,7 @@ function get_sets()
 	include("drk/midcast-absorb.lua") -- sets.midcast.absorb
 	include("drk/midcast-drain.lua") -- sets.midcast.drain
 	include("drk/midcast-dreadspikes.lua") -- sets.midcast.dreadspikes
+	include("drk/midcast-elemental.lua") -- sets.midcast.elemental
 	include("drk/midcast-endark.lua") -- sets.midcast.endark
 
 	include("func/obi_check.lua") -- obi_check()
@@ -118,6 +119,8 @@ function midcast(spell)
 		elseif spell.english:contains("Endark") then
 			equip(sets.midcast.endark)
 		end
+	elseif spell.skill == "Elemental Magic" then
+		equip(sets.midcast.elemental)
 	end
 end
 

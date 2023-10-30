@@ -8,7 +8,7 @@ sets.engaged={
     neck="Warder's Charm +1",
     waist="Engraved Belt",
     left_ear="Tuisto Earring",
-    right_ear={ name="Erilaz Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Damage taken-4%',}},
+    right_ear="Erilaz Earring +1",
 	left_ring="Shadow Ring",
     right_ring="Defending Ring",
     back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}},

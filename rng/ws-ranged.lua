@@ -7,7 +7,7 @@ sets.ws.ranged={
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="K. Kachina Belt +1",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+    right_ear="Amini Earring +1",
     left_ring="Regal Ring",
     right_ring="Dingir Ring",
     back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},

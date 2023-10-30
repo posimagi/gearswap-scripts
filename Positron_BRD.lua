@@ -37,6 +37,7 @@ function get_sets()
 	include("brd/midcast-healing.lua") -- sets.midcast.healing
 	include("brd/midcast-lullaby.lua") -- sets.midcast.lullaby
 	include("brd/midcast-madrigal.lua") -- sets.midcast.madrigal
+	include("brd/midcast-magicaccuracy.lua") -- sets.midcast.magicaccuracy
 	include("brd/midcast-march.lua") -- sets.midcast.march
 	include("brd/midcast-minne.lua") -- sets.midcast.minne
 	include("brd/midcast-minuet.lua") -- sets.midcast.minuet
@@ -197,6 +198,8 @@ function midcast(spell)
 		equip(sets.th)
 	elseif spell.english:contains("Dispelga") then
 		equip(sets.dispelga)
+	elseif spell.skill == "Dark Magic" then
+		equip(sets.midcast.magicaccuracy)
 	end
 end
 

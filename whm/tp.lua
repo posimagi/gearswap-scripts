@@ -12,7 +12,7 @@ sets.tp={
 	waist="Olseni Belt",
 	-- waist="Carrier's Sash",
 	left_ear="Telos Earring",
-	right_ear={ name="Ebers Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
+	right_ear="Ebers Earring +1",
 	left_ring="Ilabrat Ring",
 	right_ring="Chirich Ring +1",
 	back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Occ. inc. resist. to stat. ailments+10',}},
