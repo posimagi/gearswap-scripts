@@ -48,12 +48,12 @@ function get_sets()
 		"Evisceration"
 	}
 
-	_CAPPED_HASTE = false
+	_CAPPED_HASTE = true
 	if _CAPPED_HASTE then
 		include("nin/tp-stp.lua") -- sets.tp
 	end
 
-	_GOKOTAI_REGAIN = false
+	_GOKOTAI_REGAIN = true
 	if _GOKOTAI_REGAIN then
 		include("nin/tp-dualwield.lua") -- sets.tp
 	end

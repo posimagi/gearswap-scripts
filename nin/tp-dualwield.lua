@@ -1,7 +1,7 @@
 sets.tp={
     ammo="Seki Shuriken",
     head="Hattori Zukin +2",
-    body={ name="Mochi. Chainmail +3", augments={'Enhances "Sange" effect',}},
+    body="Hachiya Chain. +3",
     hands="Hachiya Tekko +3",
     legs={ name="Mochi. Hakama +3", augments={'Enhances "Mijin Gakure" effect',}},
     feet="Hiza. Sune-Ate +2",

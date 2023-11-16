@@ -27,6 +27,7 @@ function get_sets()
 	include("thf/weapon-twashtar.lua") -- sets.weapon.twashtar
 	include("thf/weapon-vajra.lua") -- sets.weapon.vajra
 	include("thf/ws.lua") -- sets.ws
+	include("thf/ws-accuracy.lua") -- sets.ws.accuracy
 	include("thf/ws-critical.lua") -- sets.ws.critical
 	include("thf/ws-magical.lua") -- sets.ws.magical
 	include("thf/ws-multihit.lua") -- sets.ws.multihit
@@ -169,7 +170,7 @@ function precast(spell, position)
 		elseif spell.english:contains("Hide") then
 			equip(sets.precast.hide)
 		elseif spell.english:contains("Steal") or spell.english:contains("Mug") then
-			equip(sets.precast.steal)
+			equip(sets.ws.accuracy, sets.precast.steal)
 		end
 	elseif spell.type == "Waltz" then
 		equip(sets.precast.waltzes)

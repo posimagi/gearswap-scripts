@@ -131,7 +131,7 @@ function precast(spell, position)
 		end
 	elseif spell.type:contains("Flourish") then
 		if spell.english:contains("Animated") then
-			equip(sets.enmity)
+			equip(sets.enmity, sets.th)
 		elseif spell.english:contains("Climactic") then
 			equip(sets.climacticflourish)
 		elseif spell.english:contains("Reverse") then

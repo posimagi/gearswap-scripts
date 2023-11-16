@@ -4,7 +4,7 @@ sets.midcast.enfeebling={
 	hands="Malignance Gloves",
 	legs="Malignance Tights",
 	feet="Malignance Boots",
-	neck="Incanter's Torque",
+	neck={ name="Comm. Charm +2", augments={'Path: A',}},
 	waist="Eschan Stone",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Regal Ring",

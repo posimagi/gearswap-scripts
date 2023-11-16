@@ -5,7 +5,7 @@ sets.ws.magical.ranged={
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
-    neck="Sibyl Scarf",
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},
     waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Friomisi Earring",
