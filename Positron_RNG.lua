@@ -37,6 +37,7 @@ function get_sets()
 	include("rng/precast-eagleeyeshot.lua") -- sets.precast.eagleeyeshot
 	include("rng/precast-ra.lua") -- sets.precast.ra
 	include("rng/precast-ra-flurry.lua") -- sets.precast.ra.flurry
+	include("rng/precast-scavenge.lua") -- sets.precast.scavenge
 	include("rng/precast-shadowbind.lua") -- sets.precast.shadowbind
 	include("rng/precast-waltzes.lua") -- sets.precast.waltzes
 
@@ -125,6 +126,8 @@ function precast(spell, position)
 			equip(sets.precast.camouflage)
 		elseif spell.english:contains("Eagle Eye Shot") then
 			equip(sets.midcast.ra, sets.precast.eagleeyeshot)
+		elseif spell.english:contains("Scavenge") then
+			equip(sets.precast.scavenge)
 		elseif spell.english:contains("Shadowbind") then
 			equip(sets.precast.shadowbind)
 		end

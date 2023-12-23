@@ -1,8 +1,8 @@
 sets.engaged={
     ammo="Yamarang",
     head={ name="Nyame Helm", augments={'Path: B',}},
-    body="Erilaz Surcoat +2",
-    hands="Erilaz Gauntlets +2",
+    body="Erilaz Surcoat +3",
+    hands="Erilaz Gauntlets +3",
 	legs="Eri. Leg Guards +3",
     feet="Erilaz Greaves +3",
     neck="Warder's Charm +1",

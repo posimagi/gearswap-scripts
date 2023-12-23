@@ -53,7 +53,7 @@ function get_sets()
 		include("nin/tp-stp.lua") -- sets.tp
 	end
 
-	_GOKOTAI_REGAIN = true
+	_GOKOTAI_REGAIN = false
 	if _GOKOTAI_REGAIN then
 		include("nin/tp-dualwield.lua") -- sets.tp
 	end

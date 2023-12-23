@@ -1,4 +1,4 @@
 sets.midcast.absorb={
-    head="Ig. Burgeonet +2",
+    head="Ig. Burgeonet +3",
     hands="Heath. Gauntlets +2",
 }

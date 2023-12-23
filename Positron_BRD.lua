@@ -38,6 +38,7 @@ function get_sets()
 	include("brd/midcast-lullaby.lua") -- sets.midcast.lullaby
 	include("brd/midcast-madrigal.lua") -- sets.midcast.madrigal
 	include("brd/midcast-magicaccuracy.lua") -- sets.midcast.magicaccuracy
+	include("brd/midcast-mambo.lua") -- sets.midcast.mambo
 	include("brd/midcast-march.lua") -- sets.midcast.march
 	include("brd/midcast-minne.lua") -- sets.midcast.minne
 	include("brd/midcast-minuet.lua") -- sets.midcast.minuet
@@ -178,6 +179,8 @@ function midcast(spell)
 			equip(sets.midcast.etude)
 		elseif spell.english:contains("Madrigal") then
 			equip(sets.midcast.madrigal)
+		elseif spell.english:contains("Mambo") then
+			equip(sets.midcast.mambo)
 		elseif spell.english:contains("March") then
 			equip(sets.midcast.march)
 		elseif spell.english:contains("Minne") then

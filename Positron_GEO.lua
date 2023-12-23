@@ -37,6 +37,7 @@ function get_sets()
 	include("geo/precast-lifecycle.lua") -- sets.precast.lifecycle
 	include("geo/precast-radialarcana.lua") -- sets.precast.radialarcana
 
+	include("geo/midcast-dark.lua") -- sets.midcast.dark
 	include("geo/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("geo/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("geo/midcast-geocolure.lua") -- sets.midcast.geocolure
@@ -164,6 +165,7 @@ function midcast(spell)
 			equip(sets.naked)
 		end
 	elseif spell.skill == "Dark Magic" then
+		equip(sets.midcast.dark)
 		if spell.english:contains("Bio") then
 			equip(sets.th)
 		end

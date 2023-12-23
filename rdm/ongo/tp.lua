@@ -1,0 +1,15 @@
+sets.tp={
+    ammo="Regal Gem",
+    head={ name="Bunzi's Hat", augments={'Path: A',}},
+    body="Lethargy Sayon +3",
+    hands="Aya. Manopolas +2",
+    legs="Leth. Fuseau +3",
+    feet="Leth. Houseaux +3",
+    neck="Quanpur Necklace",
+    waist="Orpheus's Sash",
+    left_ear="Sherida Earring",
+    right_ear={ name="Leth. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','"Dbl.Atk."+5',}},
+    left_ring="Stikini Ring +1",
+    right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +7','Enha.mag. skill +9','Mag. Acc.+2','Enh. Mag. eff. dur. +18',}},
+}

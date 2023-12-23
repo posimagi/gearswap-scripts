@@ -65,14 +65,15 @@ function get_sets()
 	}
 
 	_AMINON = false
-	if _AMINON then
-		include("dnc/aminon/idle.lua") -- sets.idle
-		include("dnc/aminon/tp.lua") -- sets.tp
-	end
 
 	_REGAL_GLOVES = false
 	if _REGAL_GLOVES then
 		include("dnc/tp-regal.lua") -- sets.tp
+	end
+
+	_SUBTLE_BLOW = false
+	if _SUBTLE_BLOW then
+		include("dnc/tp-subtleblow.lua") -- sets.tp
 	end
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
@@ -227,6 +228,24 @@ function buff_change(name, gain, buff_details)
 			if player.status == "Idle" then
 				equip(sets.idle)
 			end
+		end
+	end
+end
+
+function self_command(command)
+	if command == "aminon" then
+		if _AMINON then
+			include("dnc/idle.lua") -- sets.idle
+			include("dnc/tp.lua") -- sets.tp
+			equip(sets.idle)
+			_AMINON = false
+			add_to_chat("Standard sets equipped")
+		else
+			include("dnc/aminon/idle.lua") -- sets.idle
+			include("dnc/aminon/tp.lua") -- sets.tp
+			equip(sets.idle)
+			_AMINON = true
+			add_to_chat("Aminon sets equipped")
 		end
 	end
 end

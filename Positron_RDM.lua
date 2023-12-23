@@ -49,6 +49,7 @@ function get_sets()
 
 	include("rdm/midcast-barspell.lua") -- sets.midcast.barspell
 	include("rdm/midcast-barstatus.lua") -- sets.midcast.barstatus
+	include("rdm/midcast-curecheat.lua") -- sets.midcast.curecheat
 	include("rdm/midcast-cursna.lua") -- sets.midcast.cursna
 	include("rdm/midcast-darkmagic.lua") -- sets.midcast.darkmagic
 	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
@@ -131,6 +132,11 @@ function get_sets()
 	if _AMINON then
 		include("rdm/aminon/impact.lua") -- sets.impact
 		include("rdm/aminon/ws.lua") -- sets.ws
+	end
+
+	_ONGO = false
+	if _ONGO then
+		include("rdm/ongo/tp.lua") -- sets.tp
 	end
 
 	_SEALED_FATE = false

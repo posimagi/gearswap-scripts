@@ -1,9 +1,9 @@
 sets.tp.empyreanam={
     ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Skulker's Bonnet +2",
+    head="Skulker's Bonnet +3",
     body="Skulker's Vest +2",
     hands="Skulk. Armlets +2",
-    legs="Skulk. Culottes +2",
+    legs="Skulk. Culottes +3",
     feet="Skulk. Poulaines +3",
     neck={ name="Asn. Gorget +2", augments={'Path: A',}},
     waist="Reiki Yotai",

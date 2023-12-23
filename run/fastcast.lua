@@ -1,7 +1,7 @@
 sets.fastcast={
 	ammo="Sapience Orb", -- 2%
 	head="Rune. Bandeau +3", -- 14%
-	body="Erilaz Surcoat +2", -- 10%
+	body="Erilaz Surcoat +3", -- 10%
 	hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, -- 8%
 	legs="Agwu's Slops", -- 7%
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}}, -- 4%

@@ -1,9 +1,9 @@
 sets.midcast.enfeebling={
     ammo="Pemphredo Tathlum",
-    head="Skulker's Bonnet +2",
+    head="Skulker's Bonnet +3",
     body="Skulker's Vest +2",
     hands="Skulk. Armlets +2",
-    legs="Skulk. Culottes +2",
+    legs="Skulk. Culottes +3",
     feet="Skulk. Poulaines +3",
     neck="Incanter's Torque",
     waist="Eschan Stone",
