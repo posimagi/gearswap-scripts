@@ -10,7 +10,7 @@ sets.ws={
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	-- right_ear="Odr Earring",
 	right_ear="Macu. Earring +1",
-	left_ring="Ilabrat Ring",
-	right_ring="Regal Ring",
+	left_ring="Regal Ring",
+	right_ring="Ephramad's Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

@@ -5,7 +5,7 @@ sets.enmity={
 	hands="Kurys Gloves", -- 9
 	legs="Eri. Leg Guards +3", -- 13
 	feet="Erilaz Greaves +3", -- 8
-	neck="Unmoving Collar +1", -- 10
+	neck={ name="Futhark Torque +2", augments={'Path: A',}}, -- 10
 	-- waist="Kasiri Belt", -- 3 (borrowed)
 	-- left_ring="Eihwaz Ring", -- 5 (borrowed)
 	right_ring="Petrov Ring", -- 4

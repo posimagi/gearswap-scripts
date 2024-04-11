@@ -9,7 +9,7 @@ sets.ws.critical={
     waist="Fotia Belt",
     left_ear="Odr Earring",
     right_ear="Sherida Earring",
-    left_ring="Epona's Ring",
+    left_ring="Ephramad's Ring",
     right_ring="Gere Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

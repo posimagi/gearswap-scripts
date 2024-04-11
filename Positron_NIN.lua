@@ -28,8 +28,20 @@ function get_sets()
 	include("nin/precast-waltzes.lua") -- sets.precast.waltzes
 
 	include("nin/midcast-elemental.lua") -- sets.midcast.elemental
+	include("nin/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("nin/midcast-ra.lua") -- sets.midcast.ra
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
+
+	_ENFEEBLING_NINJUTSU = T {
+		"Aisha: Ichi",
+		"Dokumori: Ichi",
+		"Hojo: Ichi",
+		"Hojo: Ni",
+		"Jubaku: Ichi",
+		"Kurayami: Ichi",
+		"Kurayami: Ni",
+		"Yurin: Ichi"
+	}
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
@@ -113,7 +125,9 @@ function midcast(spell)
 		if buffactive["Yonin"] or buffactive["Enmity Boost"] then
 			equip(sets.enmity)
 		end
-		if spell.english:contains("Utsusemi") then
+		if _ENFEEBLING_NINJUTSU:contains(spell.english) then
+			equip(sets.midcast.enfeebling)
+		elseif spell.english:contains("Utsusemi") then
 			equip(sets.midcast.utsusemi)
 		elseif spell.english:contains("ton: ") then
 			equip(sets.midcast.elemental)

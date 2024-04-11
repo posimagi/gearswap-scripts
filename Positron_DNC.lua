@@ -5,6 +5,9 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("common/job_change.lua")
+	include("common/sneak_check.lua")
+	include("common/ws_disengaged_check.lua")
+	include("common/ws_distance_check.lua")
 	
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("all/th.lua") -- sets.th
@@ -86,22 +89,34 @@ function sub_job_change(new, old)
 end
 
 function precast(spell, position)
-	-- WS Engaged Check
-	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
-		cancel_spell()
-		return
-	end
+	if ws_disengaged_check(spell) then return end
+	if ws_distance_check(spell) then return end
+	sneak_check(spell)
+	
+	-- -- WS Engaged Check
+	-- if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
+	-- 	cancel_spell()
+	-- 	return
+	-- end
 
-	-- WS Distance Check
-	_RANGE_MULTIPLIER = 1.642276421172564
-	if spell.type == "WeaponSkill" and
-		spell.target.distance >
-		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
-	then
-		add_to_chat(8, spell.name .. " aborted due to target out of range.")
-		cancel_spell()
-		return
-	end
+	-- -- WS Distance Check
+	-- _RANGE_MULTIPLIER = 1.642276421172564
+	-- if spell.type == "WeaponSkill" and
+	-- 	spell.target.distance >
+	-- 	(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
+	-- then
+	-- 	add_to_chat(8, spell.name .. " aborted due to target out of range.")
+	-- 	cancel_spell()
+	-- 	return
+	-- end
+
+	-- -- Sneak Check
+	-- if spell.english == "Sneak" or spell.english == "Spectral Jig" then
+	-- 	if spell.target.type == "SELF" and buffactive['Sneak'] then
+	-- 		send_command("cancel Sneak")
+	-- 		cast_delay(0.6)
+	-- 	end
+	-- end
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
@@ -175,9 +190,6 @@ function aftercast(spell)
 		elseif haste_amount() == _HASTE_30 then
 			equip(sets.tp.haste30)
 		end
-		if buffactive_climacticflourish() then
-			equip(sets.climacticflourish)
-		end
 	end
 end
 
@@ -188,9 +200,6 @@ function status_change(new, old)
 			equip(sets.tp.haste0)
 		elseif haste_amount() == _HASTE_30 then
 			equip(sets.tp.haste30)
-		end
-		if buffactive_climacticflourish() then
-			equip(sets.climacticflourish)
 		end
 	elseif new == "Idle" then
 		equip(sets.idle)

@@ -9,7 +9,7 @@ sets.tp={
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear="Telos Earring",
 	right_ear="Sherida Earring",
-	left_ring="Ilabrat Ring",
+	left_ring="Roller's Ring",
 	right_ring="Gere Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 }

@@ -5,7 +5,7 @@ sets.midcast.enfeebling={
 	hands={ name="Agwu's Gages", augments={'Path: A',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
-	neck="Sanctity Necklace",
+	neck={ name="Src. Stole +2", augments={'Path: A',}},
 	waist="Luminary Sash",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",

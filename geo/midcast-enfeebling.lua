@@ -1,8 +1,8 @@
 sets.midcast.enfeebling={
 	head={ name="Amalric Coif +1", augments={'INT+12','Mag. Acc.+25','Enmity-6',}},
 	body="Azimuth Coat +3",
-	hands="Azimuth Gloves +2",
-	legs="Azimuth Tights +2",
+	hands="Azimuth Gloves +3",
+	legs="Azimuth Tights +3",
 	feet="Azimuth Gaiters +3",
 	neck={ name="Bagua Charm +2", augments={'Path: A',}},
 	waist="Luminary Sash",

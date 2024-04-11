@@ -1,11 +1,11 @@
 sets.idle={
 	ammo="Staunch Tathlum +1",
 	head={ name="Nyame Helm", augments={'Path: B',}},
-	body="Runeist Coat +3",
+	body="Erilaz Surcoat +3",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs="Eri. Leg Guards +3",
     feet="Erilaz Greaves +3",
-    neck="Warder's Charm +1",
+    neck={ name="Futhark Torque +2", augments={'Path: A',}},
 	waist="Engraved Belt",
 	left_ear="Tuisto Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},

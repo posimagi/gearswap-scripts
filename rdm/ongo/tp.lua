@@ -1,9 +1,9 @@
 sets.tp={
-    ammo="Regal Gem",
-    head={ name="Bunzi's Hat", augments={'Path: A',}},
+    ammo="Sroda Tathlum",
+    head="Umuthi Hat",
     body="Lethargy Sayon +3",
     hands="Aya. Manopolas +2",
-    legs="Leth. Fuseau +3",
+    legs="Malignance Tights",
     feet="Leth. Houseaux +3",
     neck="Quanpur Necklace",
     waist="Orpheus's Sash",

@@ -2,7 +2,7 @@ sets.midcast.elemental={
 	head="Azimuth Hood +3",
 	body="Azimuth Coat +3",
 	hands={ name="Agwu's Gages", augments={'Path: A',}},
-	legs="Azimuth Tights +2",
+	legs="Azimuth Tights +3",
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",

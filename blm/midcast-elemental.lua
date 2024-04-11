@@ -6,7 +6,7 @@ sets.midcast.elemental={
     hands={ name="Agwu's Gages", augments={'Path: A',}},
     legs={ name="Agwu's Slops", augments={'Path: A',}},
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},
-    neck="Mizu. Kubikazari",
+    neck={ name="Src. Stole +2", augments={'Path: A',}},
     waist="Sacro Cord",
     left_ear="Regal Earring",
     right_ear="Malignance Earring",

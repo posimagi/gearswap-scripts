@@ -24,6 +24,7 @@ function get_sets()
 	include("brd/ws.lua") -- sets.ws
 	include("brd/ws-accuracy.lua") -- sets.ws.accuracy
 
+	include("brd/precast-aria.lua") -- sets.precast.aria
 	include("brd/precast-honormarch.lua") -- sets.precast.honormarch
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
 	include("brd/precast-songs.lua") -- sets.precast.songs
@@ -152,7 +153,9 @@ function precast(spell, position)
 		equip(sets.fastcast)
 		if spell.type == "BardSong" then
 			equip(sets.precast.songs)
-			if spell.english:contains("Honor March") then
+			if spell.english:contains("Aria") then
+				equip(sets.precast.aria)
+			elseif spell.english:contains("Honor March") then
 				equip(sets.precast.honormarch)
 			end
 		elseif spell.english:contains("Stoneskin") then
