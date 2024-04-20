@@ -246,12 +246,18 @@ function self_command(command)
 		if _AMINON then
 			include("dnc/idle.lua") -- sets.idle
 			include("dnc/tp.lua") -- sets.tp
+			if _MOVEMENT_SPEED_BUFFS:contains(name) then
+				sets.idle = set_combine(sets.idle, sets.movementspeed)
+			end
 			equip(sets.idle)
 			_AMINON = false
 			add_to_chat("Standard sets equipped")
 		else
 			include("dnc/aminon/idle.lua") -- sets.idle
 			include("dnc/aminon/tp.lua") -- sets.tp
+			if _MOVEMENT_SPEED_BUFFS:contains(name) then
+				sets.idle = set_combine(sets.idle, sets.movementspeed)
+			end
 			equip(sets.idle)
 			_AMINON = true
 			add_to_chat("Aminon sets equipped")
