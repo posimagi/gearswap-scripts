@@ -1,3 +1,3 @@
-sets.precast.aria={
+sets.weapon.loughnashade={
     range="Loughnashade",
 }

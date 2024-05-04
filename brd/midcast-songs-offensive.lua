@@ -1,5 +1,4 @@
 sets.midcast.songs.offensive={
-	range="Gjallarhorn",
 	head="Brioso Roundlet +3",
 	body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
 	hands="Brioso Cuffs +3",

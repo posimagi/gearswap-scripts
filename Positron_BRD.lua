@@ -21,11 +21,14 @@ function get_sets()
 	include("brd/idle.lua") -- sets.idle
 	include("brd/tp.lua") -- sets.tp
 	include("brd/weapon.lua") -- sets.weapon
+	include("brd/weapon-blurredharp.lua") -- sets.weapon.blurredharp
+	include("brd/weapon-gjallarhorn.lua") -- sets.weapon.gjallarhorn
+	include("brd/weapon-loughnashade.lua") -- sets.weapon.loughnashade
+	include("brd/weapon-marsyas.lua") -- sets.weapon.marsyas
+
 	include("brd/ws.lua") -- sets.ws
 	include("brd/ws-accuracy.lua") -- sets.ws.accuracy
 
-	include("brd/precast-aria.lua") -- sets.precast.aria
-	include("brd/precast-honormarch.lua") -- sets.precast.honormarch
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
 	include("brd/precast-songs.lua") -- sets.precast.songs
 	include("brd/precast-soulvoice.lua") -- sets.precast.soulvoice
@@ -66,8 +69,6 @@ function get_sets()
 		"Magic Finale",
 		"Foe Lullaby",
 		"Foe Lullaby II",
-		"Horde Lullaby",
-		"Horde Lullaby II",
 		"Pining Nocturne",
 		"Foe Requiem",
 		"Foe Requiem II",
@@ -93,6 +94,14 @@ function get_sets()
 		"Dark Threnody",
 		"Dark Threnody II",
 		"Maiden's Virelai",
+	}
+
+	_STRING_SONGS = T {
+		"Horde Lullaby",
+		"Horde Lullaby II",
+		"Mage's Ballad",
+		"Mage's Ballad II",
+		"Mage's Ballad III",
 	}
 
 	_WEAPON_SWAP_SPELLS = T {
@@ -126,6 +135,17 @@ function precast(spell, position)
 		return
 	end
 
+	-- Instrument
+	if _OFFENSIVE_SONGS:contains(spell.english) then
+		equip(sets.weapon.gjallarhorn)
+	elseif _STRING_SONGS:contains(spell.english) then
+		equip(sets.weapon.blurredharp)
+	elseif spell.english:contains("Aria") then
+		equip(sets.weapon.loughnashade)
+	elseif spell.english:contains("Honor") then
+		equip(sets.weapon.marsyas)
+	end
+
 	if spell.type == "JobAbility" then
 		if spell.english:contains("Nightingale") or spell.english:contains("Troubadour") then
 			equip(sets.precast.nightingale, sets.precast.troubadour)
@@ -153,11 +173,6 @@ function precast(spell, position)
 		equip(sets.fastcast)
 		if spell.type == "BardSong" then
 			equip(sets.precast.songs)
-			if spell.english:contains("Aria") then
-				equip(sets.precast.aria)
-			elseif spell.english:contains("Honor March") then
-				equip(sets.precast.honormarch)
-			end
 		elseif spell.english:contains("Stoneskin") then
 			equip(sets.precast.stoneskin)
 		end
@@ -167,6 +182,21 @@ end
 function midcast(spell)
 	if spell.type == "BardSong" then
 		equip(sets.midcast.songs)
+
+		-- Instrument
+		if _OFFENSIVE_SONGS:contains(spell.english) then
+			equip(sets.weapon.gjallarhorn)
+		elseif _STRING_SONGS:contains(spell.english) then
+			equip(sets.weapon.blurredharp)
+		elseif spell.english:contains("Aria") then
+			equip(sets.weapon.loughnashade)
+		elseif spell.english:contains("Honor") then
+			equip(sets.weapon.marsyas)
+		else
+			equip(sets.weapon.loughnashade)
+		end
+
+		-- Gear
 		if _OFFENSIVE_SONGS:contains(spell.english) then
 			equip(sets.midcast.songs.offensive)
 			if spell.english:contains("Lullaby") then
