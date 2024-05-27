@@ -1,3 +1,3 @@
 sets.midcast.ballad={
-	legs="Fili Rhingrave +2",
+	legs="Fili Rhingrave +3",
 }

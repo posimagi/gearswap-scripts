@@ -1,9 +1,9 @@
 sets.ws.accuracy={
     range={ name="Linos", augments={'Accuracy+14 Attack+14','Weapon skill damage +3%','DEX+7',}},
-    head="Fili Calot +2",
+    head="Fili Calot +3",
     body={ name="Bunzi's Robe", augments={'Path: A',}},
-    hands="Fili Manchettes +2",
-    legs="Fili Rhingrave +2",
+    hands="Fili Manchettes +3",
+    legs="Fili Rhingrave +3",
     feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck={ name="Bard's Charm +2", augments={'Path: A',}},
     waist="Eschan Stone",
@@ -11,5 +11,5 @@ sets.ws.accuracy={
     right_ear="Digni. Earring",
     left_ring="Ilabrat Ring",
     right_ring="Ephramad's Ring",
-    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','Haste+10','Phys. dmg. taken-10%',}},
+    back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','Haste+10','Damage taken-5%',}},
 }

@@ -6,7 +6,7 @@ sets.tp={
 	hands="Hachiya Tekko +3",
 	legs="Malignance Tights",
 	feet="Malignance Boots",
-	neck={ name="Ninja Nodowa +1", augments={'Path: A',}},
+	neck={ name="Ninja Nodowa +2", augments={'Path: A',}},
 	waist="Reiki Yotai",
 	left_ear="Suppanomimi",
 	right_ear={ name="Hattori Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},

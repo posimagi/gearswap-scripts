@@ -1,6 +1,6 @@
 sets.midcast.elemental={
     ammo="Pemphredo Tathlum",
-    head="Wicce Petasos +2",
+    head="Wicce Petasos +3",
 	body="Spaekona's Coat +3",
     -- body="Wicce Coat +2",
     hands={ name="Agwu's Gages", augments={'Path: A',}},
@@ -9,7 +9,7 @@ sets.midcast.elemental={
     neck={ name="Src. Stole +2", augments={'Path: A',}},
     waist="Sacro Cord",
     left_ear="Regal Earring",
-    right_ear="Malignance Earring",
+    right_ear="Wicce Earring +2",
     left_ring="Freke Ring",
     right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},

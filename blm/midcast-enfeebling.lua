@@ -8,7 +8,7 @@ sets.midcast.enfeebling={
 	neck={ name="Src. Stole +2", augments={'Path: A',}},
 	waist="Luminary Sash",
 	left_ear="Regal Earring",
-	right_ear="Malignance Earring",
+	right_ear="Wicce Earring +2",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Kishar Ring",
 	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},

@@ -1,3 +1,3 @@
 sets.midcast.scherzo={
-	feet="Fili Cothurnes +2",
+	feet="Fili Cothurnes +3",
 }

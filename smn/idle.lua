@@ -1,5 +1,5 @@
 sets.idle={
-    head="Beckoner's Horn +2",
+    head="Beckoner's Horn +3",
     body="Shomonjijoe +1",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs="Beck. Spats +2",

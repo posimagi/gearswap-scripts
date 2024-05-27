@@ -1,3 +1,3 @@
 sets.midcast.minuet={
-	body="Fili Hongreline +2",
+	body="Fili Hongreline +3",
 }

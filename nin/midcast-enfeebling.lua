@@ -4,7 +4,7 @@ sets.midcast.enfeebling={
     body="Hattori Ningi +2",
     hands={ name="Mochizuki Tekko +3", augments={'Enh. "Ninja Tool Expertise" effect',}},
     legs="Hattori Hakama +2",
-    feet="Hattori Kyahan +2",
+    feet="Hattori Kyahan +3",
     neck="Incanter's Torque",
     waist="Eschan Stone",
     left_ear="Digni. Earring",

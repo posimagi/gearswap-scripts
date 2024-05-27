@@ -8,7 +8,7 @@ sets.ws.dark={
 	neck="Sibyl Scarf",
     waist="Sacro Cord",
     left_ear="Regal Earring",
-    right_ear="Malignance Earring",
+    right_ear="Wicce Earring +2",
     left_ring="Freke Ring",
     right_ring="Archon Ring",
     back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
