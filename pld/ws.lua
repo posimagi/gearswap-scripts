@@ -11,5 +11,4 @@ sets.ws={
 	right_ear="Thrud Earring",
 	left_ring="Rufescent Ring",
 	right_ring="Regal Ring",
-	back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

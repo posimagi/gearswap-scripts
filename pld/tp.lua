@@ -11,5 +11,4 @@ sets.tp={
 	right_ear="Crep. Earring",
 	left_ring="Petrov Ring",
 	right_ring="Defending Ring",
-	back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

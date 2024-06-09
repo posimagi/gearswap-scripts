@@ -49,6 +49,10 @@ function get_sets()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 	include("func/obi_check.lua") -- obi_check()
 
+	_ACCURACY_WS = T {
+		"Shadowstitch"
+	}
+
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cyclone",
@@ -147,7 +151,9 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _MAGICAL_WS:contains(spell.name) then
+		if _ACCURACY_WS:contains(spell.name) then
+			equip(sets.ws.accuracy)
+		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)
 			obi_check(spell)
 		elseif _MULTI_HIT_WS:contains(spell.name) then

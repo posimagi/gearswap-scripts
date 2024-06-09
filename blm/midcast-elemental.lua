@@ -2,7 +2,7 @@ sets.midcast.elemental={
     ammo="Pemphredo Tathlum",
     head="Wicce Petasos +3",
 	body="Spaekona's Coat +3",
-    -- body="Wicce Coat +2",
+    -- body="Wicce Coat +3",
     hands={ name="Agwu's Gages", augments={'Path: A',}},
     legs={ name="Agwu's Slops", augments={'Path: A',}},
     feet={ name="Agwu's Pigaches", augments={'Path: A',}},

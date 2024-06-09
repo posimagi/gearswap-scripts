@@ -29,6 +29,7 @@ function get_sets()
 
 	include("blm/precast-healing.lua") -- sets.precast.healing
 
+	include("blm/midcast-cumulative.lua") -- sets.midcast.cumulative
 	include("blm/midcast-dark.lua") -- sets.midcast.dark
 	include("blm/midcast-drain.lua") -- sets.midcast.drain
 	include("blm/midcast-enfeebling.lua") -- sets.midcast.enfeebling
@@ -36,6 +37,16 @@ function get_sets()
 	include("blm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("blm/midcast-elementaldebuff.lua") -- sets.midcast.elementaldebuff
 	include("blm/midcast-refresh.lua") -- sets.midcast.refresh
+
+	_CUMULATIVE_MAGIC = T {
+		"Stoneja",
+		"Waterja",
+		"Aeroja",
+		"Firaja",
+		"Blizzaja",
+		"Thundaja",
+		"Comet"
+	}
 
 	_DARK_WS = T {
 		"Cataclysm"
@@ -139,6 +150,9 @@ function midcast(spell)
 		obi_check(spell)
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.elemental)
+		if _CUMULATIVE_MAGIC:contains(spell.english) then
+			equip(sets.midcast.cumulative)
+		end
 		obi_check(spell)
 		if spell.english:contains("Impact") then
 			equip(sets.impact)

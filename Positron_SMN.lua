@@ -18,7 +18,6 @@ function get_sets()
 
 	include("smn/fastcast.lua") -- sets.fastcast
 	include("smn/idle.lua") -- sets.idle
-	include("smn/summoning.lua") -- sets.summoning
 	include("smn/tp.lua") -- sets.tp
 	include("smn/ws.lua") -- sets.ws
 	include("smn/ws-dark.lua") -- sets.ws.dark
@@ -27,6 +26,7 @@ function get_sets()
 
 	include("smn/midcast-healing.lua") -- sets.midcast.healing
 	include("smn/midcast-refresh.lua") -- sets.midcast.refresh
+	include("smn/midcast-summoning.lua") -- sets.midcast.summoning
 
 	include("smn/petmidcast-bp.lua") -- sets.petmidcast.bp
 
@@ -73,10 +73,8 @@ function precast(spell, position)
 	end
 
 	equip(sets.fastcast)
-	if spell.type == "SummonerPact" then
-		equip(sets.summoning)
-	elseif spell.type == "BloodPactRage" or spell.type == "BloodPactWard" then
-		equip(sets.precast.bp)
+	if spell.type == "BloodPactRage" or spell.type == "BloodPactWard" then
+		equip(sets.midcast.summoning, sets.precast.bp)
 	elseif spell.skill == "Healing Magic" then
 		equip(sets.precast.healing)
 	elseif spell.english:contains("Stoneskin") then
@@ -91,7 +89,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	if spell.skill == "Healing Magic" then
+	if spell.type == "SummonerPact" then
+		equip(sets.midcast.summoning)
+	elseif spell.skill == "Healing Magic" then
 		equip(sets.midcast.healing)
 	elseif spell.english:contains("Refresh") then
 		equip(sets.midcast.refresh)
@@ -104,10 +104,10 @@ function pet_midcast(spell)
 	if spell.type == "BloodPactRage" then
 		equip(sets.petmidcast.bp)
 		if spell.english:contains("Perfect Defense") then
-			equip(sets.summoning)
+			equip(sets.midcast.summoning)
 		end
 	elseif spell.type == "BloodPactWard" then
-		equip(sets.summoning)
+		equip(sets.midcast.summoning)
 	end
 end
 

@@ -11,5 +11,4 @@ sets.ws.magical={
 	right_ear="Thrud Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Regal Ring",
-	back={ name="Mecisto. Mantle", augments={'Cap. Point+50%','MP+13','Mag. Acc.+1','DEF+5',}},
 }

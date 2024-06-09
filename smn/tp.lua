@@ -1,8 +1,8 @@
 sets.tp={
     head={ name="Bunzi's Hat", augments={'Path: A',}},
-    body="Beck. Doublet +2",
+    body="Beck. Doublet +3",
     hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
-    legs="Beck. Spats +2",
+    legs="Beck. Spats +3",
     feet={ name="Bunzi's Sabots", augments={'Path: A',}},
     neck="Shulmanu Collar",
     waist="Eschan Stone",

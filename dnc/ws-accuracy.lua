@@ -1,0 +1,15 @@
+sets.ws.accuracy={
+    ammo="Yamarang",
+    head="Maculele Tiara +3",
+    body="Macu. Casaque +3",
+    hands="Macu. Bangles +3",
+    legs="Maculele Tights +3",
+    feet="Macu. Toe Sh. +3",
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist="Eschan Stone",
+    left_ear="Digni. Earring",
+    right_ear={ name="Macu. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','"Store TP"+4',}},
+    left_ring="Chirich Ring +1",
+    right_ring="Ephramad's Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+}

@@ -1,3 +1,3 @@
 sets.precast['Repair']={
-    feet="Foire Babouches +2",
+    feet="Foire Babouches +3",
 }

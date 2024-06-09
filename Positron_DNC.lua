@@ -25,6 +25,7 @@ function get_sets()
 	include("dnc/weapon-mpugandring.lua") -- sets.weapon.mpugandring
 	include("dnc/weapon-twashtar.lua") -- sets.weapon.twashtar
 	include("dnc/ws.lua") -- sets.ws
+	include("dnc/ws-accuracy.lua") -- sets.ws.accuracy
 	include("dnc/ws-critical.lua") -- sets.ws.critical
 	include("dnc/ws-magical.lua") -- sets.ws.magical
 	include("dnc/ws-multihit.lua") -- sets.ws.multihit
@@ -50,6 +51,10 @@ function get_sets()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/haste_amount.lua") -- haste_amount()
 	include("func/obi_check.lua") -- obi_check()
+
+	_ACCURACY_WS = T {
+		"Shadowstitch"
+	}
 
 	_CRITICAL_WS = T {
 		"Evisceration",
@@ -120,7 +125,9 @@ function precast(spell, position)
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
-		if _CRITICAL_WS:contains(spell.name) then
+		if _ACCURACY_WS:contains(spell.name) then
+			equip(sets.ws.accuracy)
+		elseif _CRITICAL_WS:contains(spell.name) then
 			equip(sets.ws.critical)
 		elseif _MAGICAL_WS:contains(spell.name) then
 			equip(sets.ws.magical)

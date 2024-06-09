@@ -1,3 +1,3 @@
 sets.precast['Tactical Switch']={
-    feet="Karagoz Scarpe +2",
+    feet="Karagoz Scarpe +3",
 }

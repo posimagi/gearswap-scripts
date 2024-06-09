@@ -1,8 +1,8 @@
-sets.summoning={
+sets.midcast.summoning={
     head="Beckoner's Horn +3",
-    body="Beck. Doublet +2",
+    body="Beck. Doublet +3",
     hands={ name="Glyphic Bracers +3", augments={'Inc. Sp. "Blood Pact" magic burst dmg.',}},
-    legs="Beck. Spats +2",
+    legs="Beck. Spats +3",
     feet="Baayami Sabots",
     neck="Incanter's Torque",
     left_ear="C. Palug Earring",

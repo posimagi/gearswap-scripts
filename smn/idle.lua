@@ -2,7 +2,7 @@ sets.idle={
     head="Beckoner's Horn +3",
     body="Shomonjijoe +1",
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs="Beck. Spats +2",
+    legs="Beck. Spats +3",
     feet="Baayami Sabots",
     neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Regal Belt",
