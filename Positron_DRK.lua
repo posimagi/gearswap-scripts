@@ -6,6 +6,7 @@ function get_sets()
 
 	include("common/job_change.lua")
 	
+	include("all/impact.lua") -- sets.impact
 	include("all/obi.lua") -- sets.obi
 
 	include("drk/fastcast.lua") -- sets.fastcast
@@ -28,6 +29,7 @@ function get_sets()
 	include("drk/midcast-dreadspikes.lua") -- sets.midcast.dreadspikes
 	include("drk/midcast-elemental.lua") -- sets.midcast.elemental
 	include("drk/midcast-endark.lua") -- sets.midcast.endark
+	include("drk/midcast-impact.lua") -- sets.midcast.impact
 
 	include("func/obi_check.lua") -- obi_check()
 
@@ -103,6 +105,10 @@ function precast(spell, position)
 		elseif spell.english:contains("Nether Void") then
 			equip(sets.precast.nethervoid)
 		end
+	elseif spell.skill == "Elemental Magic" then
+		if spell.english:contains("Impact") then
+			equip(sets.impact)
+		end
 	else
 		equip(sets.fastcast)
 	end
@@ -121,6 +127,10 @@ function midcast(spell)
 		end
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.elemental)
+		obi_check(spell)
+		if spell.english:contains("Impact") then
+			equip(sets.impact)
+		end
 	end
 end
 

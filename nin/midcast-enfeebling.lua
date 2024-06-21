@@ -1,9 +1,9 @@
 sets.midcast.enfeebling={
     ammo="Pemphredo Tathlum",
     head="Hachiya Hatsu. +3",
-    body="Hattori Ningi +2",
+    body="Hattori Ningi +3",
     hands={ name="Mochizuki Tekko +3", augments={'Enh. "Ninja Tool Expertise" effect',}},
-    legs="Hattori Hakama +2",
+    legs="Hattori Hakama +3",
     feet="Hattori Kyahan +3",
     neck="Incanter's Torque",
     waist="Eschan Stone",

@@ -1,3 +1,3 @@
 sets.midcast.dreadspikes={
-    body="Heath. Cuirass +2",
+    body="Heath. Cuirass +3",
 }

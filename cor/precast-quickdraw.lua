@@ -5,7 +5,7 @@ sets.precast.quickdraw={
 	hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	-- feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}}, -- for damage
-	feet="Chass. Bottes +2", -- to enhance the next nuke against the target
+	feet="Chass. Bottes +3", -- to enhance the next nuke against the target
 	neck={ name="Comm. Charm +2", augments={'Path: A',}},
 	waist="Eschan Stone",
 	left_ear="Friomisi Earring",

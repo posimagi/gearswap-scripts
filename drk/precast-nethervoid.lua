@@ -1,3 +1,3 @@
 sets.precast.nethervoid={
-    legs="Heath. Flanchard +2",
+    legs="Heath. Flanchard +3",
 }
