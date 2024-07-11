@@ -1,8 +1,8 @@
 sets.ws.accuracy={
     ammo="Knobkierrie",
-    head="Boii Mask +2",
-    body="Boii Lorica +2",
-    hands="Boii Mufflers +2",
+    head="Boii Mask +3",
+    body="Boii Lorica +3",
+    hands="Boii Mufflers +3",
     legs="Boii Cuisses +3",
     feet="Boii Calligae +2",
     neck={ name="War. Beads +2", augments={'Path: A',}},
