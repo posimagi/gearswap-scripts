@@ -4,7 +4,7 @@ sets.ws.accuracy={
     body="Boii Lorica +3",
     hands="Boii Mufflers +3",
     legs="Boii Cuisses +3",
-    feet="Boii Calligae +2",
+    feet="Boii Calligae +3",
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist="Eschan Stone",
     left_ear={ name="Schere Earring", augments={'Path: A',}},

@@ -21,6 +21,7 @@ function get_sets()
 	include("cor/weapon.lua") -- sets.weapon
 	include("cor/weapon-dagger.lua") -- sets.weapon.dagger
 	include("cor/weapon-omen.lua") -- sets.weapon.omen
+	include("cor/weapon-sword.lua") -- sets.weapon.sword
 	include("cor/ws.lua") -- sets.ws
 	include("cor/ws-dark.lua") -- sets.ws.dark
 	include("cor/ws-magical.lua") -- sets.ws.magical

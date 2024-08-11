@@ -8,7 +8,7 @@ sets.midcast.enfeebling={
     neck="Incanter's Torque",
     waist="Eschan Stone",
     left_ear="Crep. Earring",
-    right_ear="Skulk. Earring +1",
+    right_ear="Skulk. Earring +2",
     left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Stikini Ring +1",
 }

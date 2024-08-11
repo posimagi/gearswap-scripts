@@ -8,6 +8,6 @@ sets.precast['Jump'] = set_combine(sets.tp, {
 
 sets.precast['High Jump'] = sets.precast['Jump']
 sets.precast['Spirit Jump'] = set_combine(sets.precast['Jump'], {
-	feet="Pelt. Schyn. +2",
+	feet="Pelt. Schyn. +3",
 })
 sets.precast['Soul Jump'] = sets.precast['Jump']

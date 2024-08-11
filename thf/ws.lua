@@ -8,7 +8,7 @@ sets.ws={
 	neck={ name="Asn. Gorget +2", augments={'Path: A',}},
 	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Odr Earring",
+	right_ear="Skulk. Earring +2",
 	left_ring="Ilabrat Ring",
 	right_ring="Regal Ring",
 	back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','"Regen"+5',}},

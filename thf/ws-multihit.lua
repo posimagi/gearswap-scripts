@@ -1,5 +1,6 @@
 sets.ws.multihit={
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
-	right_ear="Sherida Earring",
+	left_ear="Sherida Earring",
+	right_ear="Skulk. Earring +2",
 }
