@@ -185,6 +185,7 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+	equip(sets.idle)
 end
 
 function aftercast(spell)
