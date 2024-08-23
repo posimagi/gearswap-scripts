@@ -110,25 +110,6 @@ function get_sets()
 	end
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
-	if player.sub_job == "NIN" then
-		send_command("wait 1; \
-		input /macro set 1;")
-	end
-end
-
-function sub_job_change(new, old)
-	send_command(
-		"input /macro book 6; \
-	wait 1; \
-	input /macro set 2; \
-	wait 10; \
-	input /lockstyleset 26; \
-	gs equip sets.idle"
-	)
-	if player.sub_job == "NIN" then
-		send_command("wait 1; \
-		input /macro set 1;")
-	end
 end
 
 function precast(spell, position)

@@ -185,7 +185,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	equip(sets.idle)
+	-- if spell.cast_time > 0 then
+	-- 	equip(sets.idle)
+	-- end
 end
 
 function aftercast(spell)
