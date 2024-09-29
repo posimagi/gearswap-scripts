@@ -11,5 +11,5 @@ sets.tp={
 	right_ear="Telos Earring",
 	left_ring="Ilabrat Ring",
 	right_ring="Chirich Ring +1",
-	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','Haste+10','Damage taken-5%',}},
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

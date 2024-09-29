@@ -86,7 +86,7 @@ function get_sets()
 		"Aero II",
 		"Stone II",
 		"Thunder II",
-		"Water II"
+		"Water II",
 	}
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
@@ -110,7 +110,9 @@ function precast(spell, position)
 		return
 	end
 
-	if spell.type == "WeaponSkill" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		obi_check(spell)
 	elseif spell.type == "JobAbility" then
@@ -147,7 +149,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	if spell.skill == "Enfeebling Magic" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.skill == "Enfeebling Magic" then
 		equip(sets.midcast.enfeebling)
 		obi_check(spell)
 		if spell.english:contains("Dia") then
@@ -180,6 +184,13 @@ function midcast(spell)
 	elseif spell.skill == "Elemental Magic" then
 		equip(sets.midcast.elemental)
 		obi_check(spell)
+		if _TIER_ONE_NUKES:contains(spell.english) and (world.area:contains("Outer Ra'Kaznar [U") or world.area:contains("Walk of Echoes [P")) then
+			equip(sets.naked)
+			return
+		elseif _TIER_TWO_NUKES:contains(spell.english) and world.area:contains("Outer Ra'Kaznar [U") then
+			equip(sets.midcast.elemental.vagary)
+			return
+		end
 		if spell.english:contains("helix") then
 			equip(sets.midcast.helix)
 			if spell.english:contains("Luminohelix") then
@@ -192,11 +203,6 @@ function midcast(spell)
 		end
 		if buffactive["Klimaform"] and world.weather_element == spell.element then
 			equip(sets.klimaform)
-		end
-		if _TIER_ONE_NUKES:contains(spell.english) and (world.area:contains("Outer Ra'Kaznar [U") or world.area:contains("Walk of Echoes [P")) then
-			equip(sets.naked)
-		elseif _TIER_TWO_NUKES:contains(spell.english) and world.area:contains("Outer Ra'Kaznar [U") then
-			equip(sets.midcast.elemental.vagary)
 		end
 	elseif spell.skill == "Dark Magic" then
 		equip(sets.midcast.darkmagic)
@@ -213,6 +219,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.type == "Scholar" then
+		return
+	end
 	if player.status == "Idle" then
 		equip(sets.idle)
 		if _TIER_ONE_NUKES:contains(spell.english) then

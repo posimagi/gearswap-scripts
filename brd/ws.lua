@@ -8,7 +8,8 @@ sets.ws={
 	neck={ name="Bard's Charm +2", augments={'Path: A',}},
 	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Ishvara Earring",
+	right_ear="Fili Earring +2",
 	left_ring="Ilabrat Ring",
 	right_ring="Ephramad's Ring",
+	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

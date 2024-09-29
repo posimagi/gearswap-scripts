@@ -148,6 +148,9 @@ function precast(spell, position)
 		return
 	end
 
+	if spell.type == "Scholar" then
+		return
+	end
 	equip(sets.quickmagic, sets.fastcast)
 	if spell.skill == "Healing Magic" then
 		equip(sets.precast.healing)
@@ -201,6 +204,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
+	if spell.type == "Scholar" then
+		return
+	end
 	if spell.skill == "Healing Magic" then
 		equip(sets.idle, sets.dt, sets.midcast.healing)
 		if spell.english:contains("Curaga") or spell.english:contains("Cura") then
@@ -261,6 +267,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.type == "Scholar" then
+		return
+	end
 	if player.status == "Idle" then
 		equip(sets.idle)
 		-- if spell.english == "Sublimation" or buffactive_sublimation() then

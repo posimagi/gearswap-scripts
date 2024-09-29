@@ -8,4 +8,5 @@ sets.midcast.healing={
 	right_ear="Mendi. Earring",
 	left_ring="Lebeche Ring",
 	right_ring="Kishar Ring",
+	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','Haste+10','Damage taken-5%',}},
 }

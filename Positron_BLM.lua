@@ -97,7 +97,9 @@ function precast(spell, position)
 		return
 	end
 
-	if spell.type == "WeaponSkill" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		if spell.english:contains("Myrkr") then
 			equip(sets.ws.myrkr)
@@ -105,6 +107,7 @@ function precast(spell, position)
 			equip(sets.ws.dark)
 		end
 	elseif spell.type == "JobAbility" then
+		return
 	else
 		equip(sets.fastcast)
 		if spell.skill == "Enfeebling Magic" then
@@ -125,7 +128,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	if spell.skill == "Enfeebling Magic" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.skill == "Enfeebling Magic" then
 		equip(sets.midcast.enfeebling)
 		if spell.english:contains("Dia") then
 			equip(sets.th)
@@ -163,6 +168,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
+	if spell.type == "Scholar" then
+		return
+	end
 	if spell.interrupted and spell.english:contains("Sleep") then
 		return
 	end

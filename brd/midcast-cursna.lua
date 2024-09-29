@@ -3,4 +3,5 @@ sets.midcast.cursna={
 	neck="Debilis Medallion",
 	left_ring="Menelaus's Ring",
 	right_ring="Haoma's Ring",
+	back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','CHR+10','Haste+10','Damage taken-5%',}},
 }

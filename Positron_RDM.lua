@@ -172,7 +172,9 @@ function precast(spell, position)
 		return
 	end
 
-	if spell.type == "WeaponSkill" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		if _DARK_WS:contains(spell.name) then
 			equip(sets.ws.magical, sets.ws.dark)
@@ -216,7 +218,9 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	if spell.skill == "Enfeebling Magic" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.skill == "Enfeebling Magic" then
 		if spell.english:contains("Dia") or spell.english:contains("Inundation") then
 			equip(sets.th)
 		elseif _VARIABLE_POTENCY:contains(spell.name) then
@@ -281,7 +285,9 @@ function midcast(spell)
 end
 
 function aftercast(spell)
-	if spell.action_type == "Ranged Attack" then
+	if spell.type == "Scholar" then
+		return
+	elseif spell.action_type == "Ranged Attack" then
 		equip(sets.idle, sets.precast.ra)
 	elseif player.status == "Idle" then
 		equip(sets.idle)

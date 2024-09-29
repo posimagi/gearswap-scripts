@@ -1,3 +1,3 @@
 sets.precast.weaponbash={
-    hands="Ig. Gauntlets +2",
+    hands="Ig. Gauntlets +3",
 }
