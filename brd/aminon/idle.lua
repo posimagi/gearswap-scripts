@@ -1,0 +1,15 @@
+sets.idle={
+    range={ name="Linos", augments={'Accuracy+20','"Dbl.Atk."+2','Quadruple Attack +3',}},
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Fili Hongreline +3",
+    hands="Regal Gloves",
+    legs="Dashing Subligar",
+    feet="Fili Cothurnes +3",
+    neck={ name="Loricate Torque +1", augments={'Path: A',}},
+    waist="Carrier's Sash",
+    left_ear="Etiolation Earring",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring="Roller's Ring",
+    right_ring="Defending Ring",
+    back="Repulse Mantle",
+}

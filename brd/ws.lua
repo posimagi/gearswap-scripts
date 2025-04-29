@@ -1,7 +1,7 @@
 sets.ws={
 	range={ name="Linos", augments={'Accuracy+14 Attack+14','Weapon skill damage +3%','DEX+7',}},
 	head={ name="Nyame Helm", augments={'Path: B',}},
-	body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
+	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},

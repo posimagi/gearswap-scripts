@@ -98,31 +98,6 @@ function precast(spell, position)
 	if ws_distance_check(spell) then return end
 	sneak_check(spell)
 	
-	-- -- WS Engaged Check
-	-- if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
-	-- 	cancel_spell()
-	-- 	return
-	-- end
-
-	-- -- WS Distance Check
-	-- _RANGE_MULTIPLIER = 1.642276421172564
-	-- if spell.type == "WeaponSkill" and
-	-- 	spell.target.distance >
-	-- 	(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
-	-- then
-	-- 	add_to_chat(8, spell.name .. " aborted due to target out of range.")
-	-- 	cancel_spell()
-	-- 	return
-	-- end
-
-	-- -- Sneak Check
-	-- if spell.english == "Sneak" or spell.english == "Spectral Jig" then
-	-- 	if spell.target.type == "SELF" and buffactive['Sneak'] then
-	-- 		send_command("cancel Sneak")
-	-- 		cast_delay(0.6)
-	-- 	end
-	-- end
-
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
 		if _ACCURACY_WS:contains(spell.name) then
@@ -181,6 +156,8 @@ function precast(spell, position)
 		if spell.english:contains("Utsusemi") then
 			equip(sets.precast.utsusemi)
 		end
+	else
+		equip(sets.fastcast)
 	end
 end
 
@@ -256,7 +233,7 @@ function self_command(command)
 		if _AMINON then
 			include("dnc/idle.lua") -- sets.idle
 			include("dnc/tp.lua") -- sets.tp
-			if _MOVEMENT_SPEED_BUFFS:contains(name) then
+			if buffactive_movementspeed() then
 				sets.idle = set_combine(sets.idle, sets.movementspeed)
 			end
 			equip(sets.idle)
@@ -265,7 +242,7 @@ function self_command(command)
 		else
 			include("dnc/aminon/idle.lua") -- sets.idle
 			include("dnc/aminon/tp.lua") -- sets.tp
-			if _MOVEMENT_SPEED_BUFFS:contains(name) then
+			if buffactive_movementspeed() then
 				sets.idle = set_combine(sets.idle, sets.movementspeed)
 			end
 			equip(sets.idle)

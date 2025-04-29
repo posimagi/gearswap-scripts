@@ -7,7 +7,7 @@ sets.ws={
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
-	right_ear="Kara. Earring +1",
+	right_ear="Kara. Earring +2",
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
 }

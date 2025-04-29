@@ -38,7 +38,7 @@ function get_sets()
 	include("cor/precast-waltzes.lua") -- sets.precast.waltzes
 	include("cor/precast-wildcard.lua") -- sets.precast.wildcard
 
-	include("cor/midcast-enfeebling.lua") -- sets.midcast.enfeebling
+	include("cor/midcast-magicaccuracy.lua") -- sets.midcast.magicaccuracy
 	include("cor/midcast-phalanx.lua") -- sets.midcast.phalanx
 	include("cor/midcast-ra.lua") -- sets.midcast.ra
 
@@ -178,7 +178,9 @@ function midcast(spell)
 	if spell.english:contains("Phalanx") then
 		equip(sets.midcast.phalanx)
 	elseif spell.skill == "Enfeebling Magic" then
-		equip(sets.midcast.enfeebling)
+		equip(sets.midcast.magicaccuracy)
+	elseif spell.skill == "Dark Magic" then
+		equip(sets.midcast.magicaccuracy)
 	elseif spell.action_type == "Ranged Attack" then
 		equip(sets.midcast.ra)
 	end

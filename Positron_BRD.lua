@@ -5,6 +5,8 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("common/job_change.lua")
+	include("common/ws_disengaged_check.lua")
+	include("common/ws_distance_check.lua")
 
 	include("func/obi_check.lua") -- obi_check()
 
@@ -17,6 +19,7 @@ function get_sets()
 
 	include("all/midcast-stoneskin.lua") -- sets.midcast.stoneskin
 
+	include("brd/enmity.lua") -- sets.enmity
 	include("brd/fastcast.lua") -- sets.fastcast
 	include("brd/idle.lua") -- sets.idle
 	include("brd/tp.lua") -- sets.tp
@@ -118,22 +121,8 @@ function sub_job_change(new, old)
 end
 
 function precast(spell, position)
-	-- WS Engaged Check
-	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
-		cancel_spell()
-		return
-	end
-
-	-- WS Distance Check
-	_RANGE_MULTIPLIER = 1.642276421172564
-	if spell.type == "WeaponSkill" and
-		spell.target.distance >
-		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
-	then
-		add_to_chat(8, spell.name .. " aborted due to target out of range.")
-		cancel_spell()
-		return
-	end
+	if ws_disengaged_check(spell) then return end
+	if ws_distance_check(spell) then return end
 
 	-- Instrument
 	if _OFFENSIVE_SONGS:contains(spell.english) then
@@ -201,6 +190,7 @@ function midcast(spell)
 			equip(sets.midcast.songs.offensive)
 			if spell.english:contains("Lullaby") then
 				equip(sets.midcast.lullaby)
+				equip(sets.idle, sets.enmity) -- FIXME: Ongo only!
 			elseif spell.english:contains("Threnody") then
 				equip(sets.midcast.threnody)
 			end
@@ -257,5 +247,23 @@ function status_change(new, old)
 		equip(sets.tp)
 	elseif new == "Idle" then
 		equip(sets.idle)
+	end
+end
+
+function self_command(command)
+	if command == "aminon" then
+		if _AMINON then
+			include("brd/idle.lua") -- sets.idle
+			include("brd/tp.lua") -- sets.tp
+			equip(sets.idle)
+			_AMINON = false
+			add_to_chat("Standard sets equipped")
+		else
+			include("brd/aminon/idle.lua") -- sets.idle
+			include("brd/aminon/tp.lua") -- sets.tp
+			equip(sets.idle)
+			_AMINON = true
+			add_to_chat("Aminon sets equipped")
+		end
 	end
 end

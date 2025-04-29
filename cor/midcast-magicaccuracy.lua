@@ -1,0 +1,15 @@
+sets.midcast.magicaccuracy={
+    ammo="Living Bullet",
+    head="Laksa. Tricorne +3",
+    body="Malignance Tabard",
+    hands="Malignance Gloves",
+    legs="Malignance Tights",
+    feet="Malignance Boots",
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},
+    waist="Eschan Stone",
+    left_ear="Crep. Earring",
+    right_ear={ name="Chas. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 AGI+9',}},
+    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    right_ring="Regal Ring",
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
+}

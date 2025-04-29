@@ -8,7 +8,7 @@ sets.ws.singlehit={
 	neck="Rep. Plat. Medal",
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Sherida Earring",
+	right_ear="Pel. Earring +2",
 	left_ring="Niqmaddu Ring",
 	right_ring="Regal Ring",
 	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
