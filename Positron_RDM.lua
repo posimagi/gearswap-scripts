@@ -223,6 +223,9 @@ function midcast(spell)
 	elseif spell.skill == "Enfeebling Magic" then
 		if spell.english:contains("Dia") or spell.english:contains("Inundation") then
 			equip(sets.th)
+		end
+		if spell.name:contains("Frazzle II") then
+			equip(sets.midcast.enfeeblingaccuracy)
 		elseif _VARIABLE_POTENCY:contains(spell.name) then
 			equip(sets.midcast.enfeeblingpotency)
 		else

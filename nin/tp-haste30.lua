@@ -1,4 +1,4 @@
-sets.tp={
+sets.tp.haste30={
 	ammo="Date Shuriken",
 	head="Malignance Chapeau",
 	body="Malignance Tabard",
@@ -6,10 +6,10 @@ sets.tp={
 	legs="Malignance Tights",
 	feet="Malignance Boots",
 	neck={ name="Ninja Nodowa +2", augments={'Path: A',}},
-	waist="Olseni Belt",
+	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	left_ear="Crep. Earring",
 	right_ear={ name="Hattori Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','DEX+7 AGI+7',}},
 	left_ring="Gere Ring",
 	right_ring="Regal Ring",
-	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

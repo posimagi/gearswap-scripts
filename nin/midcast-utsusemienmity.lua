@@ -1,0 +1,15 @@
+sets.midcast.utsusemienmity={
+    ammo="Staunch Tathlum +1",
+    head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+5','"Fast Cast"+6','INT+2',}},
+    body="Emet Harness +1",
+    hands="Kurys Gloves",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    feet="Hattori Kyahan +3",
+    neck="Unmoving Collar +1",
+    waist="Engraved Belt",
+    left_ear="Tuisto Earring",
+    right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+    left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+    right_ring="Defending Ring",
+    back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
+}

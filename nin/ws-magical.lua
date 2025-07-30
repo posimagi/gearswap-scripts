@@ -11,5 +11,5 @@ sets.ws.magical={
 	right_ear="Friomisi Earring",
 	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	right_ring="Dingir Ring",
-	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

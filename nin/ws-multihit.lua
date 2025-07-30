@@ -11,5 +11,5 @@ sets.ws.multihit={
 	right_ear="Telos Earring",
 	left_ring="Gere Ring",
 	right_ring="Epona's Ring",
-	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

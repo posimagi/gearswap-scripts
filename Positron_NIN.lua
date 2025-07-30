@@ -5,9 +5,6 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("common/job_change.lua")
-	
-	include("func/dusk_to_dawn.lua") -- dusk_to_dawn()
-	include("func/obi_check.lua") -- obi_check()
 
 	include("all/doom.lua") -- sets.doom
 	include("all/obi.lua") -- sets.obi
@@ -20,9 +17,12 @@ function get_sets()
 	include("nin/ninjutsu.lua") -- sets.ninjutsu
 	include("nin/tools.lua") -- sets.tools (for validate only)
 	include("nin/tp.lua") -- sets.tp
+	include("nin/tp-haste0.lua") -- sets.tp.haste0
+	include("nin/tp-haste30.lua") -- sets.tp.haste30
 	include("nin/ws.lua") -- sets.ws
 	include("nin/ws-magical.lua") -- sets.ws.magical
 	include("nin/ws-multihit.lua") -- sets.ws.multihit
+	include("nin/yagyu.lua") -- sets.yagyu
 
 	include("nin/precast-utsusemi.lua") -- sets.precast.utsusemi
 	include("nin/precast-waltzes.lua") -- sets.precast.waltzes
@@ -31,6 +31,11 @@ function get_sets()
 	include("nin/midcast-enfeebling.lua") -- sets.midcast.enfeebling
 	include("nin/midcast-ra.lua") -- sets.midcast.ra
 	include("nin/midcast-utsusemi.lua") -- sets.midcast.utsusemi
+	include("nin/midcast-utsusemienmity.lua") -- sets.midcast.utsusemienmity
+
+	include("func/dusk_to_dawn.lua") -- dusk_to_dawn()
+	include("func/haste_amount.lua") -- haste_amount()
+	include("func/obi_check.lua") -- obi_check()
 
 	_ENFEEBLING_NINJUTSU = T {
 		"Aisha: Ichi",
@@ -60,15 +65,12 @@ function get_sets()
 		"Evisceration"
 	}
 
-	_CAPPED_HASTE = true
-	if _CAPPED_HASTE then
-		include("nin/tp-stp.lua") -- sets.tp
-	end
-
 	_GOKOTAI_REGAIN = false
 	if _GOKOTAI_REGAIN then
 		include("nin/tp-dualwield.lua") -- sets.tp
 	end
+
+	_YAGYU_SAN = false
 
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
@@ -121,14 +123,22 @@ end
 
 function midcast(spell)
 	if spell.type == "Ninjutsu" then
-		equip(sets.ninjutsu)
-		if buffactive["Yonin"] or buffactive["Enmity Boost"] then
-			equip(sets.enmity)
-		end
+		equip(sets.idle, sets.ninjutsu)
 		if _ENFEEBLING_NINJUTSU:contains(spell.english) then
 			equip(sets.midcast.enfeebling)
 		elseif spell.english:contains("Utsusemi") then
-			equip(sets.midcast.utsusemi)
+			if buffactive["Yonin"] or buffactive["Enmity Boost"] then
+				equip(sets.midcast.utsusemienmity)
+			else
+				equip(sets.midcast.utsusemi)
+			end
+			if _YAGYU_SAN and spell.english:contains("Utsusemi: San") then
+				_PREVIOUS_WEAPONS = T {
+					main = player.equipment.main,
+					sub = player.equipment.sub,
+				}
+				equip(sets.yagyu)
+			end
 		elseif spell.english:contains("ton: ") then
 			equip(sets.midcast.elemental)
 			obi_check(spell)
@@ -151,6 +161,14 @@ function aftercast(spell)
 		end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+		if haste_amount() == _HASTE_0 then
+			equip(sets.tp.haste0)
+		elseif haste_amount() == _HASTE_30 then
+			equip(sets.tp.haste30)
+		end
+	end
+	if _YAGYU_SAN and spell.english:contains("Utsusemi: San") then
+		equip(_PREVIOUS_WEAPONS)
 	end
 end
 
@@ -168,6 +186,11 @@ end
 function status_change(new, old)
 	if new == "Engaged" then
 		equip(sets.tp)
+		if haste_amount() == _HASTE_0 then
+			equip(sets.tp.haste0)
+		elseif haste_amount() == _HASTE_30 then
+			equip(sets.tp.haste30)
+		end
 	elseif new == "Idle" then
 		equip(sets.idle)
 		if dusk_to_dawn() then
