@@ -111,6 +111,11 @@ function get_sets()
 		"Dispelga",
 	}
 
+	_DUAL_WIELD = false
+	if _DUAL_WIELD then
+		include("brd/tp-dualwield.lua") -- sets.tp
+	end
+
 	send_command(macrobook_cmd..porter_cmd..lockstyle_cmd)
 end
 

@@ -1,5 +1,6 @@
 sets.idle={
 	head="Azimuth Hood +3",
+	-- body="Zendik Robe",
 	body="Azimuth Coat +3",
 	hands="Geo. Mitaines +3",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
