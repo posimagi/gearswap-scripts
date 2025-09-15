@@ -4,7 +4,7 @@ sets.midcast.enfeebling={
 	body="Theo. Bliaut +3",
 	hands="Theophany Mitts +3",
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
-	feet="Theo. Duckbills +3",
+	feet="Theo. Duckbills +4",
 	neck="Erra Pendant",
 	waist={ name="Obstin. Sash", augments={'Path: A',}},
 	left_ear="Regal Earring",

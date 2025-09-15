@@ -3,7 +3,7 @@ sets.midcast.enhancing={
 	body={ name="Telchine Chas.", augments={'Enh. Mag. eff. dur. +10',}},
 	hands="Dynasty Mitts",
 	legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
-	feet="Theo. Duckbills +3",
+	feet="Theo. Duckbills +4",
 	-- neck="Incanter's Torque", -- not necessary to hit 500 skill
 	waist="Embla Sash",
 	left_ear="Mimir Earring",

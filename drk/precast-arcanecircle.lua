@@ -1,3 +1,3 @@
 sets.precast.arcanecircle={
-    feet="Ig. Sollerets +2",
+    feet="Ig. Sollerets +3",
 }

@@ -3,7 +3,7 @@ sets.ws.hp={
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
-	feet="Theo. Duckbills +3",
+	feet="Theo. Duckbills +4",
 	neck="Sanctity Necklace",
 	waist="Eschan Stone",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
