@@ -3,7 +3,7 @@ sets.ws={
 	body="Laksa. Frac +3",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
-	feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+	feet={ name="Lanun Bottes +4", augments={'Enhances "Wild Card" effect',}},
 	neck="Rep. Plat. Medal",
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

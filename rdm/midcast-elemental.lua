@@ -4,7 +4,7 @@ sets.midcast.elemental={
 	body="Lethargy Sayon +3",
 	hands={ name="Bunzi's Gloves", augments={'Path: A',}},
 	legs="Leth. Fuseau +3",
-	feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+	feet={ name="Vitiation Boots +4", augments={'Immunobreak Chance',}},
 	neck="Mizu. Kubikazari",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",

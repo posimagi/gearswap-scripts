@@ -4,7 +4,7 @@ sets.precast.quickdraw={
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands="Malignance Gloves",
     legs="Malignance Tights",
-    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +4", augments={'Enhances "Wild Card" effect',}},
     neck="Iskur Gorget",
     waist="Reiki Yotai",
     left_ear="Dedition Earring",

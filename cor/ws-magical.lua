@@ -3,7 +3,7 @@ sets.ws.magical={
     body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+    feet={ name="Lanun Bottes +4", augments={'Enhances "Wild Card" effect',}},
     neck={ name="Comm. Charm +2", augments={'Path: A',}},
     waist="Orpheus's Sash",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
