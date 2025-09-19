@@ -4,5 +4,6 @@ sets.ws.magical={
 	neck="Sibyl Scarf",
 	waist="Orpheus's Sash",
 	right_ear="Regal Earring",
-	left_ring="Freke Ring",
+	left_ring="Epaminondas's Ring",
+	right_ring="Freke Ring",
 }

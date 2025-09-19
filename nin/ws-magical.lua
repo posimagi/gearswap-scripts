@@ -9,7 +9,7 @@ sets.ws.magical={
 	waist="Orpheus's Sash",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Friomisi Earring",
-	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+	left_ring="Epaminondas's Ring",
 	right_ring="Dingir Ring",
 	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }

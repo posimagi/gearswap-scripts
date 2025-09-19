@@ -9,7 +9,7 @@ sets.ws.magical={
     waist="Fotia Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Ilabrat Ring",
+    left_ring="Epaminondas's Ring",
     right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     back={ name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Accuracy+20 Attack+20','Pet: Mag. Acc.+10','"Dbl.Atk."+10',}},
 }

@@ -8,6 +8,6 @@ sets.ws={
     waist="Grunfeld Rope",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
-    left_ring="Rufescent Ring",
+    left_ring="Epaminondas's Ring",
     right_ring="Ephramad's Ring",
 }

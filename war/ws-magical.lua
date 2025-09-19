@@ -9,7 +9,7 @@ sets.ws.magical={
 	waist="Eschan Stone",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Thrud Earring",
-	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+	left_ring="Epaminondas's Ring",
 	right_ring="Regal Ring",
 	back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 }

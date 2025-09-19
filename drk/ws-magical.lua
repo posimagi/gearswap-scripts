@@ -9,7 +9,7 @@ sets.ws.magical={
     waist="Eschan Stone",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Thrud Earring",
-    left_ring="Niqmaddu Ring",
+    left_ring="Epaminondas's Ring",
     right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 }

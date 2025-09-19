@@ -8,7 +8,7 @@ sets.ws={
 	waist="Eschan Stone",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Ishvara Earring",
-	left_ring="Rufescent Ring",
+	left_ring="Epaminondas's Ring",
 	right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Weapon skill damage +10%',}},
 }

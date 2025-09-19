@@ -6,6 +6,7 @@ function get_sets()
 
 	include("common/job_change.lua")
 	
+	include("mnk/footwork.lua") -- sets.footwork
 	include("mnk/idle.lua") -- sets.idle
 	include("mnk/impetus.lua") -- sets.impetus
 	include("mnk/tp.lua") -- sets.tp
@@ -69,6 +70,9 @@ function aftercast(spell)
 		if spell.english:contains("Impetus") or buffactive['Impetus'] then
 			equip(sets.impetus)
 		end
+		if spell.english:contains("Impetus") or buffactive['Footwork'] then
+			equip(sets.footwork)
+		end
 	end
 end
 
@@ -77,6 +81,9 @@ function status_change(new, old)
 		equip(sets.tp)
 		if buffactive['Impetus'] then
 			equip(sets.impetus)
+		end
+		if buffactive['Footwork'] then
+			equip(sets.footwork)
 		end
 	elseif new == "Idle" then
 		equip(sets.idle)

@@ -53,7 +53,7 @@ function get_sets()
 	include("func/obi_check.lua") -- obi_check()
 
 	_ACCURACY_WS = T {
-		"Shadowstitch"
+		"Shadowstitch",
 	}
 
 	_CRITICAL_WS = T {
@@ -63,7 +63,7 @@ function get_sets()
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Cyclone",
-		"Gust Slash"
+		"Gust Slash",
 	}
 
 	_MULTI_HIT_WS = T {

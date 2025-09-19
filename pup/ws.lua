@@ -9,5 +9,5 @@ sets.ws={
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Kara. Earring +2",
 	left_ring="Niqmaddu Ring",
-	right_ring="Regal Ring",
+	right_ring="Ephramad's Ring",
 }

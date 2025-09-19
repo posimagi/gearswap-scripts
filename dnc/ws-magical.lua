@@ -7,5 +7,6 @@ sets.ws.magical={
 	neck="Sibyl Scarf",
 	waist="Orpheus's Sash",
 	right_ear="Friomisi Earring",
-	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},	
+	left_ring="Epaminondas's Ring",
+	right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 }

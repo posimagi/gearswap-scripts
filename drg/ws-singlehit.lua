@@ -9,7 +9,7 @@ sets.ws.singlehit={
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Pel. Earring +2",
-	left_ring="Niqmaddu Ring",
-	right_ring="Regal Ring",
+	left_ring="Epaminondas's Ring",
+	right_ring="Ephramad's Ring",
 	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

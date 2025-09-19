@@ -31,6 +31,7 @@ function get_sets()
 
 	include("brd/ws.lua") -- sets.ws
 	include("brd/ws-accuracy.lua") -- sets.ws.accuracy
+	include("brd/ws-magical.lua") -- sets.ws.magical
 
 	include("brd/precast-nightingale.lua") -- sets.precast.nightingale
 	include("brd/precast-songs.lua") -- sets.precast.songs

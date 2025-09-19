@@ -3,4 +3,5 @@ sets.ws.multihit={
 	waist="Fotia Belt",
 	left_ear="Sherida Earring",
 	right_ear="Skulk. Earring +2",
+	right_ring="Gere Ring",
 }

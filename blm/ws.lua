@@ -5,4 +5,5 @@ sets.ws={
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
+	left_ring="Epaminondas's Ring",
 }

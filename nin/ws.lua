@@ -9,7 +9,7 @@ sets.ws={
 	waist="Grunfeld Rope",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Ishvara Earring",
-	left_ring="Ilabrat Ring",
-	right_ring="Regal Ring",
+	left_ring="Epaminondas's Ring",
+	right_ring="Ephramad's Ring",
 	back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
 }
