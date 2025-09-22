@@ -5,7 +5,7 @@ sets.idle={
 	hands="Geo. Mitaines +3",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	-- feet="Geo. Sandals +3",
-	feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
+	feet={ name="Bagua Sandals +4", augments={'Enhances "Radial Arcana" effect',}},
 	-- neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	neck={ name="Bagua Charm +2", augments={'Path: A',}},
 	waist="Carrier's Sash",

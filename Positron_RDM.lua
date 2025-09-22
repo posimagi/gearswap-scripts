@@ -5,7 +5,7 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("common/job_change.lua")
-	
+
 	include("all/dispelga.lua") -- sets.dispelga
 	include("all/impact.lua") -- sets.impact
 	include("all/midcast-aquaveil.lua") -- sets.midcast.aquaveil
@@ -54,6 +54,7 @@ function get_sets()
 	include("rdm/midcast-darkmagic.lua") -- sets.midcast.darkmagic
 	include("rdm/midcast-elemental.lua") -- sets.midcast.elemental
 	include("rdm/midcast-enfeeblingaccuracy.lua") -- sets.midcast.enfeeblingaccuracy
+	include("rdm/midcast-enfeeblingduration.lua") -- sets.midcast.enfeeblingduration
 	include("rdm/midcast-enfeeblingpotency.lua") -- sets.midcast.enfeeblingpotency
 	include("rdm/midcast-enhancing.lua") -- sets.midcast.enhancing
 	include("rdm/midcast-enhancingself.lua") -- sets.midcast.enhancingself
@@ -72,33 +73,36 @@ function get_sets()
 	_VARIABLE_POTENCY = T {
 		"Addle",
 		"Addle II",
-		"Blind",
 		"Blind II",
 		"Distract",
-		"Distract II",
 		"Distract III",
 		"Frazzle",
-		"Frazzle II",
 		"Frazzle III",
 		"Gravity",
 		"Gravity II",
-		"Paralyze",
 		"Paralyze II",
 		"Poison",
 		"Poison II",
 		"Poisonga",
+		"Slow II",
+	}
+
+	_ACCURACY_SPELLS = T{
+		"Blind",
+		"Distract II",
+		"Frazzle II",
+		"Paralyze",
 		"Slow",
-		"Slow II"
 	}
 
 	_DARK_WS = T {
-		"Sanguine Blade"
+		"Sanguine Blade",
 	}
 
 	_MAGICAL_WS = T {
 		"Aeolian Edge",
 		"Red Lotus Blade",
-		"Seraph Blade"
+		"Seraph Blade",
 	}
 
 	_MULTI_HIT_WS = T {
@@ -125,7 +129,7 @@ function get_sets()
 		"Barblind",
 		"Barblindra",
 		"Barsleep",
-		"Barsleepra"
+		"Barsleepra",
 	}
 
 	_AMINON = false
@@ -221,15 +225,14 @@ function midcast(spell)
 	if spell.type == "Scholar" then
 		return
 	elseif spell.skill == "Enfeebling Magic" then
-		if spell.english:contains("Dia") or spell.english:contains("Inundation") then
-			equip(sets.th)
-		end
-		if spell.name:contains("Frazzle II") then
-			equip(sets.midcast.enfeeblingaccuracy)
+		if spell.english:contains("Inundation") then
+			equip(sets.midcast.enfeeblingduration, sets.th)
 		elseif _VARIABLE_POTENCY:contains(spell.name) then
 			equip(sets.midcast.enfeeblingpotency)
-		else
+		elseif _ACCURACY_SPELLS:contains(spell.name) then
 			equip(sets.midcast.enfeeblingaccuracy)
+		else
+			equip(sets.midcast.enfeeblingduration)
 		end
 	elseif spell.skill == "Enhancing Magic" then
 		equip(sets.midcast.enhancing)
