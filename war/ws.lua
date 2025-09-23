@@ -1,6 +1,6 @@
 sets.ws={
 	ammo="Knobkierrie",
-	head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
+	head={ name="Agoge Mask +4", augments={'Enhances "Savagery" effect',}},
 	body={ name="Nyame Mail", augments={'Path: B',}},
 	hands="Boii Mufflers +3",
 	legs="Boii Cuisses +3",

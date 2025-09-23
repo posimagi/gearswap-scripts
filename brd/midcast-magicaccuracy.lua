@@ -1,7 +1,7 @@
 sets.midcast.magicaccuracy={
     head="Brioso Roundlet +3",
     body="Brioso Justau. +3",
-    hands="Brioso Cuffs +3",
+    hands="Brioso Cuffs +4",
     legs="Brioso Cannions +3",
     feet="Fili Cothurnes +3",
     neck="Incanter's Torque",

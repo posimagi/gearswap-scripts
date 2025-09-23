@@ -1,3 +1,3 @@
 sets.midcast.lullaby={
-	hands="Brioso Cuffs +3",
+	hands="Brioso Cuffs +4",
 }
