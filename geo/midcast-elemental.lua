@@ -4,7 +4,7 @@ sets.midcast.elemental={
 	hands={ name="Agwu's Gages", augments={'Path: A',}},
 	legs="Azimuth Tights +3",
 	feet={ name="Agwu's Pigaches", augments={'Path: A',}},
-	neck="Mizu. Kubikazari",
+	neck="Sibyl Scarf",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",

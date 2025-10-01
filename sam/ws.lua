@@ -8,7 +8,7 @@ sets.ws={
 	neck={ name="Sam. Nodowa +2", augments={'Path: A',}},
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Thrud Earring",
+	right_ear="Kasuga Earring +2",
 	left_ring="Niqmaddu Ring",
 	right_ring="Ephramad's Ring",
 	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},

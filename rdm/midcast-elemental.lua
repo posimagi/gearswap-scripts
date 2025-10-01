@@ -5,7 +5,7 @@ sets.midcast.elemental={
 	hands={ name="Bunzi's Gloves", augments={'Path: A',}},
 	legs="Leth. Fuseau +3",
 	feet={ name="Vitiation Boots +4", augments={'Immunobreak Chance',}},
-	neck="Mizu. Kubikazari",
+	neck="Sibyl Scarf",
 	waist="Sacro Cord",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",
