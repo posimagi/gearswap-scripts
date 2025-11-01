@@ -1,3 +1,3 @@
 sets.precast['Holy Circle'] = {
-    feet="Rev. Leggings +2",
+    feet="Rev. Leggings +3",
 }

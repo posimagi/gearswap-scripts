@@ -29,6 +29,8 @@ function get_sets()
 	include("pld/precast-shieldbash.lua") -- sets.precast['Shield Bash']
 
 	include("pld/midcast-healing.lua") -- sets.midcast.healing
+	include("pld/midcast-holy.lua") -- sets.midcast.holy
+	include("pld/midcast-protect.lua") -- sets.midcast.protect
 
 	include("func/obi_check.lua") -- obi_check()
 
@@ -73,6 +75,15 @@ function midcast(spell)
 		equip(sets.idle, sets.enmity)
 	elseif spell.english:contains("Cure") then
 		equip(sets.idle, sets.midcast.healing, sets.interrupt)
+	elseif spell.english:contains("Protect") then
+		_PREVIOUS_SHIELD = T {
+			sub = player.equipment.sub
+		}
+		equip(sets.idle, sets.midcast.protect)
+	elseif spell.english:contains("Reprisal") then
+		equip(sets.idle, sets.enmity)
+	elseif spell.english:contains("Holy") then
+		equip(sets.idle, sets.midcast.holy)
 	end
 end
 
@@ -81,6 +92,9 @@ function aftercast(spell)
 		equip(sets.idle)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
+	end
+	if spell.english:contains("Protect") then
+		equip(_PREVIOUS_SHIELD)
 	end
 end
 

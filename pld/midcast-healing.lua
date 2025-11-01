@@ -1,6 +1,7 @@
 sets.midcast.healing={
 	neck="Sacro Gorget",
-	right_ear="Mendi. Earring",
-	left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+	left_ear="Mendi. Earring",
+	right_ear="Chev. Earring +2",
+	left_ring="Naji's Loop",
 	right_ring="Menelaus's Ring",
 }
