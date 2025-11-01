@@ -10,5 +10,5 @@ sets.idle={
     right_ear="Evans Earring",
     left_ring="Stikini Ring +1",
     right_ring="Defending Ring",
-    back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Weapon skill damage +10%',}},
+    back="Null Shawl",
 }

@@ -6,10 +6,12 @@ sets.ws={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Bard's Charm +2", augments={'Path: A',}},
+	-- neck="Bathy Choker +1",
 	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 	right_ear="Fili Earring +2",
 	left_ring="Epaminondas's Ring",
+	-- left_ring="Chirich Ring +1",
 	right_ring="Ephramad's Ring",
 	back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 }

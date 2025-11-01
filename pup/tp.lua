@@ -5,9 +5,10 @@ sets.tp={
 	legs="Malignance Tights",
 	feet="Malignance Boots",
 	neck="Combatant's Torque",
-	waist="Olseni Belt",
+	waist="Moonbow Belt +1",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Kara. Earring +2",
 	left_ring="Niqmaddu Ring",
 	right_ring="Gere Ring",
+	back="Null Shawl",
 }

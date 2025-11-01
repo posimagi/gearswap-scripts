@@ -8,7 +8,8 @@ sets.tp={
 	neck="Combatant's Torque",
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear="Telos Earring",
-	right_ear="Crep. Earring",
+	right_ear="Chev. Earring +2",
 	left_ring="Petrov Ring",
 	right_ring="Defending Ring",
+	back="Null Shawl",
 }

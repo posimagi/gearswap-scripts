@@ -5,6 +5,8 @@ function get_sets()
 	sets.aftercast = {}
 
 	include("common/job_change.lua")
+	include("common/ws_disengaged_check.lua")
+	include("common/ws_distance_check.lua")
 	
 	include("all/obi.lua") -- sets.obi
 
@@ -15,6 +17,16 @@ function get_sets()
 	include("pld/tp.lua") -- sets.tp
 	include("pld/ws.lua") -- sets.ws
 	include("pld/ws-magical.lua") -- sets.ws.magical
+
+	include("pld/precast-chivalry.lua") -- sets.precast['Chivalry']
+	include("pld/precast-cover.lua") -- sets.precast['Cover']
+	include("pld/precast-divineemblem.lua") -- sets.precast['Divine Emblem']
+	include("pld/precast-fealty.lua") -- sets.precast['Fealty']
+	include("pld/precast-holycircle.lua") -- sets.precast['Holy Circle']
+	include("pld/precast-invincible.lua") -- sets.precast['Invincible']
+	include("pld/precast-rampart.lua") -- sets.precast['Rampart']
+	include("pld/precast-sentinel.lua") -- sets.precast['Sentinel']
+	include("pld/precast-shieldbash.lua") -- sets.precast['Shield Bash']
 
 	include("pld/midcast-healing.lua") -- sets.midcast.healing
 
@@ -38,22 +50,8 @@ function get_sets()
 end
 
 function precast(spell, position)
-	-- WS Engaged Check
-	if spell.type == "WeaponSkill" and player.status ~= "Engaged" then
-		cancel_spell()
-		return
-	end
-
-	-- WS Distance Check
-	_RANGE_MULTIPLIER = 1.642276421172564
-	if spell.type == "WeaponSkill" and
-		spell.target.distance >
-		(spell.range * _RANGE_MULTIPLIER + spell.target.model_size)
-	then
-		add_to_chat(8, spell.name .. " aborted due to target out of range.")
-		cancel_spell()
-		return
-	end
+	if ws_disengaged_check(spell) then return end
+	if ws_distance_check(spell) then return end
 
 	if spell.type == "WeaponSkill" then
 		equip(sets.ws)
@@ -62,7 +60,7 @@ function precast(spell, position)
 			obi_check(spell)
 		end
 	elseif spell.type == "JobAbility" then
-		equip(sets.idle, sets.enmity)
+		equip(sets.idle, sets.enmity, sets.precast[spell.name])
 	else
 		equip(sets.fastcast)
 	end

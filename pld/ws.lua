@@ -8,7 +8,7 @@ sets.ws={
 	neck="Rep. Plat. Medal",
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Thrud Earring",
+	right_ear="Chev. Earring +2",
 	left_ring="Epaminondas's Ring",
 	right_ring="Ephramad's Ring",
 }

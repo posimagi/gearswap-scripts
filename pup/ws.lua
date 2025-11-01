@@ -5,9 +5,10 @@ sets.ws={
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck="Fotia Gorget",
-	waist="Fotia Belt",
+	waist="Moonbow Belt +1",
 	left_ear={ name="Schere Earring", augments={'Path: A',}},
 	right_ear="Kara. Earring +2",
 	left_ring="Niqmaddu Ring",
 	right_ring="Ephramad's Ring",
+	back="Null Shawl",
 }

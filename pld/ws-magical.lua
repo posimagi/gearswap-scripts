@@ -8,7 +8,7 @@ sets.ws.magical={
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
 	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-	right_ear="Thrud Earring",
+	right_ear="Chev. Earring +2",
 	left_ring="Epaminondas's Ring",
 	right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 }
