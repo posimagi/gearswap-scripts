@@ -2,7 +2,7 @@ sets.ws={
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}},
 	head="Maculele Tiara +3",
 	body={ name="Nyame Mail", augments={'Path: B',}},
-	hands="Maxixi Bangles +3",
+	hands="Maxixi Bangles +4",
 	legs={ name="Nyame Flanchard", augments={'Path: B',}},
 	feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	neck={ name="Etoile Gorget +2", augments={'Path: A',}},

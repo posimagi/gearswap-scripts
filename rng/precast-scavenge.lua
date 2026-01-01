@@ -1,3 +1,3 @@
 sets.precast.scavenge={
-	hands="Orion Socks +3",
+	feet="Orion Socks +3",
 }

@@ -1,6 +1,6 @@
 sets.ws={
 	ammo="C. Palug Stone",
-	head="Pill. Bonnet +3",
+	head="Pill. Bonnet +4",
 	body="Skulker's Vest +3",
 	hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 	legs={ name="Plun. Culottes +3", augments={'Enhances "Feint" effect',}},
