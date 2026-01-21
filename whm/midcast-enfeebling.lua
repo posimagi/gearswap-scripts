@@ -2,7 +2,7 @@ sets.midcast.enfeebling={
 	ammo="Pemphredo Tathlum",
 	head="Theophany Cap +3",
 	body="Theo. Bliaut +3",
-	hands="Theophany Mitts +3",
+	hands="Theophany Mitts +4",
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},
 	feet="Theo. Duckbills +4",
 	neck="Erra Pendant",

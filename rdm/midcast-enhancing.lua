@@ -2,7 +2,7 @@ sets.midcast.enhancing={
 	ammo="Regal Gem",
 	head="Leth. Chappel +3",
 	body="Lethargy Sayon +3",
-	hands="Atrophy Gloves +3",
+	hands="Atrophy Gloves +4",
 	legs="Leth. Fuseau +3",
 	feet="Leth. Houseaux +3",
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},

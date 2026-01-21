@@ -4,12 +4,6 @@ sets.tp.haste0={
     body="Hachiya Chain. +3",
     hands="Hachiya Tekko +3",
     legs={ name="Mochi. Hakama +3", augments={'Enhances "Mijin Gakure" effect',}},
-    feet="Hiza. Sune-Ate +2",
-    neck={ name="Loricate Torque +1", augments={'Path: A',}},
     waist="Reiki Yotai",
     left_ear="Suppanomimi",
-    right_ear="Eabani Earring",
-    left_ring="Shadow Ring",
-    right_ring="Defending Ring",
-    back={ name="Andartia's Mantle", augments={'"Dual Wield"+10','Damage taken-5%',}},
 }

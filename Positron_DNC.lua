@@ -9,8 +9,10 @@ function get_sets()
 	include("common/ws_disengaged_check.lua")
 	include("common/ws_distance_check.lua")
 	
-	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+	include("all/autorefresh.lua") -- sets.autorefresh
 	include("all/th.lua") -- sets.th
+
+	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("dnc/enmity.lua") -- sets.enmity
 	include("dnc/fastcast.lua") -- sets.fastcast
@@ -51,6 +53,7 @@ function get_sets()
 	include("func/buffactive_strikingflourish.lua") -- buffactive_strikingflourish()
 	include("func/haste_amount.lua") -- haste_amount()
 	include("func/obi_check.lua") -- obi_check()
+	include("func/warp_autorefresh.lua") -- warp_autorefresh()
 
 	_ACCURACY_WS = T {
 		"Shadowstitch",
@@ -170,6 +173,7 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
+		warp_autorefresh(spell)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 		if haste_amount() == _HASTE_0 then

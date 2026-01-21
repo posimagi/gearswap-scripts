@@ -8,9 +8,12 @@ function get_sets()
 	
 	include("func/ammo_check.lua") -- ammo_check()
 	include("func/obi_check.lua") -- obi_check()
+	include("func/warp_autorefresh.lua") -- warp_autorefresh()
 
+	include("all/autorefresh.lua") -- sets.autorefresh
 	include("all/obi.lua") -- sets.obi
 	include("all/orpheus.lua") -- sets.orpheus
+	
 	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("cor/chronobullet.lua") -- sets.chronobullet
@@ -192,6 +195,7 @@ function aftercast(spell)
 	end
 	if player.status == "Idle" then
 		equip(sets.idle)
+		warp_autorefresh(spell)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 	end

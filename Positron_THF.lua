@@ -6,8 +6,10 @@ function get_sets()
 
 	include("common/job_change.lua")
 	
-	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
+	include("all/autorefresh.lua") -- sets.autorefresh
 	include("all/obi.lua") -- sets.obi
+	
+	include("all/precast-utsusemi.lua") -- sets.precast.utsusemi
 
 	include("thf/conspirator.lua") -- sets.conspirator
 	include("thf/domain.lua") -- sets.domain
@@ -48,6 +50,7 @@ function get_sets()
 	include("func/buffactive_elvorseal.lua") -- buffactive_elvorseal()
 	include("func/buffactive_sata.lua") -- buffactive_sata()
 	include("func/obi_check.lua") -- obi_check()
+	include("func/warp_autorefresh.lua") -- warp_autorefresh()
 
 	_ACCURACY_WS = T {
 		"Shadowstitch"
@@ -188,6 +191,7 @@ end
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
+		warp_autorefresh(spell)
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 		if spell.english:contains("Conspirator") then

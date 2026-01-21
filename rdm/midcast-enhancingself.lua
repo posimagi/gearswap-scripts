@@ -2,7 +2,7 @@ sets.midcast.enhancingself={
 	ammo="Regal Gem",
 	head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +10',}},
 	body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
-	hands="Atrophy Gloves +3",
+	hands="Atrophy Gloves +4",
 	legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 	feet="Leth. Houseaux +3",
 	neck={ name="Dls. Torque +2", augments={'Path: A',}},
