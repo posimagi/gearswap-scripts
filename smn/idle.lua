@@ -9,6 +9,6 @@ sets.idle={
     left_ear="C. Palug Earring",
     right_ear="Evans Earring",
     left_ring="Stikini Ring +1",
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back="Null Shawl",
 }

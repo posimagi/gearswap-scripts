@@ -10,6 +10,6 @@ sets.tp={
     left_ear="Digni. Earring",
     right_ear="Sherida Earring",
     left_ring="Chirich Ring +1",
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }

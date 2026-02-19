@@ -11,5 +11,5 @@ sets.naked={
 	left_ear="Etiolation Earring",
 	right_ear="Loquac. Earring",
 	left_ring="Kishar Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 }

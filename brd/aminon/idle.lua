@@ -10,6 +10,6 @@ sets.idle={
     left_ear="Etiolation Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring="Roller's Ring",
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back="Repulse Mantle",
 }

@@ -10,6 +10,6 @@ sets.idle={
 	left_ear="Etiolation Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
 }

@@ -12,6 +12,6 @@ sets.idle={
 	left_ear="Etiolation Earring",
 	right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 	left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: "Regen"+5',}},
 }

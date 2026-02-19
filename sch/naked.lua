@@ -12,6 +12,6 @@ sets.naked={
     left_ear="Digni. Earring",
     right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
     left_ring="Chirich Ring +1",
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back="Perimede Cape",
 }

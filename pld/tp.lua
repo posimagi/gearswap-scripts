@@ -10,6 +10,6 @@ sets.tp={
 	left_ear="Telos Earring",
 	right_ear="Chev. Earring +2",
 	left_ring="Petrov Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Null Shawl",
 }

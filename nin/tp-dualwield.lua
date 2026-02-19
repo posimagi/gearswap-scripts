@@ -10,6 +10,6 @@ sets.tp={
     left_ear="Suppanomimi",
     right_ear="Eabani Earring",
     left_ring="Shadow Ring",
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     back={ name="Andartia's Mantle", augments={'"Dual Wield"+10','Damage taken-5%',}},
 }
