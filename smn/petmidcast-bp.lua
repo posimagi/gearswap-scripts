@@ -3,7 +3,7 @@ sets.petmidcast.bp={
 	body="Con. Doublet +3",
 	hands={ name="Merlinic Dastanas", augments={'Pet: "Mag.Atk.Bns."+14','Blood Pact Dmg.+10','Pet: INT+8','Pet: Mag. Acc.+13',}},
 	legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},
-	feet="Convo. Pigaches +3",
+	feet="Con. Pigaches +4",
 	neck={ name="Smn. Collar +1", augments={'Path: A',}},
 	waist="Regal Belt",
 	left_ear="Gelos Earring",

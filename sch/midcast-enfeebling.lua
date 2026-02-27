@@ -1,6 +1,6 @@
 sets.midcast.enfeebling={
 	ammo="Pemphredo Tathlum",
-	head="Acad. Mortar. +3",
+	head="Acad. Mortar. +4",
 	body="Acad. Gown +3",
 	hands="Volte Gloves",
 	legs={ name="Chironic Hose", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','MND+12','Mag. Acc.+10','"Mag.Atk.Bns."+1',}},

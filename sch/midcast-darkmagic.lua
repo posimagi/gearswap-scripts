@@ -1,6 +1,6 @@
 sets.midcast.darkmagic={
     ammo="Pemphredo Tathlum",
-    head="Acad. Mortar. +3",
+    head="Acad. Mortar. +4",
     body="Acad. Gown +3",
     hands="Arbatel Bracers +3",
     legs={ name="Peda. Pants +3", augments={'Enhances "Tabula Rasa" effect',}},

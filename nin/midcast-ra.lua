@@ -1,7 +1,7 @@
 sets.midcast.ra={
     head="Malignance Chapeau",
     body={ name="Mochi. Chainmail +3", augments={'Enhances "Sange" effect',}},
-    hands="Hachiya Tekko +3",
+    hands="Hachiya Tekko +4",
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck={ name="Ninja Nodowa +2", augments={'Path: A',}},
