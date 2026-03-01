@@ -165,15 +165,18 @@ function precast(spell, position)
 end
 
 function midcast(spell)
-	-- if spell.cast_time > 0 then
-	-- 	equip(sets.idle)
-	-- end
+	if spell.cast_time > 0 then
+		equip(sets.idle)
+	end
 end
 
 function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle)
 		warp_autorefresh(spell)
+		if buffactive_movementspeed() then
+			sets.idle = set_combine(sets.idle, sets.movementspeed)
+		end
 	elseif player.status == "Engaged" then
 		equip(sets.tp)
 		if haste_amount() == _HASTE_0 then
@@ -194,6 +197,9 @@ function status_change(new, old)
 		end
 	elseif new == "Idle" then
 		equip(sets.idle)
+		if buffactive_movementspeed() then
+			sets.idle = set_combine(sets.idle, sets.movementspeed)
+		end
 	end
 end
 
